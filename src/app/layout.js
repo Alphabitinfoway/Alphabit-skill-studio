@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#F5F5F5] dark:bg-black font-sans selection:bg-indigo-500/30 flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#F5F5F5] font-sans selection:bg-indigo-500/30 flex flex-col`}
       >
         <Navbar />
         <main className="flex-1">
