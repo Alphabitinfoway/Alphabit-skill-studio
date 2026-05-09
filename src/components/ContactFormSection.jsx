@@ -27,7 +27,7 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-xl font-semibold mb-1 text-gray-900">Our Location</h3>
                                     <p className="text-gray-600 text-[15px] leading-relaxed">
-                                        813 - Runway Heights, Ayodhya Chowk,
+                                        701 - Runway Heights, Ayodhya Chowk,
                                         150 Ft Ring Road, Rajkot - 360006
                                     </p>
                                 </div>
@@ -40,7 +40,7 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-xl font-semibold mb-1 text-gray-900">Email Us</h3>
                                     <p className="text-gray-600 text-[15px] leading-relaxed">
-                                        help@skillstudio.com
+                                        alphabitskillstudio@gmail.com
 
                                     </p>
                                 </div>
@@ -53,7 +53,8 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-xl font-semibold mb-1 text-gray-900">Call Us</h3>
                                     <p className="text-gray-600 text-[15px] leading-relaxed">
-                                        +91 97140 40004 <br />
+                                        +91 9409207327 <br />
+                                        +91 8866549495 <br/>
                                         Mon-Fri, 9am-6pm
                                     </p>
                                 </div>
