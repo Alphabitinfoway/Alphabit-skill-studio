@@ -65,19 +65,24 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="lg:col-span-2 whitespace-nowrap">
+          <div className="lg:col-span-2 whitespace-nowrap lg:-ml-15">{/**lg:-ml-15 to move the text to left */}
             <h4 className="text-white text-[15px] font-semibold mb-6">
               Contact Us
             </h4>
             <ul className="space-y-4 text-[13px] lg:text-[14px]">
               <li>
                 <a href="tel:+911234567890" className="hover:text-white transition-colors">
-                  +91 12345 67890
+                  +91 9409207327
                 </a>
               </li>
               <li>
-                <a href="mailto:help@skillstudio.com" className="hover:text-white transition-colors">
-                  help@skillstudio.com
+                <a href="tel:+911234567890" className="hover:text-white transition-colors">
+                  +91 88665 49495
+                </a>
+              </li>
+              <li>
+                <a href="mailto:alphabitskillstudio@gmail.com" className="hover:text-white transition-colors">
+                  alphabitskillstudio@gmail.com
                 </a>
               </li>
             </ul>
