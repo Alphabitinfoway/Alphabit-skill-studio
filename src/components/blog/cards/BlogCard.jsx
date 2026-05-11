@@ -20,24 +20,13 @@ export default function BlogCard({ post }) {
           {post.excerpt}
         </p>
 
-        {/* Read More link — diagonal arrow ↗ */}
+        {/* Read More link — grey arrow image */}
         <span className="inline-flex items-center gap-2 text-[14px] font-medium text-[#555555] group-hover:text-[#7143FE] transition-colors duration-200">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="flex-shrink-0"
-          >
-            <path
-              d="M2 12L12 2M12 2H5M12 2V9"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <img
+            src="/greyArrow.png"
+            alt="arrow"
+            className="w-[20px] h-[20px] object-contain flex-shrink-0"
+          />
           Read More
         </span>
       </div>

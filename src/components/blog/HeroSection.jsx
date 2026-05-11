@@ -6,11 +6,11 @@ export default function HeroSection() {
         {/* Left: Text Content */}
         <div className="flex-[1.2] space-y-6 z-10">
           <h1 className="text-5xl md:text-6xl font-medium text-[#171717] leading-[1.15] font-cabinet tracking-tight">
-            <span className="text-[#FF5722] font-pp italic font-normal text-6xl md:text-7xl ">Repository</span>{" "}
+            <span className="text-[#FF5722] font-pp italic font-medium text-6xl md:text-7xl ">Repository</span>{" "}
             for Technical <br />
             Analysis &amp; Strategy
           </h1>
-          <p className="text-[#666666] text-[17px] leading-relaxed w-5/6">
+          <p className="text-[#666666] text-[22px] leading-relaxed w-5/6">
             Navigate our archive of advanced development workflows, modern UI/UX design methodologies, and strict corporate placement protocols.
           </p>
         </div>
