@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Alphabit Skill Studio | Master Modern Skills",
-  description: "Alphabit Skill Studio provides expert-led courses, real-world projects, and a vibrant community to elevate your tech and design skills.",
+  title: "Alphabit Skill | Master Modern Skills",
+  description: "Alphabit Skill provides expert-led courses, real-world projects, and a vibrant community to elevate your tech and design skills.",
 };
 
 export default function RootLayout({ children }) {

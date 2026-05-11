@@ -18,7 +18,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-[15px] leading-relaxed text-[#7A7A7A] max-w-sm">
-              At Alphabit Skill Studio, we go beyond traditional learning.
+              At Alphabit Skill, we go beyond traditional learning.
               We are a dedicated IT training hub designed to transform
               passionate individuals into industry-ready professionals.
             </p>
@@ -94,7 +94,7 @@ export default function Footer() {
       <div className="w-full border-t border-white/10 mt-10">
         <div className=" mx-auto py-8 px-6 lg:px-20 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-[14px] lg:text-[16px] text-[#7A7A7A]">
-            © {currentYear} Alphabit Skill Studio. All rights reserved.
+            © {currentYear} Alphabit Skill. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-[14px] lg:text-[16px] text-[#7A7A7A]">

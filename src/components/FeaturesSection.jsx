@@ -32,7 +32,7 @@ export default function FeaturesSection() {
                                 </span>
                                 Choose
                                 <br />
-                                Alphabit Skill Studio
+                                Alphabit Skill
                             </h2>
 
                             {/* Question Mark Div */}
@@ -57,7 +57,7 @@ export default function FeaturesSection() {
                         </div>
 
                         <p className="mt-6 text-[15px] text-gray-500 leading-[1.7]">
-                         At Alphabit Skill Studio, we go beyond traditional learning. We are a dedicated IT training hub designed to transform passionate individuals into industry-ready professionals. By focusing on high-demand technologies—from core programming to artificial intelligence and cyber security—we provide the hands-on experience and expert mentorship needed to thrive in the modern tech landscape.
+                         At Alphabit Skill, we go beyond traditional learning. We are a dedicated IT training hub designed to transform passionate individuals into industry-ready professionals. By focusing on high-demand technologies—from core programming to artificial intelligence and cyber security—we provide the hands-on experience and expert mentorship needed to thrive in the modern tech landscape.
                         </p>
 
                         <button className="mt-8 flex items-center gap-2 bg-[#6E42F8] hover:bg-[#5c33dd] text-white px-6 py-3 rounded-full text-[14px] font-semibold transition">

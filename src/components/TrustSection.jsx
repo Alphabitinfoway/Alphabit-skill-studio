@@ -76,7 +76,7 @@ export default function TrustSection() {
             {/* Bullet Points */}
             <div className="flex flex-col gap-5">
               {[
-                "Alphabit Skill Studio is recognized for transforming ambitious students into highly capable IT professionals, bridging the gap between academic learning and industry demands.",
+                "Alphabit Skill is recognized for transforming ambitious students into highly capable IT professionals, bridging the gap between academic learning and industry demands.",
                 "With a rapidly expanding alumni network and active tie-ups with 300+ hiring enterprises, we focus on delivering actual career results, not marketing hype.",
                 "Our core philosophy is simple: provide transparent, hands-on technical education that directly translates into high-value professional roles.",
               ].map((text, i) => (
