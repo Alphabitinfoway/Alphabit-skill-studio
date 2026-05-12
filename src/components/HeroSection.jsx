@@ -164,7 +164,7 @@ export default function HeroSection() {
                                     transition: "transform 0.1s ease-out"
                                 }}
                             >
-                                <Image src="/Frame.png" alt="Arrow" width={44} height={46} />
+                                <Image src="/purpleArrow.png" alt="Arrow" width={44} height={46} />
                             </div>
 
                             {/* Spinning Text SVG */}
