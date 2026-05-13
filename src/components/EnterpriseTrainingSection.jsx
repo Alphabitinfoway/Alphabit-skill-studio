@@ -8,26 +8,31 @@ const trainingData = [
     stat: "50+",
     title: "Specialized Training Modules",
     description: "Targeted education in modern programming, UI design, and data security, engineered specifically to map to current job market requirements.",
+    image: "/specializedTrainingModules.png",
   },
   {
     stat: "200+",
     title: "Industry and Government Endorsements",
     description: "Holding formal validations from key skill development authorities, guaranteeing your technical training meets rigorous national standards.",
+    image: "/industryAndGovernmentEndorsements.png",
   },
   {
     stat: "100%",
     title: "Applied Technical Execution",
     description: "Direct, mentor-led execution from the first session. You will build, deploy, and secure actual projects rather than memorizing concepts.",
+    image: "/appliedTechnicalExecution.png",
   },
   {
     stat: "300+",
     title: "Active Placement Tie-Ups",
     description: "A dedicated corporate relations pipeline that connects verified tech talent directly with companies actively seeking qualified developers and analysts.",
+    image: "/activePlacementTie-Ups.png",
   },
   {
     stat: "03+",
     title: "Dedicated Tech Campuses",
     description: "Physical infrastructure built for focused technical development, offering seamless access to high-end systems and collaborative environments.",
+    image: "/dedicatedTechCampuses.png",
   },
 ];
 
@@ -83,7 +88,7 @@ export default function EnterpriseTrainingSection() {
   );
 }
 
-function Card({ stat, title, description }) {
+function Card({ stat, title, description, image }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -96,17 +101,25 @@ function Card({ stat, title, description }) {
       {/* Image area + stat overlap wrapper */}
       {/* Extra mb accounts for the stat number that hangs below the image */}
       <div className="relative w-full mb-14">
-        {/* Grey Image Area — fixed height so all cards look the same */}
+        {/* Image Area — fixed height so all cards look the same */}
         <div
-          className="w-full bg-[#D9D9D9] rounded-[28px] overflow-hidden"
+          className="w-full rounded-[28px] overflow-hidden"
           style={{ height: "200px" }}
         >
-          <div className="absolute inset-0 " />
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-[#D9D9D9]" />
+          )}
         </div>
 
-        {/* Stat Number — bottom-left, half in / half out of grey card */}
+        {/* Stat Number — bottom-left, half in / half out of image card */}
         <div
-          className="absolute bottom-0 left-4 translate-y-1/2 z-10 text-[#7143FE] font-extrabold leading-none font-Cabinet Grotesk"
+          className="absolute bottom-0 left-4 translate-y-1/2 z-10 text-[#7143FE] font-extrabold leading-none"
           style={{
             fontSize: "52px",
             fontWeight: "700",
@@ -128,6 +141,5 @@ function Card({ stat, title, description }) {
         </p>
       </div>
     </motion.div>
-
   );
 }
