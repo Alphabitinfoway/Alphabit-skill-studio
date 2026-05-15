@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo + Description */}
           <div className="lg:col-span-4 flex flex-col gap-5">
             <Link href="/" className="flex items-center gap-2">
-              <img src="/flogo.png" alt="logo" className="h-10 lg:h-12" />
+              <img src="/Alphabit Skill Logo/Logo 1/2.png" alt="logo" className="h-10 lg:h-12" />
             </Link>
 
             <p className="text-[15px] leading-relaxed text-[#7A7A7A] max-w-sm">

@@ -39,7 +39,7 @@ const trainingData = [
 export default function EnterpriseTrainingSection() {
   return (
     <section 
-      className="relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-48 pb-24 px-6 md:px-12 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
       style={{
         clipPath: "ellipse(110% 100% at 50% 100%)",
         marginTop: "80px"
@@ -51,15 +51,15 @@ export default function EnterpriseTrainingSection() {
       <div className="max-w-[1200px] mx-auto relative z-10">
 
         {/* HEADING */}
-        <div className="text-center mb-12 px-4">
+        <div className="text-center mb-24 px-4">
           <h2
-            className="text-white font-bold leading-[1.2] font-cabinet tracking-tight"
+            className="text-white font-semibold leading-[1.2] font-cabinet tracking-tight"
             style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
           >
             Engineer Your Tech{" "}
             <span
               className="text-[#FF5622] italic font-normal inline-block"
-              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.25em" }}
+              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.4em" }}
             >
               Career
             </span>{" "}
@@ -122,7 +122,7 @@ function Card({ stat, title, description, image }) {
           className="absolute bottom-0 left-4 translate-y-1/2 z-10 text-[#7143FE] font-extrabold leading-none"
           style={{
             fontSize: "52px",
-            fontWeight: "700",
+            fontWeight: "800",
             WebkitTextStroke: "1.5px white",
             textShadow: "0 2px 6px rgba(0,0,0,0.15)"
           }}
