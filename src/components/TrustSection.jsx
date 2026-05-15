@@ -155,7 +155,7 @@ export default function TrustSection() {
 
                     {/* Arrow */}
                     <div>
-                      <Image src="/frame.png" alt="Arrow" width={46} height={46} />
+                      <Image src="/purpleArrow.png" alt="Arrow" width={46} height={46} />
                     </div>
 
                     {/* Spinning Text */}
