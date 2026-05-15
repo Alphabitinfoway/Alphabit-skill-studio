@@ -48,7 +48,7 @@ export default function EnterpriseTrainingSection() {
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto relative z-10">
 
         {/* HEADING */}
         <div className="text-center mb-24 px-4">
@@ -69,18 +69,28 @@ export default function EnterpriseTrainingSection() {
           </h2>
         </div>
 
-        {/* CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          {trainingData.slice(0, 3).map((item, index) => (
-            <Card key={index} {...item} />
-          ))}
-        </div>
+        {/* CARDS GRID (Unified for perfect alignment) */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+          {trainingData.map((item, index) => {
+            const isTopRow = index < 3;
+            
+            let gridClasses = "";
+            if (isTopRow) {
+              gridClasses = "md:col-span-3 lg:col-span-2";
+            } else {
+              gridClasses = "md:col-span-3 lg:col-span-3";
+              // Force bottom row to start on a new line at the md breakpoint
+              if (index === 3) {
+                gridClasses += " md:col-start-1 lg:col-auto";
+              }
+            }
 
-        {/* BOTTOM ROW (Centered 2 cards) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {trainingData.slice(3, 5).map((item, index) => (
-            <Card key={index} {...item} />
-          ))}
+            return (
+              <div key={index} className={`w-full h-full ${gridClasses}`}>
+                <Card {...item} isLarge={!isTopRow} />
+              </div>
+            );
+          })}
         </div>
 
       </div>
@@ -88,7 +98,7 @@ export default function EnterpriseTrainingSection() {
   );
 }
 
-function Card({ stat, title, description, image }) {
+function Card({ stat, title, description, image, isLarge }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -100,11 +110,11 @@ function Card({ stat, title, description, image }) {
     >
       {/* Image area + stat overlap wrapper */}
       {/* Extra mb accounts for the stat number that hangs below the image */}
-      <div className="relative w-full mb-14">
-        {/* Image Area — fixed height so all cards look the same */}
+      <div className="relative w-full mb-8">
+        {/* Image Area — fixed height so all cards look the same */}  
         <div
           className="w-full rounded-[28px] overflow-hidden"
-          style={{ height: "200px" }}
+          style={{ height: isLarge ? "220px" : "160px" }}
         >
           {image ? (
             <img
