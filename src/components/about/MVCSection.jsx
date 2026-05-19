@@ -9,6 +9,7 @@ const ArrowIcon = () => (
       src="/black arrow.png"
       alt="Arrow"
       fill
+      sizes="16px"
       className="object-contain"
     />
   </div>

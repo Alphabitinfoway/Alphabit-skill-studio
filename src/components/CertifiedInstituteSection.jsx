@@ -16,7 +16,7 @@ export default function CertifiedInstituteSection() {
                             className="text-[#FF5622] font-normal italic"
                             style={{
                                 fontFamily: "'PP Editorial New', serif",
-                                fontSize: "1.3em",
+                                fontSize: "1.5em",
                                 marginLeft: "6px",
                                 marginRight: "6px",
                                 verticalAlign: "baseline",

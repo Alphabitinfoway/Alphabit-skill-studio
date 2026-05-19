@@ -7,8 +7,7 @@
 
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('https://db.onlinewebfonts.com/t/5d2ff175d78709fdf190f84ad27fd94c.woff2') format('woff2'),
-    url('https://db.onlinewebfonts.com/t/5d2ff175d78709fdf190f84ad27fd94c.woff') format('woff');
+  src: local('PP Editorial New');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: 'PP Editorial New';
-  src: url('https://db.onlinewebfonts.com/t/957e05fc8dfa89047192cd2efcfebbc6.woff2') format('woff2'),
-    url('https://db.onlinewebfonts.com/t/957e05fc8dfa89047192cd2efcfebbc6.woff') format('woff');
+  src: local('PP Editorial New Italic'), local('PP Editorial New');
   font-weight: normal;
   font-style: italic;
   font-display: swap;

@@ -39,7 +39,7 @@ const trainingData = [
 export default function EnterpriseTrainingSection() {
   return (
     <section 
-      className="relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-48 pb-24 px-6 md:px-12 overflow-hidden"
+      className="relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
       style={{
         clipPath: "ellipse(110% 100% at 50% 100%)",
         marginTop: "80px"
@@ -48,18 +48,18 @@ export default function EnterpriseTrainingSection() {
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto relative z-10">
 
         {/* HEADING */}
-        <div className="text-center mb-12 px-4">
+        <div className="text-center mb-24 px-4">
           <h2
-            className="text-white font-bold leading-[1.2] font-cabinet tracking-tight"
+            className="text-white font-semibold leading-[1.2] font-cabinet tracking-tight"
             style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
           >
             Engineer Your Tech{" "}
             <span
               className="text-[#FF5622] italic font-normal inline-block"
-              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.25em" }}
+              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.4em" }}
             >
               Career
             </span>{" "}
@@ -69,18 +69,28 @@ export default function EnterpriseTrainingSection() {
           </h2>
         </div>
 
-        {/* CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          {trainingData.slice(0, 3).map((item, index) => (
-            <Card key={index} {...item} />
-          ))}
-        </div>
+        {/* CARDS GRID (Unified for perfect alignment) */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+          {trainingData.map((item, index) => {
+            const isTopRow = index < 3;
+            
+            let gridClasses = "";
+            if (isTopRow) {
+              gridClasses = "md:col-span-3 lg:col-span-2";
+            } else {
+              gridClasses = "md:col-span-3 lg:col-span-3";
+              // Force bottom row to start on a new line at the md breakpoint
+              if (index === 3) {
+                gridClasses += " md:col-start-1 lg:col-auto";
+              }
+            }
 
-        {/* BOTTOM ROW (Centered 2 cards) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {trainingData.slice(3, 5).map((item, index) => (
-            <Card key={index} {...item} />
-          ))}
+            return (
+              <div key={index} className={`w-full h-full ${gridClasses}`}>
+                <Card {...item} isLarge={!isTopRow} />
+              </div>
+            );
+          })}
         </div>
 
       </div>
@@ -88,7 +98,7 @@ export default function EnterpriseTrainingSection() {
   );
 }
 
-function Card({ stat, title, description, image }) {
+function Card({ stat, title, description, image, isLarge }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -100,11 +110,11 @@ function Card({ stat, title, description, image }) {
     >
       {/* Image area + stat overlap wrapper */}
       {/* Extra mb accounts for the stat number that hangs below the image */}
-      <div className="relative w-full mb-14">
-        {/* Image Area — fixed height so all cards look the same */}
+      <div className="relative w-full mb-8">
+        {/* Image Area — fixed height so all cards look the same */}  
         <div
           className="w-full rounded-[28px] overflow-hidden"
-          style={{ height: "200px" }}
+          style={{ height: isLarge ? "220px" : "160px" }}
         >
           {image ? (
             <img
@@ -122,7 +132,7 @@ function Card({ stat, title, description, image }) {
           className="absolute bottom-0 left-4 translate-y-1/2 z-10 text-[#7143FE] font-extrabold leading-none"
           style={{
             fontSize: "52px",
-            fontWeight: "700",
+            fontWeight: "800",
             WebkitTextStroke: "1.5px white",
             textShadow: "0 2px 6px rgba(0,0,0,0.15)"
           }}
