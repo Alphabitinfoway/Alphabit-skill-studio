@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 export default function BlogCard({ post }) {
   return (
-    <div className="group bg-white rounded-[24px] shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer p-3">
-
+    <Link
+      href={`/blog/${post.id}`}
+      className="group bg-white rounded-[24px] shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer p-3 block"
+    >
       {/* Image — padded inside card with its own rounded corners */}
       <div className="w-[calc(100%-16px)] mx-auto h-[180px] overflow-hidden rounded-[16px] bg-[#D9D9D9]">
         <img
@@ -30,7 +34,6 @@ export default function BlogCard({ post }) {
           Read More
         </span>
       </div>
-
-    </div>
+    </Link>
   );
 }
