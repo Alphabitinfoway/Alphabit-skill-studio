@@ -45,10 +45,10 @@ function SidebarCard({ post }) {
 function StepBlock({ step }) {
   return (
     <div className="mb-10">
-      <h2 className="text-[22px] sm:text-[24px] font-bold text-[#111] leading-[1.3] mb-5"
+      <h1 className="text-[22px] sm:text-[24px] font-bold text-[#111] leading-[1.3] mb-5"
         style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}>
         {step.heading}
-      </h2>
+      </h1>
       <div className="space-y-4">
         {step.paragraphs.map((item, i) => {
           /* bullet list */

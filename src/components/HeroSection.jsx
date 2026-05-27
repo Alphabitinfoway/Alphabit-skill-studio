@@ -89,7 +89,7 @@ export default function HeroSection() {
                                 variants={itemVariants}
                                 className="flex flex-col md:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-[18px] text-[36px] sm:text-[42px] md:text-[66px] lg:text-[76px] leading-none"
                             >
-                                <span className="mb-1 md:mb-0">Build</span>
+                                <h1 className="mb-1 md:mb-0">Build</h1>
                                 <div className="relative w-[130px] sm:w-[150px] md:w-[180px] h-[45px] sm:h-[55px] md:h-[100px] rounded-full overflow-hidden flex-shrink-0 shadow-inner">
                                     <Image
                                         src="/Home Page/Header/1.webp"
@@ -100,7 +100,7 @@ export default function HeroSection() {
                                         priority
                                     />
                                 </div>
-                                <span className="mt-1 md:mt-0">Skills That</span>
+                                <h1 className="mt-1 md:mt-0">Skills That</h1>
                             </motion.div>
 
                             {/* Row 2 */}
@@ -108,7 +108,7 @@ export default function HeroSection() {
                                 variants={itemVariants}
                                 className="flex flex-col md:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-[18px] text-[36px] sm:text-[42px] md:text-[66px] lg:text-[76px] leading-none mt-3 sm:mt-[18px]"
                             >
-                                <span className="mb-1 md:mb-0">Build Your</span>
+                                <h1 className="mb-1 md:mb-0">Build Your</h1>
                                 <div className="relative w-[130px] sm:w-[150px] md:w-[180px] h-[45px] sm:h-[55px] md:h-[100px] rounded-full overflow-hidden flex-shrink-0 shadow-inner">
                                     <Image
                                         src="/Home Page/Header/2.webp"
@@ -119,9 +119,9 @@ export default function HeroSection() {
                                         priority
                                     />
                                 </div>
-                                <span className="font-serif italic text-[#FF5622] font-[500] inline-block md:ml-1 mt-1 md:mt-0">
+                                <h1 className="font-serif italic text-[#FF5622] font-[500] inline-block md:ml-1 mt-1 md:mt-0">
                                     Future.
-                                </span>
+                                </h1>
                             </motion.div>
 
                         </div>

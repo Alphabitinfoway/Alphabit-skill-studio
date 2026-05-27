@@ -7,7 +7,7 @@ export default function HeroSection() {
 
         {/* ── LEFT: Text Content ── */}
         <div className="flex-[1.8] space-y-6 z-10">
-          <h2
+          <h1
             className="font-medium text-[#171717] leading-[1.15] font-cabinet tracking-tight"
             style={{ fontSize: "clamp(36px, 5vw, 62px)" }}
           >
@@ -20,7 +20,7 @@ export default function HeroSection() {
             Tech Skills into
             <br />
             Corporate Careers
-          </h2>
+          </h1>
 
           <p className="text-[#666666] text-[16px] leading-relaxed max-w-[600px]">
             Alphabit Skill focuses purely on execution and employment. We engineer
