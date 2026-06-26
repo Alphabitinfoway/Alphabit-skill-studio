@@ -55,7 +55,7 @@ export default function NewsSection() {
                     color: "#FF5622"
                   }}
                 >
-                  Skill Studio's
+                  Skill
                 </span>
               </div>
               <span
@@ -74,11 +74,11 @@ export default function NewsSection() {
 
           {/* Navigation Arrows */}
           <div className="hidden md:flex gap-4 mb-4">
-            <button className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center transition-all hover:bg-black hover:text-white group">
-              <MoveLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+            <button className="w-12 h-12 rounded-full border border-black/50 flex items-center justify-center transition-all hover:bg-white hover:text-white group">
+              <img src="black arrow.png" alt="arrow" className="w-7 rotate-225" />
             </button>
-            <button className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center transition-all hover:bg-black hover:text-white group">
-              <MoveRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            <button className="w-12 h-12 rounded-full border border-black/50 flex items-center justify-center transition-all hover:bg-white hover:text-white group">
+              <img src="black arrow.png" alt="arrow" className="w-7 rotate-45" />
             </button>
           </div>
         </div>

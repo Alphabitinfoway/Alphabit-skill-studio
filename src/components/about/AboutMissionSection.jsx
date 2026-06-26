@@ -15,7 +15,7 @@ export default function AboutMissionSection() {
           >
             <Image
               src="/Home Page/About/1.webp"
-              alt="Alphabit Skill Studio – modern training campus"
+              alt="Alphabit Skill – modern training campus"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 60vw"
@@ -47,7 +47,7 @@ export default function AboutMissionSection() {
           <div className="space-y-4">
             <p className="text-[#555555] leading-[1.75]" style={{ fontSize: "clamp(13.5px, 1.1vw, 15px)" }}>
               The technological landscape is evolving faster than traditional academic curricula can adapt.
-              Alphabit Skill Studio acts as a real-time bridge to the future of IT, focusing intensely on
+              Alphabit Skill acts as a real-time bridge to the future of IT, focusing intensely on
               the frameworks and logical architectures driving today's top tech enterprises. We cultivate
               specialized expertise in high-impact domains, including Artificial Intelligence, Cyber
               Security, Advanced Full-Stack Development, and Multimedia Design.

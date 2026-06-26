@@ -61,7 +61,7 @@ export default function FeaturesSection() {
                         </p>
 
                         <button className="mt-8 flex items-center gap-2 bg-[#6E42F8] hover:bg-[#5c33dd] text-white px-6 py-3 rounded-full text-[14px] font-semibold transition">
-                            <ArrowUpRight size={18} strokeWidth={2.5} />
+                            <img src="whiteArrow.png" alt="arrow" className="w-6" />
                             Join the Studio
                         </button>
                     </div>

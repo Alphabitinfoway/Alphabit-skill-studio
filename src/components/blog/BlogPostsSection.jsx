@@ -44,7 +44,8 @@ export default function BlogPostsSection() {
             onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             className="w-9 h-9 rounded-full bg-white border border-[#E0E0E0] flex items-center justify-center text-[#555] hover:border-[#7143FE] hover:text-[#7143FE] transition-all duration-200"
           >
-            <MoveRight size={15} />
+            
+            <img src="greyArrow.png" alt="arrow"  className="w-5 rotate-45"/>
           </button>
         </div>
 
