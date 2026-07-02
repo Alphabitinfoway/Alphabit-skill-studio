@@ -47,9 +47,7 @@ export default function RolesSection() {
               background: `linear-gradient(170deg, rgba(255,255,255,0.70) 0%, rgba(200,180,255,0.35) 45%, rgba(124,58,237,0.20) 100%)`,
               boxShadow: `
                 0 4px 20px rgba(124,58,237,0.20),
-                0 1.5px 5px rgba(124,58,237,0.12),
-                inset 0 1.5px 0 rgba(255,255,255,0.95),
-                inset 0 -1px 0 rgba(124,58,237,0.10)
+                0 1.5px 5px rgba(124,58,237,0.12)
               `,
               backdropFilter: "blur(18px) saturate(2)",
               WebkitBackdropFilter: "blur(18px) saturate(2)",

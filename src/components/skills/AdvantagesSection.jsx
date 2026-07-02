@@ -2,44 +2,44 @@
 
 import React from "react";
 
-const capabilities = [
+const advantages = [
   {
-    icon: "/icon.svg",
-    title: "Limited Students Batch",
+    icon: "/skill/learnbybuilding.svg",
+    title: "Learn by Building",
   },
   {
-    icon: "/icon1.svg",
-    title: "Personalized Attention",
+    icon: "/skill/mentorshipthatmatters.svg",
+    title: "Mentorship That Matters",
   },
   {
-    icon: "/icon2.svg",
-    title: "Highly Qualified Teachers",
+    icon: "/skill/industrydrivencurriculum.svg",
+    title: "Industry-Driven Curriculum",
   },
   {
-    icon: "/icon123.svg",
-    title: "Flexible Batch Timings",
+    icon: "/skill/carreracceleration.svg",
+    title: "Career Acceleration",
   },
   {
-    icon: "/icon3.svg",
-    title: "Interactive Learning",
+    icon: "/skill/flexiblelearningpaths.svg",
+    title: "Flexible Learning Paths",
   },
   {
-    icon: "/icon4.svg",
-    title: "Live Projects",
+    icon: "/skill/realclientprojects.svg",
+    title: "Real Client Projects",
   },
   {
-    icon: "/icon5.svg",
-    title: "Career Support",
+    icon: "/skill/futurereadyskills.svg",
+    title: "Future Ready Skills",
   },
   {
-    icon: "/icon6.svg",
-    title: "Job Oriented Training",
+    icon: "/skill/lifetimecommunitysupport.svg",
+    title: "Lifetime Community Support",
   },
 ];
 
-export default function CapabilitiesSection() {
+export default function AdvantagesSection() {
   return (
-    <section id="capabilities" className="w-full bg-[#F5F5F5] py-20 md:py-32 px-6 lg:px-12 overflow-hidden">
+    <section id="advantage" className="w-full bg-[#F5F5F5] py-20 md:py-32 px-6 lg:px-12 overflow-hidden">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-16 gap-x-8 lg:gap-x-12 items-start">
         
         {/* Header Area - Spans 2 columns on large screens */}
@@ -52,7 +52,7 @@ export default function CapabilitiesSection() {
               fontWeight: 800,
             }}
           >
-            <span>Core Program</span>
+            <span>The Alphabit</span>
             <span
               style={{
                 fontFamily: "'PP Editorial New', serif",
@@ -63,7 +63,7 @@ export default function CapabilitiesSection() {
                 lineHeight: 1,
               }}
             >
-              Capabilities
+              Advantage
             </span>
           </h2>
           <p
@@ -77,20 +77,20 @@ export default function CapabilitiesSection() {
         </div>
 
         {/* First Row Items (Remaining 3 columns on large screens) */}
-        {capabilities.slice(0, 3).map((item, index) => (
-          <CapabilityItem key={index} icon={item.icon} title={item.title} />
+        {advantages.slice(0, 3).map((item, index) => (
+          <AdvantageItem key={index} icon={item.icon} title={item.title} />
         ))}
 
         {/* Second Row Items (All 5 columns on large screens) */}
-        {capabilities.slice(3).map((item, index) => (
-          <CapabilityItem key={index} icon={item.icon} title={item.title} />
+        {advantages.slice(3).map((item, index) => (
+          <AdvantageItem key={index} icon={item.icon} title={item.title} />
         ))}
       </div>
     </section>
   );
 }
 
-function CapabilityItem({ icon, title }) {
+function AdvantageItem({ icon, title }) {
   return (
     <div className="flex flex-row items-center gap-5 group cursor-pointer lg:whitespace-normal">
       <div className="relative flex-shrink-0 w-[64px] h-[64px] lg:w-[72px] lg:h-[72px] rounded-full bg-transparent border border-[#7143FE] flex items-center justify-center text-[#7143FE] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[#7143FE] group-hover:border-transparent group-hover:shadow-[0_15px_30px_rgba(113,67,254,0.2)] group-hover:-translate-y-1">
