@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { toSlug } from "@/data/skills";
 
 const skillCategories = {
     "IT Skills": [
@@ -65,7 +67,7 @@ const skillCategories = {
             description: "Learn Ruby on Rails, Odoo ERP, and Go language to build efficient enterprise applications and APIs.",
             image: "/skill/ITskills/ror_odoo_golang.png"
         },
-        
+
     ],
     "Soft Skills": [
         {
@@ -135,7 +137,10 @@ const skillCategories = {
 
 function SkillCard({ image, title, description }) {
     return (
-        <div className="bg-white rounded-[28px] pt-5 pb-4 px-6 lg:px-7 relative shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+        <Link
+            href={`/skills/${toSlug(title)}`}
+            className="group bg-white rounded-[28px] pt-5 pb-4 px-6 lg:px-7 relative shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer"
+        >
             {/* Icon - Floating without BG */}
             <div className="absolute top-[-40px] left-8 w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-start overflow-hidden">
                 <Image
@@ -147,13 +152,16 @@ function SkillCard({ image, title, description }) {
                 />
             </div>
 
-            <h3 className="font-[700] text-[18px] text-[#111] mt-5 mb-1.5 leading-snug">
+            <h3 className="font-[700] text-[18px] text-[#111] mt-5 mb-1.5 leading-snug group-hover:text-[#6E42F8] transition-colors duration-200">
                 {title}
             </h3>
             <p className="text-[14px] text-gray-500 font-[500] leading-[1.5] flex-grow">
                 {description}
             </p>
-        </div>
+            <span className="mt-3 text-[13px] font-semibold text-[#6E42F8] opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center gap-1">
+                View Course →
+            </span>
+        </Link>
     );
 }
 
@@ -208,11 +216,10 @@ export default function LearningPathsSection() {
                         <button
                             key={category}
                             onClick={() => selectTab(category)}
-                            className={`px-6 py-2.5 rounded-full text-[15px] font-semibold transition-all duration-300 ${
-                                isActive
+                            className={`px-6 py-2.5 rounded-full text-[15px] font-semibold transition-all duration-300 ${isActive
                                     ? "bg-[#FF5622] text-white shadow-md"
                                     : "border border-white/30 text-white hover:border-white hover:bg-white/10"
-                            }`}
+                                }`}
                         >
                             {category}
                         </button>
@@ -266,11 +273,10 @@ export default function LearningPathsSection() {
                             <button
                                 key={idx}
                                 onClick={() => setPageIndex(idx)}
-                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                    pageIndex === idx
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${pageIndex === idx
                                         ? "bg-[#FF5622] w-6"
                                         : "bg-white/40 hover:bg-white/70"
-                                }`}
+                                    }`}
                                 aria-label={`Go to page ${idx + 1}`}
                             />
                         ))}

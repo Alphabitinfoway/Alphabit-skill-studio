@@ -5,6 +5,7 @@ import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { toSlug } from "@/data/skills";
 
 /* ─── Dropdown data ──────────────────────────────────────────────── */
 const skillsDropdown = {
@@ -171,7 +172,7 @@ function SkillsMegaDropdown() {
                                 {active?.items.map((item) => (
                                     <Link
                                         key={item}
-                                        href={`/skills/${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                                        href={`/skills/${toSlug(item)}`}
                                         className="group flex items-center gap-2 px-3 py-2 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all duration-150"
                                         style={{
                                             background: "rgba(210,210,218,0.45)",
@@ -432,7 +433,7 @@ export default function Navbar() {
                                                                     {cat.items.map((item) => (
                                                                         <Link
                                                                             key={item}
-                                                                            href={`/skills/${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                                                                            href={`/skills/${toSlug(item)}`}
                                                                             onClick={() => setMobileMenuOpen(false)}
                                                                             className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
                                                                             style={{
