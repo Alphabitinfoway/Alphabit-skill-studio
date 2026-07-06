@@ -31,8 +31,9 @@ export default function HeroSection() {
 
           <button
             style={{ backgroundColor: "#7143FE" }}
-            className="text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-3 text-[16px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03]"
+            className="text-white px-4 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-2 text-[16px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03]"
           >
+            <img src="whiteArrow.png" alt="arrow" className="w-6" />
             Join the Studio
           </button>
         </div>

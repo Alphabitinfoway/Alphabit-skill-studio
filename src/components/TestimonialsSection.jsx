@@ -108,15 +108,15 @@ export default function TestimonialsSection() {
                     <div className="flex gap-4 pb-4 pr-2 items-end">
                         <button
                             onClick={prevTestimonial}
-                            className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/30 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
+                            className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
                         >
-                            <ArrowLeft size={20} strokeWidth={1.5} className="text-[#111]" />
+                            <img src="black arrow.png" alt="arrow" className="w-7 rotate-225" />
                         </button>
                         <button
                             onClick={nextTestimonial}
-                            className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/30 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
+                            className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
                         >
-                            <ArrowRight size={20} strokeWidth={1.5} className="text-[#111]" />
+                            <img src="black arrow.png" alt="arrow" className="w-7 rotate-45" />
                         </button>
                     </div>
                 </div>

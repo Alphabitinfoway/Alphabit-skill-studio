@@ -18,7 +18,7 @@ export default function AdvantagesSection() {
   ];
 
   return (
-    <section className="w-full bg-[#6B46C1] py-16 px-4">
+    <section className="w-full bg-[#6E42F8] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-3xl md:text-4xl font-medium text-white mb-16 font-cabinet">
           Operational <span className="text-[#FF5722] font-pp text-5xl md:text-6xl italic font-normal">Advantages</span> for Our Talent
