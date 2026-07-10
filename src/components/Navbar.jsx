@@ -225,10 +225,12 @@ function SkillsMegaDropdown() {
 
 /* ─── Navbar ─────────────────────────────────────────────────────── */
 export default function Navbar() {
+    const pathname = usePathname();
+    if (pathname === "/skills/curriculum") return null;
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [skillsOpen, setSkillsOpen] = useState(false);
     const [mobileSkillsOpen, setMobileSkillsOpen] = useState(false);
-    const pathname = usePathname();
     const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const linkRefs = useRef([]);
     const dropdownRef = useRef(null);

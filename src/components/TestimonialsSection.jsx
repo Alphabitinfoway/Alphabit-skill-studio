@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
     }, [currentIndex]);
 
     return (
-        <section className="relative w-full bg-[#f4f4f6] pb-32 overflow-hidden z-10">
+        <section className="relative w-full bg-[#F5F5F5] pb-32 overflow-hidden z-10">
             {/* The background curve transition */}
             <div
                 className="absolute top-0 left-0 w-full h-[580px]"
@@ -110,13 +110,13 @@ export default function TestimonialsSection() {
                             onClick={prevTestimonial}
                             className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
                         >
-                            <img src="black arrow.png" alt="arrow" className="w-7 rotate-225" />
+                            <img src="/black arrow.png" alt="arrow" className="w-7 rotate-225" />
                         </button>
                         <button
                             onClick={nextTestimonial}
                             className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group"
                         >
-                            <img src="black arrow.png" alt="arrow" className="w-7 rotate-45" />
+                            <img src="/black arrow.png" alt="arrow" className="w-7 rotate-45" />
                         </button>
                     </div>
                 </div>

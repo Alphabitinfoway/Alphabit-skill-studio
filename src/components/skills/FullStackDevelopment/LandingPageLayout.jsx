@@ -30,3 +30,5 @@ export default function LandingPageLayout() {
     </section>
   );
 }
+
+
