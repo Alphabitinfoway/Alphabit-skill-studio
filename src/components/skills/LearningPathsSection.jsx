@@ -188,7 +188,7 @@ export default function LearningPathsSection() {
     const visibleSkills = skills.slice(pageIndex * 6, (pageIndex * 6) + 6);
 
     return (
-        <section className="w-full bg-[#6E42F8] py-12 md:py-[50px] font-cabinet relative px-6 md:px-16 lg:px-24">
+        <section id="learning-paths" className="w-full bg-[#6E42F8] py-12 md:py-[50px] font-cabinet relative px-6 md:px-16 lg:px-24">
             {/* Title Section */}
             <div className="flex flex-col items-center justify-center text-center w-full mb-6">
                 <h2 className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] leading-[1.35] text-white font-[600]">

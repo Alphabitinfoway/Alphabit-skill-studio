@@ -30,6 +30,12 @@ export default function HeroSection() {
 
                         <div className="mt-8">
                             <motion.button
+                                onClick={() => {
+                                    const element = document.getElementById("learning-paths");
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: "smooth" });
+                                    }
+                                }}
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.97 }}
                                 className="flex items-center gap-2 px-6 py-[13px] bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full font-cabinet font-medium text-[13.5px] transition-all duration-300 shadow-md shadow-[#7143fe]/10 hover:shadow-[#7143fe]/20 cursor-pointer"
