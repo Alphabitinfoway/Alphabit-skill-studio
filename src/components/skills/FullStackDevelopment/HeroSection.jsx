@@ -63,7 +63,7 @@ export default function HeroSection() {
                             <span className="py-1">Book Free Demo Class</span>
                         </button>
                         <Link
-                            href="tel:+91"
+                            href="tel:+919409207327"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full text-[14px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/20"
                             style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                         >
