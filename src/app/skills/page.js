@@ -4,6 +4,7 @@ import LearningMethodology from "@/components/skills/LearningMethodology";
 import AdvantagesSection from "@/components/skills/AdvantagesSection";
 import LearningPathsSection from "@/components/skills/LearningPathsSection";
 import TargetAudienceSection from "@/components/skills/TargetAudienceSection";
+import PricingSection from "@/components/skills/PricingSection";
 
 export default function SkillPage() {
   return (
@@ -13,8 +14,10 @@ export default function SkillPage() {
       <LearningPathsSection />
       <TargetAudienceSection />
       <AdvantagesSection/>
+      <PricingSection />
       <CTASection/>
     </>
   );
 }
+
 
