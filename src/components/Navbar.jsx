@@ -413,7 +413,7 @@ export default function Navbar() {
                     {/* Right Action Button */}
                     <div className="flex items-center gap-2 mr-1">
                         <Link
-                            href="#join"
+                            href="/register"
                             className="hidden lg:inline-flex h-[36px] items-center justify-center rounded-full bg-[#7143FE] px-6 text-[12px] font-[600] text-white transition-all hover:bg-[#682ad4] tracking-wide"
                         >
                             Join the Studio
@@ -550,7 +550,7 @@ export default function Navbar() {
 
                             <div className="pt-4">
                                 <Link
-                                    href="#join"
+                                    href="/register"
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="inline-flex h-[46px] w-full max-w-[240px] items-center justify-center rounded-full bg-[#7C3AED] px-8 text-[15px] font-medium text-white"
                                 >

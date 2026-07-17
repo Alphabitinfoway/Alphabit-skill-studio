@@ -150,13 +150,13 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 className="text-[13px] font-medium text-[#111111]"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
-                                Course
+                                Techinal Skills
                             </label>
                             <input
                                 id="demo-course"
                                 name="course"
                                 type="text"
-                                placeholder="Course"
+                                placeholder="Techinal Skill"
                                 value={form.course}
                                 onChange={handleChange}
                                 required

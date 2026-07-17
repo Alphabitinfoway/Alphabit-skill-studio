@@ -25,10 +25,10 @@ export default function StatsSection() {
 
                 {/* Right Side Stats */}
                 <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center xl:flex-nowrap items-center gap-x-2 gap-y-8 md:gap-8 w-full mt-4 lg:mt-0">
-                    <StatItem value={200} label="Student Placed" showDivider={true} />
+                    <StatItem value={2000} label="Student Placed" showDivider={true} />
                     <StatItem value={300} label="Companies TieUp" showDivider={true} />
                     <StatItem value={3} label="Office in Gujarat" prefix="0" showDivider={true} />
-                    <StatItem value={50} label="Industry Courses" showDivider={false} />
+                    <StatItem value={50} label="Industry Skills" showDivider={false} />
                 </div>
             </div>
         </div>

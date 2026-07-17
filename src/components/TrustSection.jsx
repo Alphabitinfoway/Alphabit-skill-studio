@@ -204,7 +204,7 @@ export default function TrustSection() {
                       color: "#111111",
                     }}
                   >
-                    200<span style={{ fontSize: "16px", marginTop: "2px" }}>+</span>
+                    2000<span style={{ fontSize: "16px", marginTop: "2px" }}>+</span>
                   </div>
                   <div
                     style={{
@@ -251,7 +251,7 @@ export default function TrustSection() {
                       marginTop: "3px",
                     }}
                   >
-                    Industry Courses
+                    Industry Skills
                   </div>
                 </div>
               </div>
