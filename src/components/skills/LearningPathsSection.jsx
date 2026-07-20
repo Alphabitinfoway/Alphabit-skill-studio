@@ -28,9 +28,9 @@ const skillCategories = {
             image: "/skill/ITskills/ui_uxgraphicdesign.png"
         },
         {
-            title: "Digital Designing",
+            title: "Digital Marketing",
             description: "Create banners, posts, and visuals that grab attention, using the same design software professionals use daily.",
-            image: "/skill/ITskills/digitaldesigning.png"
+            image: "/skill/ITskills/digitalmarketing.png"
         },
         {
             title: "Database Management",

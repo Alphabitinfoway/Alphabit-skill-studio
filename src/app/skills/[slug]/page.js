@@ -29,8 +29,8 @@ const skillComponents = {
   "ui-ux-graphic-design": {
     HeroSection: () => import("@/components/skills/UIUXGraphicDesign/HeroSection"),
   },
-  "digital-designing": {
-    HeroSection: () => import("@/components/skills/DigitalDesigning/HeroSection"),
+  "digital-marketing": {
+    HeroSection: () => import("@/components/skills/DigitalMarketing/HeroSection"),
   },
   "database-management": {
     HeroSection: () => import("@/components/skills/DatabaseManagement/HeroSection"),
@@ -88,6 +88,48 @@ const skillComponents = {
   },
   "generative-ai": {
     HeroSection: () => import("@/components/skills/GenerativeAI/HeroSection"),
+  },
+  "java-development": {
+    HeroSection: () => import("@/components/skills/JavaDevelopment/HeroSection"),
+  },
+  "mern-stack-development": {
+    HeroSection: () => import("@/components/skills/MERNStackDevelopment/HeroSection"),
+  },
+  "net-development": {
+    HeroSection: () => import("@/components/skills/NETDevelopment/HeroSection"),
+  },
+  "gaming-development": {
+    HeroSection: () => import("@/components/skills/GamingDevelopment/HeroSection"),
+  },
+  "performance-marketing": {
+    HeroSection: () => import("@/components/skills/PerformanceMarketing/HeroSection"),
+  },
+  "social-media-marketing": {
+    HeroSection: () => import("@/components/skills/SocialMediaMarketing/HeroSection"),
+  },
+  "human-resources-hr": {
+    HeroSection: () => import("@/components/skills/HumanResourcesHR/HeroSection"),
+  },
+  "business-development-executive-bde": {
+    HeroSection: () => import("@/components/skills/BusinessDevelopmentExecutiveBDE/HeroSection"),
+  },
+  "account-manager": {
+    HeroSection: () => import("@/components/skills/AccountManager/HeroSection"),
+  },
+  "sales-executive": {
+    HeroSection: () => import("@/components/skills/SalesExecutive/HeroSection"),
+  },
+  "marketing-manager": {
+    HeroSection: () => import("@/components/skills/MarketingManager/HeroSection"),
+  },
+  "brand-manager": {
+    HeroSection: () => import("@/components/skills/BrandManager/HeroSection"),
+  },
+  "purchase-manager": {
+    HeroSection: () => import("@/components/skills/PurchaseManager/HeroSection"),
+  },
+  "digital-marketing-manager": {
+    HeroSection: () => import("@/components/skills/DigitalMarketingManager/HeroSection"),
   },
 };
 

@@ -12,7 +12,7 @@ export const skills = [
   { slug: toSlug("Web Development"), title: "Web Development", category: "IT Skills" },
   { slug: toSlug("Mobile App Development"), title: "Mobile App Development", category: "IT Skills" },
   { slug: toSlug("UI/UX & Graphic Design"), title: "UI/UX & Graphic Design", category: "IT Skills" },
-  { slug: toSlug("Digital Designing"), title: "Digital Designing", category: "IT Skills" },
+  { slug: toSlug("Digital Marketing"), title: "Digital Marketing", category: "IT Skills" },
   { slug: toSlug("Database Management"), title: "Database Management", category: "IT Skills" },
   { slug: toSlug("E-Commerce (Shopify/WooCommerce)"), title: "E-Commerce (Shopify/WooCommerce)", category: "IT Skills" },
   { slug: toSlug("QA Testing"), title: "QA Testing", category: "IT Skills" },
@@ -36,6 +36,26 @@ export const skills = [
   { slug: toSlug("AI Tools Training"), title: "AI Tools Training", category: "AI Courses" },
   { slug: toSlug("AI Automation"), title: "AI Automation", category: "AI Courses" },
   { slug: toSlug("Generative AI"), title: "Generative AI", category: "AI Courses" },
+
+  // New Training Programs (Coding)
+  { slug: toSlug("Java Development"), title: "Java Development", category: "IT Skills" },
+  { slug: toSlug("MERN Stack Development"), title: "MERN Stack Development", category: "IT Skills" },
+  { slug: toSlug(".NET Development"), title: ".NET Development", category: "IT Skills" },
+  { slug: toSlug("Gaming Development"), title: "Gaming Development", category: "IT Skills" },
+
+  // New Training Programs (Non-Coding)
+  { slug: toSlug("Performance Marketing"), title: "Performance Marketing", category: "IT Skills" },
+  { slug: toSlug("Social Media Marketing"), title: "Social Media Marketing", category: "IT Skills" },
+
+  // New Non-Tech Field Programs
+  { slug: toSlug("Human Resources (HR)"), title: "Human Resources (HR)", category: "Non-Tech Field" },
+  { slug: toSlug("Business Development Executive (BDE)"), title: "Business Development Executive (BDE)", category: "Non-Tech Field" },
+  { slug: toSlug("Account Manager"), title: "Account Manager", category: "Non-Tech Field" },
+  { slug: toSlug("Sales Executive"), title: "Sales Executive", category: "Non-Tech Field" },
+  { slug: toSlug("Marketing Manager"), title: "Marketing Manager", category: "Non-Tech Field" },
+  { slug: toSlug("Brand Manager"), title: "Brand Manager", category: "Non-Tech Field" },
+  { slug: toSlug("Purchase Manager"), title: "Purchase Manager", category: "Non-Tech Field" },
+  { slug: toSlug("Digital Marketing Manager"), title: "Digital Marketing Manager", category: "Non-Tech Field" },
 ];
 
 export function getSkillBySlug(slug) {

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FullStackDevelopmentFAQData } from "./Data/FullStackDevelopmentFAQData";
 
 export default function FAQSection() {
-  const [openId, setOpenId] = useState(2); // Second item open by default like the mockup
+  const [openId, setOpenId] = useState(1); // First item open by default
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);

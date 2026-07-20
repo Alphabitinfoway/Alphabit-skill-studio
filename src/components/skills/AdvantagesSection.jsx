@@ -39,7 +39,7 @@ const advantages = [
 
 export default function AdvantagesSection() {
   return (
-    <section id="advantage" className="w-full bg-[#F5F5F5] py-20 md:py-32 px-6 lg:px-12 overflow-hidden">
+    <section id="advantage" className="w-full bg-[#F5F5F5] py-10 px-6 lg:px-12 overflow-hidden">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-16 gap-x-8 lg:gap-x-12 items-start">
         
         {/* Header Area - Spans 2 columns on large screens */}

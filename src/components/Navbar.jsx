@@ -8,11 +8,12 @@ import { usePathname } from "next/navigation";
 import { toSlug } from "@/data/skills";
 
 /* ─── Dropdown data ──────────────────────────────────────────────── */
+/* ─── Dropdown data ──────────────────────────────────────────────── */
 const skillsDropdown = {
     categories: [
         {
-            id: "it",
-            label: "IT Skills",
+            id: "tech-coding",
+            label: "Coding Programs",
             hoverColor: "#7C3AED",
             hoverBg: "rgba(124,58,237,0.10)",
             hoverBorder: "rgba(124,58,237,0.25)",
@@ -20,48 +21,51 @@ const skillsDropdown = {
             items: [
                 "Full Stack Development",
                 "Web Development",
-                "Mobile App Development",
-                "UI/UX & Graphic Design",
-                "Digital Designing",
-                "Database Management",
-                "E-Commerce (Shopify/WooCommerce)",
-                "QA Testing",
+                "Python for AI/ML",
+                "Java Development",
+                "Data Science & Analytics",
+                "MERN Stack Development",
+                ".NET Development",
                 "Cyber Security",
                 "Ethical Hacking",
+                "QA Testing",
+                "Gaming Development",
                 "Cloud Computing",
-                "ROR & Odoo & Golang",
+                "Mobile App Development",
             ],
         },
         {
-            id: "soft",
-            label: "Soft Skills",
+            id: "tech-noncoding",
+            label: "Non-Coding Programs",
             hoverColor: "#34A853",
             hoverBg: "rgba(52,168,83,0.10)",
             hoverBorder: "rgba(52,168,83,0.28)",
             hoverShadow: "inset 0 1px 0 rgba(255,255,255,0.80), 0 2px 8px rgba(52,168,83,0.14)",
             items: [
-                "Communication Skills",
-                "Resume & Linkedin",
-                "Leadership Development",
-                "Video Editing & Content Creation",
-                "E-Commerce Business Skills",
-                "Personality Development",
+                "UI/UX & Graphic Design",
+                "ROR & Odoo & Golang",
+                "E-Commerce (Shopify/WooCommerce)",
+                "Digital Marketing",
+                "Performance Marketing",
+                "Social Media Marketing",
             ],
         },
         {
-            id: "ai",
-            label: "AI Courses",
+            id: "non-tech",
+            label: "Non-Tech Field",
             hoverColor: "#FF5622",
             hoverBg: "rgba(255,86,34,0.10)",
-            hoverBorder: "rgba(255,86,34,0.28)",
-            hoverShadow: "inset 0 1px 0 rgba(255,255,255,0.80), 0 2px 8px rgba(255,86,34,0.14)",
+            hoverBorder: "rgba(255,86,34,0.25)",
+            hoverShadow: "inset 0 1px 0 rgba(255,255,255,0.80), 0 2px 8px rgba(255,86,34,0.12)",
             items: [
-                "Python for AI/ML",
-                "Data Science & Analytics",
-                "ChatGPT & Prompt Engineering",
-                "AI Tools Training",
-                "AI Automation",
-                "Generative AI",
+                "Human Resources (HR)",
+                "Business Development Executive (BDE)",
+                "Account Manager",
+                "Sales Executive",
+                "Marketing Manager",
+                "Brand Manager",
+                "Purchase Manager",
+                "Digital Marketing Manager",
             ],
         },
     ],
@@ -69,7 +73,7 @@ const skillsDropdown = {
 
 /* ─── Skills Mega Dropdown ───────────────────────────────────────── */
 function SkillsMegaDropdown() {
-    const [activeCategory, setActiveCategory] = useState("it");
+    const [activeCategory, setActiveCategory] = useState("tech-coding");
 
     const active = skillsDropdown.categories.find((c) => c.id === activeCategory);
 
@@ -80,7 +84,7 @@ function SkillsMegaDropdown() {
             exit={{ opacity: 0, y: 8, scale: 0.97 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="absolute top-full left-1/2 -translate-x-1/2 mt-3 z-50"
-            style={{ width: "660px" }}
+            style={{ width: "680px" }}
         >
             {/* arrow tip — glass-tinted */}
             <div className="flex justify-center -mb-px">
@@ -99,7 +103,7 @@ function SkillsMegaDropdown() {
             <div
                 className="rounded-2xl overflow-hidden flex border"
                 style={{
-                    minHeight: "340px",
+                    height: "440px",
                     background: "rgba(245,245,248,0.72)",
                     backdropFilter: "blur(24px) saturate(1.6)",
                     WebkitBackdropFilter: "blur(24px) saturate(1.6)",
@@ -117,11 +121,15 @@ function SkillsMegaDropdown() {
                     }}
                 >
                     <p className="text-[11px] font-[700] text-[#E53935] uppercase tracking-widest mb-2 px-2">
-                        Skills
+                        Fields
                     </p>
-                    {skillsDropdown.categories.map((cat) => {
+                    
+                    <div className="text-[11px] font-[700] text-[#7C3AED] uppercase tracking-widest px-2 mt-2 mb-1 select-none">
+                        Tech Field
+                    </div>
+
+                    {skillsDropdown.categories.slice(0, 2).map((cat) => {
                         const isActive = activeCategory === cat.id;
-                        // Parse hoverColor into rgba for background tint
                         const hex = cat.hoverColor.replace("#", "");
                         const r = parseInt(hex.substring(0, 2), 16);
                         const g = parseInt(hex.substring(2, 4), 16);
@@ -134,7 +142,40 @@ function SkillsMegaDropdown() {
                                 key={cat.id}
                                 onMouseEnter={() => setActiveCategory(cat.id)}
                                 onClick={() => setActiveCategory(cat.id)}
-                                className="flex items-center justify-between w-full text-left px-3 py-2.5 rounded-xl text-[13.5px] transition-all duration-150 group"
+                                className="flex items-center justify-between w-full text-left pl-5 pr-3 py-2 rounded-xl text-[13px] transition-all duration-150 group"
+                                style={{
+                                    fontWeight: isActive ? 600 : 500,
+                                    color: isActive ? cat.hoverColor : "#555",
+                                    background: isActive ? activeBg : "transparent",
+                                    backdropFilter: isActive ? "blur(8px)" : "none",
+                                    border: isActive ? `1px solid ${activeBorder}` : "1px solid transparent",
+                                    boxShadow: isActive ? "inset 0 1px 0 rgba(255,255,255,0.70)" : "none",
+                                }}
+                            >
+                                <span>{cat.label}</span>
+                                <ChevronRight
+                                    className={`h-3.5 w-3.5 transition-opacity ${isActive ? "opacity-70" : "opacity-0 group-hover:opacity-40"
+                                        }`}
+                                />
+                            </button>
+                        );
+                    })}
+
+                    {skillsDropdown.categories.slice(2).map((cat) => {
+                        const isActive = activeCategory === cat.id;
+                        const hex = cat.hoverColor.replace("#", "");
+                        const r = parseInt(hex.substring(0, 2), 16);
+                        const g = parseInt(hex.substring(2, 4), 16);
+                        const b = parseInt(hex.substring(4, 6), 16);
+                        const activeBg = `rgba(${r},${g},${b},0.12)`;
+                        const activeBorder = `rgba(${r},${g},${b},0.22)`;
+
+                        return (
+                            <button
+                                key={cat.id}
+                                onMouseEnter={() => setActiveCategory(cat.id)}
+                                onClick={() => setActiveCategory(cat.id)}
+                                className="flex items-center justify-between w-full text-left px-3 py-2.5 rounded-xl text-[13.5px] transition-all duration-150 group mt-4"
                                 style={{
                                     fontWeight: isActive ? 600 : 500,
                                     color: isActive ? cat.hoverColor : "#555",
@@ -165,55 +206,57 @@ function SkillsMegaDropdown() {
                             exit={{ opacity: 0, x: -6 }}
                             transition={{ duration: 0.15 }}
                         >
-                            <p className="text-[11px] font-[700] text-[#E53935] uppercase tracking-widest mb-3">
-                                {active?.label}
-                            </p>
-                            <div className="grid grid-cols-2 gap-x-3 gap-y-2">
-                                {active?.items.map((item) => (
-                                    <Link
-                                        key={item}
-                                        href={`/skills/${toSlug(item)}`}
-                                        className="group flex items-center gap-2 px-3 py-2 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all duration-150"
-                                        style={{
-                                            background: "rgba(210,210,218,0.45)",
-                                            backdropFilter: "blur(8px)",
-                                            WebkitBackdropFilter: "blur(8px)",
-                                            borderTop: "1px solid rgba(255,255,255,0.65)",
-                                            borderLeft: "1px solid rgba(255,255,255,0.65)",
-                                            borderRight: "1px solid rgba(255,255,255,0.65)",
-                                            borderBottom: "2px solid rgba(0,0,0,0.10)",
-                                            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80), 0 1px 3px rgba(0,0,0,0.06)",
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.background = active.hoverBg;
-                                            e.currentTarget.style.borderTop = `1px solid ${active.hoverBorder}`;
-                                            e.currentTarget.style.borderLeft = `1px solid ${active.hoverBorder}`;
-                                            e.currentTarget.style.borderRight = `1px solid ${active.hoverBorder}`;
-                                            e.currentTarget.style.borderBottom = `2px solid ${active.hoverColor}`;
-                                            e.currentTarget.style.boxShadow = active.hoverShadow;
-                                            e.currentTarget.style.color = active.hoverColor;
-                                            const dot = e.currentTarget.querySelector(".skill-dot");
-                                            if (dot) { dot.style.background = active.hoverColor; dot.style.opacity = "1"; }
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.background = "rgba(210,210,218,0.45)";
-                                            e.currentTarget.style.borderTop = "1px solid rgba(255,255,255,0.65)";
-                                            e.currentTarget.style.borderLeft = "1px solid rgba(255,255,255,0.65)";
-                                            e.currentTarget.style.borderRight = "1px solid rgba(255,255,255,0.65)";
-                                            e.currentTarget.style.borderBottom = "2px solid rgba(0,0,0,0.10)";
-                                            e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.80), 0 1px 3px rgba(0,0,0,0.06)";
-                                            e.currentTarget.style.color = "#374151";
-                                            const dot = e.currentTarget.querySelector(".skill-dot");
-                                            if (dot) { dot.style.opacity = "0"; }
-                                        }}
-                                    >
-                                        <span
-                                            className="skill-dot w-1.5 h-1.5 rounded-full flex-shrink-0 transition-opacity"
-                                            style={{ opacity: 0, background: active.hoverColor }}
-                                        />
-                                        {item}
-                                    </Link>
-                                ))}
+                            <div>
+                                <p className="text-[11px] font-[700] text-[#E53935] uppercase tracking-widest mb-3">
+                                    {active?.label}
+                                </p>
+                                <div className="grid grid-cols-2 gap-x-3 gap-y-2">
+                                    {active?.items?.map((item) => (
+                                        <Link
+                                            key={item}
+                                            href={`/skills/${toSlug(item)}`}
+                                            className="group flex items-center gap-2 px-3 py-2 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all duration-150"
+                                            style={{
+                                                background: "rgba(210,210,218,0.45)",
+                                                backdropFilter: "blur(8px)",
+                                                WebkitBackdropFilter: "blur(8px)",
+                                                borderTop: "1px solid rgba(255,255,255,0.65)",
+                                                borderLeft: "1px solid rgba(255,255,255,0.65)",
+                                                borderRight: "1px solid rgba(255,255,255,0.65)",
+                                                borderBottom: "2px solid rgba(0,0,0,0.10)",
+                                                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80), 0 1px 3px rgba(0,0,0,0.06)",
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.currentTarget.style.background = active.hoverBg;
+                                                e.currentTarget.style.borderTop = `1px solid ${active.hoverBorder}`;
+                                                e.currentTarget.style.borderLeft = `1px solid ${active.hoverBorder}`;
+                                                e.currentTarget.style.borderRight = `1px solid ${active.hoverBorder}`;
+                                                e.currentTarget.style.borderBottom = `2px solid ${active.hoverColor}`;
+                                                e.currentTarget.style.boxShadow = active.hoverShadow;
+                                                e.currentTarget.style.color = active.hoverColor;
+                                                const dot = e.currentTarget.querySelector(".skill-dot");
+                                                if (dot) { dot.style.background = active.hoverColor; dot.style.opacity = "1"; }
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.currentTarget.style.background = "rgba(210,210,218,0.45)";
+                                                e.currentTarget.style.borderTop = "1px solid rgba(255,255,255,0.65)";
+                                                e.currentTarget.style.borderLeft = "1px solid rgba(255,255,255,0.65)";
+                                                e.currentTarget.style.borderRight = "1px solid rgba(255,255,255,0.65)";
+                                                e.currentTarget.style.borderBottom = "2px solid rgba(0,0,0,0.10)";
+                                                e.currentTarget.style.boxShadow = "inset 0 1px 0 rgba(255,255,255,0.80), 0 1px 3px rgba(0,0,0,0.06)";
+                                                e.currentTarget.style.color = "#374151";
+                                                const dot = e.currentTarget.querySelector(".skill-dot");
+                                                if (dot) { dot.style.opacity = "0"; }
+                                            }}
+                                        >
+                                            <span
+                                                className="skill-dot w-1.5 h-1.5 rounded-full flex-shrink-0 transition-opacity"
+                                                style={{ opacity: 0, background: active.hoverColor }}
+                                            />
+                                            {item}
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
@@ -370,7 +413,7 @@ export default function Navbar() {
                     {/* Right Action Button */}
                     <div className="flex items-center gap-2 mr-1">
                         <Link
-                            href="#join"
+                            href="/register"
                             className="hidden lg:inline-flex h-[36px] items-center justify-center rounded-full bg-[#7143FE] px-6 text-[12px] font-[600] text-white transition-all hover:bg-[#682ad4] tracking-wide"
                         >
                             Join the Studio
@@ -427,30 +470,62 @@ export default function Navbar() {
                                                         className="overflow-hidden mt-3"
                                                     >
                                                         {skillsDropdown.categories.map((cat) => (
-                                                            <div key={cat.id} className="mb-4 text-left">
-                                                                <p className="text-[11px] font-[700] text-[#E53935] uppercase tracking-widest mb-1 px-2">
+                                                            <div key={cat.id} className="mb-4 text-left px-2">
+                                                                <p className="text-[12px] font-[800] text-[#E53935] uppercase tracking-wider mb-2">
                                                                     {cat.label}
                                                                 </p>
-                                                                <div className="flex flex-wrap gap-1.5">
-                                                                    {cat.items.map((item) => (
-                                                                        <Link
-                                                                            key={item}
-                                                                            href={`/skills/${toSlug(item)}`}
-                                                                            onClick={() => setMobileMenuOpen(false)}
-                                                                            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
-                                                                            style={{
-                                                                                background: "rgba(210,210,218,0.55)",
-                                                                                backdropFilter: "blur(8px)",
-                                                                                WebkitBackdropFilter: "blur(8px)",
-                                                                                border: "1px solid rgba(255,255,255,0.65)",
-                                                                                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80)",
-                                                                            }}
-                                                                        >
-                                                                            <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
-                                                                            {item}
-                                                                        </Link>
-                                                                    ))}
-                                                                </div>
+                                                                {cat.subgroups ? (
+                                                                    <div className="flex flex-col gap-3 pl-2">
+                                                                        {cat.subgroups.map((sub, sIdx) => (
+                                                                            <div key={sIdx}>
+                                                                                <p className="text-[10px] font-[700] text-[#FF5622] uppercase tracking-widest mb-1.5">
+                                                                                    {sub.label}
+                                                                                </p>
+                                                                                <div className="flex flex-wrap gap-1.5">
+                                                                                    {sub.items.map((item) => (
+                                                                                        <Link
+                                                                                            key={item}
+                                                                                            href={`/skills/${toSlug(item)}`}
+                                                                                            onClick={() => setMobileMenuOpen(false)}
+                                                                                            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
+                                                                                            style={{
+                                                                                                background: "rgba(210,210,218,0.55)",
+                                                                                                backdropFilter: "blur(8px)",
+                                                                                                WebkitBackdropFilter: "blur(8px)",
+                                                                                                border: "1px solid rgba(255,255,255,0.65)",
+                                                                                                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80)",
+                                                                                            }}
+                                                                                        >
+                                                                                            <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
+                                                                                            {item}
+                                                                                        </Link>
+                                                                                    ))}
+                                                                                </div>
+                                                                            </div>
+                                                                        ))}
+                                                                    </div>
+                                                                ) : (
+                                                                    <div className="flex flex-wrap gap-1.5 pl-2">
+                                                                        {cat.items.map((item) => (
+                                                                            <Link
+                                                                                key={item}
+                                                                                href={`/skills/${toSlug(item)}`}
+                                                                                onClick={() => setMobileMenuOpen(false)}
+                                                                                className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
+                                                                                style={{
+                                                                                    background: "rgba(210,210,218,0.55)",
+                                                                                    backdropFilter: "blur(8px)",
+                                                                                    WebkitBackdropFilter: "blur(8px)",
+                                                                                    border: "1px solid rgba(255,255,255,0.65)",
+                                                                                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80)",
+                                                                                }}
+                                                                            >
+                                                                                <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
+                                                                                {item}
+                                                                            </Link>
+                                                                        ))}
+                                                                    </div>
+                                                                )}
                                                             </div>
                                                         ))}
                                                     </motion.div>
@@ -475,7 +550,7 @@ export default function Navbar() {
 
                             <div className="pt-4">
                                 <Link
-                                    href="#join"
+                                    href="/register"
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="inline-flex h-[46px] w-full max-w-[240px] items-center justify-center rounded-full bg-[#7C3AED] px-8 text-[15px] font-medium text-white"
                                 >
