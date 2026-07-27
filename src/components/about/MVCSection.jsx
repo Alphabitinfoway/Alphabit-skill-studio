@@ -6,7 +6,7 @@ import Image from "next/image";
 const ArrowIcon = () => (
   <div className="mt-1 flex-shrink-0 relative w-[16px] h-[16px]">
     <Image
-      src="/black arrow.png"
+      src="/black arrow.webp"
       alt="Arrow"
       fill
       sizes="16px"

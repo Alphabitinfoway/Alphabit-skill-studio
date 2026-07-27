@@ -128,7 +128,7 @@ export default function ProgramsSection() {
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg> */}
-              <img src="whiteArrow.png" alt="arrow" className="w-7" />
+              <img src="whiteArrow.webp" alt="arrow" className="w-7" />
               View All Courses
             </button>
           </motion.div>

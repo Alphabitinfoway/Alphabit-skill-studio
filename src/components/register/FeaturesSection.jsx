@@ -29,7 +29,7 @@ export default function FeaturesSection() {
                                     className="text-[#FF5622] italic text-[50px] sm:text-[58px] md:text-[68px] mr-2 font-normal"
                                     style={{ fontFamily: "'PP Editorial New', serif" }}
                                 >
-                                Attend
+                                    Attend
                                 </span>
                                 {" "}This Seminar
                             </h2>
@@ -51,11 +51,11 @@ export default function FeaturesSection() {
                         </div>
 
                         <p className="mt-4 text-[15px] text-gray-500 leading-[1.7]">
-                           A focused two-hour session designed to give students real clarity on tech careers—not just through theory, but with practical guidance and a clear roadmap. Students will learn about different career paths in technology, the skills employers expect, portfolio and resume building, internships, and interview preparation. By the end of the session, they'll have a practical action plan and a better understanding of how to confidently start their tech journey.
+                            A focused two-hour session designed to give students real clarity on tech careers—not just through theory, but with practical guidance and a clear roadmap. Students will learn about different career paths in technology, the skills employers expect, portfolio and resume building, internships, and interview preparation. By the end of the session, they'll have a practical action plan and a better understanding of how to confidently start their tech journey.
                         </p>
 
                         <button className="mt-8 flex items-center gap-2 bg-[#6E42F8] hover:bg-[#5c33dd] text-white px-6 py-3 rounded-full text-[14px] font-semibold transition">
-                            <img src="whiteArrow.png" alt="arrow" className="w-6" />
+                            <img src="whiteArrow.webp" alt="arrow" className="w-6" />
                             Join the Studio
                         </button>
                     </div>

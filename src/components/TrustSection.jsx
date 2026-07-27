@@ -82,7 +82,7 @@ export default function TrustSection() {
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <Image
-                    src="/black arrow.png"
+                    src="/black arrow.webp"
                     alt="arrow"
                     width={15}
                     height={15}
@@ -155,7 +155,7 @@ export default function TrustSection() {
 
                     {/* Arrow */}
                     <div>
-                      <Image src="/purpleArrow.png" alt="Arrow" width={46} height={46} />
+                      <Image src="/purpleArrow.webp" alt="Arrow" width={46} height={46} />
                     </div>
 
                     {/* Spinning Text */}

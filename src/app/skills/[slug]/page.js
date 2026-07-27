@@ -1,137 +1,22 @@
 import { getAllSlugs, getSkillBySlug } from "@/data/skills";
 import { notFound } from "next/navigation";
 
-// ── Skill component map ───────────────────────────────────────────────────
-// Each skill folder has its own HeroSection component.
-// Add more components here (e.g. FAQSection) as each skill grows.
-const skillComponents = {
-  "full-stack-development": {
-    HeroSection: () => import("@/components/skills/FullStackDevelopment/HeroSection"),
-    ProjectStatsSection: () => import("@/components/skills/FullStackDevelopment/ProjectStatsSection"),
-    LandingPageLayout: () => import("@/components/skills/FullStackDevelopment/LandingPageLayout"),
-    CurriculumSection: () => import("@/components/skills/FullStackDevelopment/CurriculumSection"),
-    CareerOpportunitiesSection: () => import("@/components/skills/FullStackDevelopment/CareerOpportunitiesSection"),
-    IndustriesSection: () => import("@/components/skills/FullStackDevelopment/IndustriesSection"),
-    ComparisonSection: () => import("@/components/skills/FullStackDevelopment/ComparisonSection"),
-    EarningsSection: () => import("@/components/skills/FullStackDevelopment/EarningsSection"),
-    MeetingGlanceSection: () => import("@/components/skills/FullStackDevelopment/MeetingGlanceSection"),
-    MeetingVideoSection: () => import("@/components/skills/FullStackDevelopment/MeetingVideoSection"),
-    TestimonialsSection: () => import("@/components/TestimonialsSection"),
-    FAQSection: () => import("@/components/skills/FullStackDevelopment/FAQsection"),
-    CTASection: () => import("@/components/CTASection"),
-  },
-  "web-development": {
-    HeroSection: () => import("@/components/skills/WebDevelopment/HeroSection"),
-  },
-  "mobile-app-development": {
-    HeroSection: () => import("@/components/skills/MobileAppDevelopment/HeroSection"),
-  },
-  "ui-ux-graphic-design": {
-    HeroSection: () => import("@/components/skills/UIUXGraphicDesign/HeroSection"),
-  },
-  "digital-marketing": {
-    HeroSection: () => import("@/components/skills/DigitalMarketing/HeroSection"),
-  },
-  "database-management": {
-    HeroSection: () => import("@/components/skills/DatabaseManagement/HeroSection"),
-  },
-  "e-commerce-shopify-woocommerce": {
-    HeroSection: () => import("@/components/skills/ECommerceShopifyWooCommerce/HeroSection"),
-  },
-  "qa-testing": {
-    HeroSection: () => import("@/components/skills/QATesting/HeroSection"),
-  },
-  "cyber-security": {
-    HeroSection: () => import("@/components/skills/CyberSecurity/HeroSection"),
-  },
-  "ethical-hacking": {
-    HeroSection: () => import("@/components/skills/EthicalHacking/HeroSection"),
-  },
-  "cloud-computing": {
-    HeroSection: () => import("@/components/skills/CloudComputing/HeroSection"),
-  },
-  "ror-odoo-golang": {
-    HeroSection: () => import("@/components/skills/ROROdooGolang/HeroSection"),
-  },
-  "communication-skills": {
-    HeroSection: () => import("@/components/skills/CommunicationSkills/HeroSection"),
-  },
-  "resume-linkedin": {
-    HeroSection: () => import("@/components/skills/ResumeLinkedIn/HeroSection"),
-  },
-  "leadership-development": {
-    HeroSection: () => import("@/components/skills/LeadershipDevelopment/HeroSection"),
-  },
-  "video-editing-content-creation": {
-    HeroSection: () => import("@/components/skills/VideoEditingContentCreation/HeroSection"),
-  },
-  "e-commerce-business-skills": {
-    HeroSection: () => import("@/components/skills/ECommerceBusinessSkills/HeroSection"),
-  },
-  "personality-development": {
-    HeroSection: () => import("@/components/skills/PersonalityDevelopment/HeroSection"),
-  },
-  "python-for-ai-ml": {
-    HeroSection: () => import("@/components/skills/PythonForAIML/HeroSection"),
-  },
-  "data-science-analytics": {
-    HeroSection: () => import("@/components/skills/DataScienceAnalytics/HeroSection"),
-  },
-  "chatgpt-prompt-engineering": {
-    HeroSection: () => import("@/components/skills/ChatGPTPromptEngineering/HeroSection"),
-  },
-  "ai-tools-training": {
-    HeroSection: () => import("@/components/skills/AIToolsTraining/HeroSection"),
-  },
-  "ai-automation": {
-    HeroSection: () => import("@/components/skills/AIAutomation/HeroSection"),
-  },
-  "generative-ai": {
-    HeroSection: () => import("@/components/skills/GenerativeAI/HeroSection"),
-  },
-  "java-development": {
-    HeroSection: () => import("@/components/skills/JavaDevelopment/HeroSection"),
-  },
-  "mern-stack-development": {
-    HeroSection: () => import("@/components/skills/MERNStackDevelopment/HeroSection"),
-  },
-  "net-development": {
-    HeroSection: () => import("@/components/skills/NETDevelopment/HeroSection"),
-  },
-  "gaming-development": {
-    HeroSection: () => import("@/components/skills/GamingDevelopment/HeroSection"),
-  },
-  "performance-marketing": {
-    HeroSection: () => import("@/components/skills/PerformanceMarketing/HeroSection"),
-  },
-  "social-media-marketing": {
-    HeroSection: () => import("@/components/skills/SocialMediaMarketing/HeroSection"),
-  },
-  "human-resources-hr": {
-    HeroSection: () => import("@/components/skills/HumanResourcesHR/HeroSection"),
-  },
-  "business-development-executive-bde": {
-    HeroSection: () => import("@/components/skills/BusinessDevelopmentExecutiveBDE/HeroSection"),
-  },
-  "account-manager": {
-    HeroSection: () => import("@/components/skills/AccountManager/HeroSection"),
-  },
-  "sales-executive": {
-    HeroSection: () => import("@/components/skills/SalesExecutive/HeroSection"),
-  },
-  "marketing-manager": {
-    HeroSection: () => import("@/components/skills/MarketingManager/HeroSection"),
-  },
-  "brand-manager": {
-    HeroSection: () => import("@/components/skills/BrandManager/HeroSection"),
-  },
-  "purchase-manager": {
-    HeroSection: () => import("@/components/skills/PurchaseManager/HeroSection"),
-  },
-  "digital-marketing-manager": {
-    HeroSection: () => import("@/components/skills/DigitalMarketingManager/HeroSection"),
-  },
-};
+// Import common layout components
+import HeroSection from "@/components/skills/Common/HeroSection";
+import ProjectStatsSection from "@/components/skills/Common/ProjectStatsSection";
+import LandingPageLayout from "@/components/skills/Common/LandingPageLayout";
+import CurriculumSection from "@/components/skills/Common/CurriculumSection";
+import ComparisonSection from "@/components/skills/Common/ComparisonSection";
+import EarningsSection from "@/components/skills/Common/EarningsSection";
+import MeetingGlanceSection from "@/components/skills/Common/MeetingGlanceSection";
+import MeetingVideoSection from "@/components/skills/Common/MeetingVideoSection";
+import CareerOpportunitiesSection from "@/components/skills/Common/CareerOpportunitiesSection";
+import IndustriesSection from "@/components/skills/Common/IndustriesSection";
+import FAQSection from "@/components/skills/Common/FAQsection";
+import CTASection from "@/components/skills/Common/CTASection";
+
+// Import global sections
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 // ── SSG: pre-render all slugs at build time ───────────────────────────────
 export async function generateStaticParams() {
@@ -156,102 +41,50 @@ export default async function SkillDetailPage({ params }) {
 
   if (!skill) notFound();
 
-  const components = skillComponents[slug];
-  if (!components) notFound();
+  // Load configuration data dynamically for the current slug
+  let skillData = {};
+  try {
+    const dataModule = await import(`@/data/skills-data/${slug}`);
+    // Spread the module properties into a plain object to pass across RSC boundary
+    skillData = { ...dataModule };
+  } catch (err) {
+    // Generate dynamic fallback hero data based on course title if custom data file is missing
+    const words = skill.title.split(" ");
+    const titleSuffix = words.pop() || "";
+    const titlePrefix = words.join(" ") || "Professional";
 
-  const { default: HeroSection } = await components.HeroSection();
-
-  let ProjectStatsSection = null;
-  if (components.ProjectStatsSection) {
-    const res = await components.ProjectStatsSection();
-    ProjectStatsSection = res.default;
+    skillData = {
+      heroSectionData: {
+        titlePrefix,
+        titleSuffix,
+        highlights: [
+          "Expert-Led Live Training",
+          "Hands-On Projects",
+          "Placement Assistance",
+        ],
+        primaryCtaText: "Book Free Demo Class",
+        secondaryCtaText: "Call Us",
+        phoneNumber: "+919409207327",
+        heroImage: "/subtract.webp",
+      }
+    };
   }
-
-  let LandingPageLayout = null;
-  if (components.LandingPageLayout) {
-    const res = await components.LandingPageLayout();
-    LandingPageLayout = res.default;
-  }
-
-
-
-  let CurriculumSection = null;
-  if(components.CurriculumSection) {
-    const res = await components.CurriculumSection();
-    CurriculumSection = res.default;
-  }
-
-  let CareerOpportunitiesSection = null;
-  if(components.CareerOpportunitiesSection) {
-    const res = await components.CareerOpportunitiesSection();
-    CareerOpportunitiesSection = res.default;
-  }
-
-  let IndustriesSection = null;
-  if(components.IndustriesSection) {
-    const res = await components.IndustriesSection();
-    IndustriesSection = res.default;
-  }
-
-  let TestimonialsSection = null;
-  if(components.TestimonialsSection) {
-    const res = await components.TestimonialsSection();
-    TestimonialsSection = res.default;
-  }
-
-  let FAQSection = null;
-  if(components.FAQSection) {
-    const res = await components.FAQSection();
-    FAQSection = res.default;
-  }
-
-  let CTASection = null;
-  if(components.CTASection) {
-    const res = await components.CTASection();
-    CTASection = res.default;
-  }
-
-  let ComparisonSection = null;
-  if(components.ComparisonSection) {
-    const res = await components.ComparisonSection();
-    ComparisonSection = res.default;
-  }
-
-  let EarningsSection = null;
-  if(components.EarningsSection) {
-    const res = await components.EarningsSection();
-    EarningsSection = res.default;
-  }
-
-  let MeetingGlanceSection = null;
-  if(components.MeetingGlanceSection) {
-    const res = await components.MeetingGlanceSection();
-    MeetingGlanceSection = res.default;
-  }
-
-  let MeetingVideoSection = null;
-  if(components.MeetingVideoSection) {
-    const res = await components.MeetingVideoSection();
-    MeetingVideoSection = res.default;
-  }
-
-  
 
   return (
     <>
-      <HeroSection />
-      {ProjectStatsSection && <ProjectStatsSection />}
-      {LandingPageLayout && <LandingPageLayout />}
-      {CurriculumSection && <CurriculumSection />}
-      {ComparisonSection && <ComparisonSection />}
-      {EarningsSection && <EarningsSection />}
-      {MeetingGlanceSection && <MeetingGlanceSection />}
-      {MeetingVideoSection && <MeetingVideoSection />}
-      {CareerOpportunitiesSection && <CareerOpportunitiesSection />}
-      {IndustriesSection && <IndustriesSection />}
-      {TestimonialsSection && <TestimonialsSection />}
-      {FAQSection && <FAQSection />}
-      {CTASection && <CTASection />}
+      <HeroSection data={skillData} />
+      <ProjectStatsSection data={skillData} />
+      <LandingPageLayout data={skillData} />
+      <CurriculumSection data={skillData} />
+      <ComparisonSection data={skillData} />
+      <EarningsSection data={skillData} />
+      <MeetingGlanceSection data={skillData} />
+      <MeetingVideoSection data={skillData} />
+      <CareerOpportunitiesSection data={skillData} />
+      <IndustriesSection data={skillData} />
+      <TestimonialsSection />
+      <FAQSection data={skillData} />
+      <CTASection data={skillData} />
     </>
   );
 }

@@ -5,8 +5,8 @@ import { useEffect, useRef } from "react";
 
 export default function StatsSection() {
     return (
-        <div className="w-full bg-[#F5F5F5] py-12 md:py-16">
-            <div className="max-w-[1200px] px-4 mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0">
+        <div className="w-full bg-[#F5F5F5] py-12 md:py-16 font-cabinet border-b border-gray-100">
+            <div className="max-w-[1240px] px-4 md:px-6 mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 items-center justify-items-center">
                 <StatItem 
                     value={9} 
                     suffix="th" 
@@ -39,11 +39,11 @@ export default function StatsSection() {
     );
 }
 
-function CountingNumber({ value, suffix = "" }) {
+function CountingNumber({ value, prefix = "" }) {
     const count = useMotionValue(0);
     const rounded = useTransform(count, (latest) => {
         const num = Math.round(latest);
-        return `${num}${suffix}`;
+        return prefix && num < 10 ? `${prefix}${num}` : num;
     });
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -58,30 +58,37 @@ function CountingNumber({ value, suffix = "" }) {
         <motion.span 
             ref={ref} 
             className="inline-block"
+            style={{ textShadow: "2px 2px 0px #FFCC00" }}
         >
             <motion.span>{rounded}</motion.span>
         </motion.span>
     );
 }
 
-function StatItem({ value, suffix, label, showDivider, dividerClass = "" }) {
+function StatItem({ value, suffix = "", label, showDivider, dividerClass = "" }) {
     return (
-        <div className="flex-1 w-full flex items-center justify-between md:justify-center relative">
-            <div className="flex flex-col items-center justify-center text-center w-full">
-                <div 
-                    className="text-[46px] md:text-[56px] font-semibold text-[#7143FE] leading-none italic"
-                    style={{ 
-                        fontFamily: "'PP Editorial New', Georgia, serif"
-                    }}
-                >
-                    <CountingNumber value={value} suffix={suffix} />
+        <div className="w-full flex items-center justify-center relative">
+            <div className="flex flex-col items-center text-center">
+                <div className="text-[40px] md:text-[48px] font-bold text-[#7143FE] leading-none flex items-start font-cabinet">
+                    <CountingNumber value={value} />
+                    {suffix && (
+                        <span 
+                            className="relative z-10 text-[24px] md:text-[28px] mt-1 ml-1 font-[600]"
+                            style={{ textShadow: "1.5px 1.5px 0px #FFCC00" }}
+                        >
+                            {suffix}
+                        </span>
+                    )}
                 </div>
-                <div className="text-[11px] font-bold text-gray-500 mt-3 tracking-widest uppercase font-cabinet">
+                <div className="text-[14px] text-gray-700 mt-2 font-[500] whitespace-nowrap uppercase tracking-wider font-cabinet">
                     {label}
                 </div>
             </div>
             {showDivider && (
-                <div className={`absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[55px] bg-gray-200/80 ${dividerClass}`} />
+                <div 
+                    className={`absolute right-0 top-1/2 w-[1px] h-[65px] bg-gray-200 ${dividerClass}`} 
+                    style={{ transform: "translateY(-50%) rotate(20deg)" }}
+                />
             )}
         </div>
     );

@@ -38,8 +38,7 @@ export default function StatsSection() {
 function CountingNumber({ value, prefix = "" }) {
     const count = useMotionValue(0);
     const rounded = useTransform(count, (latest) => {
-        const num = Math.round(latest);
-        return prefix && num < 10 ? `${prefix}${num}` : num;
+        const num = Math.round(latest);        return prefix && num < 10 ? `${prefix}${num}` : num;
     });
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });

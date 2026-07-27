@@ -27,7 +27,7 @@ export default function BlogCard({ post }) {
         {/* Read More link — grey arrow image */}
         <span className="inline-flex items-center gap-2 text-[14px] font-medium text-[#555555] group-hover:text-[#7143FE] transition-colors duration-200">
           <img
-            src="/greyArrow.png"
+            src="/greyArrow.webp"
             alt="arrow"
             className="w-[20px] h-[20px] object-contain flex-shrink-0"
           />

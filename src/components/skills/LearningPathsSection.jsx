@@ -10,62 +10,62 @@ const skillCategories = {
         {
             title: "Full Stack Development",
             description: "Go from zero to building real web apps. You'll learn both the front-end and back-end, so you can create something complete on your own.",
-            image: "/skill/ITSkills/fullstackdevelopment.png"
+            image: "/skill/ITSkills/fullstackdevelopment.webp"
         },
         {
             title: "Web Development",
             description: "Learn how websites are actually built – HTML, CSS, JavaScript, and the frameworks real developers use every day.",
-            image: "/skill/ITSkills/webdevelopment.png"
+            image: "/skill/ITSkills/webdevelopment.webp"
         },
         {
             title: "Mobile App Development",
             description: "Build real Android and iOS apps step by step, using the same tools companies use to hire app developers.",
-            image: "/skill/ITSkills/moblieappdevelopment.png"
+            image: "/skill/ITSkills/moblieappdevelopment.webp"
         },
         {
             title: "UI/UX & Graphic Design",
             description: "Learn to design interfaces people actually enjoy using – clean, intuitive, and good-looking, with the tools the industry runs on.",
-            image: "/skill/ITskills/ui_uxgraphicdesign.png"
+            image: "/skill/ITskills/ui_uxgraphicdesign.webp"
         },
         {
             title: "Digital Marketing",
             description: "Create banners, posts, and visuals that grab attention, using the same design software professionals use daily.",
-            image: "/skill/ITskills/digitalmarketing.png"
+            image: "/skill/ITskills/digitalmarketing.webp"
         },
         {
             title: "Database Management",
             description: "Understand how data is stored, organized, and queried – a skill nearly every tech job quietly depends on.",
-            image: "/skill/ITskills/databasemanagement.png"
+            image: "/skill/ITskills/databasemanagement.webp"
         },
         {
             title: "E-Commerce (Shopify/WooCommerce)",
             description: "Learn how to build, manage, and optimize online stores using Shopify and WooCommerce to drive massive sales.",
-            image: "/skill/ITskills/e-commerce(shopify_woocommerce).png"
+            image: "/skill/ITskills/e-commerce(shopify_woocommerce).webp"
         },
         {
             title: "QA Testing",
             description: "Master software testing methodologies, automated testing tools, and quality assurance processes to ship bug-free code.",
-            image: "/skill/ITskills/qatesting.png"
+            image: "/skill/ITskills/qatesting.webp"
         },
         {
             title: "Cyber Security",
             description: "Understand network security, penetration testing, and security protocols to defend digital infrastructure against cyber threats.",
-            image: "/skill/ITskills/cybersecurity.png"
+            image: "/skill/ITskills/cybersecurity.webp"
         },
         {
             title: "Ethical Hacking",
             description: "Learn to think like a hacker to identify, test, and patch system vulnerabilities before malicious actors exploit them.",
-            image: "/skill/ITskills/ethicalhacking.png"
+            image: "/skill/ITskills/ethicalhacking.webp"
         },
         {
             title: "Cloud Computing",
             description: "Master AWS, Azure, and cloud infrastructure deployment to build reliable, high-availability web applications.",
-            image: "/skill/ITskills/cloudcomputing.png"
+            image: "/skill/ITskills/cloudcomputing.webp"
         },
         {
             title: "ROR & Odoo & Golang",
             description: "Learn Ruby on Rails, Odoo ERP, and Go language to build efficient enterprise applications and APIs.",
-            image: "/skill/ITskills/ror_odoo_golang.png"
+            image: "/skill/ITskills/ror_odoo_golang.webp"
         },
 
     ],
@@ -73,64 +73,64 @@ const skillCategories = {
         {
             title: "Communication Skills",
             description: "Develop strong verbal, written, and interpersonal communication skills crucial for teamwork and leadership.",
-            image: "/skill/softskills/communicationskills.png"
+            image: "/skill/softskills/communicationskills.webp"
         },
         {
             title: "Resume & Linkedin",
             description: "Learn to design a high-converting resume and build a strong LinkedIn profile to catch the eye of global recruiters.",
-            image: "/skill/softskills/resume_linkedin.png"
+            image: "/skill/softskills/resume_linkedin.webp"
         },
         {
             title: "Leadership Development",
             description: "Master team management, emotional intelligence, strategic thinking, and decision-making to lead teams effectively.",
-            image: "/skill/softskills/leadershipdevelopment.png"
+            image: "/skill/softskills/leadershipdevelopment.webp"
         },
         {
             title: "Video Editing & Content Creation",
             description: "Master video editing tools, storytelling, and content creation strategies to build an engaging digital presence.",
-            image: "/skill/softskills/videoediting_contentcreation.png"
+            image: "/skill/softskills/videoediting_contentcreation.webp"
         },
         {
             title: "E-Commerce Business Skills",
             description: "Develop business acumen, marketing strategies, and operational knowledge required to run a successful online business.",
-            image: "/skill/softskills/e-commercebusinessskills.png"
+            image: "/skill/softskills/e-commercebusinessskills.webp"
         },
         {
             title: "Personality Development",
             description: "Enhance your self-confidence, body language, presentation, and overall personality to stand out in any professional setting.",
-            image: "/skill/softskills/personalitydevelopment.png"
+            image: "/skill/softskills/personalitydevelopment.webp"
         }
     ],
     "AI Courses": [
         {
             title: "Python for AI/ML",
             description: "Master Python programming basics, libraries like NumPy, Pandas, and Scikit-Learn for machine learning foundations.",
-            image: "/skill/AIcourses/pythonforaiml.png"
+            image: "/skill/AIcourses/pythonforaiml.webp"
         },
         {
             title: "Data Science & Analytics",
             description: "Learn to clean, visualize, analyze complex data and build predictive models to drive data-backed business decisions.",
-            image: "/skill/AIcourses/datascienceanalytics.png"
+            image: "/skill/AIcourses/datascienceanalytics.webp"
         },
         {
             title: "ChatGPT & Prompt Engineering",
             description: "Learn to craft effective prompts, automate daily workflows, and harness the power of large language models.",
-            image: "/skill/AIcourses/chatgptpromptengineering.png"
+            image: "/skill/AIcourses/chatgptpromptengineering.webp"
         },
         {
             title: "AI Tools Training",
             description: "Explore advanced AI tools for design, copywriting, coding, and marketing to boost your productivity by 10x.",
-            image: "/skill/AIcourses/aitoolstraining.png"
+            image: "/skill/AIcourses/aitoolstraining.webp"
         },
         {
             title: "AI Automation",
             description: "Build AI-powered agents, chatbots, and automated workflows using Make, Zapier, and API integrations.",
-            image: "/skill/AIcourses/aiautomation.png"
+            image: "/skill/AIcourses/aiautomation.webp"
         },
         {
             title: "Generative AI",
             description: "Dive into deep learning, neural networks, LLM fine-tuning, and image generation models to build cutting-edge AI apps.",
-            image: "/skill/AIcourses/generativeai.png"
+            image: "/skill/AIcourses/generativeai.webp"
         }
     ]
 };
