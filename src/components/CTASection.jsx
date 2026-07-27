@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function CTASection() {
@@ -66,12 +67,14 @@ export default function CTASection() {
 
         {/* Right Side: Button */}
         <div className="flex-shrink-0">
-          <button className="group relative flex items-center gap-2 bg-[#7143FE] text-white px-2 py-4 lg:px-10 lg:py-5 rounded-full text-[16px] lg:text-[18px] font-bold transition-all duration-300 hover:bg-[#6136e0] hover:scale-105 hover:shadow-[0_20px_40px_rgba(113,67,254,0.3)]">
-            <div className="flex items-center justify-center">
-              <img src="/whiteArrow.png" alt="arrow" className="w-7" />
-            </div>
-            <span>Join The Studio</span>
-          </button>
+          <Link href="/register">
+            <button className="group relative flex items-center gap-2 bg-[#7143FE] text-white px-2 py-4 lg:px-10 lg:py-5 rounded-full text-[16px] lg:text-[18px] font-bold transition-all duration-300 hover:bg-[#6136e0] hover:scale-105 hover:shadow-[0_20px_40px_rgba(113,67,254,0.3)]">
+              <div className="flex items-center justify-center">
+                <img src="/whiteArrow.webp" alt="arrow" className="w-7" />
+              </div>
+              <span>Join The Studio</span>
+            </button>
+          </Link>
         </div>
 
       </div>

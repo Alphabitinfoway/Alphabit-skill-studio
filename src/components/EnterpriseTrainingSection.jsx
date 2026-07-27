@@ -8,31 +8,31 @@ const trainingData = [
     stat: "50+",
     title: "Specialized Training Modules",
     description: "Targeted education in modern programming, UI design, and data security, engineered specifically to map to current job market requirements.",
-    image: "/specializedTrainingModules.png",
+    image: "/specializedTrainingModules.webp",
   },
   {
     stat: "200+",
     title: "Industry and Government Endorsements",
     description: "Holding formal validations from key skill development authorities, guaranteeing your technical training meets rigorous national standards.",
-    image: "/industryAndGovernmentEndorsements.png",
+    image: "/industryAndGovernmentEndorsements.webp",
   },
   {
     stat: "100%",
     title: "Applied Technical Execution",
     description: "Direct, mentor-led execution from the first session. You will build, deploy, and secure actual projects rather than memorizing concepts.",
-    image: "/appliedTechnicalExecution.png",
+    image: "/appliedTechnicalExecution.webp",
   },
   {
     stat: "300+",
     title: "Active Placement Tie-Ups",
     description: "A dedicated corporate relations pipeline that connects verified tech talent directly with companies actively seeking qualified developers and analysts.",
-    image: "/activePlacementTie-Ups.png",
+    image: "/activePlacementTie-Ups.webp",
   },
   {
     stat: "03+",
     title: "Dedicated Tech Campuses",
     description: "Physical infrastructure built for focused technical development, offering seamless access to high-end systems and collaborative environments.",
-    image: "/dedicatedTechCampuses.png",
+    image: "/dedicatedTechCampuses.webp",
   },
 ];
 

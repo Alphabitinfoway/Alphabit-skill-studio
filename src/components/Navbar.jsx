@@ -123,7 +123,7 @@ function SkillsMegaDropdown() {
                     <p className="text-[11px] font-[700] text-[#E53935] uppercase tracking-widest mb-2 px-2">
                         Fields
                     </p>
-                    
+
                     <div className="text-[11px] font-[700] text-[#7C3AED] uppercase tracking-widest px-2 mt-2 mb-1 select-none">
                         Tech Field
                     </div>
@@ -291,6 +291,8 @@ export default function Navbar() {
         link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
     );
 
+    const isRegisterActive = pathname === "/register";
+
     useEffect(() => {
         const el = linkRefs.current[activeIndex];
         if (el) {
@@ -318,7 +320,7 @@ export default function Navbar() {
                 <div className="flex w-full max-w-[980px] items-center justify-between rounded-full bg-[#F5F5F5] border-[3px] border-[#DCDCDC] px-3 py-2 shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2.5 ml-3">
-                        <img src="/Alphabit Skill Logo/Logo 1/1.png" alt="Logo" className="h-9" />
+                        <img src="/Alphabit Skill Logo/Logo 1/1.webp" alt="Logo" className="h-9" />
                     </Link>
 
                     {/* Desktop Links */}
@@ -414,7 +416,10 @@ export default function Navbar() {
                     <div className="flex items-center gap-2 mr-1">
                         <Link
                             href="/register"
-                            className="hidden lg:inline-flex h-[36px] items-center justify-center rounded-full bg-[#7143FE] px-6 text-[12px] font-[600] text-white transition-all hover:bg-[#682ad4] tracking-wide"
+                            className={`hidden lg:inline-flex h-[36px] items-center justify-center rounded-full px-6 text-[12px] font-[600] tracking-wide transition-all duration-150 ease-out shadow-[0_2px_8px_rgba(113,67,254,0.18)] active:translate-y-[2px] active:scale-[0.97] ${isRegisterActive
+                                    ? "bg-[#6E42F8] text-white ring-2 ring-[#7143FE] ring-offset-2 ring-offset-[#F5F5F5] translate-y-[2px] scale-[0.97]"
+                                    : "bg-[#7143FE] text-white hover:bg-[#7143FE]/20 hover:text-[#7143FE] active:bg-[#6E42F8] active:text-white"
+                                }`}
                         >
                             Join the Studio
                         </Link>
@@ -552,7 +557,10 @@ export default function Navbar() {
                                 <Link
                                     href="/register"
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="inline-flex h-[46px] w-full max-w-[240px] items-center justify-center rounded-full bg-[#7C3AED] px-8 text-[15px] font-medium text-white"
+                                    className={`inline-flex h-[46px] w-full max-w-[240px] items-center justify-center rounded-full px-8 text-[15px] font-[600] transition-all duration-150 ease-out shadow-[0_2px_8px_rgba(113,67,254,0.18)] active:translate-y-[2px] active:scale-[0.97] ${isRegisterActive
+                                            ? "bg-[#6E42F8] text-white ring-2 ring-[#7143FE] ring-offset-2 ring-offset-white translate-y-[2px] scale-[0.97]"
+                                            : "bg-[#7143FE] text-white hover:bg-[#7143FE]/20 hover:text-[#7143FE] active:bg-[#6E42F8] active:text-white"
+                                        }`}
                                 >
                                     Join the Studio
                                 </Link>

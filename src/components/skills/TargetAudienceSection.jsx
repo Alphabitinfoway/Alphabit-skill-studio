@@ -10,7 +10,7 @@ export default function TargetAudienceSection() {
       title: "Fresh Graduates",
       desc: "BCA, B.Sc IT, B.Tech, or any stream — get practical skills, a portfolio of real projects, an internship certificate, and placement support to start your career with confidence.",
       icon: (
-        <img src="/skill/freshGraduates.png" alt="Fresh Graduates" className="w-10 h-10" />
+        <img src="/skill/freshgraduates.webp" alt="Fresh Graduates" className="w-10 h-10" />
       ),
     },
     {
@@ -18,7 +18,7 @@ export default function TargetAudienceSection() {
       title: "Career Switchers",
       desc: "Coming from a non-technical background? You'll get structured mentorship and placement support at every step — from zero experience to job-ready.",
       icon: (
-        <img src="/skill/careerSwitchers.png" alt="Career Switchers" className="w-10 h-10" />
+        <img src="/skill/careerswitchers.webp" alt="Career Switchers" className="w-10 h-10" />
       ),
     },
     {
@@ -26,7 +26,7 @@ export default function TargetAudienceSection() {
       title: "Working Professionals",
       desc: "Weekend batches and online options let you upskill and move into a new role without leaving your current job.",
       icon: (
-        <img src="/skill/workingProfessionals.png" alt="Working Professionals" className="w-8 h-8" />
+        <img src="/skill/workingprofessionals.webp" alt="Working Professionals" className="w-8 h-8" />
       ),
     },
   ];
@@ -37,7 +37,7 @@ export default function TargetAudienceSection() {
       title: "Aspiring Freelancers",
       desc: "Learn the complete skill set end to end and start freelancing with confidence, working on real projects for real clients.",
       icon: (
-        <img src="/skill/aspiringFreelancers.png" alt="Aspiring Freelancers" className="w-8 h-8" />
+        <img src="/skill/aspiringfreelancers.webp" alt="Aspiring Freelancers" className="w-8 h-8" />
       ),
     },
     {
@@ -45,7 +45,7 @@ export default function TargetAudienceSection() {
       title: "Entrepreneurs",
       desc: "Build your own product or business without outsourcing. Get complete hands-on ownership of your work from day one.",
       icon: (
-        <img src="/skill/entrepreneurs.png" alt="Entrepreneurs" className="w-10 h-10" />
+        <img src="/skill/entrepreneurs.webp" alt="Entrepreneurs" className="w-10 h-10" />
       ),
     },
     {
@@ -53,7 +53,7 @@ export default function TargetAudienceSection() {
       title: "Internship Seekers",
       desc: "This course includes an internship pathway — online and offline — so you graduate with verified real-world experience on your resume.",
       icon: (
-        <img src="/skill/internshipSeekers.png" alt="Internship Seekers" className="w-8 h-8" />
+        <img src="/skill/internshipseekers.webp" alt="Internship Seekers" className="w-8 h-8" />
       ),
     },
   ];
@@ -115,7 +115,7 @@ export default function TargetAudienceSection() {
         {/* Center Hexagon Column */}
         <div className="relative flex items-center justify-center w-full max-w-[420px] lg:w-[460px] mx-auto py-10 lg:py-0 z-10">
           <img
-            src="/skill/hexagon.png"
+            src="/skill/hexagon.webp"
             alt="Different People. One Destination. Your Future."
             className="w-full h-auto object-contain drop-shadow-md transition-transform duration-500 "
           />

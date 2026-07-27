@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -136,14 +137,16 @@ export default function HeroSection() {
                         </motion.p>
 
                         {/* CTA Button */}
-                        <motion.button 
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="mt-9 px-8 py-[13px] bg-white text-[#7540F0] rounded-full font-[600] text-[13px] shadow-sm hover:bg-[#FFFFFF] transition-all tracking-tight"
-                        >
-                            Join the Studio
-                        </motion.button>
+                        <Link href="/register" className="inline-block mt-9">
+                            <motion.button 
+                                variants={itemVariants}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-[13px] bg-white text-[#7540F0] rounded-full font-[600] text-[13px] shadow-sm hover:bg-[#FFFFFF] transition-all tracking-tight cursor-pointer"
+                            >
+                                Join the Studio
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
 
@@ -164,7 +167,7 @@ export default function HeroSection() {
                                     transition: "transform 0.1s ease-out"
                                 }}
                             >
-                                <Image src="/purpleArrow.png" alt="Arrow" width={44} height={46} />
+                                <Image src="/purpleArrow.webp" alt="Arrow" width={44} height={46} />
                             </div>
 
                             {/* Spinning Text SVG */}

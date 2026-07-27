@@ -11,7 +11,7 @@ export default function HeroSection() {
             Join our core operational team. Apply your technical expertise to structure rigorous, project-driven curriculums that bridge the gap between raw ambition and enterprise-level execution.
           </p>
           <button style={{ backgroundColor: "#7143FE" }} className="text-white px-5 py-3 rounded-full font-medium transition-colors flex items-center justify-center gap-3 text-[17px] shadow-md w-fit hover:opacity-90">
-            <img src="/whiteArrow.png" alt="Join icon" className="w-6 h-6 object-contain brightness-0 invert" />
+            <img src="/whiteArrow.webp" alt="Join icon" className="w-6 h-6 object-contain brightness-0 invert" />
             Join the Studio
           </button>
         </div>

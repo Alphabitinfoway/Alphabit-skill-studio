@@ -30,7 +30,7 @@ export default function RegistrationForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         // Simple validations
         if (!formData.name || !formData.phone || !formData.email || !formData.college || !formData.course || !formData.city) {
             setStatus({ submitting: false, success: false, error: "Please fill out all fields." });
@@ -40,10 +40,12 @@ export default function RegistrationForm() {
         setStatus({ submitting: true, success: false, error: null });
 
         try {
-            const response = await fetch("/seminars/register", {
+            const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
+            const response = await fetch(`${apiBaseUrl}/api/seminars/register`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "ngrok-skip-browser-warning": "true"
                 },
                 body: JSON.stringify(formData)
             });
@@ -62,17 +64,34 @@ export default function RegistrationForm() {
                 });
             } else {
                 const data = await response.json().catch(() => ({}));
-                setStatus({ 
-                    submitting: false, 
-                    success: false, 
-                    error: data.message || "Failed to confirm seat. Please try again." 
+                console.error("Registration failed response data:", data);
+
+                let errorMsg = "Failed to confirm seat. Please try again.";
+                if (data.errors && Array.isArray(data.errors)) {
+                    console.log("Detailed validation errors:", data.errors);
+                    errorMsg = data.errors.map(err => {
+                        if (typeof err === 'string') return err;
+                        return err.message || err.msg || (err.path ? `${err.path}: ${err.msg}` : JSON.stringify(err));
+                    }).join(" | ");
+                } else if (data.message) {
+                    errorMsg = data.message;
+                } else if (data.error) {
+                    errorMsg = typeof data.error === 'string' ? data.error : JSON.stringify(data.error);
+                } else if (data.errors) {
+                    errorMsg = typeof data.errors === 'object' ? Object.values(data.errors).join(", ") : JSON.stringify(data.errors);
+                }
+
+                setStatus({
+                    submitting: false,
+                    success: false,
+                    error: errorMsg
                 });
             }
         } catch (err) {
-            setStatus({ 
-                submitting: false, 
-                success: false, 
-                error: "Network error. Please check your connection and try again." 
+            setStatus({
+                submitting: false,
+                success: false,
+                error: "Network error. Please check your connection and try again."
             });
         }
     };
@@ -92,7 +111,7 @@ export default function RegistrationForm() {
                     <p className="text-gray-500 max-w-[500px] text-[16px] leading-relaxed mb-6 font-medium">
                         Confirmation has been sent to your WhatsApp and email. We look forward to seeing you at the seminar!
                     </p>
-                    <button 
+                    <button
                         onClick={() => setStatus({ submitting: false, success: false, error: null })}
                         className="bg-[#7143FE] hover:bg-[#6336e8] text-white px-8 py-3 rounded-full font-bold text-[14px] transition-colors shadow-lg shadow-[#7143FE]/20"
                     >
@@ -222,10 +241,9 @@ export default function RegistrationForm() {
                                 required
                             >
                                 <option value="Instagram">Instagram</option>
-                                <option value="Facebook">Facebook</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Google">Google Search</option>
-                                <option value="Friend/Reference">Friend / Reference</option>
+                                <option value="Friend / Referral">Friend / Referral</option>
+                                <option value="College Notice">College Notice</option>
+                                <option value="Google Search">Google Search</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>

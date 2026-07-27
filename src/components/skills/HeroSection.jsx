@@ -40,7 +40,7 @@ export default function HeroSection() {
                                 whileTap={{ scale: 0.97 }}
                                 className="flex items-center gap-2 px-6 py-[13px] bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full font-cabinet font-medium text-[13.5px] transition-all duration-300 shadow-md shadow-[#7143fe]/10 hover:shadow-[#7143fe]/20 cursor-pointer"
                             >
-                                <img src="whiteArrow.png" alt="arrow" className="w-[24px] h-[24px] object-cover" />
+                                <img src="whiteArrow.webp" alt="arrow" className="w-[24px] h-[24px] object-cover" />
                                 <span>Explore Courses</span>
                             </motion.button>
                         </div>
@@ -54,7 +54,7 @@ export default function HeroSection() {
                         className="lg:col-span-5 xl:col-span-4 relative flex justify-center items-center w-full min-h-[380px] sm:min-h-[480px] lg:min-h-[520px]"
                     >
                         <div>
-                            <img className="w-full object-contain h-[700px]" src="/skill/herosection1.png" alt="" />
+                            <img className="w-full object-contain h-[700px]" src="/skill/herosection1.webp" alt="" />
                         </div>
                     </motion.div>
 

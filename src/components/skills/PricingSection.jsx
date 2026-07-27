@@ -55,7 +55,7 @@ export default function PricingSection() {
           >
             <div className="w-full max-w-[450px] relative rounded-[32px] overflow-hidden">
               <img
-                src="/skill/pricing.png"
+                src="/skill/pricing.webp"
                 alt="Transparent Pricing"
                 className="w-full h-auto object-contain select-none"
               />
@@ -77,7 +77,7 @@ export default function PricingSection() {
                   className="flex items-start gap-4 group"
                 >
                   <span className="flex-shrink-0  w-6 h-6 mt-0.5  flex items-center justify-center text-[#7143FE] ">
-                    <img src="/black arrow.png" alt="blackxarrow" className="w-6 h-6"/>
+                    <img src="/black arrow.webp" alt="blackxarrow" className="w-6 h-6"/>
                   </span>
                   <span
                     className="text-[#111111]/80 text-[16px] md:text-[18px] leading-relaxed font-medium"
@@ -96,7 +96,7 @@ export default function PricingSection() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full text-[15px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/20 cursor-pointer"
                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
               >
-                <img src="/whiteArrow.png" alt="whitearrow" className="w-6 h-6"/>
+                <img src="/whiteArrow.webp" alt="whitearrow" className="w-6 h-6"/>
                 <span>Book Free Demo Class</span>
               </button>
 
@@ -105,7 +105,7 @@ export default function PricingSection() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full text-[15px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/20 cursor-pointer"
                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
               >
-                <img src="/whiteArrow.png" alt="whitearrow" className="w-6 h-6"/>
+                <img src="/whiteArrow.webp" alt="whitearrow" className="w-6 h-6"/>
                 <span>Call Us</span>
               </Link>
             </div>

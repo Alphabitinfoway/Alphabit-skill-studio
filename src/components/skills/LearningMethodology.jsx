@@ -8,22 +8,22 @@ const methodologyData = [
   {
     title: "Live Project Experience",
     description: "Create responsive, interactive, and performance-driven websites using modern technologies.",
-    image: "/specializedTrainingModules.png",
+    image: "/specializedTrainingModules.webp",
   },
   {
     title: "Expert Mentorship",
     description: "Master machine learning, data analytics, and AI-driven solutions shaping tomorrow's industries.",
-    image: "/specializedTrainingModules.png",
+    image: "/specializedTrainingModules.webp",
   },
   {
     title: "Internship Opportunities",
     description: "Learn SEO, social media strategy, content marketing, and performance advertising.",
-    image: "/specializedTrainingModules.png",
+    image: "/specializedTrainingModules.webp",
   },
   {
     title: "Placement Assistance",
     description: "Develop management, communication, and operational skills for modern organizations.",
-    image: "/specializedTrainingModules.png",
+    image: "/specializedTrainingModules.webp",
   },
 ];
 
