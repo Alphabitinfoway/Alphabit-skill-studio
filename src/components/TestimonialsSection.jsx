@@ -11,21 +11,21 @@ const testimonials = [
         text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         name: "Lorem Ipsum",
         title: "Lorem Ipsum",
-        image: "/Home Page/1.webp" // Kept blank to show the clean white circle just like the picture
+        image: "/Home Page/Trust/1.webp"
     },
     {
         id: 2,
         text: "The hands-on training and community support at the studio are unmatched. I went from zero coding knowledge to building full-stack applications in just a few months.",
         name: "Priya Patel",
         title: "Full Stack Developer",
-        image: "/Home Page/2.webp" 
+        image: "/2.webp" 
     },
     {
         id: 3,
         text: "The placement cell is incredible. They helped me refine my resume and prepared me for tough interviews with top-tier companies.",
         name: "Aniket Verma",
         title: "UX Designer",
-        image: "/Home Page/3.webp" 
+        image: "/3.webp" 
     }
 ];
 

@@ -250,21 +250,21 @@ export const testimonialsSectionData = {
             text: "The training and support I received were top-notch. I went from having basic knowledge to building real-world projects and landing my dream job.",
             name: "Rahul Sharma",
             title: "Software Engineer",
-            image: "/Home Page/1.webp"
+            image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "Highly recommended! The instructors are industry experts who guide you at every step. The capstone projects helped me build a great portfolio.",
             name: "Neha Patel",
             title: "Web Developer",
-            image: "/Home Page/2.webp"
+            image: "/2.webp"
         },
         {
             id: 3,
             text: "The placement assistance was a game-changer. Mock interviews, resume reviews, and direct referrals gave me the confidence to ace my interviews.",
             name: "Amit Verma",
             title: "Frontend Developer",
-            image: "/Home Page/3.webp"
+            image: "/3.webp"
         }
     ]
 };

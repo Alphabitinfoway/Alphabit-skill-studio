@@ -662,21 +662,21 @@ export const testimonialsSectionData = {
             text: "I had zero coding experience when I joined. Within 5 months I had three live projects deployed on GitHub and got placed at a software company in Rajkot. The training here is genuinely industry-level.",
             name: "Priya Desai",
             title: "Junior React Developer, Rajkot",
-            image: "/Home Page/1.webp"
+            image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "The mentors know exactly what companies ask in technical interviews. I completed the training and cracked three interviews in my first month of job hunting. Best full stack course in Rajkot, hands down.",
             name: "Karan Patel",
             title: "Full Stack Developer, Ahmedabad",
-            image: "/Home Page/2.webp"
+            image: "/2.webp"
         },
         {
             id: 3,
             text: "I chose the Java track because I wanted to work at an enterprise company. The Spring Boot and Hibernate modules were extremely detailed and practical. I got placed within 6 weeks of completing the training.",
             name: "Meenal Shah",
             title: "Java Developer, Enterprise Sector",
-            image: "/Home Page/3.webp"
+            image: "/3.webp"
         }
     ]
 };

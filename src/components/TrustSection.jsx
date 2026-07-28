@@ -82,7 +82,7 @@ export default function TrustSection() {
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <Image
-                    src="/black arrow.webp"
+                    src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785218120/black_arrow_kbjuyy.webp"
                     alt="arrow"
                     width={15}
                     height={15}
@@ -127,7 +127,7 @@ export default function TrustSection() {
                 style={{ bottom: 0, left: 40, right: 0 }}
               >
                 <Image
-                  src="/Home Page/Trust/1.webp"
+                  src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215291/1_ng5tct.webp"
                   alt="Happy Student"
                   width={700}
                   height={700}
@@ -155,7 +155,7 @@ export default function TrustSection() {
 
                     {/* Arrow */}
                     <div>
-                      <Image src="/purpleArrow.webp" alt="Arrow" width={46} height={46} />
+                      <Image src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785216791/purpleArrow_ypjtzq.webp" alt="Arrow" width={46} height={46} />
                     </div>
 
                     {/* Spinning Text */}

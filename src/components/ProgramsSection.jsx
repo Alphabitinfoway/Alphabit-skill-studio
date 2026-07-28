@@ -10,37 +10,37 @@ const programs = [
     title: "Graphic Design",
     height: "420px",
     offset: "40px",
-    image: "/Home Page/Professional Mastery/Graphic Design_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215227/Graphic_Design_11zon_anyqls.webp"
   },
   {
     title: "Full Stack Development",
     height: "480px",
     offset: "0px",
-    image: "/Home Page/Professional Mastery/Full Stack Developer_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215226/Full_Stack_Developer_11zon_owmmik.webp"
   },
   {
     title: "Video Editing",
     height: "440px",
     offset: "20px",
-    image: "/Home Page/Professional Mastery/Video Editing_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215227/Video_Editing_11zon_mjxnzg.webp"
   },
   {
     title: "AI/ML & Data Science",
     height: "460px",
     offset: "10px",
-    image: "/Home Page/Professional Mastery/AI ML Data Science_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215226/AI_ML_Data_Science_11zon_iwgbvq.webp"
   },
   {
     title: "Cyber Security",
     height: "490px",
     offset: "-10px",
-    image: "/Home Page/Professional Mastery/Cyber Security_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215227/Cyber_Security_11zon_wfykjl.webp"
   },
   {
     title: "Digital Marketing",
     height: "430px",
     offset: "30px",
-    image: "/Home Page/Professional Mastery/Digital Marketing_11zon.webp"
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215227/Digital_Marketing_11zon_ky06o1.webp"
   },
 ];
 

@@ -33,7 +33,7 @@ export default function HeroSection() {
             style={{ backgroundColor: "#7143FE" }}
             className="text-white px-4 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-2 text-[16px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03]"
           >
-            <img src="whiteArrow.webp" alt="arrow" className="w-6" />
+            <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785222060/whiteArrow_tqeact.webp" alt="arrow" className="w-6" />
             Join the Studio
           </button>
         </div>
@@ -84,7 +84,7 @@ export default function HeroSection() {
             }}
           >
             <img
-              src="/Home Page/About/degree_person.webp"
+              src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785217257/degree_person_pc3fhl.webp"
               alt="Graduate showcasing Alphabit Skill"
               className="w-full h-full object-contain object-bottom"
             />
