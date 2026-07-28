@@ -8,31 +8,31 @@ const trainingData = [
     stat: "50+",
     title: "Specialized Training Modules",
     description: "Targeted education in modern programming, UI design, and data security, engineered specifically to map to current job market requirements.",
-    image: "/specializedTrainingModules.webp",
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785219966/specializedTrainingModules_qg02zc.webp",
   },
   {
     stat: "200+",
     title: "Industry and Government Endorsements",
     description: "Holding formal validations from key skill development authorities, guaranteeing your technical training meets rigorous national standards.",
-    image: "/industryAndGovernmentEndorsements.webp",
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785219971/industryAndGovernmentEndorsements_ykcyzd.webp",
   },
   {
     stat: "100%",
     title: "Applied Technical Execution",
     description: "Direct, mentor-led execution from the first session. You will build, deploy, and secure actual projects rather than memorizing concepts.",
-    image: "/appliedTechnicalExecution.webp",
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785219986/appliedTechnicalExecution_efknr8.webp",
   },
   {
     stat: "300+",
     title: "Active Placement Tie-Ups",
     description: "A dedicated corporate relations pipeline that connects verified tech talent directly with companies actively seeking qualified developers and analysts.",
-    image: "/activePlacementTie-Ups.webp",
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785219977/activePlacementTie-Ups_etvkoc.webp",
   },
   {
     stat: "03+",
     title: "Dedicated Tech Campuses",
     description: "Physical infrastructure built for focused technical development, offering seamless access to high-end systems and collaborative environments.",
-    image: "/dedicatedTechCampuses.webp",
+    image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1785219982/dedicatedTechCampuses_kns7ve.webp",
   },
 ];
 

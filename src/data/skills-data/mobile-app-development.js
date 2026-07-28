@@ -604,21 +604,21 @@ export const testimonialsSectionData = {
             text: "Zero coding experience when I joined. Within 5 months I had two live apps on the Play Store and got placed at a mobile development company in Rajkot.",
             name: "Riya Mehta",
             title: "Flutter Developer, Rajkot",
-            image: "/Home Page/1.webp"
+            image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "The mentors know exactly what companies ask in technical interviews. I cracked three interviews in my first month of job hunting after completing the course.",
             name: "Harsh Patel",
             title: "Mobile App Developer, Ahmedabad",
-            image: "/Home Page/2.webp"
+            image: "/2.webp"
         },
         {
             id: 3,
             text: "I chose the Android track for enterprise work. The Kotlin and Jetpack Compose modules were incredibly detailed and practical. Placed within 6 weeks.",
             name: "Sneha Joshi",
             title: "Android Developer, Surat",
-            image: "/Home Page/3.webp"
+            image: "/3.webp"
         }
     ]
 };
