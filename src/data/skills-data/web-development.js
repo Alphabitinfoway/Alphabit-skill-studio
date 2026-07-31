@@ -598,14 +598,14 @@ export const testimonialsSectionData = {
             text: "I started with zero coding knowledge. After 4 months of the web development course at Alphabit Skill, I had a portfolio of live websites on GitHub and got placed at a digital agency in Rajkot. The React module alone was worth it.",
             name: "Riya Shah",
             title: "Front-End Developer, Rajkot",
-            image: "/Home Page/1.webp"
+            image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "The PHP and Laravel modules were incredibly detailed. I built a complete e-commerce application during the course and got placed in Ahmedabad within 5 weeks. Best web dev course in Rajkot.",
             name: "Mihir Patel",
             title: "PHP Laravel Developer, Ahmedabad",
-            image: "/Home Page/2.webp"
+            image: "/2.webp"
         }
     ]
 };

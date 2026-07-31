@@ -1,15 +1,15 @@
 // ==============================================================================
-// Marketing Manager - Component Data File
+// Communication Skills - Component Data File
 // Driven Dynamically for dynamic routes.
 // ==============================================================================
 
 export const heroSectionData = {
-    titlePrefix: "Marketing",
-    titleSuffix: "Manager",
+    titlePrefix: "Communication",
+    titleSuffix: "Skills",
     highlights: [
-    "Direct Corporate Referrals",
-    "Live Budget & Campaign Execution",
-    "100% Placement Support"
+    "Industry-Ready Corporate Grooming",
+    "Daily Practical Speaking & Writing",
+    "Interactive Group Discussions"
 ],
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
@@ -24,21 +24,21 @@ export const projectStatsSectionData = {
     purpleImage: "/purplesubtract.webp",
     stats: [
     {
-        "label": "300+ Career Transitions"
+        "label": "500+ Professionals Groomed"
     },
     {
-        "label": "Live Industry Budget Budgets"
+        "label": "Expert Corporate Trainers"
     },
     {
-        "label": "300+ Hiring Partners"
+        "label": "100% Mock Interview Pass Rate"
     },
     {
-        "label": "100% Placement Assistance"
+        "label": "Interactive Group Workshops"
     }
 ],
-    durationVal: "3-4 months",
+    durationVal: "2-3 months",
     durationLabel: "Course Duration",
-    hoursVal: "30+ hrs",
+    hoursVal: "20+ hrs",
     hoursLabel: "Live project hours"
 };
 
@@ -47,48 +47,48 @@ export const courseFeaturesData = {
     titleItalic: "Our Modern",
     titleSuffix: "Training Course",
     items: [
-    "Learn key strategies, budgeting, and planning",
-    "Hands-on execution of active campaigns",
-    "Client management & performance tracking dashboard",
-    "Small batch sizes for personalized guidance",
-    "Weekly mentorship reviews by working professionals",
-    "Resume, LinkedIn, and mock interview prep",
-    "Govt. recognised/Industry-ready certification",
-    "Flexible No-Cost EMI fee options"
+    "Interactive group speaking & debate sessions",
+    "Modern professional email & business writing",
+    "Resume building and mock interviews",
+    "Confidence building & public speaking exercises",
+    "Body language and grooming workshops",
+    "Corporate workplace etiquette training",
+    "Personalized feedback by industry experts",
+    "Certification on course completion"
 ],
 };
 
 export const mernModules = [
     {
         "num": "01",
-        "title": "Fundamentals & Planning",
-        "description": "Master the foundational concepts, planning guidelines, and setups required for Marketing Manager.",
+        "title": "Foundation & Understanding",
+        "description": "Master key concepts, self-assessment, initial exercises, and confidence building techniques.",
         "tags": [
-            "Planning",
-            "Basics",
-            "Campaign Setups"
+            "Foundations",
+            "Assessment",
+            "Basics"
         ],
         "techstack": {}
     },
     {
         "num": "02",
-        "title": "Active Execution & Analytics",
-        "description": "Launch campaigns, manage budgets, track results, and optimize performance parameters.",
+        "title": "Corporate Execution",
+        "description": "Practice real-life professional scenarios, business communications, writing, and presentation dynamics.",
         "tags": [
-            "Analytics",
-            "Budgeting",
-            "Optimization"
+            "Corporate Communication",
+            "Presentation",
+            "Etiquette"
         ],
         "techstack": {}
     },
     {
         "num": "03",
-        "title": "Live Case Studies & Review",
-        "description": "Analyze live corporate case studies and defend individual strategy models in panel reviews.",
+        "title": "Advanced Mock Practice",
+        "description": "Participate in intensive mock interviews, group discussions, and receive individual performance reports.",
         "tags": [
-            "Case Studies",
-            "Strategy Reviews",
-            "Final Pitch"
+            "Mock Practice",
+            "Grooming",
+            "Final Evaluation"
         ],
         "techstack": {}
     }
@@ -141,15 +141,15 @@ export const earningsSectionData = {
     titleSuffix: "After Training",
     jobs: [
     {
-        "title": "Junior Marketing Manager Associate",
+        "title": "Corporate Associate",
         "location": "Gujarat / Hybrid",
-        "salary": "₹2.5 - ₹4.5 LPA",
+        "salary": "₹2.5 - ₹4 LPA",
         "badge": "Entry Level",
     },
     {
-        "title": "Senior Marketing Manager Manager",
+        "title": "Communication / HR Specialist",
         "location": "PAN India / Remote",
-        "salary": "₹5 - ₹10 LPA",
+        "salary": "₹5 - ₹8 LPA",
         "badge": "Experienced",
     }
 ],
@@ -161,10 +161,10 @@ export const careerOpportunitiesData = {
     mernTitle: "Core Career Track",
     javaTitle: "",
     mernRoles: [
-    "Junior Marketing Manager Associate",
-    "Marketing Manager Lead",
-    "Strategy Planner",
-    "Marketing Manager Coordinator"
+    "Client Relationship Executive",
+    "HR Recruiter / Coordinator",
+    "Team Leader / Trainer",
+    "Customer Success Manager"
 ],
     javaRoles: [],
 };
@@ -175,15 +175,15 @@ export const industriesSectionData = {
     description: "The skills you gain are highly sought after across multiple high-growth industries.",
     industries: [
     {
-        "title": "IT Services",
+        "title": "IT & Startups",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
     },
     {
-        "title": "Fintech",
+        "title": "Finance & Banks",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/fintech.webp"
     },
     {
-        "title": "Retail Tech",
+        "title": "E-Commerce Support",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
     }
     ],
@@ -232,8 +232,8 @@ export const trackSelectorData = {
     description: "Choose the learning path that matches your career goal.",
     tracks: [
         {
-            title: "Marketing Manager Track",
-            description: "Master the standard professional curriculum and industry tools for Marketing Manager.",
+            title: "Communication Skills Track",
+            description: "Master the standard professional curriculum and industry tools for Communication Skills.",
             bestFor: "Career Starters · Freelancers · Professionals",
             idealIf: "Acquire modern certified skills · Build a portfolio of live projects · Gain direct job referrals"
         }
@@ -272,18 +272,10 @@ export const testimonialsSectionData = {
 
 export const ctaSectionData = {
     line1Normal: "Access the",
-    line1Italic: "Marketing Management",
+    line1Italic: "Communication Curriculum",
     line1Suffix: "- Apply Today and",
     line2Normal: "Start Building",
-    line2Italic: "Market-Winning Strategies",
+    line2Italic: "Confident Communicators",
     buttonText: "Join The Studio",
     buttonHref: "/register",
-};
-
-/**
- * 13. Metadata Info
- */
-export const metadata = {
-    title: "Marketing Manager | Alphabit Skill",
-    description: "Learn Marketing Manager at Alphabit Skill — expert-led training, real-world projects, and placement support."
 };

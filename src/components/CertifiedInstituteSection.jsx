@@ -35,7 +35,7 @@ export default function CertifiedInstituteSection() {
                         {/* Icon - Floating without BG */}
                         <div className="absolute top-[-40px] left-8 w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center overflow-hidden">
                             <Image 
-                                src="/Home Page/Certified/1_11zon.webp" 
+                                src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215274/1_11zon_bknff5.webp" 
                                 alt="Official Validation" 
                                 width={60} 
                                 height={60} 
@@ -58,7 +58,7 @@ export default function CertifiedInstituteSection() {
                         {/* Icon - Floating without BG */}
                         <div className="absolute top-[-40px] left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center overflow-hidden">
                             <Image 
-                                src="/Home Page/Certified/2_11zon.webp" 
+                                src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215274/2_11zon_y7ejez.webp" 
                                 alt="Curriculum" 
                                 width={60} 
                                 height={60} 
@@ -80,7 +80,7 @@ export default function CertifiedInstituteSection() {
                         {/* Icon - Floating without BG */}
                         <div className="absolute top-[-40px] left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center overflow-hidden">
                             <Image 
-                                src="/Home Page/Certified/3_11zon.webp" 
+                                src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785215275/3_11zon_wg68ow.webp" 
                                 alt="Fee Structure" 
                                 width={60} 
                                 height={60} 

@@ -12,7 +12,7 @@ export default function FeaturesSection() {
                     {/* LEFT IMAGE */}
                     <div className="relative w-full lg:w-[539px] h-[300px] sm:h-[400px] md:h-[520px] rounded-[34px] overflow-hidden shadow-sm">
                         <Image
-                            src="/Home Page/About/1.webp"
+                            src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785217255/1_tywtbj.webp"
                             alt="Studio"
                             fill
                             className="object-cover"

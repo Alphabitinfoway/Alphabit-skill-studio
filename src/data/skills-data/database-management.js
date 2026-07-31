@@ -1,15 +1,15 @@
 // ==============================================================================
-// Marketing Manager - Component Data File
+// Database Management - Component Data File
 // Driven Dynamically for dynamic routes.
 // ==============================================================================
 
 export const heroSectionData = {
-    titlePrefix: "Marketing",
-    titleSuffix: "Manager",
+    titlePrefix: "Database",
+    titleSuffix: "Management",
     highlights: [
-    "Direct Corporate Referrals",
-    "Live Budget & Campaign Execution",
-    "100% Placement Support"
+    "NSDC-Recognised Certification",
+    "300+ Active Hiring Partners",
+    "Rajkot, Gujarat"
 ],
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
@@ -24,10 +24,10 @@ export const projectStatsSectionData = {
     purpleImage: "/purplesubtract.webp",
     stats: [
     {
-        "label": "300+ Career Transitions"
+        "label": "200+ Students Trained"
     },
     {
-        "label": "Live Industry Budget Budgets"
+        "label": "10 Years Industry Experience"
     },
     {
         "label": "300+ Hiring Partners"
@@ -36,9 +36,9 @@ export const projectStatsSectionData = {
         "label": "100% Placement Assistance"
     }
 ],
-    durationVal: "3-4 months",
+    durationVal: "4-6 months",
     durationLabel: "Course Duration",
-    hoursVal: "30+ hrs",
+    hoursVal: "50+ hrs",
     hoursLabel: "Live project hours"
 };
 
@@ -47,10 +47,10 @@ export const courseFeaturesData = {
     titleItalic: "Our Modern",
     titleSuffix: "Training Course",
     items: [
-    "Learn key strategies, budgeting, and planning",
-    "Hands-on execution of active campaigns",
-    "Client management & performance tracking dashboard",
-    "Small batch sizes for personalized guidance",
+    "Comprehensive modules from fundamentals to advanced",
+    "Hands-on live industry projects",
+    "GitHub portfolio with deployed applications",
+    "Small batch sizes for personalized learning",
     "Weekly mentorship reviews by working professionals",
     "Resume, LinkedIn, and mock interview prep",
     "Govt. recognised/Industry-ready certification",
@@ -61,34 +61,34 @@ export const courseFeaturesData = {
 export const mernModules = [
     {
         "num": "01",
-        "title": "Fundamentals & Planning",
-        "description": "Master the foundational concepts, planning guidelines, and setups required for Marketing Manager.",
+        "title": "Fundamentals & Architecture",
+        "description": "Master core Database Management concepts, setting up development environments, syntax, and workflow setups.",
         "tags": [
-            "Planning",
-            "Basics",
-            "Campaign Setups"
+            "Architecture",
+            "Environments",
+            "Core Syntax"
         ],
         "techstack": {}
     },
     {
         "num": "02",
-        "title": "Active Execution & Analytics",
-        "description": "Launch campaigns, manage budgets, track results, and optimize performance parameters.",
+        "title": "Database Integration & Logic",
+        "description": "Learn logical structure, data handling, schemas, validations, and storage operations.",
         "tags": [
-            "Analytics",
-            "Budgeting",
-            "Optimization"
+            "Databases",
+            "APIs",
+            "Data Validation"
         ],
         "techstack": {}
     },
     {
         "num": "03",
-        "title": "Live Case Studies & Review",
-        "description": "Analyze live corporate case studies and defend individual strategy models in panel reviews.",
+        "title": "Advanced Features & Live Project",
+        "description": "Build and deploy a complete production-grade application featuring security, optimization, and scaling.",
         "tags": [
-            "Case Studies",
-            "Strategy Reviews",
-            "Final Pitch"
+            "Deployment",
+            "Security",
+            "Production Launch"
         ],
         "techstack": {}
     }
@@ -141,15 +141,15 @@ export const earningsSectionData = {
     titleSuffix: "After Training",
     jobs: [
     {
-        "title": "Junior Marketing Manager Associate",
-        "location": "Gujarat / Hybrid",
-        "salary": "₹2.5 - ₹4.5 LPA",
+        "title": "Junior Database Management Developer",
+        "location": "Gujarat / Remote",
+        "salary": "₹3 - ₹5 LPA",
         "badge": "Entry Level",
     },
     {
-        "title": "Senior Marketing Manager Manager",
+        "title": "Senior Database Management Engineer",
         "location": "PAN India / Remote",
-        "salary": "₹5 - ₹10 LPA",
+        "salary": "₹6 - ₹12 LPA",
         "badge": "Experienced",
     }
 ],
@@ -161,10 +161,10 @@ export const careerOpportunitiesData = {
     mernTitle: "Core Career Track",
     javaTitle: "",
     mernRoles: [
-    "Junior Marketing Manager Associate",
-    "Marketing Manager Lead",
-    "Strategy Planner",
-    "Marketing Manager Coordinator"
+    "Junior Database Management Developer",
+    "Database Management Analyst",
+    "Freelance Database Management Specialist",
+    "Lead Database Management Consultant"
 ],
     javaRoles: [],
 };
@@ -183,7 +183,7 @@ export const industriesSectionData = {
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/fintech.webp"
     },
     {
-        "title": "Retail Tech",
+        "title": "E-commerce",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
     }
     ],
@@ -232,8 +232,8 @@ export const trackSelectorData = {
     description: "Choose the learning path that matches your career goal.",
     tracks: [
         {
-            title: "Marketing Manager Track",
-            description: "Master the standard professional curriculum and industry tools for Marketing Manager.",
+            title: "Database Management Track",
+            description: "Master the standard professional curriculum and industry tools for Database Management.",
             bestFor: "Career Starters · Freelancers · Professionals",
             idealIf: "Acquire modern certified skills · Build a portfolio of live projects · Gain direct job referrals"
         }
@@ -272,18 +272,10 @@ export const testimonialsSectionData = {
 
 export const ctaSectionData = {
     line1Normal: "Access the",
-    line1Italic: "Marketing Management",
+    line1Italic: "Database Curriculum",
     line1Suffix: "- Apply Today and",
     line2Normal: "Start Building",
-    line2Italic: "Market-Winning Strategies",
+    line2Italic: "Data-Driven Systems",
     buttonText: "Join The Studio",
     buttonHref: "/register",
-};
-
-/**
- * 13. Metadata Info
- */
-export const metadata = {
-    title: "Marketing Manager | Alphabit Skill",
-    description: "Learn Marketing Manager at Alphabit Skill — expert-led training, real-world projects, and placement support."
 };

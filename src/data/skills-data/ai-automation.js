@@ -1,15 +1,15 @@
 // ==============================================================================
-// Marketing Manager - Component Data File
+// AI Automation - Component Data File
 // Driven Dynamically for dynamic routes.
 // ==============================================================================
 
 export const heroSectionData = {
-    titlePrefix: "Marketing",
-    titleSuffix: "Manager",
+    titlePrefix: "AI",
+    titleSuffix: "Automation",
     highlights: [
-    "Direct Corporate Referrals",
-    "Live Budget & Campaign Execution",
-    "100% Placement Support"
+    "Latest GenAI Tools & Integrations",
+    "Hands-on AI Agent Pipelines",
+    "100% Project-Based Training"
 ],
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
@@ -24,13 +24,13 @@ export const projectStatsSectionData = {
     purpleImage: "/purplesubtract.webp",
     stats: [
     {
-        "label": "300+ Career Transitions"
+        "label": "150+ AI Specialists Trained"
     },
     {
-        "label": "Live Industry Budget Budgets"
+        "label": "Hands-on Practical APIs"
     },
     {
-        "label": "300+ Hiring Partners"
+        "label": "Latest AI Models & Agents"
     },
     {
         "label": "100% Placement Assistance"
@@ -38,7 +38,7 @@ export const projectStatsSectionData = {
 ],
     durationVal: "3-4 months",
     durationLabel: "Course Duration",
-    hoursVal: "30+ hrs",
+    hoursVal: "40+ hrs",
     hoursLabel: "Live project hours"
 };
 
@@ -47,12 +47,12 @@ export const courseFeaturesData = {
     titleItalic: "Our Modern",
     titleSuffix: "Training Course",
     items: [
-    "Learn key strategies, budgeting, and planning",
-    "Hands-on execution of active campaigns",
-    "Client management & performance tracking dashboard",
-    "Small batch sizes for personalized guidance",
-    "Weekly mentorship reviews by working professionals",
-    "Resume, LinkedIn, and mock interview prep",
+    "Master Python scripts for AI pipelines",
+    "Integrate OpenAI, Claude, and Gemini APIs",
+    "Build live AI agents and automation bots",
+    "Learn database querying and vector indexing",
+    "Deploy custom AI solutions live on the web",
+    "Weekly code review by machine learning engineers",
     "Govt. recognised/Industry-ready certification",
     "Flexible No-Cost EMI fee options"
 ],
@@ -61,34 +61,34 @@ export const courseFeaturesData = {
 export const mernModules = [
     {
         "num": "01",
-        "title": "Fundamentals & Planning",
-        "description": "Master the foundational concepts, planning guidelines, and setups required for Marketing Manager.",
+        "title": "AI & ML Foundations",
+        "description": "Learn the math, data structures, and scripting concepts necessary to understand AI Automation.",
         "tags": [
-            "Planning",
-            "Basics",
-            "Campaign Setups"
+            "Math & Logic",
+            "Data Scripts",
+            "AI Basics"
         ],
         "techstack": {}
     },
     {
         "num": "02",
-        "title": "Active Execution & Analytics",
-        "description": "Launch campaigns, manage budgets, track results, and optimize performance parameters.",
+        "title": "Model Setup & Integration",
+        "description": "Integrate LLMs, vector search, prompts, and memory buffers into your custom scripts.",
         "tags": [
-            "Analytics",
-            "Budgeting",
-            "Optimization"
+            "API Integrations",
+            "Vector DBs",
+            "Prompt Pipelines"
         ],
         "techstack": {}
     },
     {
         "num": "03",
-        "title": "Live Case Studies & Review",
-        "description": "Analyze live corporate case studies and defend individual strategy models in panel reviews.",
+        "title": "Deploying AI Solutions",
+        "description": "Build custom bots, automate workflows, and deploy a complete AI product to production.",
         "tags": [
-            "Case Studies",
-            "Strategy Reviews",
-            "Final Pitch"
+            "Workflow Automation",
+            "API Security",
+            "Live Deployment"
         ],
         "techstack": {}
     }
@@ -141,15 +141,15 @@ export const earningsSectionData = {
     titleSuffix: "After Training",
     jobs: [
     {
-        "title": "Junior Marketing Manager Associate",
-        "location": "Gujarat / Hybrid",
-        "salary": "₹2.5 - ₹4.5 LPA",
+        "title": "Junior AI / AI Automation Specialist",
+        "location": "Gujarat / Remote",
+        "salary": "₹4 - ₹7 LPA",
         "badge": "Entry Level",
     },
     {
-        "title": "Senior Marketing Manager Manager",
+        "title": "Lead AI / AI Automation Engineer",
         "location": "PAN India / Remote",
-        "salary": "₹5 - ₹10 LPA",
+        "salary": "₹8 - ₹16 LPA",
         "badge": "Experienced",
     }
 ],
@@ -161,10 +161,10 @@ export const careerOpportunitiesData = {
     mernTitle: "Core Career Track",
     javaTitle: "",
     mernRoles: [
-    "Junior Marketing Manager Associate",
-    "Marketing Manager Lead",
-    "Strategy Planner",
-    "Marketing Manager Coordinator"
+    "AI Analyst",
+    "AI Automation Specialist",
+    "Automation Developer",
+    "ML/AI Consultant"
 ],
     javaRoles: [],
 };
@@ -183,8 +183,8 @@ export const industriesSectionData = {
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/fintech.webp"
     },
     {
-        "title": "Retail Tech",
-            icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
+        "title": "Healthcare Tech",
+            icon: "/skill/ITSkills/FullStackDevelopment/industriessection/healthcaretech.webp"
     }
     ],
 };
@@ -232,8 +232,8 @@ export const trackSelectorData = {
     description: "Choose the learning path that matches your career goal.",
     tracks: [
         {
-            title: "Marketing Manager Track",
-            description: "Master the standard professional curriculum and industry tools for Marketing Manager.",
+            title: "Ai Automation Track",
+            description: "Master the standard professional curriculum and industry tools for Ai Automation.",
             bestFor: "Career Starters · Freelancers · Professionals",
             idealIf: "Acquire modern certified skills · Build a portfolio of live projects · Gain direct job referrals"
         }
@@ -272,18 +272,10 @@ export const testimonialsSectionData = {
 
 export const ctaSectionData = {
     line1Normal: "Access the",
-    line1Italic: "Marketing Management",
+    line1Italic: "AI Automation Curriculum",
     line1Suffix: "- Apply Today and",
     line2Normal: "Start Building",
-    line2Italic: "Market-Winning Strategies",
+    line2Italic: "Intelligent Systems",
     buttonText: "Join The Studio",
     buttonHref: "/register",
-};
-
-/**
- * 13. Metadata Info
- */
-export const metadata = {
-    title: "Marketing Manager | Alphabit Skill",
-    description: "Learn Marketing Manager at Alphabit Skill — expert-led training, real-world projects, and placement support."
 };

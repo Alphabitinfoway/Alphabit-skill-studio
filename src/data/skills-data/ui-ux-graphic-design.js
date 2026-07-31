@@ -479,21 +479,21 @@ export const testimonialsSectionData = {
             text: "I had no design background at all when I joined. Within 5 months of the UI/UX course I had a complete Figma portfolio with three original case studies and got placed at a product company in Rajkot. The feedback sessions alone were worth the entire course fee.",
             name: "Pooja Raval",
             title: "UI/UX Designer, Rajkot",
-            image: "/Home Page/1.webp"
+            image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "The mentors know exactly what creative directors and hiring managers look for in a portfolio — because they've worked with them. I completed the graphic design course and started freelancing within weeks.",
             name: "Nikunj Shah",
             title: "Freelance Graphic Designer, Ahmedabad",
-            image: "/Home Page/2.webp"
+            image: "/2.webp"
         },
         {
             id: 3,
             text: "I chose the UI/UX course because I wanted to work at a tech startup, not an agency. The Figma and prototyping modules were incredibly detailed. Got placed within 6 weeks of completing the course.",
             name: "Drashti Mehta",
             title: "Product Designer, Surat",
-            image: "/Home Page/3.webp"
+            image: "/3.webp"
         }
     ]
 };

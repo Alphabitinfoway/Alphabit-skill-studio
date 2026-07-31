@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { toSlug } from "@/data/skills";
 
-/* ─── Dropdown data ──────────────────────────────────────────────── */
+
 /* ─── Dropdown data ──────────────────────────────────────────────── */
 const skillsDropdown = {
     categories: [
@@ -320,7 +320,7 @@ export default function Navbar() {
                 <div className="flex w-full max-w-[980px] items-center justify-between rounded-full bg-[#F5F5F5] border-[3px] border-[#DCDCDC] px-3 py-2 shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2.5 ml-3">
-                        <img src="/Alphabit Skill Logo/Logo 1/1.webp" alt="Logo" className="h-9" />
+                        <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785216931/1_wou0fw.webp" alt="Logo" className="h-9" />
                     </Link>
 
                     {/* Desktop Links */}
