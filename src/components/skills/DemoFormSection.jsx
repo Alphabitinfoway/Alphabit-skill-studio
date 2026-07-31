@@ -171,6 +171,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 Name
                             </label>
                             <input
+                                suppressHydrationWarning
                                 id="demo-name"
                                 name="name"
                                 type="text"
@@ -193,6 +194,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 Email
                             </label>
                             <input
+                                suppressHydrationWarning
                                 id="demo-email"
                                 name="email"
                                 type="email"
@@ -215,6 +217,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 Contact Number
                             </label>
                             <input
+                                suppressHydrationWarning
                                 id="demo-contact"
                                 name="contact"
                                 type="tel"
@@ -282,6 +285,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                         {/* Submit Button */}
                         <div className="flex justify-center mt-2">
                             <button
+                                suppressHydrationWarning
                                 type="submit"
                                 disabled={submitting}
                                 className="inline-flex items-center gap-1.5 px-6 py-3 bg-[#7143FE] hover:bg-[#5f33eb] disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full text-[14px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/30 cursor-pointer"

@@ -91,7 +91,7 @@ export default function ComparisonSection({ data }) {
             </div>
           </div>
 
-          {/* Column 3 Header: Alphabet Skill */}
+          {/* Column 3 Header: Alphabit Skill */}
           <div className="flex flex-col">
             <div className="bg-[#7C3AED] text-white text-center py-3.5 px-6 rounded-2xl font-semibold text-[20px] mb-6 shadow-md shadow-[#7C3AED]/20">
               Alphabit Skill
@@ -166,7 +166,7 @@ export default function ComparisonSection({ data }) {
               </div>
             </motion.div>
 
-            {/* Alphabet Skill */}
+            {/* Alphabit Skill */}
             <motion.div
               key={`us-${activeTab}`}
               initial={{ opacity: 0, y: 10 }}
@@ -175,7 +175,7 @@ export default function ComparisonSection({ data }) {
               className="bg-white border border-purple-100 rounded-2xl p-5 shadow-md shadow-purple-500/5 flex flex-col gap-3"
             >
               <div className="bg-[#7C3AED] text-white text-xs font-bold px-3 py-1.5 rounded-lg w-max uppercase">
-                Alphabet Skill
+                Alphabit Skill
               </div>
               <div className="flex items-start gap-3 mt-2">
                 <div className="w-6.5 h-6.5 rounded-full bg-[#10B981] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm shadow-[#10B981]/25">

@@ -567,7 +567,7 @@ export const meetingGlanceData = meetingGlanceSectionData.meetings;
 export const meetingVideoData = {
     titlePrefix: "A Glance",
     titleSuffix: "at yesterday's Meeting",
-    videoUrl: "", // Add YouTube embed link here (e.g. "https://www.youtube.com/embed/XXXXX")
+    videoUrl: "", // YouTube embed URL (must use /embed/ format, not /watch?v=)
 };
 
 /**
@@ -690,4 +690,12 @@ export const ctaSectionData = {
     line2Italic: "Production Apps",
     buttonText: "Join The Studio",
     buttonHref: "/register",
+};
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: "Full Stack Development | Alphabit Skill",
+    description: "Learn Full Stack Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
 };

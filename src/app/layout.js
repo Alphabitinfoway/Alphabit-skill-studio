@@ -21,12 +21,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-T6G66TTK" />
       <head>
         <link rel="icon" href="/logo.webp" />
-        <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&display=swap" rel="stylesheet" />
+        {/*
+          Cabinet Grotesk is now self-hosted via /public/fonts/CabinetGrotesk-Variable.woff2
+          and declared in globals.css — no external CDN request needed.
+          The preconnect below is a fallback hint only, safe to keep for graceful degradation.
+        */}
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#F5F5F5] font-sans selection:bg-indigo-500/30 flex flex-col`}
       >

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import DemoFormSection from "@/components/skills/DemoFormSection";
 export default function HeroSection({ data }) {
     const heroSectionData = data?.heroSectionData || {};
@@ -51,11 +52,12 @@ export default function HeroSection({ data }) {
                     <div className="mt-10 flex flex-wrap gap-3">
                         <button
                             onClick={() => setIsDemoFormOpen(true)}
+                            suppressHydrationWarning
                             className="inline-flex items-center gap-2 px-4 py-3 bg-[#7143FE] hover:bg-[#5f33eb] text-white rounded-full text-[14px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/20 cursor-pointer"
                             style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                         >
                             {/* Phone icon */}
-                            <img src="/whiteArrow.webp" alt="whiteArrow" className="w-5 h-5" />
+                            <Image src="/whiteArrow.webp" alt="whiteArrow" width={20} height={20} className="w-5 h-5" />
                             <span className="py-1">{heroSectionData.primaryCtaText}</span>
                         </button>
                         <Link
@@ -78,12 +80,17 @@ export default function HeroSection({ data }) {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
                     className="flex justify-center items-center w-full"
                 >
-                    <div className="w-full max-w-[480px] mt-12 ms-16">
-                        <img
-                            src={heroSectionData.heroImage}
-                            alt="Full Stack Development"
-                            className="w-full h-auto object-contain"
-                        />
+                    <div className="w-full max-w-[480px] mt-12 ms-16 relative">
+                        {heroSectionData.heroImage && (
+                            <Image
+                                src={heroSectionData.heroImage}
+                                alt={heroSectionData.titlePrefix || "Skill Hero"}
+                                width={480}
+                                height={480}
+                                priority
+                                className="w-full h-auto object-contain"
+                            />
+                        )}
                     </div>
                 </motion.div>
 

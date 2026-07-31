@@ -8,7 +8,6 @@ import LandingPageLayout from "@/components/skills/Common/LandingPageLayout";
 import CurriculumSection from "@/components/skills/Common/CurriculumSection";
 import ComparisonSection from "@/components/skills/Common/ComparisonSection";
 import EarningsSection from "@/components/skills/Common/EarningsSection";
-import MeetingGlanceSection from "@/components/skills/Common/MeetingGlanceSection";
 import MeetingVideoSection from "@/components/skills/Common/MeetingVideoSection";
 import CareerOpportunitiesSection from "@/components/skills/Common/CareerOpportunitiesSection";
 import IndustriesSection from "@/components/skills/Common/IndustriesSection";
@@ -28,10 +27,67 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const skill = getSkillBySlug(slug);
   if (!skill) return {};
+
+  try {
+    const dataModule = await import(`@/data/skills-data/${slug}`);
+    if (dataModule.metadata) {
+      return dataModule.metadata;
+    }
+  } catch (err) {
+    // Fall back to default if import fails or metadata is missing
+  }
+
   return {
     title: `${skill.title} | Alphabit Skill`,
     description: `Learn ${skill.title} at Alphabit Skill — expert-led training, real-world projects, and placement support.`,
   };
+}
+
+// ── Server-side API helpers ───────────────────────────────────────────────
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://skill-backend-admin.onrender.com";
+
+/**
+ * Fetch meetings and syllabus data from the backend in parallel.
+ * Uses Next.js ISR (revalidate: 3600 = 1 hour) so the Render.com free-tier
+ * cold-start only ever affects the very first server render, not user visits.
+ * Returns nulls gracefully if the API is unreachable.
+ */
+async function fetchSkillApiData(slug) {
+  try {
+    const [meetingsRes, syllabusRes] = await Promise.all([
+      fetch(`${API_BASE}/api/meetings`, {
+        headers: { "ngrok-skip-browser-warning": "true" },
+        next: { revalidate: 3600 }, // ISR: re-fetch at most once per hour
+      }),
+      fetch(`${API_BASE}/api/syllabus`, {
+        headers: { "ngrok-skip-browser-warning": "true" },
+        next: { revalidate: 3600 },
+      }),
+    ]);
+
+    const [meetingsJson, syllabusJson] = await Promise.all([
+      meetingsRes.ok ? meetingsRes.json() : Promise.resolve({ data: [] }),
+      syllabusRes.ok ? syllabusRes.json() : Promise.resolve({ data: [] }),
+    ]);
+
+    const apiMeeting =
+      meetingsJson?.success && Array.isArray(meetingsJson.data)
+        ? (meetingsJson.data.find((m) => m.skillSlug === slug) ?? null)
+        : null;
+
+    const syllabusPdf =
+      syllabusJson?.success && Array.isArray(syllabusJson.data)
+        ? (syllabusJson.data.find((s) => s.skillSlug === slug)?.pdfUrl ?? null)
+        : null;
+
+    return { apiMeeting, syllabusPdf };
+  } catch (err) {
+    // Backend unreachable (e.g. Render.com cold start timeout) — degrade gracefully
+    console.error("[SkillDetailPage] API fetch failed:", err?.message);
+    return { apiMeeting: null, syllabusPdf: null };
+  }
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────
@@ -41,45 +97,48 @@ export default async function SkillDetailPage({ params }) {
 
   if (!skill) notFound();
 
-  // Load configuration data dynamically for the current slug
-  let skillData = {};
-  try {
-    const dataModule = await import(`@/data/skills-data/${slug}`);
-    // Spread the module properties into a plain object to pass across RSC boundary
-    skillData = { ...dataModule };
-  } catch (err) {
-    // Generate dynamic fallback hero data based on course title if custom data file is missing
-    const words = skill.title.split(" ");
-    const titleSuffix = words.pop() || "";
-    const titlePrefix = words.join(" ") || "Professional";
+  // Load skill config data + API data in parallel
+  const [skillDataResult, apiData] = await Promise.all([
+    // Dynamic import for skill-specific config
+    import(`@/data/skills-data/${slug}`)
+      .then((mod) => ({ ...mod }))
+      .catch(() => {
+        // Fallback hero data if no skill-specific file exists
+        const words = skill.title.split(" ");
+        const titleSuffix = words.pop() || "";
+        const titlePrefix = words.join(" ") || "Professional";
+        return {
+          heroSectionData: {
+            titlePrefix,
+            titleSuffix,
+            highlights: [
+              "Expert-Led Live Training",
+              "Hands-On Projects",
+              "Placement Assistance",
+            ],
+            primaryCtaText: "Book Free Demo Class",
+            secondaryCtaText: "Call Us",
+            phoneNumber: "+919409207327",
+            heroImage: "/subtract.webp",
+          },
+        };
+      }),
+    // Server-side API fetch (cached with ISR)
+    fetchSkillApiData(slug),
+  ]);
 
-    skillData = {
-      heroSectionData: {
-        titlePrefix,
-        titleSuffix,
-        highlights: [
-          "Expert-Led Live Training",
-          "Hands-On Projects",
-          "Placement Assistance",
-        ],
-        primaryCtaText: "Book Free Demo Class",
-        secondaryCtaText: "Call Us",
-        phoneNumber: "+919409207327",
-        heroImage: "/subtract.webp",
-      }
-    };
-  }
+  const skillData = skillDataResult;
+  const { apiMeeting, syllabusPdf } = apiData;
 
   return (
     <>
       <HeroSection data={skillData} />
       <ProjectStatsSection data={skillData} />
       <LandingPageLayout data={skillData} />
-      <CurriculumSection data={skillData} />
+      <CurriculumSection data={skillData} syllabusPdf={syllabusPdf} />
       <ComparisonSection data={skillData} />
       <EarningsSection data={skillData} />
-      <MeetingGlanceSection data={skillData} />
-      <MeetingVideoSection data={skillData} />
+      <MeetingVideoSection data={skillData} apiMeeting={apiMeeting} />
       <CareerOpportunitiesSection data={skillData} />
       <IndustriesSection data={skillData} />
       <TestimonialsSection />

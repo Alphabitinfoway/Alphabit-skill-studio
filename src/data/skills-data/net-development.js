@@ -279,3 +279,11 @@ export const ctaSectionData = {
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: ".NET Development | Alphabit Skill",
+    description: "Learn .NET Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
+};

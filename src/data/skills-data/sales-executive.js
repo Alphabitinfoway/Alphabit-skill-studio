@@ -279,3 +279,11 @@ export const ctaSectionData = {
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: "Sales Executive | Alphabit Skill",
+    description: "Learn Sales Executive at Alphabit Skill — expert-led training, real-world projects, and placement support."
+};

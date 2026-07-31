@@ -110,6 +110,7 @@ export default function TestimonialsSection() {
                             onClick={prevTestimonial}
                             role="button"
                             tabIndex={0}
+                            suppressHydrationWarning
                             className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group cursor-pointer"
                         >
                             <img src="/black arrow.webp" alt="arrow" className="w-7 rotate-225" />
@@ -118,6 +119,7 @@ export default function TestimonialsSection() {
                             onClick={nextTestimonial}
                             role="button"
                             tabIndex={0}
+                            suppressHydrationWarning
                             className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group cursor-pointer"
                         >
                             <img src="/black arrow.webp" alt="arrow" className="w-7 rotate-45" />
