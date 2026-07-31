@@ -4,6 +4,7 @@ import type { CSSProperties, ComponentPropsWithRef, HTMLAttributes, KeyboardEven
 import { cloneElement, createContext, isValidElement, useCallback, useContext, useEffect, useState } from "react";
 import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
 import { cx } from "@/utils/cx";
+import React from "react";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
