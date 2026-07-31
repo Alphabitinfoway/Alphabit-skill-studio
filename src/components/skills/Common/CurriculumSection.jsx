@@ -3,9 +3,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useParams, usePathname } from "next/navigation";
+import Image from "next/image";
 import { getSkillBySlug } from "@/data/skills";
 
-export default function CurriculumSection({ data }) {
+export default function CurriculumSection({ data, syllabusPdf = null }) {
     const params = useParams();
     const pathname = usePathname();
 
@@ -56,6 +57,8 @@ export default function CurriculumSection({ data }) {
     const [hasFilledForm, setHasFilledForm] = useState(false);
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState(null);
+    // syllabusPdf is now passed as a prop from the server component (page.js)
+    // No client-side fetch needed — data is ISR cached server-side
 
     // Form inputs state
     const [formData, setFormData] = useState({
@@ -87,7 +90,11 @@ export default function CurriculumSection({ data }) {
 
     const handleOpenPdfFlow = () => {
         if (hasFilledForm) {
-            window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
+            if (syllabusPdf) {
+                window.open(syllabusPdf, "_blank");
+            } else {
+                window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
+            }
         } else {
             setShowFormModal(true);
         }
@@ -129,7 +136,11 @@ export default function CurriculumSection({ data }) {
                 if (response.ok) {
                     setHasFilledForm(true);
                     setShowFormModal(false);
-                    window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
+                    if (syllabusPdf) {
+                        window.open(syllabusPdf, "_blank");
+                    } else {
+                        window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
+                    }
                 } else {
                     const errText = await response.text().catch(() => "");
                     let errData = {};
@@ -231,6 +242,7 @@ export default function CurriculumSection({ data }) {
                                         key={track.path || idx}
                                         ref={(el) => (tabRefs.current[idx] = el)}
                                         onClick={() => setActiveTab(idx)}
+                                        suppressHydrationWarning
                                         className={`relative z-10 px-5 py-2.5 whitespace-nowrap text-[14px] font-[600] rounded-xl transition-colors duration-200 ${
                                             activeTab === idx
                                                 ? "text-[#7C3AED] font-[700]"
@@ -313,18 +325,20 @@ export default function CurriculumSection({ data }) {
                                             <button
                                                 onClick={() => setActiveModule((prev) => Math.max(prev - 1, 0))}
                                                 disabled={activeModule === 0}
+                                                suppressHydrationWarning
                                                 className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group disabled:opacity-30 disabled:cursor-not-allowed"
                                                 aria-label="Previous module"
                                             >
-                                                <img src="/black arrow.webp" alt="arrow" className="w-7 rotate-225" />
+                                                <Image src="/black arrow.webp" alt="arrow" width={28} height={28} className="w-7 rotate-225" />
                                             </button>
                                             <button
                                                 onClick={() => setActiveModule((prev) => Math.min(prev + 1, activeModulesList.length - 1))}
                                                 disabled={activeModule === activeModulesList.length - 1}
+                                                suppressHydrationWarning
                                                 className="w-[48px] h-[48px] rounded-full border-[1.5px] border-[#333]/50 flex items-center justify-center hover:bg-white transition-all active:scale-90 group disabled:opacity-30 disabled:cursor-not-allowed"
                                                 aria-label="Next module"
                                             >
-                                                <img src="/black arrow.webp" alt="arrow" className="w-7 rotate-45" />
+                                                <Image src="/black arrow.webp" alt="arrow" width={28} height={28} className="w-7 rotate-45" />
                                             </button>
                                         </div>
                                     </div>
@@ -343,11 +357,15 @@ export default function CurriculumSection({ data }) {
                                         </div>
                                         <div className="w-full md:w-[50%] lg:w-[45%] shrink-0 md:-mt-8">
                                             <div className="relative w-full rounded-2xl overflow-hidden bg-transparent">
-                                                <img
-                                                    src={currentData.image}
-                                                    alt={currentData.title}
-                                                    className="w-full h-auto object-contain max-h-[300px]"
-                                                />
+                                                {currentData.image && (
+                                                    <Image
+                                                        src={currentData.image}
+                                                        alt={currentData.title || "Module Preview"}
+                                                        width={400}
+                                                        height={300}
+                                                        className="w-full h-auto object-contain max-h-[300px]"
+                                                    />
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -391,6 +409,7 @@ export default function CurriculumSection({ data }) {
                                     <div className="mt-12 pt-6 flex justify-end">
                                         <button
                                             onClick={handleOpenPdfFlow}
+                                            suppressHydrationWarning
                                             className="px-8 py-4 bg-[#7143FE] hover:bg-[#5C32EB] text-white font-bold text-[16px] rounded-2xl shadow-[0_6px_20px_rgba(113,67,254,0.3)] hover:shadow-[0_8px_24px_rgba(113,67,254,0.4)] hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5"
                                         >
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

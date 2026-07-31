@@ -5,6 +5,16 @@
   --foreground: #171717;
 }
 
+/* ── Cabinet Grotesk — self-hosted (place woff2 in /public/fonts/) ── */
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── PP Editorial New — local system font fallback ─────────────────── */
 @font-face {
   font-family: 'PP Editorial New';
   src: local('PP Editorial New');

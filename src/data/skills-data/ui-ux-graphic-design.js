@@ -549,3 +549,11 @@ export const ctaSectionData = {
     buttonText: "Book Free Demo Class",
     buttonHref: "/register",
 };
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: "UI/UX & Graphic Design | Alphabit Skill",
+    description: "Learn UI/UX & Graphic Design at Alphabit Skill — expert-led training, real-world projects, and placement support."
+};

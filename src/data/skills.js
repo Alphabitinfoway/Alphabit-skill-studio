@@ -7,47 +7,30 @@ export function toSlug(title) {
 }
 
 export const skills = [
-  // IT Skills
-  { slug: toSlug("Full Stack Development"), title: "Full Stack Development", category: "IT Skills" },
-  { slug: toSlug("Web Development"), title: "Web Development", category: "IT Skills" },
-  { slug: toSlug("Mobile App Development"), title: "Mobile App Development", category: "IT Skills" },
-  { slug: toSlug("UI/UX & Graphic Design"), title: "UI/UX & Graphic Design", category: "IT Skills" },
-  { slug: toSlug("Digital Marketing"), title: "Digital Marketing", category: "IT Skills" },
-  { slug: toSlug("Database Management"), title: "Database Management", category: "IT Skills" },
-  { slug: toSlug("E-Commerce (Shopify/WooCommerce)"), title: "E-Commerce (Shopify/WooCommerce)", category: "IT Skills" },
-  { slug: toSlug("QA Testing"), title: "QA Testing", category: "IT Skills" },
-  { slug: toSlug("Cyber Security"), title: "Cyber Security", category: "IT Skills" },
-  { slug: toSlug("Ethical Hacking"), title: "Ethical Hacking", category: "IT Skills" },
-  { slug: toSlug("Cloud Computing"), title: "Cloud Computing", category: "IT Skills" },
-  { slug: toSlug("ROR & Odoo & Golang"), title: "ROR & Odoo & Golang", category: "IT Skills" },
+  // Coding Programs
+  { slug: toSlug("Full Stack Development"), title: "Full Stack Development", category: "Coding Programs" },
+  { slug: toSlug("Web Development"), title: "Web Development", category: "Coding Programs" },
+  { slug: toSlug("Python for AI/ML"), title: "Python for AI/ML", category: "Coding Programs" },
+  { slug: toSlug("Java Development"), title: "Java Development", category: "Coding Programs" },
+  { slug: toSlug("Data Science & Analytics"), title: "Data Science & Analytics", category: "Coding Programs" },
+  { slug: toSlug("MERN Stack Development"), title: "MERN Stack Development", category: "Coding Programs" },
+  { slug: toSlug(".NET Development"), title: ".NET Development", category: "Coding Programs" },
+  { slug: toSlug("Cyber Security"), title: "Cyber Security", category: "Coding Programs" },
+  { slug: toSlug("Ethical Hacking"), title: "Ethical Hacking", category: "Coding Programs" },
+  { slug: toSlug("QA Testing"), title: "QA Testing", category: "Coding Programs" },
+  { slug: toSlug("Gaming Development"), title: "Gaming Development", category: "Coding Programs" },
+  { slug: toSlug("Cloud Computing"), title: "Cloud Computing", category: "Coding Programs" },
+  { slug: toSlug("Mobile App Development"), title: "Mobile App Development", category: "Coding Programs" },
 
-  // Soft Skills
-  { slug: toSlug("Communication Skills"), title: "Communication Skills", category: "Soft Skills" },
-  { slug: toSlug("Resume & Linkedin"), title: "Resume & Linkedin", category: "Soft Skills" },
-  { slug: toSlug("Leadership Development"), title: "Leadership Development", category: "Soft Skills" },
-  { slug: toSlug("Video Editing & Content Creation"), title: "Video Editing & Content Creation", category: "Soft Skills" },
-  { slug: toSlug("E-Commerce Business Skills"), title: "E-Commerce Business Skills", category: "Soft Skills" },
-  { slug: toSlug("Personality Development"), title: "Personality Development", category: "Soft Skills" },
+  // Non-Coding Programs
+  { slug: toSlug("UI/UX & Graphic Design"), title: "UI/UX & Graphic Design", category: "Non-Coding Programs" },
+  { slug: toSlug("ROR & Odoo & Golang"), title: "ROR & Odoo & Golang", category: "Non-Coding Programs" },
+  { slug: toSlug("E-Commerce (Shopify/WooCommerce)"), title: "E-Commerce (Shopify/WooCommerce)", category: "Non-Coding Programs" },
+  { slug: toSlug("Digital Marketing"), title: "Digital Marketing", category: "Non-Coding Programs" },
+  { slug: toSlug("Performance Marketing"), title: "Performance Marketing", category: "Non-Coding Programs" },
+  { slug: toSlug("Social Media Marketing"), title: "Social Media Marketing", category: "Non-Coding Programs" },
 
-  // AI Courses
-  { slug: toSlug("Python for AI/ML"), title: "Python for AI/ML", category: "AI Courses" },
-  { slug: toSlug("Data Science & Analytics"), title: "Data Science & Analytics", category: "AI Courses" },
-  { slug: toSlug("ChatGPT & Prompt Engineering"), title: "ChatGPT & Prompt Engineering", category: "AI Courses" },
-  { slug: toSlug("AI Tools Training"), title: "AI Tools Training", category: "AI Courses" },
-  { slug: toSlug("AI Automation"), title: "AI Automation", category: "AI Courses" },
-  { slug: toSlug("Generative AI"), title: "Generative AI", category: "AI Courses" },
-
-  // New Training Programs (Coding)
-  { slug: toSlug("Java Development"), title: "Java Development", category: "IT Skills" },
-  { slug: toSlug("MERN Stack Development"), title: "MERN Stack Development", category: "IT Skills" },
-  { slug: toSlug(".NET Development"), title: ".NET Development", category: "IT Skills" },
-  { slug: toSlug("Gaming Development"), title: "Gaming Development", category: "IT Skills" },
-
-  // New Training Programs (Non-Coding)
-  { slug: toSlug("Performance Marketing"), title: "Performance Marketing", category: "IT Skills" },
-  { slug: toSlug("Social Media Marketing"), title: "Social Media Marketing", category: "IT Skills" },
-
-  // New Non-Tech Field Programs
+  // Non-Tech Field
   { slug: toSlug("Human Resources (HR)"), title: "Human Resources (HR)", category: "Non-Tech Field" },
   { slug: toSlug("Business Development Executive (BDE)"), title: "Business Development Executive (BDE)", category: "Non-Tech Field" },
   { slug: toSlug("Account Manager"), title: "Account Manager", category: "Non-Tech Field" },

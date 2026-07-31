@@ -183,7 +183,7 @@ const androidModules = [
             tools: "Git · GitHub · Play Console"
         }
     }
-];
+];      
 
 // Flutter App Development Modules (flutterModules = Tab 1 alphabetically, f > k)
 const flutterModules = [
@@ -631,4 +631,12 @@ export const ctaSectionData = {
     line2Italic: "Mobile Frameworks",
     buttonText: "Join The Studio",
     buttonHref: "/register",
+};
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: "Mobile App Development | Alphabit Skill",
+    description: "Learn Mobile App Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
 };

@@ -40,6 +40,7 @@ export default function FAQSection({ data }) {
                   onClick={() => toggleAccordion(faq.id)}
                   role="button"
                   tabIndex={0}
+                  suppressHydrationWarning
                   className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none cursor-pointer"
                 >
                   <span className="text-[#171717] font-medium" style={{ fontSize: "clamp(15px, 1.2vw, 16px)" }}>

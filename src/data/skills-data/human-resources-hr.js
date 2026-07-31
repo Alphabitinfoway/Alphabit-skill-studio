@@ -279,3 +279,11 @@ export const ctaSectionData = {
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };
+
+/**
+ * 13. Metadata Info
+ */
+export const metadata = {
+    title: "Human Resources (HR) | Alphabit Skill",
+    description: "Learn Human Resources (HR) at Alphabit Skill — expert-led training, real-world projects, and placement support."
+};

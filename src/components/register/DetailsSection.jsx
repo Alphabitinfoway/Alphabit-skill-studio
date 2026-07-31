@@ -78,25 +78,23 @@ export default function DetailsSection() {
     ];
 
     const mapContent = (
-        <>
-            <Image
+        <div className="w-full relative">
+            <img
                 src={venueImage}
                 alt="Seminar Venue"
-                fill
-                unoptimized
-                className={`object-cover ${venueMapLink ? "transition-transform duration-300 group-hover:scale-105" : ""}`}
+                className={`w-full h-auto block ${venueMapLink ? "transition-transform duration-300 group-hover:scale-105" : ""}`}
             />
             {/* Seminar Venue Badge */}
             <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm py-2 px-4 rounded-full text-white text-[12px] font-bold tracking-wide flex items-center gap-1.5 border border-white/10 transition-colors group-hover:bg-black/80">
                 <span>📍</span> Seminar Venue {venueMapLink && <span className="ml-1 text-[11px] opacity-80">↗</span>}
             </div>
-        </>
+        </div>
     );
 
     return (
         <section className="w-full bg-[#F5F5F5] pb-[60px] md:pb-[100px] px-6 font-cabinet">
             <div className="max-w-[1180px] mx-auto bg-[#7143FE] rounded-[32px] p-6 sm:p-8 md:p-12 shadow-[0_12px_40px_rgba(113,67,254,0.25)]">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-stretch">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 
                     {/* LEFT IMAGE / MAP VENUE */}
                     {venueMapLink ? (
@@ -104,13 +102,13 @@ export default function DetailsSection() {
                             href={venueMapLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative w-full lg:w-[480px] min-h-[300px] sm:min-h-[360px] lg:min-h-[unset] rounded-[24px] overflow-hidden flex-shrink-0 block"
+                            className="group relative w-full lg:w-[480px] rounded-[24px] overflow-hidden flex-shrink-0 block bg-black/20"
                             title="Open Google Maps location"
                         >
                             {mapContent}
                         </a>
                     ) : (
-                        <div className="relative w-full lg:w-[480px] min-h-[300px] sm:min-h-[360px] lg:min-h-[unset] rounded-[24px] overflow-hidden flex-shrink-0">
+                        <div className="relative w-full lg:w-[480px] rounded-[24px] overflow-hidden flex-shrink-0 bg-black/20">
                             {mapContent}
                         </div>
                     )}
