@@ -5,6 +5,7 @@ import { useParams, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { getSkillBySlug, skills } from "@/data/skills";
+import { API_BASE_URL } from "@/config/api";
 
 export default function DemoFormSection({ isOpen, onClose, isInline = false, defaultCourse = "" }) {
     const params = useParams();
@@ -67,8 +68,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                 skill: form.course
             };
 
-            const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
-            const response = await fetch(`${apiBaseUrl}/api/inquiries`, {
+            const response = await fetch(`${API_BASE_URL}/api/inquiries`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -80,10 +80,11 @@ function MeetingGlanceCard({ heading, subheading, image1, image2 }) {
 
 // ── Main Merged Section ───────────────────────────────────────────────────────
 /**
- * @param {object} data        - Skill config data (from page.js)
- * @param {object|null} apiMeeting - Pre-fetched meeting from server (ISR cached, never null on cold start)
+ * @param {object} data         - Skill config data (from page.js)
+ * @param {array}  apiMeetings  - Pre-fetched meetings array from server (ISR cached)
+ * @param {object} apiMeeting   - Backward compatibility for single meeting object
  */
-export default function MeetingVideoSection({ data, apiMeeting = null }) {
+export default function MeetingVideoSection({ data, apiMeetings = [], apiMeeting = null }) {
   const {
     titlePrefix,
     titleSuffix,
@@ -93,43 +94,93 @@ export default function MeetingVideoSection({ data, apiMeeting = null }) {
   const { videoUrl } = data?.meetingVideoData || {};
 
   const [api, setApi] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoHovered, setIsVideoHovered] = useState(false);
 
-  // Helper to convert any YouTube URL to embed format
+  // Helper to convert any YouTube URL to embed format with enablejsapi=1
   const getEmbedUrl = (url) => {
     if (!url) return "";
-    if (url.includes("embed")) return url;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    if (match && match[2].length === 11) {
-      return `https://www.youtube.com/embed/${match[2]}`;
+    let base = url;
+    if (!url.includes("embed")) {
+      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      const match = url.match(regExp);
+      if (match && match[2].length === 11) {
+        base = `https://www.youtube.com/embed/${match[2]}`;
+      }
     }
-    return url;
+    const separator = base.includes("?") ? "&" : "?";
+    return `${base}${separator}enablejsapi=1`;
   };
 
-  // Determine meetings and video url to display
-  // apiMeeting is now pre-fetched server-side — no client fetch, no spinner
-  let displayMeetings = MEETINGS;
-  let displayVideoUrl = videoUrl;
+  // Normalize meetings list from props
+  const meetingsList =
+    Array.isArray(apiMeetings) && apiMeetings.length > 0
+      ? apiMeetings
+      : apiMeeting
+      ? [apiMeeting]
+      : [];
 
-  if (apiMeeting) {
-    displayMeetings = [
-      {
-        heading: apiMeeting.title,
-        subheading: apiMeeting.subtitle,
-        image1: apiMeeting.image1,
-        image2: apiMeeting.image2,
-      },
-    ];
-    displayVideoUrl = apiMeeting.videoUrl;
+  // Determine meetings to display
+  let displayMeetings = MEETINGS;
+  if (meetingsList.length > 0) {
+    displayMeetings = meetingsList.map((item) => ({
+      heading: item.title,
+      subheading: item.subtitle,
+      image1: item.image1,
+      image2: item.image2,
+      videoUrl: item.videoUrl,
+    }));
   }
 
+  // Sync videoUrl with currently active selected slide (or fallback)
+  const activeMeetingVideo = displayMeetings[selectedIndex]?.videoUrl;
+  const displayVideoUrl =
+    activeMeetingVideo ||
+    displayMeetings.find((m) => m.videoUrl)?.videoUrl ||
+    videoUrl;
+
   useEffect(() => {
-    if (!api || displayMeetings.length <= 1) return;
+    if (!api) return;
+    const onSelect = () => {
+      setSelectedIndex(api.selectedScrollSnap());
+    };
+    onSelect();
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  // Listen to YouTube postMessage events to detect video play / pause / end
+  useEffect(() => {
+    const handleMessage = (event) => {
+      try {
+        const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        if (data && data.event === "infoDelivery" && data.info && data.info.playerState !== undefined) {
+          // YT.PlayerState: 1 = PLAYING, 3 = BUFFERING
+          if (data.info.playerState === 1 || data.info.playerState === 3) {
+            setIsVideoPlaying(true);
+          } else if (data.info.playerState === 2 || data.info.playerState === 0) {
+            setIsVideoPlaying(false);
+          }
+        }
+      } catch (e) {
+        // ignore non-json postMessages
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  // Auto-scroll interval (PAUSED when video is playing or video container is hovered)
+  useEffect(() => {
+    if (!api || displayMeetings.length <= 1 || isVideoPlaying || isVideoHovered) return;
     const interval = setInterval(() => {
       api.scrollNext();
     }, 4000);
     return () => clearInterval(interval);
-  }, [api, displayMeetings]);
+  }, [api, displayMeetings, isVideoPlaying, isVideoHovered]);
 
   // Nothing to render if no glance cards AND no video
   if (displayMeetings.length === 0 && !displayVideoUrl) return null;
@@ -148,7 +199,7 @@ export default function MeetingVideoSection({ data, apiMeeting = null }) {
                 fontSize: "52px",
               }}
             >
-              {apiMeeting ? "Meeting" : (titlePrefix || "A Glance")}{" "}
+              {meetingsList.length > 0 ? "Meeting" : (titlePrefix || "A Glance")}{" "}
             </span>
             <span
               className="font-semibold"
@@ -157,7 +208,7 @@ export default function MeetingVideoSection({ data, apiMeeting = null }) {
                 fontSize: "32px",
               }}
             >
-              {apiMeeting ? "Glance" : (titleSuffix || "at yesterday's Meeting")}
+              {meetingsList.length > 0 ? "Glance" : (titleSuffix || "at yesterday's Meeting")}
             </span>
           </h2>
         </div>
@@ -221,7 +272,11 @@ export default function MeetingVideoSection({ data, apiMeeting = null }) {
 
         {/* ── Video Player ──────────────────────────────────────────────── */}
         {displayVideoUrl && (
-          <div className="w-full max-w-[960px] mx-auto bg-gradient-to-br from-[#EAEAEA] to-[#D5D5D5] rounded-[40px] p-6 shadow-inner border border-gray-200/50 aspect-video relative overflow-hidden flex items-center justify-center">
+          <div
+            className="w-full max-w-[960px] mx-auto bg-gradient-to-br from-[#EAEAEA] to-[#D5D5D5] rounded-[40px] p-6 shadow-inner border border-gray-200/50 aspect-video relative overflow-hidden flex items-center justify-center"
+            onMouseEnter={() => setIsVideoHovered(true)}
+            onMouseLeave={() => setIsVideoHovered(false)}
+          >
             <iframe
               className="w-full h-full rounded-[30px] shadow-lg border-0"
               src={getEmbedUrl(displayVideoUrl)}

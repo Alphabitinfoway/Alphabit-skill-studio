@@ -227,6 +227,7 @@ export const faqSectionData = {
     ]
 };
 
+
 export const trackSelectorData = {
     title: "Choose your track",
     description: "Choose the learning path that matches your career goal.",

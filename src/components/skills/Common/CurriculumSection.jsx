@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useParams, usePathname } from "next/navigation";
 import Image from "next/image";
 import { getSkillBySlug } from "@/data/skills";
+import { API_BASE_URL } from "@/config/api";
 
 export default function CurriculumSection({ data, syllabusPdf = null }) {
     const params = useParams();
@@ -54,11 +55,10 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
 
     // Form and Modal States
     const [showFormModal, setShowFormModal] = useState(false);
+    const [showPdfModal, setShowPdfModal] = useState(false);
     const [hasFilledForm, setHasFilledForm] = useState(false);
     const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState(null);
-    // syllabusPdf is now passed as a prop from the server component (page.js)
-    // No client-side fetch needed — data is ISR cached server-side
 
     // Form inputs state
     const [formData, setFormData] = useState({
@@ -88,13 +88,17 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
     // Get the track title matching the active tab index from trackSelectorData
     const currentPathLabel = curriculumTracks[activeTab]?.title;
 
+    const openPdfViewer = () => {
+        if (syllabusPdf) {
+            setShowPdfModal(true);
+        } else {
+            window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
+        }
+    };
+
     const handleOpenPdfFlow = () => {
         if (hasFilledForm) {
-            if (syllabusPdf) {
-                window.open(syllabusPdf, "_blank");
-            } else {
-                window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
-            }
+            openPdfViewer();
         } else {
             setShowFormModal(true);
         }
@@ -123,8 +127,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                     skill: skillTitle
                 };
 
-                const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
-                const response = await fetch(`${apiBaseUrl}/api/inquiries`, {
+                const response = await fetch(`${API_BASE_URL}/api/inquiries`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -136,11 +139,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                 if (response.ok) {
                     setHasFilledForm(true);
                     setShowFormModal(false);
-                    if (syllabusPdf) {
-                        window.open(syllabusPdf, "_blank");
-                    } else {
-                        window.open(`/skills/curriculum?path=${curriculumTracks[activeTab].path}`, "_blank");
-                    }
+                    openPdfViewer();
                 } else {
                     const errText = await response.text().catch(() => "");
                     let errData = {};
@@ -545,6 +544,62 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                                     )}
                                 </button>
                             </form>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+
+            {/* MODAL 2: Secure PDF Viewer (No Download Toolbar Option) */}
+            <AnimatePresence>
+                {showPdfModal && syllabusPdf && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowPdfModal(false)}
+                            className="absolute inset-0 bg-black/75 backdrop-blur-md"
+                        />
+
+                        {/* Modal Window Container */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="relative w-full max-w-5xl h-[88vh] bg-white rounded-3xl p-6 shadow-2xl z-10 border border-gray-100 flex flex-col overflow-hidden"
+                            onContextMenu={(e) => e.preventDefault()}
+                        >
+                            {/* Modal Header */}
+                            <div className="flex justify-between items-center pb-4 mb-4 border-b border-gray-200">
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 font-cabinet">
+                                        {currentPathLabel || "Curriculum Syllabus"}
+                                    </h3>
+                                    <p className="text-xs text-gray-500 font-medium">
+                                        Protected Document Viewer
+                                    </p>
+                                </div>
+                                <button
+                                    onClick={() => setShowPdfModal(false)}
+                                    className="p-2 rounded-xl text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+                                    aria-label="Close PDF Viewer"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            {/* Secure PDF Iframe (Toolbar/Download Disabled) */}
+                            <div className="flex-1 w-full h-full rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 relative">
+                                <iframe
+                                    src={`${syllabusPdf}#toolbar=0&navpanes=0&scrollbar=1`}
+                                    className="w-full h-full border-0 select-none"
+                                    title="Syllabus PDF Preview"
+                                    onContextMenu={(e) => e.preventDefault()}
+                                />
+                            </div>
                         </motion.div>
                     </div>
                 )}

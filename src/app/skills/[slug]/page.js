@@ -1,5 +1,6 @@
 import { getAllSlugs, getSkillBySlug } from "@/data/skills";
 import { notFound } from "next/navigation";
+import { API_BASE_URL } from "@/config/api";
 
 // Import common layout components
 import HeroSection from "@/components/skills/Common/HeroSection";
@@ -15,7 +16,7 @@ import FAQSection from "@/components/skills/Common/FAQsection";
 import CTASection from "@/components/skills/Common/CTASection";
 
 // Import global sections
-import TestimonialsSection from "@/components/TestimonialsSection";
+import TestimonialsSection from "@/components/skills/Common/TestimonialsSection";
 
 // ── SSG: pre-render all slugs at build time ───────────────────────────────
 export async function generateStaticParams() {
@@ -44,9 +45,7 @@ export async function generateMetadata({ params }) {
 }
 
 // ── Server-side API helpers ───────────────────────────────────────────────
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
-  "https://skill-backend-admin.onrender.com";
+const API_BASE = API_BASE_URL;
 
 /**
  * Fetch meetings and syllabus data from the backend in parallel.
@@ -72,21 +71,21 @@ async function fetchSkillApiData(slug) {
       syllabusRes.ok ? syllabusRes.json() : Promise.resolve({ data: [] }),
     ]);
 
-    const apiMeeting =
+    const apiMeetings =
       meetingsJson?.success && Array.isArray(meetingsJson.data)
-        ? (meetingsJson.data.find((m) => m.skillSlug === slug) ?? null)
-        : null;
+        ? meetingsJson.data.filter((m) => m.skillSlug === slug)
+        : [];
 
     const syllabusPdf =
       syllabusJson?.success && Array.isArray(syllabusJson.data)
         ? (syllabusJson.data.find((s) => s.skillSlug === slug)?.pdfUrl ?? null)
         : null;
 
-    return { apiMeeting, syllabusPdf };
+    return { apiMeetings, syllabusPdf };
   } catch (err) {
     // Backend unreachable (e.g. Render.com cold start timeout) — degrade gracefully
     console.error("[SkillDetailPage] API fetch failed:", err?.message);
-    return { apiMeeting: null, syllabusPdf: null };
+    return { apiMeetings: [], syllabusPdf: null };
   }
 }
 
@@ -128,7 +127,7 @@ export default async function SkillDetailPage({ params }) {
   ]);
 
   const skillData = skillDataResult;
-  const { apiMeeting, syllabusPdf } = apiData;
+  const { apiMeetings, syllabusPdf } = apiData;
 
   return (
     <>
@@ -138,10 +137,10 @@ export default async function SkillDetailPage({ params }) {
       <CurriculumSection data={skillData} syllabusPdf={syllabusPdf} />
       <ComparisonSection data={skillData} />
       <EarningsSection data={skillData} />
-      <MeetingVideoSection data={skillData} apiMeeting={apiMeeting} />
+      <MeetingVideoSection data={skillData} apiMeetings={apiMeetings} />
       <CareerOpportunitiesSection data={skillData} />
       <IndustriesSection data={skillData} />
-      <TestimonialsSection />
+      <TestimonialsSection data={skillData} />
       <FAQSection data={skillData} />
       <CTASection data={skillData} />
     </>

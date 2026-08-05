@@ -1,16 +1,24 @@
 import Link from "next/link";
 
 export default function BlogCard({ post }) {
+  const slugOrId = post?.slug || post?._id || post?.id;
+  const href = `/blog/${slugOrId}`;
+  const image =
+    post?.image && post?.image !== "no-photo.jpg"
+      ? post.image
+      : "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  const title = post?.title || post?.excerpt || "Untitled Post";
+
   return (
     <Link
-      href={`/blog/${post.id}`}
+      href={href}
       className="group bg-white rounded-[24px] shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer p-3 block"
     >
       {/* Image — padded inside card with its own rounded corners */}
       <div className="w-[calc(100%-16px)] mx-auto h-[180px] overflow-hidden rounded-[16px] bg-[#D9D9D9]">
         <img
-          src={post.image}
-          alt="blog post"
+          src={image}
+          alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
@@ -21,7 +29,7 @@ export default function BlogCard({ post }) {
           className="text-[#111111] text-[16px] font-bold leading-[1.55] line-clamp-2"
           style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
         >
-          {post.excerpt}
+          {title}
         </p>
 
         {/* Read More link — grey arrow image */}

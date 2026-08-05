@@ -1,8 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { API_BASE_URL } from "@/config/api";
+
+const getAutoMonthBatch = () => {
+    const now = new Date();
+    const monthName = now.toLocaleString("en-US", { month: "long" });
+    const year = now.getFullYear();
+    return `${monthName} ${year} Batch`;
+};
 
 export default function RegistrationForm() {
+    const defaultBatch = getAutoMonthBatch();
+    const [activeBatch, setActiveBatch] = useState(defaultBatch);
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -11,7 +21,7 @@ export default function RegistrationForm() {
         course: "",
         city: "",
         source: "Instagram",
-        seminarBatch: "July 2026 Batch" // Default value as specified
+        seminarBatch: defaultBatch
     });
 
     const [status, setStatus] = useState({
@@ -19,6 +29,45 @@ export default function RegistrationForm() {
         success: false,
         error: null
     });
+
+    // Fetch active seminar batch from current seminar API
+    useEffect(() => {
+        const fetchCurrentSeminarBatch = async () => {
+            const fallbackBatch = getAutoMonthBatch();
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/seminars/current`, {
+                    headers: {
+                        "ngrok-skip-browser-warning": "true"
+                    }
+                });
+                if (response.ok) {
+                    const result = await response.json();
+                    const eventData = result?.data || result || {};
+                    const fetchedBatch = eventData.batchId || eventData.seminarBatch || fallbackBatch;
+                    setActiveBatch(fetchedBatch);
+                    setFormData((prev) => ({
+                        ...prev,
+                        seminarBatch: fetchedBatch
+                    }));
+                } else {
+                    setActiveBatch(fallbackBatch);
+                    setFormData((prev) => ({
+                        ...prev,
+                        seminarBatch: fallbackBatch
+                    }));
+                }
+            } catch (err) {
+                console.error("Failed to fetch active seminar batch:", err);
+                setActiveBatch(fallbackBatch);
+                setFormData((prev) => ({
+                    ...prev,
+                    seminarBatch: fallbackBatch
+                }));
+            }
+        };
+
+        fetchCurrentSeminarBatch();
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,7 +81,7 @@ export default function RegistrationForm() {
         e.preventDefault();
 
         // Simple validations
-        if (!formData.name || !formData.phone || !formData.email || !formData.college || !formData.course || !formData.city) {
+        if (!formData.name || !formData.phone || !formData.email || !formData.college || !formData.course || !formData.city || !formData.seminarBatch) {
             setStatus({ submitting: false, success: false, error: "Please fill out all fields." });
             return;
         }
@@ -40,8 +89,7 @@ export default function RegistrationForm() {
         setStatus({ submitting: true, success: false, error: null });
 
         try {
-            const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
-            const response = await fetch(`${apiBaseUrl}/api/seminars/register`, {
+            const response = await fetch(`${API_BASE_URL}/api/seminars/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -60,7 +108,7 @@ export default function RegistrationForm() {
                     course: "",
                     city: "",
                     source: "Instagram",
-                    seminarBatch: "July 2026 Batch"
+                    seminarBatch: activeBatch
                 });
             } else {
                 const data = await response.json().catch(() => ({}));
@@ -166,7 +214,7 @@ export default function RegistrationForm() {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder="+91 XXXXX XXXXX"
+                                placeholder="Enter your phone number"
                                 className="w-full h-[52px] px-4 rounded-xl border border-gray-200 focus:border-[#7143FE] focus:ring-1 focus:ring-[#7143FE] outline-none text-[15px] text-[#333] transition-all bg-gray-50/50"
                                 required
                             />
@@ -291,3 +339,4 @@ export default function RegistrationForm() {
         </section>
     );
 }
+

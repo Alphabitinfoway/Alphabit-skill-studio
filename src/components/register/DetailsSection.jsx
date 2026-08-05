@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "@/config/api";
 
 export default function DetailsSection() {
     const [seminarData, setSeminarData] = useState(null);
@@ -10,8 +11,7 @@ export default function DetailsSection() {
     useEffect(() => {
         const fetchCurrentSeminar = async () => {
             try {
-                const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
-                const response = await fetch(`${apiBaseUrl}/api/seminars/current`, {
+                const response = await fetch(`${API_BASE_URL}/api/seminars/current`, {
                     headers: {
                         "ngrok-skip-browser-warning": "true"
                     }
@@ -55,9 +55,8 @@ export default function DetailsSection() {
         ? `${currentData.startTime} – ${currentData.endTime}`
         : (errorMsg ? "—" : "Loading time...");
 
-    const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://skill-backend-admin.onrender.com";
     const venueImage = currentData.venueImage
-        ? (currentData.venueImage.startsWith("http") ? currentData.venueImage : `${apiBaseUrl}${currentData.venueImage}`)
+        ? (currentData.venueImage.startsWith("http") ? currentData.venueImage : `${API_BASE_URL}${currentData.venueImage}`)
         : "/venue_map.webp";
 
     const seatsLeft = currentData.seatsLeft !== undefined ? currentData.seatsLeft : "...";

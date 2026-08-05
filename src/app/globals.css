@@ -5,28 +5,30 @@
   --foreground: #171717;
 }
 
-/* ── Cabinet Grotesk — self-hosted (place woff2 in /public/fonts/) ── */
+/* ── Cabinet Grotesk — self-hosted ── */
 @font-face {
   font-family: 'Cabinet Grotesk';
-  src: url('/fonts/CabinetGrotesk-Variable.woff2') format('woff2');
-  font-weight: 100 900;
+  src: url('/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+  font-weight: 500 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* ── PP Editorial New — local system font fallback ─────────────────── */
+/* ── PP Editorial New — self-hosted ─────────────────────────────────── */
 @font-face {
   font-family: 'PP Editorial New';
-  src: local('PP Editorial New');
-  font-weight: normal;
+  src: url('/fonts/PPEditorialNew-Regular-BFF4535d2ea3599.otf') format('opentype'),
+       local('PP Editorial New');
+  font-weight: 500 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'PP Editorial New';
-  src: local('PP Editorial New Italic'), local('PP Editorial New');
-  font-weight: normal;
+  src: url('/fonts/PPEditorialNew-UltraboldItalic-BF644b214faef01.otf') format('opentype'),
+       local('PP Editorial New');
+  font-weight: 500 900;
   font-style: italic;
   font-display: swap;
 }
@@ -61,3 +63,90 @@ body {
 .font-cabinet {
   font-family: 'Cabinet Grotesk', sans-serif;
 }
+
+/* ── Blog Prose Content styling (Rich Text HTML) ── */
+.blog-prose-content {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.blog-prose-content p {
+  margin-bottom: 1.5rem;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.blog-prose-content h1,
+.blog-prose-content h2,
+.blog-prose-content h3,
+.blog-prose-content h4 {
+  color: #111111;
+  font-weight: 700;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-prose-content h1 {
+  font-size: 2rem; /* 32px */
+}
+
+.blog-prose-content h2 {
+  font-size: 1.65rem; /* 26px */
+}
+
+.blog-prose-content h3 {
+  font-size: 1.35rem; /* 22px */
+}
+
+.blog-prose-content h4 {
+  font-size: 1.15rem; /* 18px */
+}
+
+.blog-prose-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-prose-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-prose-content li {
+  margin-bottom: 0.5rem;
+  color: #333333;
+  line-height: 1.8;
+}
+
+.blog-prose-content strong,
+.blog-prose-content b {
+  color: #111111;
+  font-weight: 700;
+}
+
+.blog-prose-content a {
+  color: #7143FE;
+  text-decoration: underline;
+}
+
+.blog-prose-content blockquote {
+  border-left: 4px solid #7143FE;
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: #555555;
+  margin: 1.75rem 0;
+}
+
+.blog-prose-content img {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
