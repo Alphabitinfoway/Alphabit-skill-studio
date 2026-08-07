@@ -5,11 +5,16 @@ import Link from "next/link";
 import { Calendar, Search, ArrowLeft, ChevronDown, Check, Sparkles } from "lucide-react";
 import { blogDetailData } from "./data/blogDetailData";
 import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/skills/Common/FAQsection";
+import { API_BASE_URL } from "@/config/api";
 
 /* ─── Sidebar post card ───────────────────────────────────────────── */
 function SidebarCard({ post }) {
   const href = `/blog/${post.slug || post.id || post._id}`;
-  const img = post.image && post.image !== "no-photo.jpg" ? post.image : "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  let img = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  if (post?.image && post.image !== "no-photo.jpg") {
+    img = post.image.startsWith("http") ? post.image : `${API_BASE_URL}/${post.image}`;
+  }
 
   return (
     <Link href={href} className="flex items-center gap-3.5 group cursor-pointer">
@@ -37,56 +42,20 @@ function SidebarCard({ post }) {
 
 /* ─── FAQ Accordion Component ────────────────────────────────────── */
 function FaqAccordion({ items }) {
-  const [openIndex, setOpenIndex] = useState(0);
-
   return (
-    <div className="my-8 flex flex-col gap-3 font-cabinet">
-      {items.map((item, idx) => {
-        const isOpen = openIndex === idx;
-        return (
-          <div
-            key={idx}
-            className={`rounded-[16px] border transition-all duration-200 overflow-hidden ${
-              isOpen
-                ? "bg-white border-[#7143FE]/40 shadow-[0_4px_20px_rgba(113,67,254,0.08)]"
-                : "bg-white border-[#E4E4E9] hover:border-[#7143FE]/30 shadow-sm"
-            }`}
-          >
-            <button
-              type="button"
-              onClick={() => setOpenIndex(isOpen ? -1 : idx)}
-              className="w-full p-4 sm:p-5 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <span
-                  className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-[13px] flex-shrink-0 transition-colors ${
-                    isOpen ? "bg-[#7143FE] text-white" : "bg-[#F4F2FF] text-[#7143FE]"
-                  }`}
-                >
-                  Q
-                </span>
-                <h4 className="text-[15px] sm:text-[17px] font-bold text-[#111111] leading-[1.4]">
-                  {item.question}
-                </h4>
-              </div>
-              <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center bg-[#F5F5F7] text-[#555] flex-shrink-0 transition-transform duration-200 ${
-                  isOpen ? "rotate-180 bg-[#7143FE]/10 text-[#7143FE]" : ""
-                }`}
-              >
-                <ChevronDown size={16} className="flex-shrink-0" />
-              </div>
-            </button>
-
-            {isOpen && (
-              <div className="px-5 pb-5 pt-3 text-[14px] sm:text-[15px] text-[#444444] leading-[1.8] border-t border-[#F0F0F5] mx-5">
-                {item.answer}
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div>
+    <FAQSection
+      data={{
+        faqSectionData: {
+          titleNormal: "Frequently Asked",
+          titleItalic: "Questions",
+          faqs: items.map((item, idx) => ({
+            id: item.id || idx + 1,
+            question: item.question,
+            answer: item.answer,
+          })),
+        },
+      }}
+    />
   );
 }
 
@@ -146,8 +115,8 @@ function ComparisonTable({ rows }) {
   );
 }
 
-/* ─── Smart Blog Content Renderer ───────────────────────────────── */
-function BlogContentRenderer({ content, ctaLink }) {
+/* ─── Clean Blog Content Renderer ───────────────────────────────── */
+function BlogContentRenderer({ content }) {
   if (!content) return null;
 
   // Check if content is HTML (contains HTML tags like <p>, <h2>, <div>, <br>)
@@ -156,13 +125,13 @@ function BlogContentRenderer({ content, ctaLink }) {
   if (isHtml) {
     return (
       <div
-        className="blog-prose-content"
+        className="blog-prose-content w-full max-w-full overflow-hidden break-words font-cabinet"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     );
   }
 
-  // Parse plain text content with line breaks into structured elements
+  // Parse plain text content with line breaks into clean structured elements
   const rawBlocks = content
     .split(/\r?\n\r?\n/)
     .map((b) => b.trim())
@@ -174,38 +143,9 @@ function BlogContentRenderer({ content, ctaLink }) {
     return !lower.startsWith("meta title") && !lower.startsWith("meta description") && !lower.startsWith("url\n") && lower !== "url";
   });
 
-  // Group consecutive FAQ blocks
-  const processedBlocks = [];
-  let currentFaqs = [];
-
-  blocks.forEach((block) => {
-    const faqMatch = block.match(/^([^\?]{5,120}\?)\s*(.+)$/s);
-    const isMajorSectionHeader = /^(should you|why is|what does)/i.test(block);
-
-    if (faqMatch && !isMajorSectionHeader) {
-      currentFaqs.push({ question: faqMatch[1].trim(), answer: faqMatch[2].trim() });
-    } else {
-      if (currentFaqs.length > 0) {
-        processedBlocks.push({ type: 'faq', items: [...currentFaqs] });
-        currentFaqs = [];
-      }
-      processedBlocks.push({ type: 'block', content: block });
-    }
-  });
-
-  if (currentFaqs.length > 0) {
-    processedBlocks.push({ type: 'faq', items: [...currentFaqs] });
-  }
-
   return (
-    <div className="space-y-6 text-[#333333] text-[15px] sm:text-[16px] leading-[1.85] font-cabinet">
-      {processedBlocks.map((item, idx) => {
-        if (item.type === 'faq') {
-          return <FaqAccordion key={idx} items={item.items} />;
-        }
-
-        const block = item.content;
-
+    <div className="space-y-6 text-[#333333] text-[16px] leading-[1.85] font-cabinet w-full max-w-full overflow-hidden break-words">
+      {blocks.map((block, idx) => {
         // Meta header block (Last updated / Written by)
         if (block.toLowerCase().startsWith("last updated") || block.toLowerCase().startsWith("written by")) {
           const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
@@ -227,194 +167,56 @@ function BlogContentRenderer({ content, ctaLink }) {
           );
         }
 
-        // Key Takeaway / Highlight Box (Matches "Key Takeaway:", "Summary:", "Pro Tip:", "Note:", etc.)
-        const takeawayMatch = block.match(/^(key takeaway|takeaway|summary|pro tip|important|note|highlights|conclusion)[:\-]?\s*(.*)/i);
-        if (takeawayMatch) {
-          const label = takeawayMatch[1].toUpperCase();
-          const takeawayText = takeawayMatch[2] || block;
-          return (
-            <div key={idx} className="my-6 p-5 rounded-2xl bg-[#F3EFFF] border-l-4 border-[#7143FE] text-[#111111] text-[15px] sm:text-[16px] font-medium leading-[1.75] shadow-sm">
-              <span className="text-[#7143FE] font-bold flex items-center gap-1.5 mb-1 uppercase tracking-wider text-[12px]">
-                <Sparkles size={14} className="flex-shrink-0" /> {label}
-              </span>
-              {takeawayText}
-            </div>
-          );
-        }
-
-        // Comparison Table detection
-        if ((block.includes("Your Goal") && block.includes("Recommended Learning Path")) || block.includes("| --- |")) {
-          const lines = block.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-          const rows = [];
-          for (let i = 0; i < lines.length; i++) {
-            if (lines[i].includes("---") || lines[i] === "Your Goal" || lines[i] === "Recommended Learning Path") continue;
-            const parts = lines[i].includes("|") ? lines[i].split("|").map(p => p.trim()).filter(Boolean) : null;
-            if (parts && parts.length >= 2) {
-              rows.push({ goal: parts[0], path: parts[1] });
-            } else if (i + 1 < lines.length) {
-              rows.push({ goal: lines[i], path: lines[i + 1] });
-              i++;
-            }
-          }
-          if (rows.length > 0) {
-            return <ComparisonTable key={idx} rows={rows} />;
-          }
-        }
-
-        // CTA / Link block (starts with 👉 or Primary CTA / Secondary CTA)
-        if (block.startsWith("👉") || block.toLowerCase().startsWith("cta:") || block.toLowerCase().startsWith("[cta]")) {
-          const isSecondary = block.toLowerCase().includes("secondary") || block.toLowerCase().includes("counseling");
-          let targetUrl = ctaLink || "/register";
-          let cleanText = block.replace(/^(👉|cta:|\[cta\])\s*(Primary CTA:|Secondary CTA:)?\s*/i, "").trim();
-
-          // Custom explicit link syntax e.g. "👉 Explore Course | /custom-link"
-          if (cleanText.includes("|")) {
-            const parts = cleanText.split("|");
-            cleanText = parts[0].trim();
-            targetUrl = parts[1].trim();
-          }
-
-          return (
-            <div
-              key={idx}
-              className={`my-6 p-5 rounded-[18px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm transition-all ${
-                isSecondary
-                  ? "bg-[#F0EBFF] border border-[#7143FE]/30 text-[#7143FE]"
-                  : "bg-gradient-to-r from-[#7143FE] to-[#5B2ED7] text-white shadow-[0_4px_20px_rgba(113,67,254,0.25)]"
-              }`}
-            >
-              <div className="flex items-center gap-3 font-semibold text-[15px] sm:text-[16px]">
-                <span className="text-xl">👉</span>
-                <span>{cleanText}</span>
-              </div>
-              <Link
-                href={targetUrl}
-                className={`px-6 py-2.5 rounded-full font-bold text-[13px] flex-shrink-0 transition-all ${
-                  isSecondary
-                    ? "bg-[#7143FE] text-white hover:bg-[#5e35d4]"
-                    : "bg-white text-[#7143FE] hover:bg-opacity-95 shadow-sm"
-                }`}
-              >
-                {isSecondary ? "Book Session" : "Explore Course"}
-              </Link>
-            </div>
-          );
-        }
-
-        // Stage / Step Sub-Headings (e.g. Stage 1: ..., Step 1: ..., Phase 1: ...)
-        const stageMatch = block.match(/^(stage|step|phase|part|module)\s*(\d+)?[:\-]?\s*(.*)/i);
-        if (stageMatch) {
-          const badgeLabel = stageMatch[1].toUpperCase();
-          const stageNum = stageMatch[2] || "";
-          const stageTitle = stageMatch[3] || block;
-
-          return (
-            <div key={idx} className="my-7 p-4 sm:p-5 rounded-[16px] bg-[#F7F5FF] border-l-4 border-[#7143FE] border border-[#E9E4FF] flex items-center gap-4 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-[#7143FE] text-white flex items-center justify-center font-extrabold text-[15px] flex-shrink-0 shadow-md font-cabinet">
-                {stageNum ? (stageNum.length === 1 ? `0${stageNum}` : stageNum) : "★"}
-              </div>
-              <div className="font-cabinet">
-                <span className="text-[11px] uppercase tracking-wider text-[#7143FE] font-extrabold block mb-0.5">
-                  {badgeLabel} {stageNum}
-                </span>
-                <h3 className="text-[17px] sm:text-[19px] font-bold text-[#111111] leading-[1.3]">
-                  {stageTitle}
-                </h3>
-              </div>
-            </div>
-          );
-        }
-
-        // Main Section Headings (Markdown headings, short lines, or section titles)
+        // Headings (Markdown headings or short section title lines)
         const isMarkdownHeading = /^#{1,4}\s+/.test(block);
         const cleanHeadingText = block.replace(/^#{1,4}\s+/, "").trim();
 
         const isHeading =
           isMarkdownHeading ||
-          (block.length < 95 && !block.endsWith(".") && !block.endsWith(",") && !block.includes("\n")) ||
-          /^(quick answer|why is|should you|full stack vs|common mistakes|career opportunities|salary expectations|is full stack|frequently asked|final thoughts|ready to start|skills employers)/i.test(block);
+          (block.length < 85 && !block.endsWith(".") && !block.endsWith(",") && !block.includes("\n"));
 
         if (isHeading) {
           return (
             <h2
               key={idx}
-              className="text-[22px] sm:text-[26px] lg:text-[28px] font-bold text-[#111111] leading-[1.3] mt-10 mb-4 font-cabinet"
+              className="text-[22px] sm:text-[26px] font-bold text-[#111111] leading-[1.3] mt-8 mb-3 font-cabinet"
             >
               {cleanHeadingText}
             </h2>
           );
         }
 
-        // List / Bullet Block (contains any lines starting with •, -, *, 1., 2., ->, >)
-        const lines = block.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+        // List / Bullet Block
+        const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
         const bulletRegex = /^([•\-\*]|->|>|\d+[\.\)])\s+/;
-        const hasBulletLines = lines.some(l => bulletRegex.test(l));
+        const hasBulletLines = lines.some((l) => bulletRegex.test(l));
 
         if (hasBulletLines) {
-          const introLines = [];
-          const bulletItems = [];
-
-          lines.forEach(line => {
-            if (bulletRegex.test(line)) {
-              bulletItems.push(line.replace(bulletRegex, ""));
-            } else {
-              introLines.push(line);
-            }
-          });
-
-          const isShortGrid = bulletItems.length > 0 && bulletItems.every(item => item.length < 36);
+          const bulletItems = lines.filter((l) => bulletRegex.test(l)).map((l) => l.replace(bulletRegex, ""));
+          const introLines = lines.filter((l) => !bulletRegex.test(l));
 
           return (
-            <div key={idx} className="my-5 font-cabinet space-y-4">
+            <div key={idx} className="my-4 font-cabinet space-y-3">
               {introLines.length > 0 && (
-                <p className="text-[15px] sm:text-[16px] text-[#333333] leading-[1.85]">
+                <p className="text-[16px] text-[#333333] leading-[1.85]">
                   {introLines.join(" ")}
                 </p>
               )}
-
-              {isShortGrid ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
-                  {bulletItems.map((item, lIdx) => (
-                    <div key={lIdx} className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E6E6EC] shadow-sm hover:border-[#7143FE]/40 transition-all">
-                      <span className="w-3 h-3 rounded-full bg-[#7143FE] flex-shrink-0 shadow-[0_0_6px_rgba(113,67,254,0.4)]" />
-                      <span className="text-[15px] sm:text-[16px] font-semibold text-[#111111]">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <ul className="space-y-3.5 my-4 pl-1">
-                  {bulletItems.map((item, lIdx) => (
-                    <li key={lIdx} className="flex items-start gap-3.5 text-[15px] sm:text-[16px] text-[#222222] font-medium leading-[1.75]">
-                      <span className="mt-[8px] w-3 h-3 rounded-full bg-[#7143FE] flex-shrink-0 shadow-[0_0_6px_rgba(113,67,254,0.4)]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className="space-y-2 pl-6 list-disc text-[#333333]">
+                {bulletItems.map((item, lIdx) => (
+                  <li key={lIdx} className="text-[16px] leading-[1.75]">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           );
         }
 
-        // Paragraph block with possible inline line breaks or bold prefix
+        // Standard Paragraph
         return (
-          <p key={idx} className="text-[15px] sm:text-[16px] text-[#333333] leading-[1.85] mb-5 font-cabinet">
-            {lines.map((line, lIdx) => {
-              // Check if line starts with a bold label e.g., "Label — text" or "Label:"
-              const labelMatch = line.match(/^([^—:]{3,45})([—:])\s*(.*)$/);
-              if (labelMatch && !line.startsWith("http") && !line.toLowerCase().startsWith("stage")) {
-                return (
-                  <span key={lIdx} className="block mb-2">
-                    <strong className="text-[#111111] font-bold">{labelMatch[1]}{labelMatch[2]} </strong>
-                    {labelMatch[3]}
-                  </span>
-                );
-              }
-              return (
-                <span key={lIdx} className={lIdx > 0 ? "block mt-2" : ""}>
-                  {line}
-                </span>
-              );
-            })}
+          <p key={idx} className="text-[16px] text-[#333333] leading-[1.85] mb-4 font-cabinet">
+            {block}
           </p>
         );
       })}
@@ -429,10 +231,10 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
   // Map API blog object or fallback to static blogDetailData
   const hasApiBlog = !!initialBlog;
   const title = initialBlog?.title || blogDetailData.title;
-  const image =
-    initialBlog?.image && initialBlog.image !== "no-photo.jpg"
-      ? initialBlog.image
-      : blogDetailData.image;
+  let image = blogDetailData.image;
+  if (initialBlog?.image && initialBlog.image !== "no-photo.jpg") {
+    image = initialBlog.image.startsWith("http") ? initialBlog.image : `${API_BASE_URL}/${initialBlog.image}`;
+  }
 
   const contentHtml = initialBlog?.content;
 
@@ -443,7 +245,7 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
         slug: b.slug || b._id,
         title: b.title,
         image: b.image && b.image !== "no-photo.jpg" ? b.image : "/Home Page/Career/Specialized Training Modules_11zon.webp",
-        date: new Date(b.createdAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+        date: b.createdAt ? new Date(b.createdAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "",
       }))
     : [];
 
@@ -457,7 +259,7 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
 
   return (
     <div className="w-full min-h-screen bg-[#F5F5F5]">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 pt-28 sm:pt-32 pb-16">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 pt-32 sm:pt-36 lg:pt-40 pb-16">
 
         {/* Back link */}
         <Link
@@ -492,9 +294,9 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
 
             {/* Article Content */}
             {hasApiBlog && contentHtml ? (
-              <BlogContentRenderer content={contentHtml} ctaLink={initialBlog?.ctaLink} />
+              <BlogContentRenderer content={contentHtml} />
             ) : (
-              <BlogContentRenderer content={blogDetailData.rawText || ""} ctaLink={initialBlog?.ctaLink} />
+              <BlogContentRenderer content={blogDetailData.rawText || ""} />
             )}
 
           </article>

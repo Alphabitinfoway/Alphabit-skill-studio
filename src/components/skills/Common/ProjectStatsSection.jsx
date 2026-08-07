@@ -120,7 +120,7 @@ export default function ProjectStatsSection({ data }) {
                             <div className="flex items-center gap-3 w-full sm:w-1/2">
                                 <div
                                     className="w-12 h-12 rounded-full flex-shrink-0"
-                                    style={{ background: "linear-gradient(135deg, #7143FE 0%, #a78bfa 100%)" }}
+                                    style={{ background: "linear-gradient(180deg, #7143FE 0%, #ffffff 87.93%)" }}
                                 />
                                 <div>
                                     <p className="text-[#7143FE] italic font-semibold text-[20px]" style={{ fontFamily: "'PP Editorial New', serif" }}>
@@ -139,7 +139,7 @@ export default function ProjectStatsSection({ data }) {
                             <div className="flex items-center gap-3 w-full sm:w-1/2">
                                 <div
                                     className="w-12 h-12 rounded-full flex-shrink-0"
-                                    style={{ background: "linear-gradient(135deg, #7143FE 0%, #a78bfa 100%)" }}
+                                    style={{ background: "linear-gradient(180deg, #7143FE 0%, #ffffff 87.93%)" }}
                                 />
                                 <div>
                                     <p className="text-[#7143FE] italic font-semibold text-[20px]" style={{ fontFamily: "'PP Editorial New', serif" }}>

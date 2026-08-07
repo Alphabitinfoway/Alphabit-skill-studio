@@ -134,7 +134,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                 }}
             >
                 <p
-                    className="text-[#FF5622] text-[20px] italic font-semibold leading-snug"
+                    className="text-[#FFFFFF] text-[20px] italic font-semibold leading-snug"
                     style={{ fontFamily: "'PP Editorial New', serif" }}
                 >
                     Book a Free Demo Class{" "}

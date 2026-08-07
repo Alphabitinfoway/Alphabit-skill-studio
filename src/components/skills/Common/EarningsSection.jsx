@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 export default function EarningsSection({ data }) {
-  const { titlePrefix, titleItalic, titleSuffix, jobs = [] } = data?.earningsSectionData || {};
+  const { titlePrefix, titleItalic, titleSuffix, disclaimer, jobs = [] } = data?.earningsSectionData || {};
 
   if (jobs.length === 0) return null;
 
@@ -99,6 +99,13 @@ export default function EarningsSection({ data }) {
             </motion.div>
           ))}
         </div>
+
+        {/* Disclaimer Note */}
+        {disclaimer && (
+          <p className="text-center text-white/80 text-[13px] md:text-[14px] max-w-2xl mx-auto italic font-sans">
+            * {disclaimer}
+          </p>
+        )}
       </div>
     </section>
   );

@@ -10,10 +10,11 @@ export const heroSectionData = {
     titlePrefix: "Full Stack",
     titleSuffix: "Development",
     highlights: [
+        "Rajkot & Ahmedabad",
         "NSDC-Recognised Certification",
-        "300+ Active Hiring Partners",
-        "Rajkot, Gujarat",
+        "300+ Hiring Partners",
     ],
+    description: "Looking for the best <strong>Full Stack Development Course in Rajkot</strong> or <strong>Full Stack Development Training in Ahmedabad</strong>? Alphabit Skill offers hands-on training in <strong>MERN Stack (MongoDB, Express.js, React, Node.js)</strong> and <strong>PHP Full Stack Development with Laravel and MySQL</strong>. From week one, you'll build real-world web applications through live projects, learn from experienced industry mentors, and receive <strong>100% placement assistance</strong> to launch your career as a full stack developer.",
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
@@ -418,6 +419,7 @@ export const earningsSectionData = {
     titlePrefix: "What Full Stack Developers",
     titleItalic: "Earn",
     titleSuffix: "After This Course",
+    disclaimer: "Figures are indicative ranges based on regional job market trends and vary with company, experience, and negotiation.",
     jobs: [
         {
             title: "Junior Full Stack Developer (MERN)",
@@ -593,7 +595,7 @@ export const faqSectionData = {
             id: 3,
             question: "What is the course duration?",
             answer:
-                "The full stack developer course at Alphabit Skill is 4 to 6 months long, covering 9–10 modules from HTML and CSS basics to backend APIs, databases, and live project deployment.",
+                "The full stack developer course at Alphabit Skill is 4 to 6 months long, covering 9 modules from HTML and CSS basics to backend APIs, databases, and live project deployment.",
         },
         {
             id: 4,
@@ -617,13 +619,13 @@ export const faqSectionData = {
             id: 7,
             question: "What certification do I receive?",
             answer:
-                "Students receive an NSDC-recognised government certification backed by national skill development initiatives. Accepted by employers across India — whether applying locally in Rajkot or for remote roles nationally.",
+                "Students receive an NSDC-recognised government certification backed by national skill development initiatives, accepted by employers across India — whether applying locally in Rajkot or for remote roles nationally.",
         },
         {
             id: 8,
             question: "Is this better than learning PHP or WordPress?",
             answer:
-                "Our curriculum focuses on MERN Stack and Java — the technologies modern product companies, startups, and enterprise IT firms are hiring for in 2025–26. Full stack JavaScript (MERN) and Java offer higher salaries, broader job opportunities, and stronger long-term career growth across India's IT sector.",
+                "Our curriculum focuses on MERN Stack and Java — the technologies modern product companies, startups, and enterprise IT firms are actively hiring for. Full stack JavaScript (MERN) and Java offer higher salaries, broader job opportunities, and stronger long-term career growth across India's IT sector.",
         }
     ]
 };
@@ -653,12 +655,13 @@ export const trackSelectorData = {
 };
 
 export const testimonialsSectionData = {
-    titleNormal: "Verified Career Transitions Hear Directly",
-    titleParent: "from",
+    titleNormal: "Verified Career Transitions",
+    titleParent: "Hear Directly from",
     titleItalic: "Deployed Alumni",
     testimonials: [
         {
             id: 1,
+            track: "MERN Track",
             text: "I had zero coding experience when I joined. Within 5 months I had three live projects deployed on GitHub and got placed at a software company in Rajkot. The training here is genuinely industry-level.",
             name: "Priya Desai",
             title: "Junior React Developer, Rajkot",
@@ -666,16 +669,18 @@ export const testimonialsSectionData = {
         },
         {
             id: 2,
-            text: "The mentors know exactly what companies ask in technical interviews. I completed the training and cracked three interviews in my first month of job hunting. Best full stack course in Rajkot, hands down.",
+            track: "MERN Track",
+            text: "The mentors know exactly what companies ask in technical interviews. I completed the training and cracked three interviews in my first month of job hunting.",
             name: "Karan Patel",
             title: "Full Stack Developer, Ahmedabad",
             image: "/2.webp"
         },
         {
             id: 3,
+            track: "Java Track",
             text: "I chose the Java track because I wanted to work at an enterprise company. The Spring Boot and Hibernate modules were extremely detailed and practical. I got placed within 6 weeks of completing the training.",
             name: "Meenal Shah",
-            title: "Java Developer, Enterprise Sector",
+            title: "Java Backend Developer, Surat",
             image: "/3.webp"
         }
     ]
@@ -696,6 +701,6 @@ export const ctaSectionData = {
  * 13. Metadata Info
  */
 export const metadata = {
-    title: "Full Stack Development | Alphabit Skill",
-    description: "Learn Full Stack Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
+    title: "Full Stack Development Course in Rajkot & Ahmedabad",
+    description: "Alphabit Skill's Full Stack Development course in Rajkot & Ahmedabad — Front-End or PHP tracks, live projects, 300+ hiring partners. NSDC-certified. Book a free demo."
 };

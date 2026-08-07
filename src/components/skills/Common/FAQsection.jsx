@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 export default function FAQSection({ data }) {
-  const { titleNormal, titleItalic, faqs: faqData = [] } = data?.faqSectionData || {};
+  const { titleNormal = "Frequently Asked", titleItalic = "Questions", faqs: faqData = [] } = data?.faqSectionData || {};
   const [openId, setOpenId] = useState(1); // First item open by default
 
   const toggleAccordion = (id) => {

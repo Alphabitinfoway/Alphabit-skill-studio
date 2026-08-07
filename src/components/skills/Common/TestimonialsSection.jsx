@@ -166,6 +166,16 @@ export default function TestimonialsSection({ data }) {
 
                             {/* Testimonial Content Box */}
                             <div className="flex-1 text-white relative h-full flex flex-col justify-center px-8 lg:px-16 max-w-[800px]">
+                                {testimonials[currentIndex].track && (
+                                    <motion.span
+                                        initial={{ opacity: 0, y: -5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2, duration: 0.4 }}
+                                        className="inline-block w-fit bg-white/20 backdrop-blur-sm text-white text-[12px] font-semibold px-3 py-1 rounded-full mb-2 tracking-wide uppercase"
+                                    >
+                                        {testimonials[currentIndex].track}
+                                    </motion.span>
+                                )}
                                 <motion.p 
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}

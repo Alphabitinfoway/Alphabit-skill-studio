@@ -198,7 +198,7 @@ export default function ContactFormSection() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold font-cabinet text-gray-900 mb-4">
-                            Get in <span className="text-[#FF5622] italic font-serif">Touch</span>
+                            Get in <span className="text-[#FF5622] italic font-pp">Touch</span>
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                             Have a question about our programs or want to discuss a customized learning path? We'd love to hear from you.

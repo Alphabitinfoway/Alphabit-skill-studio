@@ -1,12 +1,15 @@
 import Link from "next/link";
+import { API_BASE_URL } from "@/config/api";
 
 export default function BlogCard({ post }) {
   const slugOrId = post?.slug || post?._id || post?.id;
   const href = `/blog/${slugOrId}`;
-  const image =
-    post?.image && post?.image !== "no-photo.jpg"
-      ? post.image
-      : "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  
+  let image = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  if (post?.image && post.image !== "no-photo.jpg") {
+    image = post.image.startsWith("http") ? post.image : `${API_BASE_URL}/${post.image}`;
+  }
+
   const title = post?.title || post?.excerpt || "Untitled Post";
 
   return (

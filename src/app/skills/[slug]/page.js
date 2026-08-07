@@ -18,6 +18,9 @@ import CTASection from "@/components/skills/Common/CTASection";
 // Import global sections
 import TestimonialsSection from "@/components/skills/Common/TestimonialsSection";
 
+// Force dynamic rendering to ensure fresh API data on every page request
+export const revalidate = 0;
+
 // ── SSG: pre-render all slugs at build time ───────────────────────────────
 export async function generateStaticParams() {
   return getAllSlugs();
@@ -49,7 +52,6 @@ const API_BASE = API_BASE_URL;
 
 /**
  * Fetch meetings and syllabus data from the backend in parallel.
- * Uses Next.js ISR (revalidate: 3600 = 1 hour) so the Render.com free-tier
  * cold-start only ever affects the very first server render, not user visits.
  * Returns nulls gracefully if the API is unreachable.
  */
@@ -58,27 +60,35 @@ async function fetchSkillApiData(slug) {
     const [meetingsRes, syllabusRes] = await Promise.all([
       fetch(`${API_BASE}/api/meetings`, {
         headers: { "ngrok-skip-browser-warning": "true" },
-        next: { revalidate: 3600 }, // ISR: re-fetch at most once per hour
+        cache: "no-store",
       }),
       fetch(`${API_BASE}/api/syllabus`, {
         headers: { "ngrok-skip-browser-warning": "true" },
-        next: { revalidate: 3600 },
+        cache: "no-store",
       }),
     ]);
-
     const [meetingsJson, syllabusJson] = await Promise.all([
       meetingsRes.ok ? meetingsRes.json() : Promise.resolve({ data: [] }),
       syllabusRes.ok ? syllabusRes.json() : Promise.resolve({ data: [] }),
     ]);
 
+
+
+    const matchSlug = (itemSlug, currentSlug) => {
+      if (!itemSlug || !currentSlug) return false;
+      const norm1 = itemSlug.toLowerCase().trim().replace(/[-\s]+/g, " ");
+      const norm2 = currentSlug.toLowerCase().trim().replace(/[-\s]+/g, " ");
+      return norm1 === norm2;
+    };
+
     const apiMeetings =
       meetingsJson?.success && Array.isArray(meetingsJson.data)
-        ? meetingsJson.data.filter((m) => m.skillSlug === slug)
+        ? meetingsJson.data.filter((m) => matchSlug(m.skillSlug, slug) || matchSlug(m.title, slug))
         : [];
 
     const syllabusPdf =
       syllabusJson?.success && Array.isArray(syllabusJson.data)
-        ? (syllabusJson.data.find((s) => s.skillSlug === slug)?.pdfUrl ?? null)
+        ? (syllabusJson.data.find((s) => matchSlug(s.skillSlug, slug) || matchSlug(s.title, slug))?.pdfUrl ?? null)
         : null;
 
     return { apiMeetings, syllabusPdf };

@@ -7,10 +7,11 @@ export const heroSectionData = {
     titlePrefix: "Web",
     titleSuffix: "Development",
     highlights: [
+        "Rajkot & Ahmedabad",
         "NSDC-Recognised Certification",
         "300+ Active Hiring Partners",
-        "Rajkot, Gujarat"
     ],
+    description: "Looking for the best <strong>Web Development Course in Rajkot</strong> or <strong>Web Development Training in Ahmedabad</strong>? Alphabit Skill offers hands-on training in <strong>Front-End Development with React</strong> and <strong>PHP Development with Laravel and WordPress</strong>. From week one, you'll build real websites and web applications through live projects under industry mentors, with <strong>100% placement assistance</strong> to help you launch your web development career.",
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
@@ -402,6 +403,7 @@ export const earningsSectionData = {
     titlePrefix: "What Web Developers",
     titleItalic: "Earn",
     titleSuffix: "After This Course",
+    disclaimer: "Figures are indicative ranges based on regional job market trends and vary with company, experience, and negotiation.",
     jobs: [
         {
             title: "Junior Web Developer (HTML/CSS/JS)",
@@ -565,25 +567,35 @@ export const faqSectionData = {
             id: 6,
             question: "What certification do I receive?",
             answer: "An NSDC-recognised government certification, accepted by employers across India."
+        },
+        {
+            id: 7,
+            question: "Does Alphabit Skill have a physical branch in Ahmedabad?",
+            answer: "Yes. Alphabit Skill has training centers in both Rajkot and Ahmedabad, so students can attend web development classes in person at either location, in addition to the fully online track available across Gujarat and India."
+        },
+        {
+            id: 8,
+            question: "Is an online web development course available for students outside Rajkot?",
+            answer: "Yes. The online track includes the same curriculum, live projects, and placement support as the in-person course at either center."
         }
     ]
 };
 
 export const trackSelectorData = {
     title: "Choose your track",
-    description: "Choose the learning path that matches your career goal.",
+    description: "Not every student has the same career goal. Choose the track that matches the job market you want to enter.",
     tracks: [
         {
             title: "Front-End Web Development",
             description: "Build with HTML5, CSS3, JavaScript, and React.js — the frontend skills every web development role needs, whether at a digital agency, a startup, or with your own freelance clients.",
-            bestFor: "Digital Agencies • Startups • Freelance Web Developers",
-            idealIf: "Work at a digital agency • Freelance building websites and landing pages • Move into a React.js frontend role."
+            bestFor: "Digital Agencies · Startups · Freelance Web Developers",
+            idealIf: "Work at a digital agency · Freelance building websites and landing pages · Move into a React.js frontend role"
         },
         {
             title: "PHP Web Development",
             description: "Build with PHP, MySQL, Laravel, and WordPress — the combination small and mid-size businesses across India rely on for websites, portals, and online stores.",
-            bestFor: "Web Development Agencies • E-commerce Businesses • WordPress Freelancers",
-            idealIf: "Build complete websites end-to-end • Work with WordPress and CMS clients • Freelance building business websites and online stores"
+            bestFor: "Web Development Agencies · E-commerce Businesses · WordPress Freelancers",
+            idealIf: "Build complete websites end-to-end · Work with WordPress and CMS clients · Freelance building business websites and online stores"
         }
     ]
 };
@@ -597,15 +609,22 @@ export const testimonialsSectionData = {
             id: 1,
             text: "I started with zero coding knowledge. After 4 months of the web development course at Alphabit Skill, I had a portfolio of live websites on GitHub and got placed at a digital agency in Rajkot. The React module alone was worth it.",
             name: "Riya Shah",
-            title: "Front-End Developer, Rajkot",
+            title: "Front-End Developer, Rajkot (October 2025)",
             image: "/Home Page/Trust/1.webp"
         },
         {
             id: 2,
             text: "The PHP and Laravel modules were incredibly detailed. I built a complete e-commerce application during the course and got placed in Ahmedabad within 5 weeks. Best web dev course in Rajkot.",
             name: "Mihir Patel",
-            title: "PHP Laravel Developer, Ahmedabad",
+            title: "PHP Laravel Developer, Ahmedabad (April 2026)",
             image: "/2.webp"
+        },
+        {
+            id: 3,
+            text: "I was torn between the Front-End and PHP tracks and picked PHP because I wanted to freelance for local businesses. By the end I'd built a working WooCommerce store from scratch — that alone got me my first three freelance clients before I'd even finished the course.",
+            name: "Naina Desai",
+            title: "Freelance Web Developer, Rajkot (Batch July 2026)",
+            image: "/3.webp"
         }
     ]
 };
@@ -624,6 +643,6 @@ export const ctaSectionData = {
  * 13. Metadata Info
  */
 export const metadata = {
-    title: "Web Development | Alphabit Skill",
-    description: "Learn Web Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
+    title: "Web Development Course in Rajkot & Ahmedabad | Alphabit Skill",
+    description: "Alphabit Skill's Web Development course — training centers in Rajkot & Ahmedabad. Front-End or PHP tracks, live projects, 300+ hiring partners. Book a demo."
 };

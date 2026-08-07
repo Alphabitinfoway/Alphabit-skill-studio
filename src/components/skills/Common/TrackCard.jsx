@@ -14,7 +14,7 @@ export default function TrackCard({ title, description, bestFor, idealIf }) {
         <div 
           className="w-12 h-12 rounded-full flex-shrink-0"
           style={{
-            background: "linear-gradient(135deg, #7143FE 0%, #a78bfa 100%)"
+            background: "linear-gradient(180deg, #7143FE 0%, #ffffff 87.93%)"
           }}
         />
         <h4 className="text-[18px] sm:text-[20px] font-bold text-[#111111] leading-tight">

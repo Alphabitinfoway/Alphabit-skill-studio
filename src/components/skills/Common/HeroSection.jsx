@@ -10,7 +10,7 @@ export default function HeroSection({ data }) {
     const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
 
     return (
-        <section className="w-full bg-[#F5F5F5] min-h-[85vh] flex items-center px-2 md:px-10 lg:px-20 py-10">
+        <section className="w-full bg-[#F5F5F5] min-h-[85vh] flex items-center px-4 md:px-10 lg:px-20 pt-32 md:pt-36 lg:pt-40 pb-16">
             <div className="max-w-[1300px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* ── Left: Content ─────────────────────────────────────── */}
@@ -21,7 +21,7 @@ export default function HeroSection({ data }) {
                     className="flex flex-col"
                 >
                     {/* Title */}
-                    <h1 className="whitespace-nowrap text-[42px] sm:text-[54px] md:text-[64px] lg:text-[72px] leading-[1.05] tracking-tight text-[#111111]">
+                    <h1 className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-tight text-[#111111]">
                         <span
                             className="italic font-medium text-[#E85B2A]"
                             style={{ fontFamily: "'PP Editorial New', serif" }}
@@ -33,13 +33,23 @@ export default function HeroSection({ data }) {
                         </span>
                     </h1>
 
-                    {/* Bullet Points */}
-                    <ul className="mt-8 ms-16 flex flex-col gap-4">
+                   
+
+                    {/* Description */}
+                    {heroSectionData.description && (
+                        <p
+                            className="mt-5 text-[#444444] text-[15px] sm:text-[16px] leading-relaxed [&>strong]:font-bold [&>strong]:text-[#111111]"
+                            style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+                            dangerouslySetInnerHTML={{ __html: heroSectionData.description }}
+                        />
+                    )}
+ {/* Bullet Points */}
+                    <ul className="mt-6 flex flex-col gap-3">
                         {(heroSectionData.highlights || []).map((item) => (
                             <li key={item} className="flex items-start gap-3">
                                 <span className="mt-[7px] w-2 h-2 rounded-full bg-[#7143FE] flex-shrink-0" />
                                 <span
-                                    className="text-[#111111] text-[17px] font-medium leading-snug"
+                                    className="text-[#111111] text-[16px] sm:text-[17px] font-medium leading-snug"
                                     style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                                 >
                                     {item}
@@ -47,9 +57,8 @@ export default function HeroSection({ data }) {
                             </li>
                         ))}
                     </ul>
-
                     {/* CTA Buttons */}
-                    <div className="mt-10 flex flex-wrap gap-3">
+                    <div className="mt-8 flex flex-wrap gap-3">
                         <button
                             onClick={() => setIsDemoFormOpen(true)}
                             suppressHydrationWarning

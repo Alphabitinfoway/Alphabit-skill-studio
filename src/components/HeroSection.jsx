@@ -166,7 +166,7 @@ export default function HeroSection() {
                                         initial={{ y: "110%", rotateX: -25, opacity: 0 }}
                                         animate={{ y: "0%", rotateX: 0, opacity: 1 }}
                                         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.95 }}
-                                        className="font-serif italic text-[#FF5622] font-[500] inline-block md:ml-1 mt-1 md:mt-0 origin-bottom-left"
+                                        className="font-pp italic text-[#FF5622] font-[500] inline-block md:ml-1 mt-1 md:mt-0 origin-bottom-left"
                                     >
                                         Future.
                                     </motion.h1>
