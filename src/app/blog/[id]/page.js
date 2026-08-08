@@ -59,15 +59,68 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// ── BlogPosting JSON-LD Structured Data Schema ───────────────────────────
+function getBlogPostingJsonLd(id, blog) {
+  if (!blog) return null;
+  const title = blog.metaTitle || blog.title || "Blog Details - Alphabit Skill";
+  const description =
+    blog.metaDescription ||
+    blog.excerpt ||
+    blog.description ||
+    "Read the latest tech, coding, and design insights from Alphabit Skill.";
+  const publishedDate = blog.createdAt || blog.date || "2024-01-01T00:00:00.000Z";
+  const modifiedDate = blog.updatedAt || blog.createdAt || blog.date || "2024-01-01T00:00:00.000Z";
+  const imageUrl =
+    blog.image && blog.image !== "no-photo.jpg"
+      ? blog.image
+      : "https://alphabitskill.com/logo.webp";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": [imageUrl],
+    "datePublished": publishedDate,
+    "dateModified": modifiedDate,
+    "author": {
+      "@type": "Person",
+      "name": blog.author || "Alphabit Skill Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alphabit Skill",
+      "url": "https://alphabitskill.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alphabitskill.com/logo.webp"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://alphabitskill.com/blog/${id}`
+    }
+  };
+}
+
 export default async function BlogDetailRoute({ params }) {
   const { id } = await params;
   const { blog, allBlogs } = await fetchBlogData(id);
+  const blogJsonLd = getBlogPostingJsonLd(id, blog);
 
   return (
-    <BlogDetailPage
-      initialBlog={blog}
-      initialAllBlogs={allBlogs}
-      slugOrId={id}
-    />
+    <>
+      {blogJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+        />
+      )}
+      <BlogDetailPage
+        initialBlog={blog}
+        initialAllBlogs={allBlogs}
+        slugOrId={id}
+      />
+    </>
   );
 }

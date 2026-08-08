@@ -284,6 +284,6 @@ export const ctaSectionData = {
  * 13. Metadata Info
  */
 export const metadata = {
-    title: "MERN Stack Development | Alphabit Skill",
-    description: "Learn MERN Stack Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
+    title: "MERN Stack Development Course in Rajkot & Ahmedabad ",
+    description: "MERN Stack Development course in Rajkot & Ahmedabad — MongoDB, Express, React & Node.js in depth. Live projects, 300+ hiring partners. Book a free demo."
 };

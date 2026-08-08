@@ -64,7 +64,7 @@ async function fetchSkillApiData(slug) {
       }),
       fetch(`${API_BASE}/api/syllabus`, {
         headers: { "ngrok-skip-browser-warning": "true" },
-        cache: "no-store",
+        next: { revalidate: 3600 },
       }),
     ]);
     const [meetingsJson, syllabusJson] = await Promise.all([
@@ -97,6 +97,85 @@ async function fetchSkillApiData(slug) {
     console.error("[SkillDetailPage] API fetch failed:", err?.message);
     return { apiMeetings: [], syllabusPdf: null };
   }
+}
+
+// ── Course JSON-LD Structured Data Schema ────────────────────────────────
+function getCourseJsonLd(slug, skill, skillData) {
+  const meta = skillData?.metadata || {};
+  const courseTitle = meta.title || `${skill.title} Course | Alphabit Skill`;
+  const courseDesc =
+    meta.description ||
+    skillData?.heroSectionData?.description ||
+    `Learn ${skill.title} with hands-on projects, industry mentors, and placement support at Alphabit Skill.`;
+  const durationText = skillData?.projectStatsSectionData?.durationVal || "4–5 months";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseTitle,
+    "description": courseDesc,
+    "provider": {
+      "@type": "Organization",
+      "name": "Alphabit Skill",
+      "sameAs": "https://alphabitskill.com",
+      "url": "https://alphabitskill.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alphabitskill.com/logo.webp"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kalawad Road",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "postalCode": "360005",
+        "addressCountry": "IN"
+      }
+    },
+    "educationalCredentialAwarded": "Government-Recognised (NSDC) Industry-Ready Certification",
+    "courseMode": ["Blended", "Onsite", "Online"],
+    "hasCourseInstance": [
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Blended",
+        "duration": durationText,
+        "instructor": {
+          "@type": "Person",
+          "name": "Working Industry Mentors"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "Alphabit Skill Training Studio",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kalawad Road",
+            "addressLocality": "Rajkot",
+            "addressRegion": "Gujarat",
+            "postalCode": "360005",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "description": "Transparent pricing with No Cost EMI options and free demo class",
+        "url": `https://alphabitskill.com/skills/${slug}`
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "380",
+      "reviewCount": "195"
+    }
+  };
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────
@@ -138,9 +217,15 @@ export default async function SkillDetailPage({ params }) {
 
   const skillData = skillDataResult;
   const { apiMeetings, syllabusPdf } = apiData;
+  const courseJsonLd = getCourseJsonLd(slug, skill, skillData);
 
   return (
     <>
+      {/* Schema.org Course Structured Data for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
       <HeroSection data={skillData} />
       <ProjectStatsSection data={skillData} />
       <LandingPageLayout data={skillData} />

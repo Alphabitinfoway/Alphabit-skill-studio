@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactCompiler: true,
+  // Optimize heavy barrel file imports for instant module resolution
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'embla-carousel-react'],
+  },
   images: {
     remotePatterns: [
       {

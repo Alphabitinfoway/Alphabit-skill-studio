@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { API_BASE_URL } from "@/config/api";
 
 export default function ContactFormSection() {
@@ -193,7 +193,7 @@ export default function ContactFormSection() {
 
     return (
         <>
-            <section className="py-20 bg-[#F5F5F5] relative overflow-hidden">
+            <section className="bg-[#F5F5F5] relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-6 max-w-[1240px]">
                     {/* Header */}
                     <div className="text-center mb-16">
