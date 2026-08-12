@@ -22,6 +22,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
         configTracks.forEach(track => {
             const trackTitle = track.title.toLowerCase();
             const matchingKey = legacyKeys.find(key => {
+                if (orderedKeys.includes(key)) return false;
                 const arrayTitle = data[key]?.title;
                 if (arrayTitle) {
                     return arrayTitle.toLowerCase() === trackTitle;
@@ -34,7 +35,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                 return trackWords.some(w => keyWords.includes(w) || baseKey.includes(w)) || 
                        keyWords.some(w => trackWords.includes(w) || normalizedTrack.includes(w));
             });
-            if (matchingKey) orderedKeys.push(matchingKey);
+            if (matchingKey && !orderedKeys.includes(matchingKey)) orderedKeys.push(matchingKey);
         });
 
         legacyKeys.forEach(key => {
@@ -238,7 +239,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                                 const title = track.title;
                                 return (
                                     <button
-                                        key={track.path || idx}
+                                        key={track.path ? `${track.path}-${idx}` : idx}
                                         ref={(el) => (tabRefs.current[idx] = el)}
                                         onClick={() => setActiveTab(idx)}
                                         suppressHydrationWarning

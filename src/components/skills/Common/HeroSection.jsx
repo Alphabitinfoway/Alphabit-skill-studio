@@ -89,7 +89,7 @@ export default function HeroSection({ data }) {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
                     className="flex justify-center items-center w-full"
                 >
-                    <div className="w-full max-w-[480px] mt-12 ms-16 relative">
+                    <div className="w-full max-w-[680px] mt-12 ms-16 relative">
                         {heroSectionData.heroImage && (
                             <Image
                                 src={heroSectionData.heroImage}

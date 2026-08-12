@@ -8,24 +8,24 @@ import { motion, AnimatePresence } from "framer-motion";
 const testimonials = [
     {
         id: 1,
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        name: "Lorem Ipsum",
-        title: "Lorem Ipsum",
-        image: "/Home Page/Trust/1.webp"
+        text: "I always wanted to build a career in IT, but Alphabit Skill Studio gave me the clarity and direction I was missing. The hands-on learning, practical exposure, and expert mentorship transformed my curiosity into confidence and helped me find the right career path.",
+        name: "Harshad Zalaniya",
+        title: "Cyber Security",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786443813/copy_of_whatsapp_image_2026-08-11_at_31948_pm_1_yokobz.jpg"
     },
     {
         id: 2,
-        text: "The hands-on training and community support at the studio are unmatched. I went from zero coding knowledge to building full-stack applications in just a few months.",
-        name: "Priya Patel",
-        title: "Full Stack Developer",
-        image: "/2.webp" 
+        text: "I discovered Alphabit Skill Studio through a reel, and it completely changed my perspective. The mentors helped strengthen my fundamentals through practical learning, boosting my confidence and taking my skills to the next level.",
+        name: "Aanshi Bhuva",
+        title: "Python AI/ML",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786444211/WhatsApp_Image_2026-08-11_at_3.19.48_PM_o3z71q.jpg" 
     },
     {
         id: 3,
-        text: "The placement cell is incredible. They helped me refine my resume and prepared me for tough interviews with top-tier companies.",
-        name: "Aniket Verma",
-        title: "UX Designer",
-        image: "/3.webp" 
+        text: "After college, I knew I wanted to pursue web development but lacked the practical skills and direction. Alphabit Skill Studio helped me build strong technical foundations, improve my confidence, and become industry-ready through hands-on learning.",
+        name: "Vinita Kanjani",
+        title: "Web Development",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786443919/copy_of_whatsapp_image_2026-08-11_at_31908_pm_ugdoba.jpg " 
     }
 ];
 

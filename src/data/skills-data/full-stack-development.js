@@ -18,7 +18,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786522962/fullstack-hero_msv53i.webp",
 };
 
 /**
@@ -68,7 +68,7 @@ const mernModules = [
     {
         num: "01",
         title: "Web Development Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518867/module1_az0qpi.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every full stack developer is expected to know before their first interview.",
         tags: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design", "Semantic Structure", "Web Accessibility"],
         techstack: {
@@ -81,7 +81,7 @@ const mernModules = [
     {
         num: "02",
         title: "JavaScript & ES6+",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518868/module2_y12ei0.webp",
         description: "Master variables, functions, arrays, objects, DOM manipulation, ES6+ features, async/await, the Fetch API, and event-driven programming that powers every modern web application.",
         tags: ["JavaScript", "ES6+", "DOM Manipulation", "Async/Await", "Fetch API", "Closures", "Promises"],
         techstack: {
@@ -94,7 +94,7 @@ const mernModules = [
     {
         num: "03",
         title: "React.js Frontend Framework",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518869/module3_woweqg.webp",
         description: "React is the most hired frontend skill in India's full stack developer job market. Learn to build dynamic, component-based interfaces using React Hooks, Redux Toolkit, and third-party API integration.",
         tags: ["React.js", "Hooks", "useState/useEffect", "Redux Toolkit", "React Router", "API Integration"],
         techstack: {
@@ -107,7 +107,7 @@ const mernModules = [
     {
         num: "04",
         title: "Node.js & Express.js Backend",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518869/module4_pb7plr.webp",
         description: "Build production-grade server-side applications and REST APIs using Node.js and Express.js — with middleware, routing, JWT authentication, error handling, and server-side file management.",
         tags: ["Node.js", "Express.js", "REST APIs", "Middleware", "JWT Auth", "Error Handling", "File Handling"],
         techstack: {
@@ -120,7 +120,7 @@ const mernModules = [
     {
         num: "05",
         title: "MongoDB & Database Design",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518868/module5_zaijee.webp",
         description: "Work with MongoDB and Mongoose to design data models, execute CRUD operations, build aggregation pipelines, apply indexing, and connect your database to a live Node.js backend.",
         tags: ["MongoDB", "Mongoose", "CRUD Operations", "Aggregation Pipeline", "Data Modeling", "Indexing"],
         techstack: {
@@ -133,7 +133,7 @@ const mernModules = [
     {
         num: "06",
         title: "Authentication, Security & APIs",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518869/module6_nvkw6m.webp",
         description: "Implement JWT authentication, OAuth2, bcrypt password hashing, and learn how to build and consume third-party APIs in a secure, production-ready way.",
         tags: ["JWT", "OAuth2", "bcrypt", "API Security", "CORS", "Session Management"],
         techstack: {
@@ -146,7 +146,7 @@ const mernModules = [
     {
         num: "07",
         title: "Git & GitHub",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518869/module7_ewnmz8.webp",
         description: "Recruiters check your GitHub before they read your resume. Learn branching, merging, pull requests, and collaborative team workflows — and build a clean commit history that hiring managers notice.",
         tags: ["Git", "GitHub", "Branching", "Pull Requests", "Collaborative Workflows", "CI/CD Basics"],
         techstack: {
@@ -159,7 +159,7 @@ const mernModules = [
     {
         num: "08",
         title: "Deployment & Cloud Hosting",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module8.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518871/module8_uwcagj.webp",
         description: "Learn to deploy full stack applications on Vercel, Render, and Railway — with environment configuration, domain setup, SSL, and foundational DevOps concepts every full stack developer must understand.",
         tags: ["Vercel", "Render", "Railway", "DevOps Basics", "SSL", "Cloud Hosting"],
         techstack: {
@@ -172,7 +172,7 @@ const mernModules = [
     {
         num: "09",
         title: "Capstone Projects, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module9.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518870/module9_prn7lq.webp",
         description: "Build 2+ complete applications from scratch — an e-commerce platform, task management tool, or social application. Get access to a full stack developer internship for hands-on, real-world experience. Walk into every interview with deployed, live work on GitHub and verified internship experience.",
         tags: ["Live Projects", "Full Stack Internship", "Portfolio Building", "GitHub Showcase", "Interview Prep"],
         techstack: {
@@ -188,7 +188,7 @@ const javaModules = [
     {
         num: "01",
         title: "Web Development Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518878/module1_orotp8.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every full stack developer is expected to know before their first interview.",
         tags: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design", "Semantic Structure", "Web Accessibility"],
         techstack: {
@@ -201,7 +201,7 @@ const javaModules = [
     {
         num: "02",
         title: "Core Java & OOP",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518879/module2_ace7ds.webp",
         description: "Master Java fundamentals — data types, control flow, arrays, collections, and the object-oriented principles that every Java interview will test you on: classes, inheritance, polymorphism, abstraction, and encapsulation.",
         tags: ["Core Java", "OOP", "Collections Framework", "Exception Handling", "Generics", "Java 8+ Features"],
         techstack: {
@@ -214,7 +214,7 @@ const javaModules = [
     {
         num: "03",
         title: "Advanced Java & Java 8+",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518878/module3_l8agcr.webp",
         description: "Go deeper with Java 8+ features that modern enterprise applications depend on — Lambda expressions, Stream API, Functional Interfaces, Optional, and the Date/Time API that replaces legacy patterns.",
         tags: ["Lambda Expressions", "Stream API", "Functional Interfaces", "Optional", "Method References", "Date/Time API"],
         techstack: {
@@ -227,7 +227,7 @@ const javaModules = [
     {
         num: "04",
         title: "Spring Boot Backend Framework",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518879/module4_ilwhdx.webp",
         description: "Spring Boot is the most hired backend skill in India's Java full stack job market. Learn to build production-grade REST APIs with Spring Boot, dependency injection, Spring MVC, and auto-configuration.",
         tags: ["Spring Boot", "Spring MVC", "REST APIs", "Dependency Injection", "Spring Annotations", "Auto-Configuration"],
         techstack: {
@@ -240,7 +240,7 @@ const javaModules = [
     {
         num: "05",
         title: "Spring Data JPA & Database Design",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518880/module5_wxniiz.webp",
         description: "Work with Spring Data JPA and Hibernate to design relational data models, execute CRUD operations, write custom queries, and connect your database to a live Spring Boot backend.",
         tags: ["Spring Data JPA", "Hibernate", "MySQL", "CRUD Operations", "JPQL", "Entity Relationships", "Database Design"],
         techstack: {
@@ -253,7 +253,7 @@ const javaModules = [
     {
         num: "06",
         title: "Authentication, Security & APIs",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518882/module6_jyenco.webp",
         description: "Implement JWT authentication, Spring Security, BCrypt password hashing, role-based access control, and learn how to build and consume third-party APIs in a secure, production-ready way.",
         tags: ["Spring Security", "JWT", "BCrypt", "Role-Based Access", "OAuth2", "CORS", "API Security"],
         techstack: {
@@ -266,7 +266,7 @@ const javaModules = [
     {
         num: "07",
         title: "React.js Frontend Integration",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518882/module7_g1xeef.webp",
         description: "Java full stack developers are expected to build the complete picture. Learn React.js, component-based UI design, Hooks, Axios for API calls, and how to connect your React frontend to a Spring Boot backend.",
         tags: ["React.js", "Hooks", "useState/useEffect", "Axios", "REST Integration", "React Router", "Component Architecture"],
         techstack: {
@@ -292,7 +292,7 @@ const javaModules = [
     {
         num: "09",
         title: "Deployment & Cloud Hosting",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module9.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518882/module8_uoddwo.webp",
         description: "Learn to deploy Java full stack applications on AWS, Railway, and Render — with environment configuration, domain setup, SSL, Docker basics, and foundational DevOps concepts every Java developer must understand.",
         tags: ["AWS EC2", "Docker Basics", "Railway", "Render", "DevOps Fundamentals", "SSL", "Cloud Hosting"],
         techstack: {
@@ -305,7 +305,7 @@ const javaModules = [
     {
         num: "10",
         title: "Capstone Projects, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/JAVA/module10.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786518881/module10_eemlwq.webp",
         description: "Build 2+ complete applications from scratch — a banking portal, inventory management system, or job board platform. Get access to a Java full stack internship for hands-on, real-world experience. Walk into every interview with deployed, live work on GitHub and verified internship experience.",
         tags: ["Live Projects", "Full Stack Internship", "Portfolio Building", "GitHub Showcase", "Interview Prep"],
         techstack: {
