@@ -18,7 +18,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786522962/fullstack-hero_msv53i.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786599218/Group_571_cbutdo.png",
 };
 
 /**

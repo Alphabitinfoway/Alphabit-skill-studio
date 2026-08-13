@@ -1,58 +1,212 @@
 // ==============================================================================
-// Mobile App Development - Component Data File
+// Mobile App Development - Master Component Data File
 // Driven Dynamically for dynamic routes.
 // ==============================================================================
 
+/**
+ * 1. Hero Section Data
+ */
 export const heroSectionData = {
     titlePrefix: "Mobile App",
     titleSuffix: "Development",
     highlights: [
         "NSDC-Recognised Certification",
         "300+ Active Hiring Partners",
-        "Rajkot, Gujarat"
+        "Rajkot, Ahmedabad Gujarat"
     ],
+    description: "<strong>Mobile App Development Course in Rajkot</strong>. Most courses teach one screen, one button, and call it an app. Real mobile teams connect to live APIs, handle a rotated screen without losing state, and actually publish to the Play Store — not just build and stop. Choose Flutter for one codebase across Android and iOS, or Android for the native, enterprise-hired skill set, and leave with a published app you can demo in an interview.",
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786599863/copy_of_mobile-app_fe2sq9.webp",
 };
 
+/**
+ * 2. Project Stats Section Data
+ */
 export const projectStatsSectionData = {
     titleItalic: "Real-World Projects",
     titleAmpersand: "&",
     titleBold: "Industry Work",
     purpleImage: "/purplesubtract.webp",
     stats: [
-        { "label": "200+ Students Trained" },
-        { "label": "10 Years Industry Experience" },
-        { "label": "300+ Hiring Partners" },
-        { "label": "100% Placement Assistance" }
+        { label: "200+ Students Trained" },
+        { label: "10 Years Industry Experience" },
+        { label: "300+ Hiring Partners" },
+        { label: "100% Placement Assistance" }
     ],
-    durationVal: "4-6 months",
+    durationVal: "4–6 months",
     durationLabel: "Course Duration",
     hoursVal: "50+ hrs",
     hoursLabel: "Live project hours"
 };
 
+/**
+ * 3. Course Features Section Data
+ */
 export const courseFeaturesData = {
     titleNormal: "About",
     titleItalic: "Mobile App",
     titleSuffix: "Development Course",
     items: [
-        "9 Modules — fundamentals to app store deployment",
+        "8 Modules per track — fundamentals to app store deployment",
         "5+ industry-grade live mobile app projects",
         "Apps published on the Google Play Store",
         "Small batch sizes for personal attention",
         "Weekly code reviews by working developers",
         "Resume, LinkedIn & mock interview prep",
-        "Government-recognised certification",
+        "Government-recognised (NSDC) certification",
         "No Cost EMI — flexible fee structure",
         "Weekend & weekday batch options"
     ],
 };
 
-// Android App Development Modules (nativeAndroidModules = Tab 1, n > f alphabetically)
-const androidModules = [
+/**
+ * 4. Choose Your Track Data
+ */
+export const trackSelectorData = {
+    title: "Choose Your Track",
+    description: "Not every student has the same career goal. Choose the track that matches the job market you want to enter.",
+    tracks: [
+        {
+            title: "Flutter App Development",
+            description: "Build with Flutter, Dart, Firebase, and REST APIs — one codebase that runs on both Android and iOS, the fastest-growing cross-platform skill in India's startup and product ecosystem.",
+            bestFor: "Startups · Product Companies · Freelance Mobile Developers",
+            idealIf: "Work at a product startup · Freelance as a mobile developer · Build your own app for both platforms at once"
+        },
+        {
+            title: "Android App Development",
+            description: "Build with Kotlin, Jetpack Compose, Room, and Retrofit — the native Android skill set that enterprise IT companies and service-based firms across India specifically hire for.",
+            bestFor: "Enterprise IT Companies · Service-Based Firms · High-Performance Android Roles",
+            idealIf: "Work at TCS/Infosys-level firms · Build high-performance native Android apps · Specialise in the Android ecosystem"
+        }
+    ]
+};
+
+/**
+ * 5. Curriculum Modules (Flutter App Development + Android App Development Tracks)
+ */
+export const flutterModules = [
+    {
+        num: "01",
+        title: "Programming Fundamentals & Dart Basics",
+        description: "Start with programming logic, then move into Dart — the language Flutter runs on — covering variables, functions, OOP, and asynchronous programming from the ground up.",
+        tags: [
+            "Dart Syntax",
+            "OOP",
+            "Async/Await & Futures",
+            "Null Safety"
+        ],
+        techstack: {
+            languages: "Dart",
+            tools: "VS Code • Android Studio"
+        }
+    },
+    {
+        num: "02",
+        title: "Flutter Fundamentals & Widget Architecture",
+        description: "Learn how Flutter apps are actually structured — everything in Flutter is a widget, and this module covers how to think in widgets to build real interfaces.",
+        tags: [
+            "Flutter Setup",
+            "Widget Tree",
+            "Stateless vs Stateful Widgets",
+            "Hot Reload Workflow"
+        ],
+        techstack: {
+            framework: "Flutter SDK",
+            tools: "Android Studio • VS Code"
+        }
+    },
+    {
+        num: "03",
+        title: "Layouts, Navigation & UI Design",
+        description: "Build responsive, good-looking interfaces that work identically on Android and iOS — layouts, navigation between screens, and Flutter's theming system.",
+        tags: [
+            "Rows, Columns & Layouts",
+            "Navigation & Routing",
+            "Theming & Styling",
+            "Responsive Design"
+        ],
+        techstack: {
+            framework: "Flutter",
+            workflow: "Figma-to-Flutter Workflow"
+        }
+    },
+    {
+        num: "04",
+        title: "State Management with Provider/Riverpod",
+        description: "Learn to manage app state properly at scale — the single skill that separates a Flutter developer who can build a demo from one who can build a real, maintainable app.",
+        tags: [
+            "Provider / Riverpod",
+            "State Lifting",
+            "App-Wide State Patterns",
+            "Performance Basics"
+        ],
+        techstack: {
+            libraries: "Provider • Riverpod"
+        }
+    },
+    {
+        num: "05",
+        title: "REST API Integration",
+        description: "Connect your Flutter app to real backend services — fetching, sending, and handling data from live APIs across both platforms from a single codebase.",
+        tags: [
+            "HTTP Package",
+            "REST API Calls",
+            "JSON Parsing",
+            "Error & Loading States"
+        ],
+        techstack: {
+            libraries: "http / dio",
+            tools: "Postman"
+        }
+    },
+    {
+        num: "06",
+        title: "Firebase Integration for Flutter",
+        description: "Learn to add authentication, real-time data, and push notifications to your app using Firebase — the backend-as-a-service most Flutter apps rely on early on.",
+        tags: [
+            "Firebase Authentication",
+            "Firestore Database",
+            "Push Notifications",
+            "Firebase Analytics Basics"
+        ],
+        techstack: {
+            backend: "Firebase (Firestore, Auth, FCM)",
+            libraries: "FlutterFire"
+        }
+    },
+    {
+        num: "07",
+        title: "Git, GitHub & App Store Deployment",
+        description: "Learn team version control workflows, and take your app through both the Google Play Store and Apple App Store publishing processes — the real advantage of building cross-platform.",
+        tags: [
+            "Git & GitHub",
+            "App Signing (Android & iOS)",
+            "Play Console & App Store Connect",
+            "Submission Process"
+        ],
+        techstack: {
+            tools: "Git • GitHub • Google Play Console • App Store Connect"
+        }
+    },
+    {
+        num: "08",
+        title: "Capstone Projects, Internship & Portfolio",
+        description: "Apply everything into 2–3 full-scale Flutter capstone projects, complete a guided internship, and walk away with published apps and a GitHub portfolio ready to show recruiters.",
+        tags: [
+            "Capstone Project Build",
+            "Code Review",
+            "Internship Experience",
+            "Portfolio & Resume Prep"
+        ],
+        techstack: {
+            tools: "Git • GitHub • Play Console • App Store Connect"
+        }
+    }
+];
+
+export const androidModules = [
     {
         num: "01",
         title: "Programming Fundamentals & Kotlin Basics",
@@ -64,295 +218,143 @@ const androidModules = [
             "Null Safety"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            languages: "Kotlin",
+            ide: "Android Studio"
         }
     },
     {
         num: "02",
         title: "Android Studio & App Architecture",
-        description: "Set up Android Studio correctly and understand Activities, Fragments, Intents, and the Android lifecycle — plus MVVM architecture, the pattern enterprise teams use in production.",
+        description: "Learn to navigate Android Studio properly and understand how a real Android app is structured — activities, fragments, and the architecture patterns production apps actually follow.",
         tags: [
-            "Android Studio",
-            "Activities",
-            "Fragments",
-            "Intents",
-            "MVVM"
+            "Android Studio Setup",
+            "Activities & Fragments",
+            "MVVM Architecture",
+            "App Lifecycle"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            tools: "Android Studio • Android SDK"
         }
     },
     {
         num: "03",
         title: "Jetpack Compose UI",
-        description: "Google's modern UI toolkit for Android is rapidly replacing XML layouts at enterprise companies across India. Build declarative, reactive UIs with theming, navigation, and animation.",
+        description: "Build modern Android interfaces using Jetpack Compose — Google's current recommended toolkit, replacing the older XML-based layout system most tutorials still teach.",
         tags: [
-            "Jetpack Compose",
-            "Composables",
+            "Composable Functions",
             "State in Compose",
-            "Navigation"
+            "Layouts & Modifiers",
+            "Navigation Compose"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            framework: "Jetpack Compose",
+            ide: "Android Studio"
         }
     },
     {
         num: "04",
         title: "ViewModel, LiveData & Room Database",
-        description: "ViewModel and LiveData are the backbone of MVVM on Android. Room Database is the most widely used local storage solution in enterprise Android apps — the core data layer employers expect you to know cold.",
+        description: "Learn to manage app state properly and store data locally — the pattern that keeps an app working smoothly even when the screen rotates or the user navigates away and back.",
         tags: [
             "ViewModel",
             "LiveData",
             "Room Database",
-            "Repository Pattern"
+            "Local Data Persistence"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            database: "Room • SQLite",
+            architecture: "ViewModel • LiveData"
         }
     },
     {
         num: "05",
         title: "Retrofit & REST API Integration",
-        description: "Retrofit is the standard HTTP client for Android. Integrate real backend APIs with JSON parsing, error handling, coroutine-based async calls, and OkHttp interceptors.",
+        description: "Connect your Android app to real backend services — fetching, sending, and handling data from live APIs the way production apps do.",
         tags: [
-            "Retrofit",
-            "OkHttp",
-            "Gson/Moshi",
-            "Coroutines"
+            "Retrofit Setup",
+            "REST API Calls",
+            "JSON Parsing",
+            "Error & Loading States"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            libraries: "Retrofit",
+            tools: "Postman"
         }
     },
     {
         num: "06",
         title: "Firebase Integration for Android",
-        description: "Implement Firebase Authentication, Firestore, Storage, and FCM push notifications in native Android — used extensively by product companies across Gujarat and India.",
+        description: "Learn to add authentication, real-time data, and push notifications to your app using Firebase — the backend-as-a-service most Android apps rely on early on.",
         tags: [
-            "Firebase Auth",
-            "Firestore",
-            "FCM",
-            "Crashlytics"
+            "Firebase Authentication",
+            "Firestore Database",
+            "Push Notifications",
+            "Firebase Analytics Basics"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            backend: "Firebase (Firestore, Auth, FCM)"
         }
     },
     {
         num: "07",
         title: "Git, GitHub & Play Store Deployment",
-        description: "Version control with Git and GitHub, team workflows, APK and AAB builds, app signing, Google Play Store submission, and release management.",
+        description: "Learn team version control workflows, and take your app through the actual Google Play Store publishing process — not just a local build.",
         tags: [
-            "Git",
-            "GitHub",
-            "APK/AAB",
+            "Git & GitHub",
             "App Signing",
-            "Play Store"
+            "Play Console Setup",
+            "Play Store Submission Process"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
+            tools: "Git • GitHub • Google Play Console"
         }
     },
     {
         num: "08",
         title: "Capstone Projects, Internship & Portfolio",
-        description: "Build 2+ complete native Android apps — an e-commerce app, task management tool, or real-time chat app — published on the Play Store, with a mobile developer internship for real-world experience.",
+        description: "Apply everything into 2–3 full-scale native Android capstone projects, complete a guided internship, and walk away with a Play Store listing and GitHub portfolio ready to show recruiters.",
         tags: [
-            "Live Projects",
-            "Android Internship",
-            "Play Store",
-            "Interview Prep"
+            "Capstone Project Build",
+            "Code Review",
+            "Internship Experience",
+            "Portfolio & Resume Prep"
         ],
         techstack: {
-            frontend: "Kotlin · Android Studio · Jetpack Compose · ViewModel · LiveData",
-            database: "Firestore · SQLite · Room · Shared Preferences",
-            tools: "Git · GitHub · Play Console"
-        }
-    }
-];      
-
-// Flutter App Development Modules (flutterModules = Tab 1 alphabetically, f > k)
-const flutterModules = [
-    {
-        num: "01",
-        title: "Programming Fundamentals & UI Basics",
-        description: "Programming logic, UI design principles, mobile screen layouts, and how apps communicate with users and backends — so you start the course with clarity, not confusion.",
-        tags: [
-            "Programming Logic",
-            "UI/UX Basics",
-            "App Architecture",
-            "Mobile Design Principles"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "02",
-        title: "Dart Programming Language",
-        description: "Variables, functions, OOP, null safety, async/await, and streams — the engine behind every Flutter application, covered deeply so the language never slows you down.",
-        tags: [
-            "Dart",
-            "OOP",
-            "Null Safety",
-            "Async/Await",
-            "Streams"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "03",
-        title: "Flutter UI Development",
-        description: "Build beautiful, responsive interfaces using Flutter widgets, layouts, navigation, and animations — screens that run perfectly on both Android and iOS without platform-specific code.",
-        tags: [
-            "Flutter",
-            "Widgets",
-            "Layouts",
-            "Navigation",
-            "Animations"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "04",
-        title: "State Management",
-        description: "Provider, Riverpod, and BLoC — the state management tools production Flutter teams actually rely on, so your apps are scalable, testable, and production-ready.",
-        tags: [
-            "Provider",
-            "Riverpod",
-            "BLoC",
-            "GetX",
-            "Reactive Programming"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "05",
-        title: "REST APIs & Backend Integration",
-        description: "Connect to real backends using REST APIs, Dio, and HTTP — with proper JSON parsing, error handling, and loading state management, exactly what interviewers check in your project code.",
-        tags: [
-            "REST APIs",
-            "Dio",
-            "HTTP",
-            "JSON Parsing",
-            "Error Handling"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "06",
-        title: "Firebase & Backend Services",
-        description: "Firebase Authentication, Firestore, Storage, FCM push notifications, and Crashlytics — a complete backend without building a server from scratch.",
-        tags: [
-            "Firebase Auth",
-            "Firestore",
-            "FCM",
-            "Crashlytics"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "07",
-        title: "Git & GitHub",
-        description: "Branching, merging, pull requests, and collaborative workflows — and a commit history that actually impresses the companies you're applying to.",
-        tags: [
-            "Git",
-            "GitHub",
-            "Branching",
-            "Pull Requests",
-            "CI/CD Basics"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "08",
-        title: "App Store Deployment & Publishing",
-        description: "APK and AAB builds, app signing, Google Play Store submission, Apple App Store basics, and app store optimisation — skills most courses skip entirely.",
-        tags: [
-            "Google Play Store",
-            "App Signing",
-            "AAB Builds",
-            "ASO Basics"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
-        }
-    },
-    {
-        num: "09",
-        title: "Capstone Projects, Internship & Portfolio",
-        description: "Build 2+ complete apps — a food delivery clone, e-commerce app, or social platform — published on the Play Store. Get access to a mobile developer internship for verified, real-world experience.",
-        tags: [
-            "Live Projects",
-            "Mobile Dev Internship",
-            "Portfolio Building",
-            "Interview Prep"
-        ],
-        techstack: {
-            frontend: "Flutter · Dart · Widgets · Animations · Responsive Layouts",
-            tools: "Git · GitHub · Postman · Play Console"
+            tools: "Git • GitHub • Play Console"
         }
     }
 ];
 
 export const curriculumTracks = [
     {
-        title: "Android Development",
-        path: "android",
-        modules: androidModules
-    },
-    {
         title: "Flutter App Development",
         path: "flutter",
         modules: flutterModules
+    },
+    {
+        title: "Android App Development",
+        path: "android",
+        modules: androidModules
     }
 ];
 
+export const mernModules = flutterModules;
+export const javaModules = androidModules;
+
+/**
+ * 6. Comparison Section Data
+ */
 export const comparisonSectionData = {
     titleNormal: "Why Students Choose Our ",
-    titleItalic: "Mobile App Development Training",
+    titleItalic: "Training Studio",
     categories: [
         {
             id: "mentors",
             label: "Mentors",
             other: "Academics reading from slides",
-            usPrefix: "",
-            usHighlight: "Working mobile developers",
-            usSuffix: " who have shipped real apps",
+            usPrefix: "Working mobile developers who've shipped ",
+            usHighlight: "real apps",
+            usSuffix: "",
         },
         {
             id: "style",
@@ -366,96 +368,138 @@ export const comparisonSectionData = {
             id: "portfolio",
             label: "Portfolio",
             other: "Certificate recruiters ignore",
-            usPrefix: "",
-            usHighlight: "Play Store links + GitHub",
-            usSuffix: " commit history",
-        },
-        {
-            id: "internship",
-            label: "Internship",
-            other: "Not Included",
-            usPrefix: "",
-            usHighlight: "Mobile dev internship",
-            usSuffix: " — online & offline options",
+            usPrefix: "Published ",
+            usHighlight: "Play Store apps",
+            usSuffix: " and a real GitHub",
         },
         {
             id: "placement",
             label: "Placement",
-            other: "Resume forwarding only",
+            other: "Job board links only",
             usPrefix: "",
-            usHighlight: "300+ partners",
-            usSuffix: ", direct referrals, mock interviews",
+            usHighlight: "Direct referrals",
+            usSuffix: " to hiring partners",
+        },
+        {
+            id: "internship",
+            label: "Internship",
+            other: "Not included",
+            usPrefix: "Guided mobile app project internship, ",
+            usHighlight: "online & offline",
+            usSuffix: "",
         },
         {
             id: "certification",
             label: "Certification",
-            other: "Private, unrecognized",
+            other: "Certificate recruiters ignore",
             usPrefix: "",
-            usHighlight: "Government-recognised",
-            usSuffix: " national certification",
+            usHighlight: "Govt.-recognised",
+            usSuffix: ", industry-ready certification",
         },
         {
             id: "fees",
             label: "Fees",
-            other: "Hidden Charges, no EMI",
+            other: "Hidden charges, no EMI",
             usPrefix: "Transparent pricing, ",
             usHighlight: "No Cost EMI",
             usSuffix: ", zero hidden fees",
         },
         {
             id: "support",
-            label: "Support after course",
+            label: "Support After Course",
             other: "None",
             usPrefix: "",
             usHighlight: "Lifetime doubt support",
             usSuffix: " for alumni",
-        }
+        },
     ]
 };
 
+/**
+ * 7. Earnings Section Data
+ */
 export const earningsSectionData = {
     titlePrefix: "What Mobile Developers",
     titleItalic: "Earn",
     titleSuffix: "After This Course",
+    disclaimer: "Figures are indicative ranges based on regional job market trends and vary with company, experience, and negotiation.",
     jobs: [
         {
-            title: "Flutter Developer (Fresher)",
+            title: "Junior Android/Flutter Developer",
             location: "Rajkot",
-            salary: "₹2.5 – ₹5 LPA",
+            salary: "₹3 – ₹5 LPA",
             badge: "Entry Level",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
         },
         {
-            title: "Android Developer (Fresher)",
-            location: "Rajkot / Gujarat",
-            salary: "₹3 – ₹6 LPA",
-            badge: "Entry Level",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
-        },
-        {
-            title: "Mobile Developer",
+            title: "Mobile App Developer",
             location: "Ahmedabad / Surat",
-            salary: "₹3.5 – ₹7 LPA",
+            salary: "₹4 – ₹7 LPA",
             badge: "Early Career",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
         },
         {
-            title: "Flutter Developer (1-2 yrs)",
-            location: "PAN India / Remote",
-            salary: "₹5 – ₹10 LPA",
+            title: "Flutter Developer (Product Co.)",
+            location: "Gujarat (Startups)",
+            salary: "₹5 – ₹8 LPA",
             badge: "High Demand",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
         },
         {
-            title: "Freelance Mobile Developer",
-            location: "India / International",
-            salary: "₹3.6 – ₹9.6 LPA",
-            badge: "Freelance Roles",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
+            title: "Android Developer (Enterprise)",
+            location: "Gujarat (Enterprise)",
+            salary: "₹5 – ₹9 LPA",
+            badge: "High Demand",
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
+        },
+        {
+            title: "Mobile Developer (2–3 yrs exp)",
+            location: "PAN India / Remote",
+            salary: "₹7 – ₹12 LPA",
+            badge: "Mid-Level",
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
+        },
+        {
+            title: "Senior Mobile Engineer",
+            location: "PAN India",
+            salary: "₹12 – ₹18 LPA",
+            badge: "Experienced",
+            image: "/skill/ITSkills/moblieappdevelopment.webp",
         }
     ],
 };
 
+/**
+ * 8. Inside Our Classroom (Glance Carousel Data)
+ */
+export const meetingGlanceSectionData = {
+    titlePrefix: "Inside Our",
+    titleSuffix: "Classroom",
+    meetings: [
+        {
+            heading: "Live Build Sessions",
+            subheading: "Every class is hands-on — students write and run real Flutter or Kotlin code alongside the mentor, not just watch slides.",
+        },
+        {
+            heading: "Mentor-Led Code Reviews",
+            subheading: "Working mobile developers who've actually shipped apps review your code weekly and guide you toward production-ready practices.",
+        },
+        {
+            heading: "Small Batch, Real Attention",
+            subheading: "Limited seats per batch mean every student gets doubt-clearing and feedback, not just a lecture.",
+        }
+    ]
+};
+
+export const meetingVideoData = {
+    titlePrefix: "Inside Our",
+    titleSuffix: "Classroom",
+    videoUrl: "",
+};
+
+/**
+ * 9. Career Opportunities Data
+ */
 export const careerOpportunitiesData = {
     titleNormal: "Explore",
     titleItalic: "Career Opportunities",
@@ -477,70 +521,89 @@ export const careerOpportunitiesData = {
     ],
 };
 
+/**
+ * 10. Industries Section Data
+ */
 export const industriesSectionData = {
     titleNormal: "Industries that",
-    titleItalic: "Hire",
-    description: "The skills you gain are relevant across multiple industries actively hiring mobile developers.",
+    titleItalic: "Hire Across Gujarat",
+    description: "The skills you gain are relevant across multiple high-growth industries actively hiring mobile developers.",
     industries: [
-    {
-        title: "IT Services",
+        {
+            title: "IT Services",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "Fintech",
+        },
+        {
+            title: "Fintech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/fintech.webp"
-    },
-    {
-        title: "E-commerce",
+        },
+        {
+            title: "E-commerce",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
-    },
-    {
-        title: "Ed-Tech",
+        },
+        {
+            title: "Ed-Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/ed-tech.webp"
-    },
-    {
-        title: "Healthcare Tech",
+        },
+        {
+            title: "Healthcare Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/healthcaretech.webp"
-    },
-    {
-        title: "Food & Delivery Tech",
+        },
+        {
+            title: "Food & Delivery Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "Government IT",
+        },
+        {
+            title: "Government IT",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/goverment-it.webp"
-    },
-    {
-        title: "Retail Tech",
-            icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
-    }
+        },
+        {
+            title: "Retail Tech",
+            icon: "/skill/ITSkills/FullStackDevelopment/industriessection/retail-tech.webp"
+        }
     ],
 };
 
-export const meetingGlanceSectionData = {
-    titlePrefix: "A Glance",
-    titleSuffix: "at yesterday's Class",
-    meetings: [
+export const industriesData = industriesSectionData.industries;
+
+/**
+ * 11. Alumni Testimonials Section Data
+ */
+export const testimonialsSectionData = {
+    titleNormal: "Alumni",
+    titleParent: "Verified",
+    titleItalic: "Testimonials",
+    testimonials: [
         {
-            heading: "Live Mentor Sessions",
-            subheading: "Interactive daily reviews and coding challenges.",
+            id: 1,
+            text: "I wanted to build something that worked on both Android and iOS without learning two completely different languages. By the end, I had 3 Flutter apps live on the Play Store — one of them started as a freelance project I picked up mid-course.",
+            name: "Dhruv Nirmal",
+            title: "Flutter Developer at a Rajkot-based startup, Batch January 2026",
+            image: "/Home Page/Trust/1.webp"
         },
         {
-            heading: "Doubt Solving",
-            subheading: "Instant error debugging with real-time feedback.",
+            id: 2,
+            text: "I'd tried a couple of Kotlin tutorials on my own before this and kept losing motivation halfway through. Having a real mentor review my Jetpack Compose code every week is what actually got me to a working app instead of another abandoned project.",
+            name: "Naman Dave",
+            title: "Android Developer at an enterprise IT firm, Batch October 2025",
+            image: "/2.webp"
+        },
+        {
+            id: 3,
+            text: "The Firebase and Retrofit module was the turning point for me — connecting an app to a real backend and database made everything before that finally make sense.",
+            name: "Daksh Lakhani",
+            title: "Mobile Developer at a Gujarat-based company, Batch April 2026",
+            image: "/3.webp"
         }
     ]
 };
 
-export const meetingVideoData = {
-    titlePrefix: "A Glance",
-    titleSuffix: "at yesterday's Meeting",
-    videoUrl: "",
-};
-
+/**
+ * 12. Placement & Curriculum FAQ Section Data
+ */
 export const faqSectionData = {
-    titleNormal: "Corporate Placement &",
-    titleItalic: "Curriculum FAQ",
+    titleNormal: "Placement & Curriculum",
+    titleItalic: "FAQ",
     faqs: [
         {
             id: 1,
@@ -550,93 +613,55 @@ export const faqSectionData = {
         {
             id: 2,
             question: "Do I need prior coding experience?",
-            answer: "No. The Flutter track starts with Dart fundamentals, the Android track starts with Kotlin basics. Many placed students came from arts, commerce, and non-IT backgrounds with zero prior coding experience."
+            answer: "No. The course starts from programming fundamentals before moving into Dart (Flutter track) or Kotlin (Android track), so no prior mobile development experience is required."
         },
         {
             id: 3,
             question: "How long is the mobile app development course?",
-            answer: "4 to 6 months depending on batch schedule, with weekday and weekend batches available. The Android track may run slightly longer due to the depth of native frameworks covered."
+            answer: "4–6 months, with both weekday and weekend batch options and No Cost EMI payment plans available."
         },
         {
             id: 4,
             question: "Will my apps actually be published on the Google Play Store?",
-            answer: "Yes — it's part of the curriculum. You'll learn APK/AAB builds, app signing, and Play Store submission, and graduate with real Play Store links in your portfolio."
+            answer: "Yes — as part of your capstone projects, you'll take at least one working app through the actual Play Store publishing process, not just build it and stop at a local build."
         },
         {
             id: 5,
             question: "Does Alphabit Skill provide placement assistance?",
-            answer: "Yes, 100% placement assistance including resume building, LinkedIn optimisation, mock interviews, and direct referrals to 300+ hiring partners across Rajkot, Ahmedabad, Surat, and across India."
+            answer: "Yes — resume building, mock interviews, and direct referrals through our 300+ hiring partners actively looking for Flutter and Android developers."
         },
         {
             id: 6,
             question: "Is Flutter or Android better for jobs in Gujarat?",
-            answer: "Both are in demand. Flutter suits startups and remote roles; Android is preferred by enterprise IT firms, often at slightly higher starting salaries. Attend a free demo and our mentors will help you choose based on your goals."
+            answer: "Both are in demand, but for different reasons. Android (Kotlin) is what most enterprise IT and service-based companies in Gujarat specifically list in job postings. Flutter is more common at startups and product companies, and is also the stronger choice if you want to freelance or build your own app for both platforms at once."
+        },
+        {
+            id: 7,
+            question: "Is this Mobile App Development course available in Rajkot as well as online?",
+            answer: "Yes. The course runs both offline at our Rajkot studio and online for students across Gujarat and beyond, with the same mentor-led, live-project structure either way."
         }
     ]
 };
 
-export const trackSelectorData = {
-    title: "Choose your track",
-    description: "Not every student has the same career goal. Choose the track that matches the job market you want to enter.",
-    tracks: [
-        {
-            title: "Flutter App Development",
-            description: "Build with Flutter, Dart, Firebase, and REST APIs — one codebase that runs on both Android and iOS, the fastest-growing cross-platform skill in India's startup and product ecosystem.",
-            bestFor: "Startups · Product Companies · Freelance Mobile Developers",
-            idealIf: "Work at a product startup · Freelance as a mobile developer · Build your own app for both platforms at once"
-        },
-        {
-            title: "Android App Development",
-            description: "Build with Kotlin, Jetpack Compose, Room, and Retrofit — the native Android skill set that enterprise IT companies and service-based firms across India specifically hire for.",
-            bestFor: "Enterprise IT Companies · Service-Based Firms · High-Performance Android Roles",
-            idealIf: "Work at TCS/Infosys-level firms · Build high-performance native Android apps · Specialise in the Android ecosystem"
-        }
-    ]
-};
+export const faqData = faqSectionData.faqs;
 
-export const testimonialsSectionData = {
-    titleNormal: "Verified Career Transitions — Hear Directly",
-    titleParent: "from",
-    titleItalic: "Deployed Alumni",
-    testimonials: [
-        {
-            id: 1,
-            text: "Zero coding experience when I joined. Within 5 months I had two live apps on the Play Store and got placed at a mobile development company in Rajkot.",
-            name: "Riya Mehta",
-            title: "Flutter Developer, Rajkot",
-            image: "/Home Page/Trust/1.webp"
-        },
-        {
-            id: 2,
-            text: "The mentors know exactly what companies ask in technical interviews. I cracked three interviews in my first month of job hunting after completing the course.",
-            name: "Harsh Patel",
-            title: "Mobile App Developer, Ahmedabad",
-            image: "/2.webp"
-        },
-        {
-            id: 3,
-            text: "I chose the Android track for enterprise work. The Kotlin and Jetpack Compose modules were incredibly detailed and practical. Placed within 6 weeks.",
-            name: "Sneha Joshi",
-            title: "Android Developer, Surat",
-            image: "/3.webp"
-        }
-    ]
-};
-
+/**
+ * 13. Final CTA Section Data
+ */
 export const ctaSectionData = {
-    line1Normal: "Access the Curriculum —",
-    line1Italic: "Apply Today",
-    line1Suffix: "& Master",
-    line2Normal: "Advanced",
-    line2Italic: "Mobile Frameworks",
+    line1Normal: "Join the",
+    line1Italic: "Mobile App Development ",
+    line1Suffix: " Course in Rajkot, Gujarat — Apply Today and",
+    line2Normal: "Start Building",
+    line2Italic: "Real Apps",
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };
 
 /**
- * 13. Metadata Info
+ * 14. Metadata Info
  */
 export const metadata = {
-    title: "Mobile App Development | Alphabit Skill",
-    description: "Learn Mobile App Development at Alphabit Skill — expert-led training, real-world projects, and placement support."
+    title: "Mobile App Development Course in Rajkot | Alphabit Skill",
+    description: "Mobile App Development course in Rajkot — Flutter cross-platform, or native Android tracks. NSDC-certified, 300+ hiring partners. Book a free demo."
 };

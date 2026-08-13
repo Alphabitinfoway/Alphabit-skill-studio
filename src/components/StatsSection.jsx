@@ -5,47 +5,45 @@ import { useEffect, useRef } from "react";
 
 export default function StatsSection() {
     return (
-        <div className="w-full bg-[#F5F5F5] py-12 md:py-[80px] border-b border-gray-100 font-cabinet">
-            <div className="max-w-[1240px] px-4 md:px-6 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-                {/* Left Side */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left min-w-max">
-                    <div className="text-[20px] md:text-[24px] font-bold text-[#111] leading-tight flex flex-col sm:flex-row items-center sm:items-baseline">
+        <section className="w-full bg-[#F5F5F5] py-10 sm:py-14 md:py-[72px] border-b border-gray-100 font-cabinet">
+            <div className="max-w-[1240px] px-5 sm:px-6 md:px-8 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 sm:gap-10 lg:gap-12">
+                {/* Left Side / Heading */}
+                <div className="flex flex-col items-start text-left">
+                    <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#111111] leading-[1.25] tracking-tight">
                         <span 
-                            className="text-[40px] sm:text-[48px] md:text-[58px] font-normal text-[#FF5622] leading-[0.8] sm:mr-2 italic mb-1 sm:mb-0"
-                            style={{ 
-                                fontFamily: "'PP Editorial New', serif"
-                            }}
+                            className="text-[36px] sm:text-[44px] md:text-[48px] font-normal text-[#FF5622] italic mr-2 font-pp inline-block"
                         >
                             9 Years
                         </span>
                         <span>in the IT Training &</span>
-                    </div>
-                    <div className="text-[20px] md:text-[24px] font-bold text-[#111] mt-1">Placement Industry</div>
+                        <span className="block mt-1">Placement Industry</span>
+                    </h2>
                 </div>
 
                 {/* Right Side Stats */}
-                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center xl:flex-nowrap items-center gap-x-2 gap-y-8 md:gap-8 w-full mt-4 lg:mt-0">
-                    <StatItem value={2000} label="Student Placed" showDivider={true} />
+                <div className="grid grid-cols-2 md:flex md:flex-wrap lg:flex-nowrap items-start md:items-center justify-between gap-x-8 gap-y-8 sm:gap-x-12 sm:gap-y-10 md:gap-8 w-full lg:w-auto">
+                    <StatItem value={200} label="Student Placed" showDivider={true} />
                     <StatItem value={300} label="Companies TieUp" showDivider={true} />
                     <StatItem value={3} label="Office in Gujarat" prefix="0" showDivider={true} />
-                    <StatItem value={50} label="Industry Skills" showDivider={false} />
+                    <StatItem value={50} label="Industry Courses" showDivider={false} />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
 function CountingNumber({ value, prefix = "" }) {
     const count = useMotionValue(0);
     const rounded = useTransform(count, (latest) => {
-        const num = Math.round(latest);        return prefix && num < 10 ? `${prefix}${num}` : num;
+        const num = Math.round(latest);
+        return prefix && num < 10 ? `${prefix}${num}` : num;
     });
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
         if (isInView) {
-            animate(count, value, { duration: 2, ease: "easeOut" });
+            animate(count, value, { duration: 1.8, ease: "easeOut" });
         }
     }, [isInView, count, value]);
 
@@ -53,7 +51,7 @@ function CountingNumber({ value, prefix = "" }) {
         <motion.span 
             ref={ref} 
             className="inline-block"
-            style={{ textShadow: "2px 2px 0px #FFCC00" }}
+            style={{ textShadow: "3px 3px 0px #FFC72C" }}
         >
             <motion.span>{rounded}</motion.span>
         </motion.span>
@@ -63,17 +61,19 @@ function CountingNumber({ value, prefix = "" }) {
 function StatItem({ value, label, showDivider, prefix = "" }) {
     return (
         <div className="flex items-center gap-6 md:gap-8">
-            <div className="flex flex-col items-center">
-                <div className="text-[40px] md:text-[48px] font-bold text-[#7143FE] leading-none flex items-start font-cabinet">
+            <div className="flex flex-col items-start md:items-center text-left md:text-center">
+                <div className="text-[42px] sm:text-[46px] md:text-[48px] font-extrabold text-[#7143FE] leading-none flex items-center font-cabinet">
                     <CountingNumber value={value} prefix={prefix} />
                     <span 
-                        className="relative z-10 text-[24px] md:text-[28px] mt-1 ml-1 font-[600]"
-                        style={{ textShadow: "1.5px 1.5px 0px #FFCC00" }}
+                        className="text-[34px] sm:text-[38px] md:text-[36px] font-extrabold ml-0.5"
+                        style={{ textShadow: "2.5px 2.5px 0px #FFC72C" }}
                     >
                         +
                     </span>
                 </div>
-                <div className="text-[14px] text-gray-700 mt-2 font-[500] whitespace-nowrap uppercase tracking-wider">{label}</div>
+                <div className="text-[15px] sm:text-[15.5px] text-[#333] mt-2 font-[500] leading-snug">
+                    {label}
+                </div>
             </div>
             {showDivider && (
                 <div className="hidden md:block w-[1px] h-[65px] bg-gray-200" style={{ transform: "rotate(20deg)" }}></div>
