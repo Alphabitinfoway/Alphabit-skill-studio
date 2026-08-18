@@ -64,7 +64,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "01",
         title: "Web Development Fundamentals",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045892/module-1_wpivts.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every web developer is expected to know before their first project.",
         tags: [
             "HTML5",
@@ -81,7 +81,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "02",
         title: "JavaScript & ES6+",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045900/module-2_l5huec.webp",
         description: "Master variables, functions, arrays, objects, DOM manipulation, ES6+ features, async/await, the Fetch API, and event-driven programming that powers every modern website.",
         tags: [
             "JavaScript",
@@ -98,7 +98,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "03",
         title: "React.js Frontend",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045891/module-3_smj3av.webp",
         description: "React is the most hired frontend skill in India's web developer job market. Learn to build dynamic, component-based interfaces using React Hooks, React Router, and third-party API integration.",
         tags: [
             "React.js",
@@ -115,7 +115,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "04",
         title: "Responsive & Cross-Browser Development",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045892/module-4_pwcqkd.webp",
         description: "Learn to build websites that work perfectly across devices and browsers using Bootstrap and Tailwind CSS — a skill every client and hiring manager checks before approving a website.",
         tags: [
             "Bootstrap",
@@ -131,7 +131,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "05",
         title: "Git & GitHub",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045893/module-5_yzqbwz.webp",
         description: "Recruiters and clients check your GitHub before they read your resume. Learn branching, merging, pull requests, and collaborative workflows — and build a clean commit history that gets noticed.",
         tags: [
             "Git",
@@ -148,7 +148,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "06",
         title: "Deployment & Hosting",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045896/module-6_ggabrb.webp",
         description: "Learn to deploy websites on Vercel and Netlify — with domain setup, SSL, environment configuration, and the foundational hosting concepts every web developer must understand.",
         tags: [
             "Vercel",
@@ -165,7 +165,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "07",
         title: "Capstone Projects, Internship & Portfolio",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787045897/module-7_s7jo42.webp",
         description: "Build 3+ complete websites from scratch — a business landing page, a portfolio site, or a dynamic React application. Get access to a web developer internship for hands-on, real-world experience.",
         tags: [
             "Live Projects",
@@ -183,6 +183,7 @@ const phpWebDevelopmentModules = [
     {
         num: "01",
         title: "Web Development Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046688/module-1_p1jnr8.png",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every web developer is expected to know before their first project.",
         tags: [
             "HTML5",
@@ -200,6 +201,7 @@ const phpWebDevelopmentModules = [
     {
         num: "02",
         title: "JavaScript & ES6+",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046686/module-2_ybve7d.png",
         description: "Master variables, functions, arrays, objects, DOM manipulation, ES6+ features, async/await, the Fetch API, and event-driven programming that powers every modern website.",
         tags: [
             "JavaScript",
@@ -217,6 +219,7 @@ const phpWebDevelopmentModules = [
     {
         num: "03",
         title: "PHP Programming Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046688/module-3_h4jim2.png",
         description: "Learn PHP from the ground up — variables, control flow, functions, arrays, sessions, and form handling — the server-side language powering a large share of websites across India.",
         tags: [
             "PHP",
@@ -234,6 +237,7 @@ const phpWebDevelopmentModules = [
     {
         num: "04",
         title: "MySQL & Database Design",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046692/module-4_zdm34n.png",
         description: "Work with MySQL and phpMyAdmin to design database schemas, write queries, and connect a live PHP backend to a relational database — the combination most business websites run on.",
         tags: [
             "MySQL",
@@ -250,6 +254,7 @@ const phpWebDevelopmentModules = [
     {
         num: "05",
         title: "Laravel Framework",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046690/module-5_wkiulf.png",
         description: "Laravel is the most hired PHP framework in India's web developer job market. Learn MVC architecture, routing, Eloquent ORM, authentication, and building production-ready web applications.",
         tags: [
             "Laravel",
@@ -266,6 +271,7 @@ const phpWebDevelopmentModules = [
     {
         num: "06",
         title: "WordPress Development & CMS",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046689/module-6_r48jy1.png",
         description: "Learn to build and customise WordPress websites — themes, plugins, WooCommerce for online stores, and the CMS skills freelancers and agencies across Gujarat use daily for client work.",
         tags: [
             "WordPress",
@@ -282,6 +288,7 @@ const phpWebDevelopmentModules = [
     {
         num: "07",
         title: "Git, GitHub & Deployment",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787046688/module-7_qmmyub.png",
         description: "Learn version control with Git and GitHub, then deploy PHP applications on cPanel and VPS hosting — with domain setup, SSL, and database migration.",
         tags: [
             "Git",
@@ -299,6 +306,7 @@ const phpWebDevelopmentModules = [
     {
         num: "08",
         title: "Capstone Projects, Internship & Portfolio",
+        image:"",
         description: "Build 3+ complete websites from scratch — a business website, an e-commerce store, or a custom WordPress site. Get access to a web developer internship for hands-on, real-world experience.",
         tags: [
             "Live Projects",

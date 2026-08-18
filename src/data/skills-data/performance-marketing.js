@@ -598,11 +598,11 @@ export const faqData = faqSectionData.faqs;
  * 13. CTA Section Data
  */
 export const ctaSectionData = {
-    line1Normal: "Access the",
+    line1Normal: "Ready to Master",
     line1Italic: "Performance Marketing",
-    line1Suffix: "Curriculum in Rajkot & Ahmedabad —",
-    line2Normal: "Apply Today and Start Building-",
-    line2Italic: " ROI-Driven Campaigns",
+    line1Suffix: "?",
+    line2Normal: "Join Us in",
+    line2Italic: "Rajkot & Ahmedabad",
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };

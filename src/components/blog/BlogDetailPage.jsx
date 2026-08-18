@@ -27,7 +27,7 @@ function SidebarCard({ post }) {
             e.currentTarget.onerror = null;
             e.currentTarget.src = defaultImg;
           }}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 ease-out"
         />
       </div>
       <div className="flex flex-col gap-1 min-w-0">

@@ -5,7 +5,8 @@ export default function BlogCard({ post }) {
   const slugOrId = post?.slug || post?._id || post?.id;
   const href = `/blog/${slugOrId}`;
   
-  let image = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  const defaultImg = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  let image = defaultImg;
   if (post?.image && post.image !== "no-photo.jpg") {
     image = post.image.startsWith("http") ? post.image : `${API_BASE_URL}/${post.image}`;
   }
@@ -15,32 +16,36 @@ export default function BlogCard({ post }) {
   return (
     <Link
       href={href}
-      className="group bg-white rounded-[24px] shadow-[0_2px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer p-3 block"
+      className="group bg-white rounded-[24px] shadow-[0_2px_18px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer p-3 sm:p-3.5 flex flex-col h-full border border-[#EAEAEF]"
     >
-      {/* Image — padded inside card with its own rounded corners */}
-      <div className="w-[calc(100%-16px)] mx-auto h-[180px] overflow-hidden rounded-[16px] bg-[#D9D9D9]">
+      {/* Image — full width inside card with proportional 16:10 aspect ratio and rounded corners */}
+      <div className="w-full aspect-[16/10] overflow-hidden rounded-[18px] bg-[#F2F2F5] relative">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = defaultImg;
+          }}
+          className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 ease-out"
         />
       </div>
 
       {/* Body */}
-      <div className="px-3 pt-4 pb-3 flex flex-col gap-4">
+      <div className="px-2 pt-4 pb-1.5 flex flex-col flex-1 justify-between gap-4">
         <p
-          className="text-[#111111] text-[16px] font-bold leading-[1.55] line-clamp-2"
+          className="text-[#111111] text-[16px] sm:text-[17px] font-bold leading-[1.4] line-clamp-2 group-hover:text-[#7143FE] transition-colors"
           style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
         >
           {title}
         </p>
 
         {/* Read More link — grey arrow image */}
-        <span className="inline-flex items-center gap-2 text-[14px] font-medium text-[#555555] group-hover:text-[#7143FE] transition-colors duration-200">
+        <span className="inline-flex items-center gap-2 text-[14px] font-medium text-[#555555] group-hover:text-[#7143FE] transition-colors duration-200 mt-auto">
           <img
             src="/greyArrow.webp"
             alt="arrow"
-            className="w-[20px] h-[20px] object-contain flex-shrink-0"
+            className="w-[18px] h-[18px] object-contain flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
           />
           Read More
         </span>
@@ -48,3 +53,4 @@ export default function BlogCard({ post }) {
     </Link>
   );
 }
+

@@ -14,11 +14,11 @@ export default function BlogPostsSection({ initialBlogs = [] }) {
   const visiblePosts = postsList.slice(start, start + POSTS_PER_PAGE);
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-10 px-4 sm:px-6 lg:px-20">
-      <div className="max-w-[1728px] mx-auto">
+    <section className="w-full bg-[#F5F5F5] py-10 px-4 sm:px-8 lg:px-16 xl:px-20">
+      <div className="max-w-[1440px] mx-auto">
 
         {/* ── Card Grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {visiblePosts.map((post, idx) => (
             <BlogCard key={post._id || post.id || post.slug || idx} post={post} />
           ))}
