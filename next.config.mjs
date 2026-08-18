@@ -24,6 +24,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/skills/ror-odoo-golang',
+        destination: '/skills/odoo-erp-development',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

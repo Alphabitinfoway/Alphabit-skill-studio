@@ -24,7 +24,7 @@ export const skills = [
 
   // Non-Coding Programs
   { slug: toSlug("UI/UX & Graphic Design"), title: "UI/UX & Graphic Design", category: "Non-Coding Programs" },
-  { slug: toSlug("ROR & Odoo & Golang"), title: "ROR & Odoo & Golang", category: "Non-Coding Programs" },
+  { slug: toSlug("Odoo ERP Development"), title: "Odoo ERP Development", category: "Non-Coding Programs" },
   { slug: toSlug("E-Commerce (Shopify/WooCommerce)"), title: "E-Commerce (Shopify/WooCommerce)", category: "Non-Coding Programs" },
   { slug: toSlug("Digital Marketing"), title: "Digital Marketing", category: "Non-Coding Programs" },
   { slug: toSlug("Performance Marketing"), title: "Performance Marketing", category: "Non-Coding Programs" },

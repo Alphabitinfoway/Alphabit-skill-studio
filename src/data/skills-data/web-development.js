@@ -15,7 +15,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786947633/web-dev-hero_zrxnzd.webp",
 };
 
 export const projectStatsSectionData = {
@@ -64,7 +64,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "01",
         title: "Web Development Fundamentals",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every web developer is expected to know before their first project.",
         tags: [
             "HTML5",
@@ -81,7 +81,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "02",
         title: "JavaScript & ES6+",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
         description: "Master variables, functions, arrays, objects, DOM manipulation, ES6+ features, async/await, the Fetch API, and event-driven programming that powers every modern website.",
         tags: [
             "JavaScript",
@@ -98,7 +98,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "03",
         title: "React.js Frontend",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
         description: "React is the most hired frontend skill in India's web developer job market. Learn to build dynamic, component-based interfaces using React Hooks, React Router, and third-party API integration.",
         tags: [
             "React.js",
@@ -115,7 +115,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "04",
         title: "Responsive & Cross-Browser Development",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
         description: "Learn to build websites that work perfectly across devices and browsers using Bootstrap and Tailwind CSS — a skill every client and hiring manager checks before approving a website.",
         tags: [
             "Bootstrap",
@@ -131,7 +131,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "05",
         title: "Git & GitHub",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
         description: "Recruiters and clients check your GitHub before they read your resume. Learn branching, merging, pull requests, and collaborative workflows — and build a clean commit history that gets noticed.",
         tags: [
             "Git",
@@ -148,7 +148,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "06",
         title: "Deployment & Hosting",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
         description: "Learn to deploy websites on Vercel and Netlify — with domain setup, SSL, environment configuration, and the foundational hosting concepts every web developer must understand.",
         tags: [
             "Vercel",
@@ -165,7 +165,7 @@ const frontEndWebDevelopmentModules = [
     {
         num: "07",
         title: "Capstone Projects, Internship & Portfolio",
-        image : "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
         description: "Build 3+ complete websites from scratch — a business landing page, a portfolio site, or a dynamic React application. Get access to a web developer internship for hands-on, real-world experience.",
         tags: [
             "Live Projects",
@@ -478,38 +478,38 @@ export const industriesSectionData = {
     titleItalic: "Hire",
     description: "The skills you gain are relevant across multiple industries actively hiring modern web developers.",
     industries: [
-    {
-        title: "Digital Agencies",
+        {
+            title: "Digital Agencies",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "IT Services",
+        },
+        {
+            title: "IT Services",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "E-commerce",
+        },
+        {
+            title: "E-commerce",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
-    },
-    {
-        title: "Ed-Tech",
+        },
+        {
+            title: "Ed-Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/ed-tech.webp"
-    },
-    {
-        title: "Real Estate",
+        },
+        {
+            title: "Real Estate",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "Government IT",
+        },
+        {
+            title: "Government IT",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/goverment-it.webp"
-    },
-    {
-        title: "Media & Publishing",
+        },
+        {
+            title: "Media & Publishing",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        title: "Retail Tech",
+        },
+        {
+            title: "Retail Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
-    }
+        }
     ],
 };
 

@@ -1,19 +1,20 @@
 // ==============================================================================
-// Digital Marketing Manager - Master Component Data File
-// Edit this file to easily update copy, content, features, stats & curriculum!
+// Digital Marketing - Master Component Data File
+// Driven Dynamically for dynamic routes.
 // ==============================================================================
 
 /**
  * 1. Hero Section Data
  */
 export const heroSectionData = {
-    titlePrefix: "Digital Marketing",
-    titleSuffix: "Manager",
+    titlePrefix: "Digital",
+    titleSuffix: "Marketing",
     highlights: [
         "NSDC-Recognised Certification",
         "300+ Active Hiring Partners",
-        "Rajkot, Gujarat",
+        "Rajkot & Ahmedabad, Gujarat"
     ],
+    description: "<strong>Digital Marketing Course in Rajkot & Ahmedabad</strong>. Most digital marketing courses show you how to boost a post and call it strategy. Real marketers manage live ad budgets, track conversions that actually matter, and now increasingly optimize for how AI search tools cite brands, not just Google rankings. Choose Performance Marketing or SEO & Content Marketing, and train on real accounts with mentors who work in marketing professionally.",
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
@@ -32,12 +33,12 @@ export const projectStatsSectionData = {
         { label: "200+ Students Trained" },
         { label: "10 Years Industry Experience" },
         { label: "300+ Hiring Partners" },
-        { label: "100% Placement Assistance" },
+        { label: "100% Placement Assistance" }
     ],
-    durationVal: "4-6 months",
+    durationVal: "4–6 months",
     durationLabel: "Course Duration",
     hoursVal: "50+ hrs",
-    hoursLabel: "Live project hours",
+    hoursLabel: "Live project hours"
 };
 
 /**
@@ -47,8 +48,6 @@ export const courseFeaturesData = {
     titleNormal: "About",
     titleItalic: "Digital Marketing",
     titleSuffix: "Course",
-    description:
-        "Every business today — from a local Rajkot shop to a national e-commerce brand — needs someone who can get found online and turn that visibility into customers. Most digital marketing courses teach you to read a dashboard. At Alphabit Skill, you run real campaigns, on real budgets, for real client accounts, so you understand not just what the numbers mean but what to do next. That includes ranking for traditional Google search and showing up in AI answers on ChatGPT, Perplexity, and Google AI Overviews — the search behaviour that's reshaping how people find businesses right now.",
     items: [
         "9 Modules — fundamentals to AI search visibility",
         "5+ live campaigns on real ad accounts & websites",
@@ -58,279 +57,280 @@ export const courseFeaturesData = {
         "Resume, LinkedIn & mock interview prep",
         "Government-recognised certification",
         "No Cost EMI — flexible fee structure",
-        "Weekend, weekday & online batch options",
+        "Weekend, weekday & online batch options"
     ],
 };
 
 /**
- * 4. Track Selector Data
+ * 4. Choose Your Track Data
  */
 export const trackSelectorData = {
-    title: "Choose your track",
-    description:
-        "Digital marketing splits into two very different day-to-day jobs. Choose the track that matches the kind of work you actually want to do.",
+    title: "Choose Your Track",
+    description: "Digital marketing splits into two very different day-to-day jobs. Choose the track that matches the kind of work you actually want to do — whether you're hiring into Rajkot, Ahmedabad, or working remote/freelance.",
     tracks: [
         {
-            title: "Performance Marketing",
-            description:
-                "Google Ads, Meta Ads, and analytics — the paid, data-driven side of digital marketing that runs campaigns, tracks conversions, and delivers measurable ROI for e-commerce and lead-generation businesses.",
+            title: "Performance Marketing Track",
+            description: "Google Ads, Meta Ads, and analytics — the paid, data-driven side of digital marketing that runs campaigns, tracks conversions, and delivers measurable ROI for e-commerce and lead-generation businesses.",
             bestFor: "E-commerce Brands · Performance Marketing Agencies · Lead-Gen Businesses",
-            idealIf:
-                "Run Google & Meta ad campaigns · Work at a performance marketing agency · Manage ad budgets for real businesses",
+            idealIf: "Run Google & Meta ad campaigns · Work at a performance marketing agency · Manage ad budgets for real businesses"
         },
         {
-            title: "SEO & Content Marketing",
-            description:
-                "Technical SEO, content strategy, and AI search visibility (GEO/AEO) — the organic side of digital marketing that builds long-term traffic and gets brands cited by both Google and AI search tools.",
+            title: "SEO & Content Marketing Track",
+            description: "Technical SEO, content strategy, and AI search visibility (GEO/AEO) — the organic side of digital marketing that builds long-term traffic and gets brands cited by both Google and AI search tools.",
             bestFor: "SEO Agencies · IT Companies · Content-Led Businesses",
-            idealIf:
-                "Rank websites on Google · Get brands cited in ChatGPT & AI Overviews · Build a long-term SEO or content marketing career",
-        },
-    ],
+            idealIf: "Rank websites on Google · Get brands cited in ChatGPT & AI Overviews · Build a long-term SEO or content marketing career"
+        }
+    ]
 };
 
 /**
- * 5. Curriculum Section Data
+ * 5. Curriculum Modules (Performance Marketing + SEO & Content Marketing Tracks)
  */
-const performanceModules = [
+export const performanceModules = [
     {
         num: "01",
-        title: "Digital Marketing Fundamentals",
-        image: "/skill/ITSkills/DigitalMarketing/module1.webp",
-        description:
-            "Before you touch an ad account, you need to understand how a customer actually moves from seeing a brand to buying from it. Cover the marketing funnel, buyer personas, campaign objectives, and how paid and organic channels work together — the foundation every performance marketer needs before their first campaign brief.",
-        tags: ["Marketing Funnel", "Buyer Personas", "Campaign Objectives", "Channel Strategy"],
+        title: "Performance Marketing Fundamentals",
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module1.webp",
+        imageAlt: "Performance marketing fundamentals and campaign strategy",
+        description: "Before you touch an ad account, you need to understand how paid channels actually move a customer from seeing a brand to buying from it — on someone else's ad budget. Cover the marketing funnel, buyer personas, campaign objectives, and how ROI and ad spend get judged, before opening a single ads dashboard.",
+        tags: [
+            "Marketing Funnel",
+            "Buyer Personas",
+            "Campaign Objectives & KPIs",
+            "Paid Channel Strategy"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Google Ads · Meta Ads Manager · Google Sheets"
+        }
     },
     {
         num: "02",
         title: "Google Ads & Search Engine Marketing",
-        image: "/skill/ITSkills/DigitalMarketing/module2.webp",
-        description:
-            "Google Ads is where most performance marketing budgets in India get spent. Learn search campaigns, keyword match types, Quality Score, ad extensions, and bidding strategies that actually control cost-per-click instead of burning budget.",
-        tags: ["Search Campaigns", "Keyword Match Types", "Quality Score", "Bidding Strategies"],
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module2.webp",
+        imageAlt: "Google Ads search engine marketing and keyword planner",
+        description: "Build, structure, and optimize real search and display campaigns — keyword match types, bidding strategies, and Quality Score, the mechanics that decide whether an ad budget gets wasted or converts.",
+        tags: [
+            "Campaign Structure",
+            "Keyword Match Types",
+            "Bidding Strategies",
+            "Quality Score & Ad Rank"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Google Ads · Google Keyword Planner"
+        }
     },
     {
         num: "03",
         title: "Meta Ads: Facebook & Instagram Advertising",
-        image: "/skill/ITSkills/DigitalMarketing/module3.webp",
-        description:
-            "Meta Ads Manager runs the ad spend for most D2C and local businesses across Gujarat. Learn campaign structure, audience targeting, creative testing, and how to diagnose a campaign that's spending but not converting — a real skill, not a theory exercise.",
-        tags: ["Campaign Structure", "Audience Targeting", "Creative Testing", "Ad Delivery Diagnosis"],
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module3.webp",
+        imageAlt: "Meta Ads Facebook and Instagram advertising campaigns",
+        description: "Run campaigns inside Meta Ads Manager — audience targeting, creative testing, and budget allocation across Facebook and Instagram placements for real lead-gen and e-commerce objectives.",
+        tags: [
+            "Audience Targeting & Lookalikes",
+            "Ad Creative Testing",
+            "Campaign Budget Optimisation",
+            "Placement Strategy"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Meta Ads Manager · Meta Pixel"
+        }
     },
     {
         num: "04",
-        title: "Google Analytics & Data Tracking",
-        image: "/skill/ITSkills/DigitalMarketing/module4.webp",
-        description:
-            "A campaign you can't measure is a campaign you can't improve. Learn Google Analytics 4, Google Tag Manager, conversion tracking, and how to read a dashboard well enough to tell a client what to change next.",
-        tags: ["GA4", "Google Tag Manager", "Conversion Tracking", "Attribution Basics"],
+        title: "Google Analytics & Conversion Tracking",
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module4.webp",
+        imageAlt: "Google Analytics 4 and Tag Manager conversion tracking",
+        description: "Set up the tracking that makes every other module's data trustworthy — GA4 events, Tag Manager, and pixel setup, so campaign performance numbers reflect what actually happened, not guesswork.",
+        tags: [
+            "GA4 Setup & Events",
+            "Google Tag Manager",
+            "Conversion Tracking",
+            "Attribution Basics"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Google Analytics 4 · Google Tag Manager · Looker Studio"
+        }
     },
     {
         num: "05",
         title: "Conversion Rate Optimisation & Landing Pages",
-        image: "/skill/ITSkills/DigitalMarketing/module5.webp",
-        description:
-            "Traffic that doesn't convert is wasted ad spend. Learn landing page structure, A/B testing, heatmaps, and CRO principles that turn clicks into leads and sales — the skill that separates a media buyer from a growth marketer.",
-        tags: ["Landing Page Structure", "A/B Testing", "Heatmaps", "CRO Fundamentals"],
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module5.webp",
+        imageAlt: "Conversion rate optimization and landing page A/B testing",
+        description: "Learn why a campaign can hit its click targets and still lose money — landing page structure, A/B testing, and CRO principles that turn traffic into actual conversions.",
+        tags: [
+            "Landing Page Structure",
+            "A/B Testing",
+            "CRO Principles",
+            "Heatmaps & User Behaviour"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Unbounce · Hotjar · Google Optimize"
+        }
     },
     {
         num: "06",
-        title: "E-commerce & Retargeting Campaigns",
-        image: "/skill/ITSkills/DigitalMarketing/module6.webp",
-        description:
-            "Learn Meta and Google Shopping campaigns, dynamic product ads, and retargeting funnels built specifically for e-commerce brands — one of the fastest-growing hiring segments for performance marketers in India right now.",
-        tags: ["Shopping Campaigns", "Dynamic Product Ads", "Retargeting Funnels"],
+        title: "E-commerce, Retargeting & Automation",
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module6.webp",
+        imageAlt: "E-commerce retargeting campaigns and marketing automation",
+        description: "Layer retargeting campaigns and automated email/WhatsApp flows on top of paid traffic — the systems that recover abandoned carts and turn one-time buyers into repeat customers.",
+        tags: [
+            "Retargeting Campaign Setup",
+            "E-commerce Catalog Ads",
+            "Email & Automation Flows",
+            "Customer Lifecycle Marketing"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
+            tools: "Meta Ads Manager · Google Ads · Email Automation Tools"
+        }
     },
     {
         num: "07",
-        title: "Marketing Automation & Email Marketing",
-        image: "/skill/ITSkills/DigitalMarketing/module7.webp",
-        description:
-            "Learn email sequences, lead nurturing, marketing automation tools, and WhatsApp marketing basics — the follow-up systems that turn a one-time click into a repeat customer.",
-        tags: ["Email Sequences", "Lead Nurturing", "Marketing Automation", "WhatsApp Marketing"],
+        title: "Performance Marketing Capstone, Internship & Portfolio",
+        image: "/skill/ITSkills/FullStackDevelopment/Java/module7.webp",
+        imageAlt: "Performance marketing capstone project and ROI reporting",
+        description: "Apply everything into live campaigns on a real ad account and budget, complete a guided internship, and leave with campaign reports and ROI data you can walk an interviewer through.",
+        tags: [
+            "Capstone Campaign Build",
+            "Budget & ROI Reporting",
+            "Internship Experience",
+            "Portfolio & Resume Prep"
+        ],
         techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
-    },
-    {
-        num: "08",
-        title: "Capstone Campaigns & Portfolio",
-        image: "/skill/ITSkills/DigitalMarketing/module8.webp",
-        description:
-            "Plan, launch, and optimise 2+ live ad campaigns on real budgets — one Google Ads campaign and one Meta Ads campaign — with a full performance report you can show in interviews.",
-        tags: ["Live Ad Campaigns", "Performance Reporting", "Campaign Case Studies"],
-        techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
-    },
-    {
-        num: "09",
-        title: "Placement Prep",
-        image: "/skill/ITSkills/DigitalMarketing/module9.webp",
-        description:
-            "Resume building, LinkedIn optimisation, and mock interviews built around the exact questions performance marketing agencies ask — campaign audits, budget allocation, and troubleshooting scenarios.",
-        tags: ["Resume Building", "LinkedIn Optimisation", "Mock Interviews"],
-        techstack: {
-            "ad Platforms": "Google Ads · Meta Ads Manager · LinkedIn Ads",
-            "analytics": "Google Analytics 4 · Google Tag Manager · Meta Pixel",
-            "tools": "Canva · Google Sheets · Looker Studio",
-        },
-    },
+            tools: "Google Ads · Meta Ads Manager · Looker Studio"
+        }
+    }
 ];
 
-const seoModules = [
+export const seoModules = [
     {
         num: "01",
-        title: "Digital Marketing Fundamentals",
-        image: "/skill/ITSkills/DigitalMarketing/module1.webp",
-        description:
-            "The same foundation applies to every marketing discipline. Cover the marketing funnel, buyer personas, and how search engines and AI tools actually decide what to show a user — the mental model every SEO executive needs before touching a website.",
-        tags: ["Marketing Funnel", "Buyer Personas", "Search Intent", "Channel Strategy"],
+        title: "SEO & Content Marketing Fundamentals",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        imageAlt: "SEO and content marketing fundamentals and search intent",
+        description: "Before writing a single article or touching a site's code, you need to understand how search actually works — search intent, how Google and AI search tools decide what to surface, and how organic and content strategy fit together long-term.",
+        tags: [
+            "Search Intent",
+            "How Search Engines Rank Content",
+            "Organic vs Paid Strategy",
+            "Content Funnel Basics"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "Google Search Console · Google Sheets"
+        }
     },
     {
         num: "02",
-        title: "On-Page & Technical SEO",
-        image: "/skill/ITSkills/DigitalMarketing/module2.webp",
-        description:
-            "Learn meta titles, header structure, internal linking, site speed, crawlability, and schema markup — the technical foundation every page needs before it can rank, whether for Google or an AI search tool.",
-        tags: ["Meta Tags", "Internal Linking", "Site Speed", "Schema Markup"],
+        title: "Keyword Research & On-Page SEO",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        imageAlt: "Keyword research and on-page SEO optimization",
+        description: "Find the keywords worth targeting and structure a page to actually rank for them — title tags, meta descriptions, headers, and internal linking done the way real audits check for.",
+        tags: [
+            "Keyword Research",
+            "On-Page Optimisation",
+            "Meta Tags & Headers",
+            "Internal Linking Strategy"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "Ahrefs / Semrush · Google Search Console"
+        }
     },
     {
         num: "03",
-        title: "Off-Page SEO & Link Building",
-        image: "/skill/ITSkills/DigitalMarketing/module3.webp",
-        description:
-            "Rankings aren't decided by your website alone. Learn backlink building, guest posting, digital PR, and domain authority — the off-page signals that tell Google your site is worth trusting.",
-        tags: ["Backlink Building", "Guest Posting", "Digital PR", "Domain Authority"],
+        title: "Technical SEO & Site Health",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        imageAlt: "Technical SEO site audits speed and schema markup",
+        description: "Learn the site-level issues that quietly cap a page's rankings no matter how good the content is — crawlability, site speed, Core Web Vitals, and structured data.",
+        tags: [
+            "Crawling & Indexing",
+            "Site Speed & Core Web Vitals",
+            "Schema Markup",
+            "Technical SEO Audits"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "Screaming Frog · Google PageSpeed Insights · Google Search Console"
+        }
     },
     {
         num: "04",
-        title: "Keyword Research & Content Strategy",
-        image: "/skill/ITSkills/DigitalMarketing/module4.webp",
-        description:
-            "Learn keyword research, search intent mapping, content clusters, and how to plan content that actually gets found — using tools like Ahrefs, SEMrush, and Google Search Console the way agencies use them daily.",
-        tags: ["Keyword Research", "Search Intent Mapping", "Content Clusters", "Google Search Console"],
+        title: "Content Strategy & Writing for Search",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        imageAlt: "Content strategy and writing for search engine intent",
+        description: "Plan and write content that actually ranks and gets read — content calendars, search-intent-matched writing, and structuring articles for both readers and search engines.",
+        tags: [
+            "Content Planning & Calendars",
+            "Writing for Search Intent",
+            "Content Structuring",
+            "On-Page Content Optimisation"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "WordPress · Google Docs · Surfer SEO"
+        }
     },
     {
         num: "05",
-        title: "AI Search & GEO/AEO Optimisation",
-        image: "/skill/ITSkills/DigitalMarketing/module5.webp",
-        description:
-            "Search is no longer just Google. Learn Generative Engine Optimisation (GEO) and Answer Engine Optimization (AEO) — structuring content with clear answers, FAQ schema, and citation-worthy formatting so brands get cited by ChatGPT, Perplexity, and AI Overviews, not just ranked in blue links.",
-        tags: ["GEO", "AEO", "FAQ Schema", "AI Citation Structuring"],
+        title: "Off-Page SEO & Link Building",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        imageAlt: "Off-page SEO backlink building and outreach techniques",
+        description: "Learn how domain authority actually gets built — white-hat link building, outreach, and the off-page signals that separate a page that should rank from one that actually does.",
+        tags: [
+            "Link Building Fundamentals",
+            "Outreach Techniques",
+            "Domain Authority Signals",
+            "White-Hat vs Black-Hat SEO"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "Ahrefs / Semrush · Outreach Tools"
+        }
     },
     {
         num: "06",
-        title: "Social Media Marketing & Content Creation",
-        image: "/skill/ITSkills/DigitalMarketing/module6.webp",
-        description:
-            "Learn organic social media strategy, content calendars, and platform-specific content for Instagram, LinkedIn, and Google Business Profile — the channels that support SEO and build brand trust alongside it.",
-        tags: ["Social Media Strategy", "Content Calendars", "Google Business Profile"],
+        title: "GEO/AEO: Optimizing for AI Search & Answer Engines",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        imageAlt: "GEO and AEO optimizing for AI search and ChatGPT citation",
+        description: "Go beyond classic SEO into how brands get cited inside ChatGPT, Google AI Overviews, and other AI-driven search tools — the newest, fastest-growing part of organic visibility.",
+        tags: [
+            "Generative Engine Optimization (GEO)",
+            "Answer Engine Optimization (AEO)",
+            "Structuring Content for AI Citation",
+            "Measuring AI Search Visibility"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
+            tools: "ChatGPT · Perplexity · Google AI Overviews · Schema Validator"
+        }
     },
     {
         num: "07",
-        title: "Capstone Projects & Portfolio",
-        image: "/skill/ITSkills/DigitalMarketing/module7.webp",
-        description:
-            "Run a full SEO audit and content strategy sprint for a real or concept website — technical fixes, keyword mapping, and published content — with before-and-after ranking data you can show in interviews.",
-        tags: ["SEO Audit", "Content Strategy", "Ranking Reports", "Case Study Writing"],
+        title: "SEO Capstone, Internship & Portfolio",
+        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
+        imageAlt: "SEO capstone case study and ranking performance reporting",
+        description: "Apply everything into a full SEO case study on a real website — keyword research through ranking results — complete a guided internship, and leave with ranking data and reports ready for interviews.",
+        tags: [
+            "Capstone SEO Case Study",
+            "Ranking & Traffic Reporting",
+            "Internship Experience",
+            "Portfolio & Resume Prep"
+        ],
         techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
-    },
-    {
-        num: "08",
-        title: "Placement Prep",
-        image: "/skill/ITSkills/DigitalMarketing/module8.webp",
-        description:
-            "Resume building, LinkedIn optimisation, and mock interviews built around real SEO and content marketing interview questions — audits, keyword strategy, and AI visibility scenarios.",
-        tags: ["Resume Building", "LinkedIn Optimisation", "Mock Interviews"],
-        techstack: {
-            "sEO Tools": "Google Search Console · Ahrefs · SEMrush · Screaming Frog",
-            "content & CMS": "WordPress · Schema Markup · Google Analytics 4",
-            "aI Visibility": "ChatGPT · Perplexity · Google AI Overviews",
-        },
-    },
+            tools: "Ahrefs / Semrush · Google Search Console · Google Analytics 4"
+        }
+    }
 ];
 
 export const curriculumTracks = [
     {
-        title: "Performance Marketing",
+        title: "Performance Marketing Track",
         path: "performance",
         modules: performanceModules,
     },
     {
-        title: "SEO & Content Marketing",
+        title: "SEO & Content Marketing Track",
         path: "seo",
         modules: seoModules,
     },
 ];
+
+export const mernModules = performanceModules;
+export const javaModules = seoModules;
 
 /**
  * 6. Comparison Section Data
@@ -397,7 +397,7 @@ export const comparisonSectionData = {
         },
         {
             id: "support",
-            label: "Support after course",
+            label: "Support After Course",
             other: "None",
             usPrefix: "Lifetime ",
             usHighlight: "doubt support",
@@ -420,6 +420,7 @@ export const earningsSectionData = {
     titlePrefix: "What Digital Marketers",
     titleItalic: "Earn",
     titleSuffix: "After This Course",
+    disclaimer: "Figures are indicative ranges based on regional job market trends and vary with company, experience, and negotiation.",
     jobs: [
         {
             title: "Junior Digital Marketing Executive",
@@ -445,12 +446,12 @@ export const earningsSectionData = {
         {
             title: "Digital Marketing Manager",
             location: "Gujarat/Remote",
-            salary: "₹4 – ₹7 LPA",
+            salary: "₹4 – 0.6 LPA",
             badge: "High Demand",
             image: "/skill/ITSkills/digitalmarketing.webp",
         },
         {
-            title: "SEO Specialist (2-3 yrs)",
+            title: "SEO Specialist (2–3 yrs)",
             location: "PAN India/Remote",
             salary: "₹5 – ₹9 LPA",
             badge: "Experienced",
@@ -469,7 +470,37 @@ export const earningsSectionData = {
 export const earningsJobsData = earningsSectionData.jobs;
 
 /**
- * 8. Career Opportunities Roles
+ * 8. Recent Batch Highlights (Classroom Glance Data)
+ */
+export const meetingGlanceSectionData = {
+    titlePrefix: "Inside a Recent Batch —",
+    titleSuffix: "Rajkot Studio, Live for Ahmedabad Students",
+    meetings: [
+        {
+            heading: "Live Campaign Reviews",
+            subheading: "Students walk through their real Google Ads and Meta Ads dashboards with mentors, not mock data.",
+        },
+        {
+            heading: "SEO Case Study Presentations",
+            subheading: "Batch members present ranking movement on real client or personal-project websites.",
+        },
+        {
+            heading: "Placement Prep Sessions",
+            subheading: "Mock interviews and resume reviews run by working marketers ahead of hiring partner introductions.",
+        },
+    ],
+};
+
+export const meetingGlanceData = meetingGlanceSectionData.meetings;
+
+export const meetingVideoData = {
+    titlePrefix: "Inside a Recent Batch —",
+    titleSuffix: "Rajkot Studio, Live for Ahmedabad Students",
+    videoUrl: "",
+};
+
+/**
+ * 9. Career Opportunities Roles
  */
 export const careerOpportunitiesData = {
     titleNormal: "Explore",
@@ -494,7 +525,7 @@ export const careerOpportunitiesData = {
 };
 
 /**
- * 9. Industries Hiring Data
+ * 10. Industries Hiring Data
  */
 export const industriesSectionData = {
     titleNormal: "Industries that",
@@ -540,76 +571,94 @@ export const industriesSectionData = {
 export const industriesData = industriesSectionData.industries;
 
 /**
- * 10. Meeting Glance Section Data
+ * 11. Alumni Testimonials Section Data
  */
-export const meetingGlanceSectionData = {
-    titlePrefix: "A Glance",
-    titleSuffix: "at yesterday's Meeting",
-    meetings: [
-        { heading: "Heading", subheading: "Subheading" },
-        { heading: "Heading", subheading: "Subheading" },
-        { heading: "Heading", subheading: "Subheading" },
+export const testimonialsSectionData = {
+    titleNormal: "Verified Career Transitions — Hear Directly",
+    titleParent: "from",
+    titleItalic: "Deployed Alumni",
+    testimonials: [
+        {
+            id: 1,
+            text: "I had zero marketing background when I joined. Within 4 months I was running live Google Ads campaigns on a real client account and got placed at a digital agency in Rajkot. Managing an actual ad budget during training made all the difference.",
+            name: "Krisha Vaghela",
+            title: "Performance Marketer, Rajkot, Batch October 2025",
+            track: "Performance Marketing Track",
+            image: "",
+        },
+        {
+            id: 2,
+            text: "The SEO module went far beyond basic keyword stuffing — the GEO/AEO training on getting cited in AI search was something no other institute in Rajkot was even teaching. Got placed within 6 weeks.",
+            name: "Yash Ramani",
+            title: "SEO Executive, Ahmedabad",
+            track: "SEO & Content Marketing Track",
+            image: "",
+        },
+        {
+            id: 3,
+            text: "I chose performance marketing because I wanted to work with ad budgets, not just write blogs. The Meta Ads module was extremely detailed and practical. Placed at a performance marketing agency in Surat right after the course.",
+            name: "Foram Trivedi",
+            title: "Meta Ads Specialist, Surat",
+            track: "Performance Marketing Track",
+            image: "",
+        },
     ],
 };
 
-export const meetingGlanceData = meetingGlanceSectionData.meetings;
-
-/**
- * 11. Meeting Video Data
- */
-export const meetingVideoData = {
-    titlePrefix: "A Glance",
-    titleSuffix: "at yesterday's Meeting",
-    videoUrl: "https://www.youtube.com/embed/LUgpPmj6nR8?si=I7GhUwTuKYRCdj6q", // YouTube embed URL (must use /embed/ format, not /watch?v=)
-};
 /**
  * 12. FAQ Data
  */
 export const faqSectionData = {
-    titleNormal: "Corporate Placement & Curriculum",
-    titleItalic: "FAQ",
+    titleNormal: "Corporate Placement &",
+    titleItalic: "Curriculum FAQ",
     faqs: [
         {
             id: 1,
             question: "What is the difference between the performance marketing and SEO & content marketing tracks?",
             answer:
-                "Performance marketing covers Google Ads, Meta Ads, analytics, and conversion optimisation — ideal for e-commerce brands and paid marketing agencies. SEO & content marketing covers technical SEO, content strategy, and AI search visibility (GEO/AEO) — ideal for SEO agencies, IT companies, and long-term organic growth roles. Both are available at Alphabit Skill in Rajkot with the same live, hands-on training approach.",
+                "Performance marketing covers Google Ads, Meta Ads, analytics, and conversion optimisation — ideal for e-commerce brands and paid marketing agencies. SEO & content marketing covers technical SEO, content strategy, and AI search visibility (GEO/AEO) — ideal for SEO agencies, IT companies, and long-term organic growth roles. Both are available at Alphabit Skill in Rajkot and Ahmedabad, with the same live, hands-on training approach.",
         },
         {
             id: 2,
             question: "Do I need prior marketing experience to join?",
             answer:
-                "No. Both tracks start from digital marketing fundamentals. Many placed students came from commerce, arts, and non-marketing backgrounds with zero prior experience.",
+                "No. The course starts from digital marketing fundamentals, assuming no prior experience, before splitting into your chosen Performance Marketing or SEO & Content Marketing track.",
         },
         {
             id: 3,
             question: "Will I actually run live ad campaigns, or just watch demos?",
             answer:
-                "You'll plan, launch, and optimise real campaigns on real ad budgets as part of the capstone module — not just observe a mentor's screen. You graduate with actual performance reports, not simulated data.",
+                "You'll run 5+ live campaigns on real ad accounts and websites during the course — not sandbox demos or dummy dashboards.",
         },
         {
             id: 4,
             question: "What is GEO/AEO, and why does this course teach it?",
             answer:
-                "GEO (Generative Engine Optimisation) and AEO (Answer Engine Optimization) are the practices behind getting a website or brand cited by AI tools like ChatGPT, Perplexity, and Google AI Overviews — not just ranked in traditional search. This is one of the fastest-growing skill gaps in digital marketing hiring right now, and it's a dedicated module in our SEO & content marketing track.",
+                "GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) are the practices of getting a brand cited directly inside AI tools like ChatGPT and Google AI Overviews, not just ranked on a traditional search results page. As more people search through AI tools instead of typing into Google, this is becoming as important as classic SEO — which is why it gets a dedicated module here instead of being an afterthought.",
         },
         {
             id: 5,
-            question: "How long is the digital marketing course?",
+            question: "Is this Digital Marketing course available in Rajkot and Ahmedabad, or only online?",
             answer:
-                "4 to 6 months depending on your batch schedule, with weekday, weekend, and online options available.",
+                "It runs offline at our Rajkot studio, live online for students in Ahmedabad, and online more broadly for students across Gujarat and beyond — all with the same mentor-led, hands-on structure.",
         },
         {
             id: 6,
-            question: "Does Alphabit Skill provide placement assistance after the course?",
+            question: "How long is the digital marketing course?",
             answer:
-                "Yes. 100% placement assistance including resume building, LinkedIn optimisation, mock interviews, and direct referrals to 300+ hiring partners across Rajkot, Ahmedabad, Surat, Vadodara, and across India.",
+                "The course runs 4 to 6 months, with flexible weekday, weekend, and online batch options plus No Cost EMI payment options.",
         },
         {
             id: 7,
+            question: "Does Alphabit Skill provide placement assistance after the course?",
+            answer:
+                "Yes. Placement support includes resume building, mock interviews, and direct referrals through 300+ hiring partners actively looking for digital marketing talent across Rajkot, Ahmedabad, and Gujarat.",
+        },
+        {
+            id: 8,
             question: "Why choose Alphabit Skill over YouTube or Udemy for digital marketing?",
             answer:
-                "YouTube and Udemy give you tool tutorials on a demo dashboard. Alphabit Skill gives you live campaigns on real ad accounts and websites, weekly performance reviews from working marketers, and a direct path to placement through 300+ hiring partners — built for what agencies in the Rajkot and Gujarat job market are actually hiring for.",
+                "Free content teaches concepts; it doesn't put you in charge of a real ad budget, give you a working mentor to review your campaigns, or connect you to hiring partners when you're done. This course does all three, alongside a government-recognised certification.",
         },
     ],
 };
@@ -620,48 +669,19 @@ export const faqData = faqSectionData.faqs;
  * 13. CTA Section Data
  */
 export const ctaSectionData = {
-    line1Normal: "Access the",
-    line1Italic: "Curriculum",
-    line1Suffix: " — Apply Today & ",
+    line1Normal: "Access the Digital Marketing Curriculum in Rajkot & Ahmedabad -",
+    line1Italic: "Apply Today",
+    line1Suffix: "-&    ",
     line2Normal: "Master Digital Marketing",
     line2Italic: "Frameworks",
     buttonText: "Join The Studio",
     buttonHref: "/register",
 };
 
-export const testimonialsSectionData = {
-    titleNormal: "Verified Career Transitions",
-    titleParent: "— Hear Directly from",
-    titleItalic: "Deployed Alumni",
-    testimonials: [
-        {
-            id: 1,
-            text: "I had zero marketing background when I joined. Within 4 months I was running live Google Ads campaigns on a real client account and got placed at a digital agency in Rajkot. Managing an actual ad budget during training made all the difference.",
-            name: "Krisha Vaghela",
-            title: "Performance Marketer, Rajkot",
-            image: "/Home Page/1.webp",
-        },
-        {
-            id: 2,
-            text: "The SEO module went far beyond basic keyword stuffing — the GEO/AEO training on getting cited in AI search was something no other institute in Rajkot was even teaching. Got placed within 6 weeks.",
-            name: "Yash Ramani",
-            title: "SEO Executive, Ahmedabad",
-            image: "/Home Page/2.webp",
-        },
-        {
-            id: 3,
-            text: "I chose performance marketing because I wanted to work with ad budgets, not just write blogs. The Meta Ads module was extremely detailed and practical. Placed at a performance marketing agency in Surat right after the course.",
-            name: "Foram Trivedi",
-            title: "Meta Ads Specialist, Surat",
-            image: "/Home Page/3.webp",
-        },
-    ],
-};
-
 /**
- * 13. Metadata Info
+ * 14. Metadata Info
  */
 export const metadata = {
-    title: "Digital Marketing | Alphabit Skill",
-    description: "Learn Digital Marketing at Alphabit Skill — expert-led training, real-world projects, and placement support."
+    title: "Digital Marketing Course in Rajkot & Ahmedabad | Alphabit Skill",
+    description: "Digital Marketing course in Rajkot & Ahmedabad — Performance Marketing or SEO & Content Marketing tracks. Live campaigns, 300+ hiring partners. Book a free demo."
 };

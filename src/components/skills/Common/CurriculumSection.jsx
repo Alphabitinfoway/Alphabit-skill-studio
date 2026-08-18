@@ -360,7 +360,7 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                                                 {currentData.image && (
                                                     <Image
                                                         src={currentData.image}
-                                                        alt={currentData.title || "Module Preview"}
+                                                        alt={currentData.imageAlt || currentData.alt || currentData.title || "Module Preview"}
                                                         width={400}
                                                         height={300}
                                                         className="w-full h-auto object-contain max-h-[300px]"

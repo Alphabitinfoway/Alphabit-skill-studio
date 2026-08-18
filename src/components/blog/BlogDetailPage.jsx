@@ -11,7 +11,8 @@ import { API_BASE_URL } from "@/config/api";
 /* ─── Sidebar post card ───────────────────────────────────────────── */
 function SidebarCard({ post }) {
   const href = `/blog/${post.slug || post.id || post._id}`;
-  let img = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  const defaultImg = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  let img = defaultImg;
   if (post?.image && post.image !== "no-photo.jpg") {
     img = post.image.startsWith("http") ? post.image : `${API_BASE_URL}/${post.image}`;
   }
@@ -22,6 +23,10 @@ function SidebarCard({ post }) {
         <img
           src={img}
           alt={post.title}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = defaultImg;
+          }}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -125,7 +130,7 @@ function BlogContentRenderer({ content }) {
   if (isHtml) {
     return (
       <div
-        className="blog-prose-content w-full max-w-full overflow-hidden break-words font-cabinet"
+        className="blog-detail-content blog-prose-content w-full max-w-full overflow-x-auto break-words font-cabinet"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     );
@@ -288,6 +293,10 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
               <img
                 src={image}
                 alt={title}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+                }}
                 className="w-full h-full object-cover"
               />
             </div>
