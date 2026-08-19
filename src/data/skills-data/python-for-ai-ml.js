@@ -63,6 +63,7 @@ export const appliedAiMlModules = [
     {
         num: "01",
         title: "AI & ML Foundations",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120847/module-1_p4ua57.png",
         description: "Learn the math, data structures, and scripting concepts behind AI and ML — the foundation every module in this Python for AI/ML course builds on, explained in practical, beginner-friendly terms.",
         tags: [
             "Math & Logic",
@@ -78,6 +79,7 @@ export const appliedAiMlModules = [
     {
         num: "02",
         title: "Python for Data Handling",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120849/module-2_kn56i4.png",
         description: "Learn to clean, structure, and analyze real datasets using Python's core data libraries — the first practical step in any machine learning or data science workflow.",
         tags: [
             "NumPy Arrays",
@@ -93,6 +95,7 @@ export const appliedAiMlModules = [
     {
         num: "03",
         title: "Machine Learning Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120850/module-3_taubw2.png",
         description: "Understand supervised and unsupervised learning, model training, and evaluation — the core machine learning concepts behind every AI system, taught with hands-on Scikit-learn practice.",
         tags: [
             "Supervised Learning",
@@ -107,7 +110,9 @@ export const appliedAiMlModules = [
     },
     {
         num: "04",
+     
         title: "Model Building & Evaluation",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120849/module-4_jqe6g0.png",
         description: "Build, test, and improve real ML models using standard Python tools — regression, classification, tuning, and cross-validation, with real datasets, not toy examples.",
         tags: [
             "Regression Models",
@@ -123,6 +128,7 @@ export const appliedAiMlModules = [
     {
         num: "05",
         title: "Data Visualization & Reporting",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120847/module-5_c9b4g5.png",
         description: "Turn model outputs and datasets into clear visuals and dashboards — the reporting and communication skill every data-focused AI/ML role expects from day one on the job.",
         tags: [
             "Data Visualization",
@@ -138,6 +144,7 @@ export const appliedAiMlModules = [
     {
         num: "06",
         title: "Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787120845/module-6_fhkw3q.png",
         description: "Apply everything into a full data/ML capstone project, complete a guided internship, and leave with a deployed project and GitHub portfolio ready for AI/ML job interviews.",
         tags: [
             "Capstone Project Build",
@@ -156,6 +163,7 @@ export const genAiAgentModules = [
     {
         num: "01",
         title: "AI & ML Foundations",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121973/module-1_izbp0f.webp",
         description: "Learn the math, data structures, and scripting concepts behind AI and ML — the foundation every module in this Python for AI/ML course builds on, explained in practical, beginner-friendly terms.",
         tags: [
             "Math & Logic",
@@ -170,6 +178,7 @@ export const genAiAgentModules = [
     },
     {
         num: "02",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121975/module-2_uhkfu2.webp",
         title: "Model Setup & API Integration",
         description: "Connect to leading AI models through their APIs — authenticate, send requests, and handle responses from OpenAI, Claude, and Gemini for real, working GenAI applications.",
         tags: [
@@ -186,6 +195,7 @@ export const genAiAgentModules = [
     {
         num: "03",
         title: "Prompt Engineering & AI Workflows",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121975/module-3_a16g2u.webp",
         description: "Learn to design effective prompts and chain AI calls into working workflows — the prompt engineering skill that separates a reliable AI agent from a fragile, one-off demo.",
         tags: [
             "Prompt Design Patterns",
@@ -201,6 +211,7 @@ export const genAiAgentModules = [
     {
         num: "04",
         title: "Vector Databases & AI Search",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121981/module-4_fe7mkm.webp",
         description: "Learn how modern AI applications store and retrieve knowledge using vector embeddings and indexing — the backbone behind AI search, chatbots, and RAG pipelines.",
         tags: [
             "Vector Embeddings",
@@ -215,6 +226,7 @@ export const genAiAgentModules = [
     {
         num: "05",
         title: "Deploying AI Solutions",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121982/module-5_adzkf6.webp",
         description: "Take your AI agent from a local script to a live, usable product — build a simple interface and deploy it so others can actually use your work.",
         tags: [
             "Building AI UIs",
@@ -230,6 +242,7 @@ export const genAiAgentModules = [
     {
         num: "06",
         title: "Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787121984/module-6_jv1txu.webp",
         description: "Build a full AI agent capstone project, complete a guided internship, and leave with a deployed, working GenAI demo plus a GitHub portfolio ready to show recruiters.",
         tags: [
             "Capstone Project Build",

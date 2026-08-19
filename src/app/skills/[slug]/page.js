@@ -94,7 +94,7 @@ async function fetchSkillApiData(slug) {
     return { apiMeetings, syllabusPdf };
   } catch (err) {
     // Backend unreachable (e.g. Render.com cold start timeout) — degrade gracefully
-    console.error("[SkillDetailPage] API fetch failed:", err?.message);
+    console.warn("[SkillDetailPage] API fetch failed:", err?.message);
     return { apiMeetings: [], syllabusPdf: null };
   }
 }

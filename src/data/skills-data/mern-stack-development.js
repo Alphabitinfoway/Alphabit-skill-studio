@@ -67,7 +67,7 @@ export const mernFrontendModules = [
     {
         num: "01",
         title: "Web Development Fundamentals for Frontend",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126310/module-1_ugmlbt.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts using Flexbox and Grid, and real-world design principles every frontend-focused MERN developer needs before their first interview.",
         tags: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design", "Semantic Structure", "Web Accessibility"],
         techstack: {
@@ -78,7 +78,7 @@ export const mernFrontendModules = [
     {
         num: "02",
         title: "JavaScript & ES6+ for React",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126312/module-2_fqg4kf.webp",
         description: "Master the modern JavaScript features that React development runs on — closures, async patterns, and destructuring, framed around what you'll actually use inside components.",
         tags: ["ES6+ Syntax", "Destructuring", "Async/Await", "Promises", "Fetch API", "Modules & Imports"],
         techstack: {
@@ -89,7 +89,7 @@ export const mernFrontendModules = [
     {
         num: "03",
         title: "React.js Frontend In Depth",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126320/module_3_efiymo.webp",
         description: "Go beyond basic components into how production React applications are structured — hooks, routing, and component architecture that scale past a single-page demo.",
         tags: ["Components & Props", "React Hooks (useState, useEffect, useContext)", "React Router", "Component Architecture"],
         techstack: {
@@ -100,7 +100,7 @@ export const mernFrontendModules = [
     {
         num: "04",
         title: "State Management & Performance",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126322/module_4_fqasfp.webp",
         description: "Learn advanced state management patterns and performance optimization specific to large React applications — the skill that separates a MERN developer from a frontend specialist.",
         tags: ["Redux Toolkit", "Context API vs Redux", "Memoization", "Code Splitting", "Performance Profiling"],
         techstack: {
@@ -110,7 +110,7 @@ export const mernFrontendModules = [
     {
         num: "05",
         title: "Advanced UI Patterns & Component Design",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126313/module-5_abwlqt.webp",
         description: "Learn reusable component patterns, design systems, and accessibility practices used in production frontend teams — not just making a component work, but making it maintainable.",
         tags: ["Reusable Component Patterns", "Design Systems Basics", "Form Handling & Validation", "Accessibility (a11y) Practices"],
         techstack: {
@@ -121,7 +121,7 @@ export const mernFrontendModules = [
     {
         num: "06",
         title: "Connecting to APIs & Backend Data",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126315/module-6_mteipn.webp",
         description: "Learn to consume REST APIs from a React frontend — handling loading states, errors, and authentication tokens the way real applications do, without needing to build the backend yourself.",
         tags: ["API Integration", "Axios/Fetch", "Handling Auth Tokens Client-Side", "Error & Loading State Management"],
         techstack: {
@@ -131,7 +131,7 @@ export const mernFrontendModules = [
     {
         num: "07",
         title: "Frontend Capstone, Deployment & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126318/module-7_yyc4lk.webp",
         description: "Learn team version control workflows, deploy your React applications live, and build a capstone frontend project for your portfolio.",
         tags: ["Git & GitHub", "Vercel/Netlify Deployment", "Capstone Project Build", "Portfolio & Resume Prep"],
         techstack: {
@@ -145,7 +145,7 @@ export const mernFullStackModules = [
     {
         num: "01",
         title: "Web Development Fundamentals for Full Stack",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126857/module-1_cjeplg.webp",
         description: "Build semantic HTML5 structure, responsive CSS3 layouts, and real-world design principles — framed as the frontend surface of an application you'll build end-to-end, backend included.",
         tags: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design", "Semantic Structure", "Web Accessibility"],
         techstack: {
@@ -156,7 +156,7 @@ export const mernFullStackModules = [
     {
         num: "02",
         title: "JavaScript & ES6+ Across the Stack",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126859/module-2_wlacnv.webp",
         description: "Master the modern JavaScript features that power both your frontend and backend — the same syntax you'll reuse across MongoDB queries, Express routes, and React components.",
         tags: ["ES6+ Syntax", "Destructuring", "Async/Await", "Promises", "Fetch API", "Modules & Imports"],
         techstack: {
@@ -167,7 +167,7 @@ export const mernFullStackModules = [
     {
         num: "03",
         title: "React.js Frontend Framework",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126860/module-3_wvduqr.webp",
         description: "Build dynamic, component-based user interfaces with React — hooks, state management, routing, and connecting your frontend to real APIs you'll build yourself.",
         tags: ["Components & Props", "React Hooks", "React Router", "State Management", "API Integration"],
         techstack: {
@@ -178,7 +178,7 @@ export const mernFullStackModules = [
     {
         num: "04",
         title: "Node.js & Express.js Backend",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126882/module-4_n4ydjn.webp",
         description: "Build fast, scalable backend servers with Node.js and Express — routing, middleware, and REST API design patterns used in real MERN production apps.",
         tags: ["Server Setup", "Express Routing", "Middleware", "REST API Design", "Error Handling"],
         techstack: {
@@ -189,7 +189,7 @@ export const mernFullStackModules = [
     {
         num: "05",
         title: "MongoDB & Mongoose Database Design",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126886/module-5_jccue8.webp",
         description: "Design and query NoSQL databases the way MERN applications structure data — schema design, relationships, and aggregation using MongoDB and Mongoose.",
         tags: ["Schema Design", "CRUD Operations", "Mongoose ODM", "Aggregation Pipelines", "Database Indexing"],
         techstack: {
@@ -200,7 +200,7 @@ export const mernFullStackModules = [
     {
         num: "06",
         title: "Authentication, Security & APIs",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126889/module-6_c7ihld.webp",
         description: "Learn how real MERN applications keep user data safe — JWT-based authentication, password hashing, and protected routes across your full stack.",
         tags: ["JWT Authentication", "Password Hashing", "Protected Routes", "API Security Best Practices"],
         techstack: {
@@ -211,7 +211,7 @@ export const mernFullStackModules = [
     {
         num: "07",
         title: "Git, Deployment & Cloud Hosting",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126891/module-7_j8n8c7.webp",
         description: "Learn team version control workflows and deploy your full MERN applications live using real hosting platforms.",
         tags: ["Git & GitHub", "Branching Workflows", "Vercel/Render Deployment", "Environment Variables"],
         techstack: {
@@ -222,7 +222,7 @@ export const mernFullStackModules = [
     {
         num: "08",
         title: "Full Stack Capstone Projects, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/MERN/module8.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787126896/module-8_w35rk9.webp",
         description: "Apply everything into 2–3 full-scale MERN capstone projects, complete a guided internship, and walk away with a GitHub portfolio ready to show recruiters.",
         tags: ["Capstone Project Build", "Code Review", "Internship Experience", "Portfolio & Resume Prep"],
         techstack: {

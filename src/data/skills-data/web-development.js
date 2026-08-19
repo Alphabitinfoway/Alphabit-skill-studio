@@ -306,7 +306,7 @@ const phpWebDevelopmentModules = [
     {
         num: "08",
         title: "Capstone Projects, Internship & Portfolio",
-        image:"",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787115635/module-8_ypqggd.webp",
         description: "Build 3+ complete websites from scratch — a business website, an e-commerce store, or a custom WordPress site. Get access to a web developer internship for hands-on, real-world experience.",
         tags: [
             "Live Projects",

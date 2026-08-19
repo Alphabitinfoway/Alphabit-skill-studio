@@ -29,7 +29,7 @@ async function fetchBlogData(id) {
 
     return { blog, allBlogs };
   } catch (err) {
-    console.error("[BlogDetailPage] API fetch error:", err?.message);
+    console.warn("[BlogDetailPage] API fetch error:", err?.message);
     return { blog: null, allBlogs: [] };
   }
 }

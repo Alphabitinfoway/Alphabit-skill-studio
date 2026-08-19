@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-T6G66TTK" />
       <head>
-        <link rel="icon" href="/logo.webp" />
+        <link rel="icon" href="/logo.webp" /> 
         {/*
           Cabinet Grotesk is now self-hosted via /public/fonts/CabinetGrotesk-Variable.woff2
           and declared in globals.css — no external CDN request needed.

@@ -18,7 +18,7 @@ async function fetchBlogs() {
       }
     }
   } catch (err) {
-    console.error("[BlogPage] Error fetching blogs:", err?.message);
+    console.warn("[BlogPage] Error fetching blogs:", err?.message);
   }
   return [];
 }

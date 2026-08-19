@@ -62,6 +62,7 @@ export const coreJavaBackendModules = [
     {
         num: "01",
         title: "Java & OOP Foundations",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122863/module-1_f1hn7q.webp",
         description: "Start with the building blocks — variables, control flow, and object-oriented programming — the concepts every Java application, from a simple script to an enterprise system, is built on.",
         tags: [
             "Core Java Syntax",
@@ -77,6 +78,7 @@ export const coreJavaBackendModules = [
     {
         num: "02",
         title: "Data Structures & Collections",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122864/module-2_kemjmp.webp",
         description: "Move from writing code that works to writing code that scales — arrays, collections, generics, and the logic behind choosing the right data structure for the job.",
         tags: [
             "Arrays & Strings",
@@ -92,6 +94,7 @@ export const coreJavaBackendModules = [
     {
         num: "03",
         title: "Database Design & JDBC",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122864/module-3_yeuafh.webp",
         description: "Learn to design relational databases and connect them to Java applications — the skill behind every data-driven backend, from inventory systems to booking platforms.",
         tags: [
             "Relational Database Design",
@@ -107,6 +110,7 @@ export const coreJavaBackendModules = [
     {
         num: "04",
         title: "Spring Boot & REST API Development",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122866/module-4_y9cekn.webp",
         description: "Build backend applications the way companies actually hire for — using Spring Boot to create REST APIs, handle requests, and structure real, maintainable projects.",
         tags: [
             "Spring Boot Fundamentals",
@@ -123,6 +127,7 @@ export const coreJavaBackendModules = [
     {
         num: "05",
         title: "Testing, Security & Deployment",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122867/module-5_etjhkj.webp",
         description: "Take a project from \"it runs on my machine\" to a secured, deployed application — the practical skills that separate a working backend developer from a classroom coder.",
         tags: [
             "Unit Testing (JUnit)",
@@ -139,6 +144,7 @@ export const coreJavaBackendModules = [
     {
         num: "06",
         title: "Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787122868/module-6_rpkd1m.webp",
         description: "Apply everything into a full backend capstone project, complete a guided internship, and leave with a deployed API and a GitHub portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",
@@ -157,6 +163,7 @@ export const javaFullStackModules = [
     {
         num: "01",
         title: "Java & OOP Foundations",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123154/module-1_xnqssp.webp",
         description: "Start with the building blocks — variables, control flow, and object-oriented programming — the concepts every Java application, from a simple script to an enterprise system, is built on.",
         tags: [
             "Core Java Syntax",
@@ -172,6 +179,7 @@ export const javaFullStackModules = [
     {
         num: "02",
         title: "Database Design & Backend Basics",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123155/module-2_fdw49z.webp",
         description: "Learn to design relational databases and build the server-side logic that powers real applications, using Java and SQL together.",
         tags: [
             "Relational Database Design",
@@ -187,6 +195,7 @@ export const javaFullStackModules = [
     {
         num: "03",
         title: "Spring Boot & REST API Development",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123158/module-3_jv7gr0.webp",
         description: "Build the backend half of a full stack application — using Spring Boot to create REST APIs that a frontend can actually consume.",
         tags: [
             "Spring Boot Fundamentals",
@@ -203,6 +212,7 @@ export const javaFullStackModules = [
     {
         num: "04",
         title: "Frontend Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123160/module-4_yphwob.webp",
         description: "Learn to build the interface users actually see and interact with — structured markup, styling, and interactivity that connects to your Java backend.",
         tags: [
             "HTML & CSS",
@@ -218,6 +228,7 @@ export const javaFullStackModules = [
     {
         num: "05",
         title: "Connecting Frontend & Backend",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123162/module-5_vumlua.webp",
         description: "Bring both halves together — call your Spring Boot APIs from a frontend interface and handle real data flow end to end, the way a full stack role actually works.",
         tags: [
             "Full Stack Integration",
@@ -233,6 +244,7 @@ export const javaFullStackModules = [
     {
         num: "06",
         title: "Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787123164/module-6_kr2of8.webp",
         description: "Apply everything into a full stack capstone project, complete a guided internship, and leave with a deployed application and a GitHub portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",

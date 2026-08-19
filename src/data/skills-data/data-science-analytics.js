@@ -63,6 +63,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "01",
         title: "Statistics Foundations for Business Analytics",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124095/module-1_r9iec6.webp",
         description: "Learn the statistical thinking behind every business data decision — distributions, correlation, and hypothesis testing — explained with a reporting/business lens before any tool touches your screen.",
         tags: [
             "Descriptive Statistics",
@@ -77,6 +78,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "02",
         title: "SQL for Data Analysis",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124097/module-2_tnuh4n.webp",
         description: "Learn to pull, filter, and join real data directly from databases — the single most requested skill in data analyst job postings, taught on real multi-table datasets.",
         tags: [
             "SQL Queries",
@@ -92,6 +94,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "03",
         title: "Data Analysis with Python",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124098/module-3_u7d5cf.webp",
         description: "Move from spreadsheets to Python for business-facing analysis — cleaning, reshaping, and summarizing datasets to support reports and dashboards, not model building.",
         tags: [
             "NumPy Arrays",
@@ -107,6 +110,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "04",
         title: "Data Visualization & Dashboards",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124100/module-4_ytg7zr.webp",
         description: "Turn analysis into something a business team can actually act on — building clean, readable dashboards that answer real business questions.",
         tags: [
             "Dashboard Design",
@@ -121,6 +125,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "05",
         title: "Business Intelligence & Stakeholder Reporting",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124102/module-5_trzthi.webp",
         description: "Learn to work the way analytics teams actually operate — recurring reports, KPI tracking, and presenting findings clearly to non-technical stakeholders.",
         tags: [
             "KPI Design",
@@ -135,6 +140,7 @@ export const dataAnalyticsBiModules = [
     {
         num: "06",
         title: "Analytics Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124104/module-6_aeducc.webp",
         description: "Apply everything into a full analytics capstone project, complete a guided internship, and leave with a live dashboard and a portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",
@@ -153,6 +159,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "01",
         title: "Statistics Foundations for Machine Learning",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124892/module-1_ba8zaq.webp",
         description: "Learn the statistical thinking behind every predictive model — distributions, correlation, and hypothesis testing — explained with a modeling lens as the foundation every ML algorithm builds on.",
         tags: [
             "Descriptive Statistics",
@@ -167,6 +174,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "02",
         title: "Python for Machine Learning",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124889/module-2_ix4oud.webp",
         description: "Move from spreadsheets to Python for model-ready data — cleaning and structuring datasets specifically to feed into machine learning models, the first practical step in any ML workflow.",
         tags: [
             "NumPy Arrays",
@@ -182,6 +190,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "03",
         title: "Machine Learning Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124891/module-3_feg2kn.webp",
         description: "Understand supervised and unsupervised learning, model training, and evaluation — the core machine learning concepts behind every predictive system, taught with hands-on Scikit-learn practice.",
         tags: [
             "Supervised Learning",
@@ -196,6 +205,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "04",
         title: "Model Building & Evaluation",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124894/module-4_bnybkd.webp",
         description: "Build, test, and improve real ML models using standard Python tools — regression, classification, tuning, and cross-validation, with real datasets, not toy examples.",
         tags: [
             "Regression Models",
@@ -210,6 +220,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "05",
         title: "Cloud Deployment & MLOps Basics",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124906/module-5_gazltx.webp",
         description: "Take a model from a notebook to something that actually serves predictions — the deployment and monitoring skills employers now expect alongside modeling ability.",
         tags: [
             "Model Deployment Basics",
@@ -225,6 +236,7 @@ export const machineLearningPredictiveModules = [
     {
         num: "06",
         title: "ML Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787124909/module-6_wor5sb.webp",
         description: "Apply everything into a full ML capstone project, complete a guided internship, and leave with a deployed model and a GitHub portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",
