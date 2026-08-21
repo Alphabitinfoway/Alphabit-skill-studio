@@ -416,7 +416,7 @@ export const careerOpportunitiesData = {
 
 export const industriesSectionData = {
     titleNormal: "Industries That Hire",
-    titleItalic: "Across Gujarat",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple industries actively hiring data science and analytics professionals.",
     industries: [
         {

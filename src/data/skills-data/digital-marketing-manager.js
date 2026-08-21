@@ -170,8 +170,8 @@ export const careerOpportunitiesData = {
 };
 
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are highly sought after across multiple high-growth industries.",
     industries: [
         {

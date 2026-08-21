@@ -554,8 +554,8 @@ export const careerOpportunitiesData = {
  * 10. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries That",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple industries actively hiring designers in Gujarat and beyond.",
     industries: [
         { title: "IT Services", icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp" },

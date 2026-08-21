@@ -453,8 +453,8 @@ export const careerOpportunitiesData = {
  * 9. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries That",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "QA testers and automation engineers are needed across every sector that builds, ships, and maintains software applications.",
     industries: [
         {

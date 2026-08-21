@@ -525,8 +525,8 @@ export const careerOpportunitiesData = {
  * 10. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire Across Gujarat",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple high-growth industries actively hiring mobile developers.",
     industries: [
         {

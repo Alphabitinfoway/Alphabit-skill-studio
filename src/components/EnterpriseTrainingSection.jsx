@@ -38,28 +38,30 @@ const trainingData = [
 
 export default function EnterpriseTrainingSection() {
   return (
-    <section 
-      className="relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
-      style={{
-        clipPath: "ellipse(110% 100% at 50% 100%)",
-        marginTop: "80px"
-      }}
-    >
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-
-      <div className="max-w-[1440px] mx-auto relative z-10">
-
-        {/* HEADING */}
-        <div className="text-center mb-24 px-4">
+    <>
+      {/* MOBILE LAYOUT (lg:hidden) - Pixel perfect matching user screenshot */}
+      <section className="block lg:hidden relative w-full bg-[#7143FE] py-10 px-4 sm:px-6 overflow-hidden">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8"
+        >
           <h2
-            className="text-white font-semibold leading-[1.2] font-cabinet tracking-tight"
-            style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
+            className="text-white text-[22px] sm:text-[26px] font-extrabold leading-[1.25] tracking-tight"
+            style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
           >
             Engineer Your Tech{" "}
             <span
-              className="text-[#FF5622] italic font-normal inline-block"
-              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.4em" }}
+              style={{
+                fontFamily: "'PP Editorial New', serif",
+                color: "#FF5622",
+                fontStyle: "italic",
+                fontWeight: 400,
+              }}
+              className="text-[28px] sm:text-[34px] px-1 inline-block"
             >
               Career
             </span>{" "}
@@ -67,34 +69,112 @@ export default function EnterpriseTrainingSection() {
             <br />
             Enterprise-Level Training
           </h2>
-        </div>
+        </motion.div>
 
-        {/* CARDS GRID (Unified for perfect alignment) */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
-          {trainingData.map((item, index) => {
-            const isTopRow = index < 3;
-            
-            let gridClasses = "";
-            if (isTopRow) {
-              gridClasses = "md:col-span-3 lg:col-span-2";
-            } else {
-              gridClasses = "md:col-span-3 lg:col-span-3";
-              // Force bottom row to start on a new line at the md breakpoint
-              if (index === 3) {
-                gridClasses += " md:col-start-1 lg:col-auto";
-              }
-            }
-
-            return (
-              <div key={index} className={`w-full h-full ${gridClasses}`}>
-                <Card {...item} isLarge={!isTopRow} />
+        {/* 5 White Cards Vertical Stack */}
+        <div className="flex flex-col gap-4 max-w-[380px] sm:max-w-[420px] mx-auto">
+          {trainingData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-[22px] sm:rounded-[24px] p-4 sm:p-5 shadow-lg flex flex-col text-left"
+            >
+              {/* Card Image */}
+              <div className="relative w-full h-[140px] sm:h-[160px] rounded-[16px] overflow-hidden mb-3.5">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            );
-          })}
-        </div>
 
-      </div>
-    </section>
+              {/* Stat Number */}
+              <div
+                className="text-[#7143FE] text-[32px] sm:text-[36px] font-black leading-none tracking-tight mb-1"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                {item.stat}
+              </div>
+
+              {/* Card Title */}
+              <h3
+                className="text-[#111111] text-[15px] sm:text-[16px] font-extrabold leading-snug mb-1.5"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                {item.title}
+              </h3>
+
+              {/* Card Description */}
+              <p
+                className="text-gray-500 text-[12.5px] sm:text-[13.5px] leading-relaxed"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* DESKTOP LAYOUT (hidden lg:block) - Original curve layout preserved */}
+      <section
+        className="hidden lg:block relative w-full bg-gradient-to-b from-[#7143FE] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
+        style={{
+          clipPath: "ellipse(110% 100% at 50% 100%)",
+          marginTop: "80px"
+        }}
+      >
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
+          {/* HEADING */}
+          <div className="text-center mb-24 px-4">
+            <h2
+              className="text-white font-semibold leading-[1.2] font-cabinet tracking-tight"
+              style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
+            >
+              Engineer Your Tech{" "}
+              <span
+                className="text-[#FF5622] italic font-normal inline-block"
+                style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.4em" }}
+              >
+                Career
+              </span>{" "}
+              with
+              <br />
+              Enterprise-Level Training
+            </h2>
+          </div>
+
+          {/* CARDS GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-6">
+            {trainingData.map((item, index) => {
+              const isTopRow = index < 3;
+              
+              let gridClasses = "";
+              if (isTopRow) {
+                gridClasses = "md:col-span-3 lg:col-span-2";
+              } else {
+                gridClasses = "md:col-span-3 lg:col-span-3";
+                if (index === 3) {
+                  gridClasses += " md:col-start-1 lg:col-auto";
+                }
+              }
+
+              return (
+                <div key={index} className={`w-full h-full ${gridClasses}`}>
+                  <Card {...item} isLarge={!isTopRow} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -108,10 +188,7 @@ function Card({ stat, title, description, image, isLarge }) {
       transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
       className="bg-white border-[2.5px] border-white rounded-[28px] p-5 h-full flex flex-col shadow-[0_15px_30px_rgba(0,0,0,0.08)]"
     >
-      {/* Image area + stat overlap wrapper */}
-      {/* Extra mb accounts for the stat number that hangs below the image */}
       <div className="relative w-full mb-8">
-        {/* Image Area — fixed height so all cards look the same */}  
         <div
           className="w-full rounded-[28px] overflow-hidden"
           style={{ height: isLarge ? "220px" : "160px" }}
@@ -127,7 +204,6 @@ function Card({ stat, title, description, image, isLarge }) {
           )}
         </div>
 
-        {/* Stat Number — bottom-left, half in / half out of image card */}
         <div
           className="absolute bottom-0 left-4 translate-y-1/2 z-10 text-[#7143FE] font-extrabold leading-none"
           style={{
@@ -141,7 +217,6 @@ function Card({ stat, title, description, image, isLarge }) {
         </div>
       </div>
 
-      {/* Title & Description below */}
       <div className="flex flex-col flex-grow">
         <h3 className="text-[#111111] font-bold mb-2 font-cabinet leading-tight" style={{ fontSize: "clamp(16px, 1.8vw, 18px)" }}>
           {title}
@@ -153,3 +228,4 @@ function Card({ stat, title, description, image, isLarge }) {
     </motion.div>
   );
 }
+

@@ -73,7 +73,7 @@ export default function HeroSection() {
     };
 
     return (
-        <div className="bg-[#F5F5F5] pt-6 sm:pt-10 md:pt-[55px] pb-16 md:pb-32 flex flex-col items-center">
+        <div className="bg-[#F5F5F5] pt-28 sm:pt-32 md:pt-[55px] pb-16 md:pb-32 flex flex-col items-center">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @media (min-width: 768px) {

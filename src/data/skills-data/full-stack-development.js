@@ -498,8 +498,8 @@ export const careerOpportunitiesData = {
  * 8. Industries Hiring Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple industries actively hiring modern full stack developers.",
     industries: [
     {

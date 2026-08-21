@@ -316,15 +316,15 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center w-full h-16 px-4 md:px-6">
-                <div className="flex w-full max-w-[980px] items-center justify-between rounded-full bg-[#F5F5F5] border-[3px] border-[#DCDCDC] px-3 py-2 shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
+            <nav className="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center w-full h-16 px-3 sm:px-6">
+                <div className="flex w-full max-w-[980px] items-center justify-between rounded-full bg-[#F5F5F5] border-[3px] border-[#DCDCDC] px-3 sm:px-5 py-2 shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2.5 ml-3">
-                        <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785216931/1_wou0fw.webp" alt="Logo" className="h-9" />
+                    <Link href="/" className="flex items-center gap-2.5 ml-1 sm:ml-2 shrink-0">
+                        <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785216931/1_wou0fw.webp" alt="Logo" className="h-8 lg:h-9" />
                     </Link>
 
-                    {/* Desktop Links */}
-                    <div className="hidden lg:flex items-center space-x-7 -ml-6 relative">
+                    {/* Desktop Links (1024px+) */}
+                    <div className="hidden lg:flex items-center justify-center flex-1 space-x-4 lg:space-x-6 relative">
                         {/* Animated glass pill */}
                         <motion.span
                             className="absolute h-[34px] my-auto top-0 bottom-0 rounded-full pointer-events-none"
@@ -336,8 +336,8 @@ export default function Navbar() {
                                 border: "1.5px solid rgba(255,255,255,0.60)",
                             }}
                             animate={{
-                                left: pillStyle.left - 10,
-                                width: pillStyle.width + 20,
+                                left: pillStyle.left - 8,
+                                width: pillStyle.width + 16,
                                 opacity: pillStyle.opacity,
                             }}
                             transition={{
@@ -412,11 +412,11 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    {/* Right Action Button */}
-                    <div className="flex items-center gap-2 mr-1">
+                    {/* Right Action Button & Hamburger */}
+                    <div className="flex items-center gap-2 mr-1 shrink-0">
                         <Link
                             href="/register"
-                            className={`hidden lg:inline-flex h-[36px] items-center justify-center rounded-full px-6 text-[12px] font-[600] tracking-wide transition-all duration-150 ease-out shadow-[0_2px_8px_rgba(113,67,254,0.18)] active:translate-y-[2px] active:scale-[0.97] ${isRegisterActive
+                            className={`hidden lg:flex h-[36px] items-center justify-center rounded-full px-4 sm:px-6 text-[12px] font-[600] tracking-wide transition-all duration-150 ease-out shadow-[0_2px_8px_rgba(113,67,254,0.18)] active:translate-y-[2px] active:scale-[0.97] whitespace-nowrap ${isRegisterActive
                                     ? "bg-[#6E42F8] text-white ring-2 ring-[#7143FE] ring-offset-2 ring-offset-[#F5F5F5] translate-y-[2px] scale-[0.97]"
                                     : "bg-[#7143FE] text-white hover:bg-[#7143FE]/20 hover:text-[#7143FE] active:bg-[#6E42F8] active:text-white"
                                 }`}
@@ -426,7 +426,7 @@ export default function Navbar() {
 
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="lg:hidden flex items-center justify-center w-[36px] h-[36px] rounded-full bg-white border border-[#E5E5E5] text-[#222222]"
+                            className="lg:hidden flex items-center justify-center w-[36px] h-[36px] rounded-full bg-white border border-[#E5E5E5] text-[#222222] shrink-0"
                         >
                             {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
                         </button>
@@ -434,7 +434,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile / Tablet Menu Overlay */}
             <AnimatePresence>
                 {mobileMenuOpen && (
                     <motion.div

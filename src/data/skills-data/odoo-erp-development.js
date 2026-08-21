@@ -491,8 +491,8 @@ export const careerOpportunitiesData = {
  * 10. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple industries actively hiring Odoo consultants and developers in Gujarat and across India.",
     industries: [
         { title: "Manufacturing", icon: "/skill/ITSkills/FullStackDevelopment/industriessection/manufacturingSaaS.webp" },

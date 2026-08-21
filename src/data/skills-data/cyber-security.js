@@ -449,8 +449,8 @@ export const careerOpportunitiesData = {
  * 9. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Hiring Industries in",
-    titleItalic: "  Gujarat",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "Security professionals are needed across every sector that handles sensitive customer, financial, or organizational data.",
     industries: [
         {

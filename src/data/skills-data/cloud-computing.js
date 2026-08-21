@@ -474,8 +474,8 @@ export const careerOpportunitiesData = {
  * 10. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "Cloud and DevOps skills are critically needed across every modern industry managing digital products, services, and infrastructure.",
     industries: [
         {

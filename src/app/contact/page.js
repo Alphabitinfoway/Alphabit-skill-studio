@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
-import ContactFormSection from "@/components/ContactFormSection";
+import ContactFormSection from "@/components/contact/ContactFormSection";
+import FAQSection from "@/components/contact/FAQSection";
 
 export const metadata = {
   title: "Contact Us | Alphabit Skill",
@@ -11,6 +12,7 @@ export default function ContactUs() {
     <>
       <HeroSection />
       <ContactFormSection />
+      <FAQSection />
     </>
   );
 }

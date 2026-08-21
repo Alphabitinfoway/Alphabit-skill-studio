@@ -421,8 +421,8 @@ export const careerOpportunitiesData = {
 };
 
 export const industriesSectionData = {
-    titleNormal: "Industries that",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "The skills you gain are relevant across multiple industries actively hiring Python for AI/ML professionals.",
     industries: [
         {

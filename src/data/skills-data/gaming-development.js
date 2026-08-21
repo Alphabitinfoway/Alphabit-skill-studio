@@ -495,8 +495,8 @@ export const careerOpportunitiesData = {
  * 11. Industries Section Data
  */
 export const industriesSectionData = {
-    titleNormal: "Industries That",
-    titleItalic: "Hire",
+    titleNormal: "Industries That Hire",
+    titleItalic: "in India",
     description: "Game development and real-time interactive skills are in high demand across multiple rapid-growth industries.",
     industries: [
         {
