@@ -190,53 +190,53 @@ export default function ContactFormSection() {
 
     return (
         <>
-            <section className="bg-[#F5F5F5] relative overflow-hidden">
-                <div className="container mx-auto px-4 md:px-6 max-w-[1240px]">
+            <section className="bg-[#F5F5F5] py-10 sm:py-16 md:py-20 relative overflow-hidden font-cabinet">
+                <div className="container mx-auto px-4 sm:px-6 max-w-[1240px]">
                     {/* Header */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold font-cabinet text-gray-900 mb-4">
+                    <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
                             Get in <span className="text-[#FF5622] italic font-pp">Touch</span>
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
                             Have a question about our programs or want to discuss a customized learning path? We'd love to hear from you.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
                         {/* Contact Info */}
-                        <div className="lg:col-span-2 space-y-6">
-                            <div className="bg-white p-6 md:p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-5">
-                                <div className="w-14 h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
-                                    <MapPin size={26} />
+                        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+                            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
+                                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-semibold mb-1 text-gray-900">Our Location</h3>
-                                    <p className="text-gray-600 text-[15px] leading-relaxed">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Our Location</h3>
+                                    <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
                                         701 - Runway Heights, Ayodhya Chowk,
                                         150 Ft Ring Road, Rajkot - 360006
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="bg-white p-6 md:p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-5">
-                                <div className="w-14 h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
-                                    <Mail size={26} />
+                            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
+                                    <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-semibold mb-1 text-gray-900">Email Us</h3>
-                                    <p className="text-gray-600 text-[15px] leading-relaxed">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Email Us</h3>
+                                    <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed break-all sm:break-normal">
                                         alphabitskillstudio@gmail.com
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="bg-white p-6 md:p-8 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-5">
-                                <div className="w-14 h-14 flex-shrink-0 bg-[rgba(255,86,34,0.1)] rounded-2xl flex items-center justify-center text-[#FF5622] group-hover:scale-110 transition-transform duration-300">
-                                    <Phone size={26} />
+                            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[rgba(255,86,34,0.1)] rounded-2xl flex items-center justify-center text-[#FF5622] group-hover:scale-110 transition-transform duration-300">
+                                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-semibold mb-1 text-gray-900">Call Us</h3>
-                                    <p className="text-gray-600 text-[15px] leading-relaxed">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Call Us</h3>
+                                    <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
                                         +91 9409207327 <br />
                                         +91 8866549495 <br />
                                         Mon-Fri, 9am-6pm
@@ -246,7 +246,7 @@ export default function ContactFormSection() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="lg:col-span-3 bg-white p-8 md:p-12 rounded-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
+                        <div className="lg:col-span-3 bg-white p-5 sm:p-8 md:p-12 rounded-[24px] sm:rounded-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
                             {status.success && (
                                 <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl flex items-center gap-3 text-sm font-medium">
                                     <CheckCircle2 size={20} className="text-emerald-600 shrink-0" />
@@ -261,10 +261,10 @@ export default function ContactFormSection() {
                                 </div>
                             )}
 
-                            <form onSubmit={handleSubmit} noValidate className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-700">
+                            <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                    <div className="space-y-1.5 sm:space-y-2">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             First Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -274,7 +274,7 @@ export default function ContactFormSection() {
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             placeholder="John"
-                                            className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.firstName && fieldErrors.firstName
+                                            className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.firstName && fieldErrors.firstName
                                                     ? "border-red-500 ring-2 ring-red-100"
                                                     : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                                 }`}
@@ -284,8 +284,8 @@ export default function ContactFormSection() {
                                         )}
                                     </div>
 
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-700">Last Name</label>
+                                    <div className="space-y-1.5 sm:space-y-2">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">Last Name</label>
                                         <input
                                             type="text"
                                             name="lastName"
@@ -293,7 +293,7 @@ export default function ContactFormSection() {
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             placeholder="Doe"
-                                            className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.lastName && fieldErrors.lastName
+                                            className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.lastName && fieldErrors.lastName
                                                     ? "border-red-500 ring-2 ring-red-100"
                                                     : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                                 }`}
@@ -304,9 +304,9 @@ export default function ContactFormSection() {
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-700">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                                    <div className="space-y-1.5 sm:space-y-2">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Email Address <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -316,7 +316,7 @@ export default function ContactFormSection() {
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                             placeholder="john@example.com"
-                                            className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.email && fieldErrors.email
+                                            className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.email && fieldErrors.email
                                                     ? "border-red-500 ring-2 ring-red-100"
                                                     : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                                 }`}
@@ -326,8 +326,8 @@ export default function ContactFormSection() {
                                         )}
                                     </div>
 
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-medium text-gray-700">
+                                    <div className="space-y-1.5 sm:space-y-2">
+                                        <label className="text-xs sm:text-sm font-medium text-gray-700">
                                             Contact Number <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -338,7 +338,7 @@ export default function ContactFormSection() {
                                             onBlur={handleBlur}
                                             maxLength={15}
                                             placeholder="+91 98765 43210"
-                                            className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.contactNumber && fieldErrors.contactNumber
+                                            className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.contactNumber && fieldErrors.contactNumber
                                                     ? "border-red-500 ring-2 ring-red-100"
                                                     : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                                 }`}
@@ -349,8 +349,8 @@ export default function ContactFormSection() {
                                     </div>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">
+                                <div className="space-y-1.5 sm:space-y-2">
+                                    <label className="text-xs sm:text-sm font-medium text-gray-700">
                                         Subject <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -360,7 +360,7 @@ export default function ContactFormSection() {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         placeholder="How can we help?"
-                                        className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.subject && fieldErrors.subject
+                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.subject && fieldErrors.subject
                                                 ? "border-red-500 ring-2 ring-red-100"
                                                 : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                             }`}
@@ -370,8 +370,8 @@ export default function ContactFormSection() {
                                     )}
                                 </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-gray-700">
+                                <div className="space-y-1.5 sm:space-y-2">
+                                    <label className="text-xs sm:text-sm font-medium text-gray-700">
                                         Message <span className="text-red-500">*</span>
                                     </label>
                                     <textarea
@@ -381,7 +381,7 @@ export default function ContactFormSection() {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         placeholder="Your message here (at least 10 characters)..."
-                                        className={`w-full px-5 py-4 rounded-2xl bg-[#F5F5F5] border transition-all outline-none resize-none ${touched.message && fieldErrors.message
+                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none resize-none ${touched.message && fieldErrors.message
                                                 ? "border-red-500 ring-2 ring-red-100"
                                                 : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                             }`}
@@ -394,7 +394,7 @@ export default function ContactFormSection() {
                                 <button
                                     type="submit"
                                     disabled={status.submitting}
-                                    className="w-full bg-[#7143FE] hover:bg-[#5b32d6] disabled:bg-purple-300 text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-[#7143fe]/30 cursor-pointer disabled:cursor-not-allowed"
+                                    className="w-full bg-[#7143FE] hover:bg-[#5b32d6] disabled:bg-purple-300 text-white font-semibold py-3.5 sm:py-4 text-sm sm:text-base rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01] active:scale-95 shadow-lg shadow-[#7143fe]/30 cursor-pointer disabled:cursor-not-allowed"
                                 >
                                     {status.submitting ? (
                                         <>
@@ -402,7 +402,7 @@ export default function ContactFormSection() {
                                         </>
                                     ) : (
                                         <>
-                                            Send Message <Send size={20} />
+                                            Send Message <Send size={18} />
                                         </>
                                     )}
                                 </button>
@@ -413,33 +413,23 @@ export default function ContactFormSection() {
             </section>
 
             {/* Map Section */}
-            <section className="relative w-full h-[500px] md:h-[680px] mb-0 overflow-visible">
-                <div
-                    className="absolute inset-0 w-full bg-gradient-to-t from-[#7143FE] to-[#F5F5F5] z-0 pointer-events-none overflow-hidden"
-                    style={{
-                        clipPath: "ellipse(60% 60% at 50% 15%)"
-                    }}
-                >
-                    <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full -translate-y-1/2" />
-                    <div className="absolute bottom-[50px] right-0 w-[400px] h-[400px] bg-white/30 blur-[100px] rounded-full" />
-                </div>
-
-                <div className="absolute top-[120px] md:top-[225px] left-0 w-full z-10">
-                    <div className="container mx-auto px-4 md:px-6 max-w-[1240px]">
-                        <div className="w-full h-[350px] md:h-[450px] rounded-[24px] overflow-hidden shadow-2xl border border-white/20">
-                            <iframe
-                                src="https://www.google.com/maps?q=22.3227457,70.7681992&hl=es;z=17&output=embed"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </div>
+            <section className="relative w-full py-8 md:py-12 bg-[#F5F5F5] font-cabinet">
+                <div className="container mx-auto px-4 sm:px-6 max-w-[1240px]">
+                    <div className="w-full h-[280px] sm:h-[380px] md:h-[450px] rounded-[20px] sm:rounded-[32px] overflow-hidden shadow-xl border border-gray-200/80">
+                        <iframe
+                            src="https://www.google.com/maps?q=22.3227457,70.7681992&hl=es;z=17&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Alphabit Skill Location"
+                        ></iframe>
                     </div>
                 </div>
             </section>
         </>
     );
 }
+

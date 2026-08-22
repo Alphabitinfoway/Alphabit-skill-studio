@@ -5,12 +5,12 @@
 
 export const heroSectionData = {
     titlePrefix: "Marketing",
-    titleSuffix: "Manager",
+    titleSuffix: "Manager course",
     highlights: [
-    "Direct Corporate Referrals",
-    "Live Budget & Campaign Execution",
-    "100% Placement Support"
-],
+        "Direct Corporate Referrals",
+        "Live Budget & Campaign Execution",
+        "100% Placement Support"
+    ],
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
@@ -23,19 +23,19 @@ export const projectStatsSectionData = {
     titleBold: "Industry Work",
     purpleImage: "/purplesubtract.webp",
     stats: [
-    {
-        "label": "300+ Career Transitions"
-    },
-    {
-        "label": "Live Industry Budget Budgets"
-    },
-    {
-        "label": "300+ Hiring Partners"
-    },
-    {
-        "label": "100% Placement Assistance"
-    }
-],
+        {
+            "label": "300+ Career Transitions"
+        },
+        {
+            "label": "Live Industry Budget Budgets"
+        },
+        {
+            "label": "300+ Hiring Partners"
+        },
+        {
+            "label": "100% Placement Assistance"
+        }
+    ],
     durationVal: "3-4 months",
     durationLabel: "Course Duration",
     hoursVal: "30+ hrs",
@@ -47,15 +47,15 @@ export const courseFeaturesData = {
     titleItalic: "Our Modern",
     titleSuffix: "Training Course",
     items: [
-    "Learn key strategies, budgeting, and planning",
-    "Hands-on execution of active campaigns",
-    "Client management & performance tracking dashboard",
-    "Small batch sizes for personalized guidance",
-    "Weekly mentorship reviews by working professionals",
-    "Resume, LinkedIn, and mock interview prep",
-    "Govt. recognised/Industry-ready certification",
-    "Flexible No-Cost EMI fee options"
-],
+        "Learn key strategies, budgeting, and planning",
+        "Hands-on execution of active campaigns",
+        "Client management & performance tracking dashboard",
+        "Small batch sizes for personalized guidance",
+        "Weekly mentorship reviews by working professionals",
+        "Resume, LinkedIn, and mock interview prep",
+        "Govt. recognised/Industry-ready certification",
+        "Flexible No-Cost EMI fee options"
+    ],
 };
 
 export const mernModules = [
@@ -140,19 +140,19 @@ export const earningsSectionData = {
     titleItalic: "Earn",
     titleSuffix: "After Training",
     jobs: [
-    {
-        "title": "Junior Marketing Manager Associate",
-        "location": "Gujarat / Hybrid",
-        "salary": "₹2.5 - ₹4.5 LPA",
-        "badge": "Entry Level",
-    },
-    {
-        "title": "Senior Marketing Manager Manager",
-        "location": "PAN India / Remote",
-        "salary": "₹5 - ₹10 LPA",
-        "badge": "Experienced",
-    }
-],
+        {
+            "title": "Junior Marketing Manager Associate",
+            "location": "Gujarat / Hybrid",
+            "salary": "₹2.5 - ₹4.5 LPA",
+            "badge": "Entry Level",
+        },
+        {
+            "title": "Senior Marketing Manager Manager",
+            "location": "PAN India / Remote",
+            "salary": "₹5 - ₹10 LPA",
+            "badge": "Experienced",
+        }
+    ],
 };
 
 export const careerOpportunitiesData = {
@@ -161,11 +161,11 @@ export const careerOpportunitiesData = {
     mernTitle: "Core Career Track",
     javaTitle: "",
     mernRoles: [
-    "Junior Marketing Manager Associate",
-    "Marketing Manager Lead",
-    "Strategy Planner",
-    "Marketing Manager Coordinator"
-],
+        "Junior Marketing Manager Associate",
+        "Marketing Manager Lead",
+        "Strategy Planner",
+        "Marketing Manager Coordinator"
+    ],
     javaRoles: [],
 };
 
@@ -174,18 +174,18 @@ export const industriesSectionData = {
     titleItalic: "in India",
     description: "The skills you gain are highly sought after across multiple high-growth industries.",
     industries: [
-    {
-        "title": "IT Services",
+        {
+            "title": "IT Services",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/itservices.webp"
-    },
-    {
-        "title": "Fintech",
+        },
+        {
+            "title": "Fintech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/fintech.webp"
-    },
-    {
-        "title": "Retail Tech",
+        },
+        {
+            "title": "Retail Tech",
             icon: "/skill/ITSkills/FullStackDevelopment/industriessection/e-commerce.webp"
-    }
+        }
     ],
 };
 

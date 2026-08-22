@@ -12,16 +12,16 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="w-full bg-[#F5F5F5] pt-16 md:pt-16 pb-16 md:pb-24 font-cabinet">
+        <section className="w-full bg-[#F5F5F5] py-10 sm:py-16 md:py-24 font-cabinet">
             <div className="max-w-[900px] mx-auto px-4 sm:px-6">
 
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-[#171717] font-bold tracking-tight" style={{ fontSize: "clamp(24px, 3vw, 32px)" }}>
+                <div className="text-center mb-8 sm:mb-12">
+                    <h2 className="text-[#171717] font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
                         Contact & Enrollment{" "}
                         <span
                             className="text-[#FF5622] italic font-medium"
-                            style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.6em" }}
+                            style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.4em" }}
                         >
                             Questions
                         </span>
@@ -29,19 +29,19 @@ export default function FAQSection() {
                 </div>
 
                 {/* Accordion List */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4">
                     {contactFAQData.map((faq) => {
                         const isOpen = openId === faq.id;
                         return (
                             <div
                                 key={faq.id}
-                                className="w-full border border-gray-400/80 rounded-[20px] overflow-hidden bg-white/50 backdrop-blur-sm"
+                                className="w-full border border-gray-300/80 rounded-[16px] sm:rounded-[20px] overflow-hidden bg-white/70 backdrop-blur-sm shadow-sm"
                             >
                                 <button
                                     onClick={() => toggleAccordion(faq.id)}
-                                    className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none"
+                                    className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left focus:outline-none gap-3"
                                 >
-                                    <span className="text-[#171717] font-semibold" style={{ fontSize: "clamp(15px, 1.2vw, 16px)" }}>
+                                    <span className="text-[#171717] font-semibold text-sm sm:text-base leading-snug">
                                         {faq.question}
                                     </span>
                                     <div
@@ -63,7 +63,7 @@ export default function FAQSection() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                                         >
-                                            <div className="px-6 pb-6 text-[#555555] leading-[1.65]" style={{ fontSize: "clamp(14px, 1vw, 15px)" }}>
+                                            <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-[#555555] text-xs sm:text-sm leading-[1.65]">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>
@@ -78,3 +78,4 @@ export default function FAQSection() {
         </section>
     );
 }
+
