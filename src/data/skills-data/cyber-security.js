@@ -75,6 +75,7 @@ export const socDefensiveModules = [
     {
         num: "01",
         title: "Networking & Security Fundamentals for Defenders",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639424/module-1_oytkzf.webp",
         description: "Learn how networks actually work — protocols, IP addressing, and traffic flow — framed around what a defender needs to spot when something looks wrong.",
         tags: [
             "Networking Basics",
@@ -89,6 +90,7 @@ export const socDefensiveModules = [
     {
         num: "02",
         title: "Threats, Vulnerabilities & Risk",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639423/module-2_vyyarn.webp",
         description: "Understand how attacks actually happen — malware types, common vulnerabilities, and how organizations assess and prioritize risk before it becomes a breach.",
         tags: [
             "Malware & Attack Types",
@@ -103,6 +105,7 @@ export const socDefensiveModules = [
     {
         num: "03",
         title: "SOC Operations & SIEM Tools",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639420/module-3_tqo5pb.webp",
         description: "Learn how a real Security Operations Center monitors an organization — using SIEM tools to detect, investigate, and triage alerts the way analysts do daily.",
         tags: [
             "SIEM Fundamentals",
@@ -117,6 +120,7 @@ export const socDefensiveModules = [
     {
         num: "04",
         title: "Incident Response & Threat Hunting",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639422/module-4_arcnkw.webp",
         description: "Move from detecting an alert to responding to a real incident — containment, investigation, and the structured process security teams follow under pressure.",
         tags: [
             "Incident Response Process",
@@ -131,6 +135,7 @@ export const socDefensiveModules = [
     {
         num: "05",
         title: "Cloud & Enterprise Security Basics",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639423/module-5_robe3j.webp",
         description: "Get introduced to securing cloud environments and enterprise systems — the direction most modern SOC and defensive roles are moving toward.",
         tags: [
             "Cloud Security Basics",
@@ -145,6 +150,7 @@ export const socDefensiveModules = [
     {
         num: "06",
         title: "SOC Capstone Project, Internship & Portfolio",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639423/module-6_indtmo.webp",
         description: "Apply everything into a full SOC capstone project, complete a guided internship, and leave with real lab experience and a portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",
@@ -163,6 +169,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "01",
         title: "Ethical Hacking Fundamentals & Legal Boundaries",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639434/module-1_dllzzf.webp",
         description: "Understand the mindset and legal boundaries of ethical hacking — how authorized testing works, and the methodology every penetration test follows, framed entirely around offense, not defense.",
         tags: [
             "Ethical Hacking Principles",
@@ -177,6 +184,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "02",
         title: "Vulnerability Assessment & Scanning",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639429/module-2_nq6ebo.webp",
         description: "Learn to systematically find weaknesses in systems and applications — the same scanning and assessment process used before any real penetration test begins.",
         tags: [
             "Vulnerability Scanning",
@@ -191,6 +199,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "03",
         title: "Exploitation & Web Application Testing",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639430/module-3_ykmw5w.webp",
         description: "Move from finding vulnerabilities to safely exploiting them in a controlled lab — the hands-on skill that separates a certified pentester from a theory-only student.",
         tags: [
             "Exploitation Basics",
@@ -205,6 +214,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "04",
         title: "Network & System Penetration Testing",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639431/module-4_ukd073.webp",
         description: "Learn to test internal networks and systems the way a real attacker would — going beyond web applications into infrastructure-level exploitation.",
         tags: [
             "Network Exploitation Basics",
@@ -219,6 +229,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "05",
         title: "Reporting & Client Communication",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787639433/module-5_p1oedl.webp",
         description: "Learn the part most courses skip — writing a penetration test report that a client or employer can actually act on, clearly and professionally.",
         tags: [
             "Vulnerability Reporting",
@@ -233,6 +244,7 @@ export const ethicalHackingPentestModules = [
     {
         num: "06",
         title: "Penetration Testing Capstone, Internship & Portfolio",
+          image:"",
         description: "Apply everything into a full penetration testing capstone project, complete a guided internship, and leave with a real test report and a portfolio ready for interviews.",
         tags: [
             "Capstone Project Build",

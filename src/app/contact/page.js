@@ -1,18 +1,19 @@
-import HeroSection from "@/components/HeroSection";
+import ContactHeroSection from "@/components/contact/ContactHeroSection";
 import ContactFormSection from "@/components/contact/ContactFormSection";
 import FAQSection from "@/components/contact/FAQSection";
 
 export const metadata = {
-  title: "Contact Us | Alphabit Skill",
-  description: "Get in touch with Alphabit Skill. We'd love to hear from you.",
+  title: "Contact Alphabit Skill | Industrial Internship & Training Company, Rajkot",
+  description: "Contact Alphabit Skill in Rajkot for IT, AI, and design course enrollment. Call, email, or visit our Ayodhya Chowk campus — we reply within 24 hours.",
 };
 
 export default function ContactUs() {
   return (
     <>
-      <HeroSection />
+      <ContactHeroSection />
       <ContactFormSection />
       <FAQSection />
     </>
   );
 }
+

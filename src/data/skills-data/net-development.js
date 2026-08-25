@@ -76,6 +76,7 @@ export const netBackendModules = [
     {
         num: "01",
         title: "C# Fundamentals for Backend Development",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636796/module-1_bauwa5.webp",
         description: "Core syntax, environment setup, and workflow with a backend-first lens — the foundation every server-side .NET role builds on, taught the way you'll actually use it, not as isolated syntax drills.",
         tags: [
             "Core Syntax",
@@ -91,6 +92,7 @@ export const netBackendModules = [
     {
         num: "02",
         title: "OOP, Collections & Data Structures for APIs",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636800/module-2_wn0sol.webp",
         description: "C#'s object-oriented principles and collections, covered in the depth every backend interview and real API codebase actually relies on — not the surface-level version most courses stop at.",
         tags: [
             "OOP Principles",
@@ -106,6 +108,7 @@ export const netBackendModules = [
     {
         num: "03",
         title: "ASP.NET Core & REST API Development",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636802/module-3_d8yetj.webp",
         description: "Build backend web APIs using ASP.NET Core — the framework most enterprise and service-based companies in India hire for, focused purely on server-side logic.",
         tags: [
             "ASP.NET Core Setup",
@@ -121,6 +124,7 @@ export const netBackendModules = [
     {
         num: "04",
         title: "Entity Framework & SQL Server Database Design",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636809/module-4_jtybnh.webp",
         description: "Learn ORM-based database management with Entity Framework, plus relational database design using SQL Server — standard practice at enterprise IT firms.",
         tags: [
             "Entity Framework Core",
@@ -136,6 +140,7 @@ export const netBackendModules = [
     {
         num: "05",
         title: "API Authentication & Enterprise Security",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636813/module-5_t3ms5d.webp",
         description: "Learn enterprise-grade security practices — ASP.NET Identity, JWT authentication, and role-based access control used to secure backend systems across large organizations.",
         tags: [
             "ASP.NET Identity",
@@ -151,6 +156,7 @@ export const netBackendModules = [
     {
         num: "06",
         title: "Microservices Architecture & Cloud Deployment",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636847/module-6_paqvdw.webp",
         description: "Get introduced to microservices architecture and Microsoft Azure fundamentals — the direction most large-scale enterprise backend systems are moving toward.",
         tags: [
             "Microservices Fundamentals",
@@ -166,6 +172,7 @@ export const netBackendModules = [
     {
         num: "07",
         title: "Backend Capstone Project, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787636822/module-7_ekj6ay.webp",
         description: "Apply everything into a full backend/API capstone project, complete a guided internship, and build a portfolio of deployed, documented APIs ready for interviews.",
         tags: [
             "Git & GitHub",
@@ -184,6 +191,7 @@ export const netFullStackModules = [
     {
         num: "01",
         title: "C# Fundamentals for Full Stack Development",
+      image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638100/module-1_ioypif.webp",
         description: "Master C#'s core syntax, environment setup, and workflow with an eye toward building complete applications — not just APIs, but the systems that power a real frontend too.",
         tags: [
             "Core Syntax",
@@ -199,6 +207,7 @@ export const netFullStackModules = [
     {
         num: "02",
         title: "OOP & Application Architecture Fundamentals",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638101/module-2_rijegi.webp",
         description: "Learn C#'s object-oriented principles and how they translate into structuring a full application — from backend services to how data flows to your frontend.",
         tags: [
             "OOP Principles",
@@ -214,6 +223,7 @@ export const netFullStackModules = [
     {
         num: "03",
         title: "ASP.NET Core APIs for Frontend Consumption",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638101/module-3_vnvj6a.webp",
         description: "Build the API layer your frontend will run on — using ASP.NET Core to create endpoints designed from the start to be consumed by a Blazor or Angular interface, not just tested in isolation.",
         tags: [
             "ASP.NET Core Setup",
@@ -229,6 +239,7 @@ export const netFullStackModules = [
     {
         num: "04",
         title: "Entity Framework & Full Application Data Modeling",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638101/module-4_kxsmjg.webp",
         description: "Learn ORM-based database management with Entity Framework, designing your data models to serve both backend logic and frontend display needs.",
         tags: [
             "Entity Framework Core",
@@ -244,6 +255,7 @@ export const netFullStackModules = [
     {
         num: "05",
         title: "Frontend Integration with Blazor or Angular",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638103/module-5_ndcwwe.webp",
         description: "Connect your .NET backend to a modern frontend using Blazor or Angular, so you can build complete end-to-end enterprise applications rather than just APIs.",
         tags: [
             "Frontend-Backend Integration",
@@ -259,6 +271,7 @@ export const netFullStackModules = [
     {
         num: "06",
         title: "End-to-End Authentication & Security",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638113/module6_yupjhe.webp",
         description: "Learn enterprise-grade security practices across your full application — ASP.NET Identity, JWT authentication, and role-based access control that protects both backend and frontend layers.",
         tags: [
             "ASP.NET Identity",
@@ -274,6 +287,7 @@ export const netFullStackModules = [
     {
         num: "07",
         title: "Microservices, Cloud & Scalable Architecture",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638113/module-7_zi8kbh.webp",
         description: "Get introduced to microservices architecture and Microsoft Azure fundamentals as they apply to full end-to-end applications, not just backend services.",
         tags: [
             "Microservices Fundamentals",
@@ -289,6 +303,7 @@ export const netFullStackModules = [
     {
         num: "08",
         title: "Full Stack Capstone Project, Internship & Portfolio",
+              image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787638112/module-8_l0ancc.webp",
         description: "Apply everything into a full end-to-end enterprise application capstone project, complete a guided internship, and build a portfolio showcasing complete applications, not just APIs.",
         tags: [
             "Git & GitHub",

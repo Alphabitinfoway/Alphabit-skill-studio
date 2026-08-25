@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { API_BASE_URL } from "@/config/api";
 
 export default function ContactFormSection() {
@@ -10,7 +10,7 @@ export default function ContactFormSection() {
         lastName: "",
         email: "",
         contactNumber: "",
-        subject: "",
+        preferredCourse: "",
         message: ""
     });
 
@@ -59,11 +59,9 @@ export default function ContactFormSection() {
                     error = "Contact number contains invalid characters.";
                 }
                 break;
-            case "subject":
+            case "preferredCourse":
                 if (!val) {
-                    error = "Subject is required.";
-                } else if (val.length < 3) {
-                    error = "Subject must be at least 3 characters.";
+                    error = "Please select your preferred course.";
                 }
                 break;
             case "message":
@@ -128,7 +126,7 @@ export default function ContactFormSection() {
             lastName: true,
             email: true,
             contactNumber: true,
-            subject: true,
+            preferredCourse: true,
             message: true
         });
 
@@ -145,12 +143,17 @@ export default function ContactFormSection() {
         setStatus({ submitting: true, success: null, error: null });
 
         try {
+            const payload = {
+                ...formData,
+                subject: formData.preferredCourse || "Course Inquiry"
+            };
+
             const response = await fetch(`${API_BASE_URL}/api/contacts`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(payload)
             });
 
             const data = await response.json();
@@ -174,7 +177,7 @@ export default function ContactFormSection() {
                 lastName: "",
                 email: "",
                 contactNumber: "",
-                subject: "",
+                preferredCourse: "",
                 message: ""
             });
             setFieldErrors({});
@@ -198,7 +201,7 @@ export default function ContactFormSection() {
                             Get in <span className="text-[#FF5622] italic font-pp">Touch</span>
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
-                            Have a question about our programs or want to discuss a customized learning path? We'd love to hear from you.
+                            Have a question about our programs, fees, or a custom learning path for your team? We're here to help — reach us any of the ways below, or drop your details in the form and we'll get back to you within a day.
                         </p>
                     </div>
 
@@ -212,8 +215,7 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Our Location</h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
-                                        701 - Runway Heights, Ayodhya Chowk,
-                                        150 Ft Ring Road, Rajkot - 360006
+                                        701, Runway Heights, Ayodhya Chowk, 150 Ft Ring Road, Rajkot – 360006, Gujarat
                                     </p>
                                 </div>
                             </div>
@@ -225,7 +227,9 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Email Us</h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed break-all sm:break-normal">
-                                        alphabitskillstudio@gmail.com
+                                        <a href="mailto:alphabitskillstudio@gmail.com" className="hover:underline transition-colors">
+                                            alphabitskillstudio@gmail.com
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -237,9 +241,13 @@ export default function ContactFormSection() {
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Call Us</h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
-                                        +91 9409207327 <br />
-                                        +91 8866549495 <br />
-                                        Mon-Fri, 9am-6pm
+                                        <a href="tel:+919409207327" className="hover:underline transition-colors block">
+                                            +91 94092 07327
+                                        </a>
+                                        <a href="tel:+918866549495" className="hover:underline transition-colors block">
+                                            +91 88665 49495
+                                        </a>
+                                        <span className="text-gray-500 mt-1 block">Mon–Fri, 9 AM – 6 PM</span>
                                     </p>
                                 </div>
                             </div>
@@ -351,22 +359,32 @@ export default function ContactFormSection() {
 
                                 <div className="space-y-1.5 sm:space-y-2">
                                     <label className="text-xs sm:text-sm font-medium text-gray-700">
-                                        Subject <span className="text-red-500">*</span>
+                                        Preferred Course <span className="text-red-500">*</span>
                                     </label>
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        value={formData.subject}
+                                    <select
+                                        name="preferredCourse"
+                                        value={formData.preferredCourse}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        placeholder="How can we help?"
-                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.subject && fieldErrors.subject
+                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${formData.preferredCourse ? "text-gray-900" : "text-gray-500"
+                                            } ${touched.preferredCourse && fieldErrors.preferredCourse
                                                 ? "border-red-500 ring-2 ring-red-100"
                                                 : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                             }`}
-                                    />
-                                    {touched.subject && fieldErrors.subject && (
-                                        <p className="text-xs text-red-500 font-medium pl-1">{fieldErrors.subject}</p>
+                                    >
+                                        <option value="" disabled>
+                                            Select Preferred Course
+                                        </option>
+                                        <option value="Full Stack Development">Full Stack Development</option>
+                                        <option value="AI & Data Science">AI & Data Science</option>
+                                        <option value="UI/UX & Graphic Design">UI/UX & Graphic Design</option>
+                                        <option value="Cyber Security">Cyber Security</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Not sure yet">Not sure yet</option>
+                                    </select>
+                                    {touched.preferredCourse && fieldErrors.preferredCourse && (
+                                        <p className="text-xs text-red-500 font-medium pl-1">{fieldErrors.preferredCourse}</p>
                                     )}
                                 </div>
 
@@ -432,4 +450,3 @@ export default function ContactFormSection() {
         </>
     );
 }
-
