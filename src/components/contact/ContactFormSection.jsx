@@ -10,7 +10,7 @@ export default function ContactFormSection() {
         lastName: "",
         email: "",
         contactNumber: "",
-        preferredCourse: "",
+        subject: "",
         message: ""
     });
 
@@ -59,9 +59,11 @@ export default function ContactFormSection() {
                     error = "Contact number contains invalid characters.";
                 }
                 break;
-            case "preferredCourse":
+            case "subject":
                 if (!val) {
-                    error = "Please select your preferred course.";
+                    error = "Subject is required.";
+                } else if (val.length < 3) {
+                    error = "Subject must be at least 3 characters.";
                 }
                 break;
             case "message":
@@ -126,7 +128,7 @@ export default function ContactFormSection() {
             lastName: true,
             email: true,
             contactNumber: true,
-            preferredCourse: true,
+            subject: true,
             message: true
         });
 
@@ -143,17 +145,12 @@ export default function ContactFormSection() {
         setStatus({ submitting: true, success: null, error: null });
 
         try {
-            const payload = {
-                ...formData,
-                subject: formData.preferredCourse || "Course Inquiry"
-            };
-
             const response = await fetch(`${API_BASE_URL}/api/contacts`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(formData)
             });
 
             const data = await response.json();
@@ -177,7 +174,7 @@ export default function ContactFormSection() {
                 lastName: "",
                 email: "",
                 contactNumber: "",
-                preferredCourse: "",
+                subject: "",
                 message: ""
             });
             setFieldErrors({});
@@ -220,7 +217,7 @@ export default function ContactFormSection() {
                                 </div>
                             </div>
 
-                            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
+                            <div className="bg-[#F5F5F5] p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
                                     <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
@@ -359,32 +356,22 @@ export default function ContactFormSection() {
 
                                 <div className="space-y-1.5 sm:space-y-2">
                                     <label className="text-xs sm:text-sm font-medium text-gray-700">
-                                        Preferred Course <span className="text-red-500">*</span>
+                                        Subject <span className="text-red-500">*</span>
                                     </label>
-                                    <select
-                                        name="preferredCourse"
-                                        value={formData.preferredCourse}
+                                    <input
+                                        type="text"
+                                        name="subject"
+                                        value={formData.subject}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${formData.preferredCourse ? "text-gray-900" : "text-gray-500"
-                                            } ${touched.preferredCourse && fieldErrors.preferredCourse
+                                        placeholder="How can we help?"
+                                        className={`w-full px-4 py-3 sm:px-5 sm:py-4 text-sm rounded-xl sm:rounded-2xl bg-[#F5F5F5] border transition-all outline-none ${touched.subject && fieldErrors.subject
                                                 ? "border-red-500 ring-2 ring-red-100"
                                                 : "border-transparent focus:ring-2 focus:ring-[#7143FE]"
                                             }`}
-                                    >
-                                        <option value="" disabled>
-                                            Select Preferred Course
-                                        </option>
-                                        <option value="Full Stack Development">Full Stack Development</option>
-                                        <option value="AI & Data Science">AI & Data Science</option>
-                                        <option value="UI/UX & Graphic Design">UI/UX & Graphic Design</option>
-                                        <option value="Cyber Security">Cyber Security</option>
-                                        <option value="Digital Marketing">Digital Marketing</option>
-                                        <option value="Mobile App Development">Mobile App Development</option>
-                                        <option value="Not sure yet">Not sure yet</option>
-                                    </select>
-                                    {touched.preferredCourse && fieldErrors.preferredCourse && (
-                                        <p className="text-xs text-red-500 font-medium pl-1">{fieldErrors.preferredCourse}</p>
+                                    />
+                                    {touched.subject && fieldErrors.subject && (
+                                        <p className="text-xs text-red-500 font-medium pl-1">{fieldErrors.subject}</p>
                                     )}
                                 </div>
 
