@@ -34,10 +34,10 @@ export default function RootLayout({ children }) {
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#F5F5F5] font-sans selection:bg-indigo-500/30 flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#F5F5F5] font-sans selection:bg-indigo-500/30 flex flex-col max-w-full overflow-x-hidden relative`}
       >
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 w-full max-w-full overflow-x-hidden">
           {children}
         </main>
         <Footer />

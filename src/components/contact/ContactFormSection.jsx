@@ -210,19 +210,23 @@ export default function ContactFormSection() {
                                     <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Our Location</h3>
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">
+                                        Our <span className="font-pp italic text-[#7143FE]">Location</span>
+                                    </h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
                                         701, Runway Heights, Ayodhya Chowk, 150 Ft Ring Road, Rajkot – 360006, Gujarat
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="bg-[#F5F5F5] p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
+                            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
                                     <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Email Us</h3>
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">
+                                        Email <span className="font-pp italic text-[#7143FE]">Us</span>
+                                    </h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed break-all sm:break-normal">
                                         <a href="mailto:alphabitskillstudio@gmail.com" className="hover:underline transition-colors">
                                             alphabitskillstudio@gmail.com
@@ -232,11 +236,13 @@ export default function ContactFormSection() {
                             </div>
 
                             <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[24px] sm:rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(113,67,254,0.1)] transition-all duration-300 border border-gray-100 group flex items-start gap-4 sm:gap-5">
-                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[rgba(255,86,34,0.1)] rounded-2xl flex items-center justify-center text-[#FF5622] group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 bg-[#F2EEFF] rounded-2xl flex items-center justify-center text-[#7143FE] group-hover:scale-110 transition-transform duration-300">
                                     <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">Call Us</h3>
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-1 text-gray-900">
+                                        Call <span className="font-pp italic text-[#7143FE]">Us</span>
+                                    </h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
                                         <a href="tel:+919409207327" className="hover:underline transition-colors block">
                                             +91 94092 07327

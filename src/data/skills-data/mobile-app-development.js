@@ -90,6 +90,7 @@ export const flutterModules = [
     {
         num: "01",
         title: "Programming Fundamentals & Dart Basics",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725232/module-2_bambvv.webp",
         description: "Start with programming logic, then move into Dart — the language Flutter runs on — covering variables, functions, OOP, and asynchronous programming from the ground up.",
         tags: [
             "Dart Syntax",
@@ -105,6 +106,7 @@ export const flutterModules = [
     {
         num: "02",
         title: "Flutter Fundamentals & Widget Architecture",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725235/module-3_fsekww.webp",
         description: "Learn how Flutter apps are actually structured — everything in Flutter is a widget, and this module covers how to think in widgets to build real interfaces.",
         tags: [
             "Flutter Setup",
@@ -120,6 +122,7 @@ export const flutterModules = [
     {
         num: "03",
         title: "Layouts, Navigation & UI Design",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787726067/module-3_bubctb.webp",
         description: "Build responsive, good-looking interfaces that work identically on Android and iOS — layouts, navigation between screens, and Flutter's theming system.",
         tags: [
             "Rows, Columns & Layouts",
@@ -135,6 +138,7 @@ export const flutterModules = [
     {
         num: "04",
         title: "State Management with Provider/Riverpod",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725236/module-4_vbzjak.webp",
         description: "Learn to manage app state properly at scale — the single skill that separates a Flutter developer who can build a demo from one who can build a real, maintainable app.",
         tags: [
             "Provider / Riverpod",
@@ -149,6 +153,7 @@ export const flutterModules = [
     {
         num: "05",
         title: "REST API Integration",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725237/module-5_l3ye5l.webp",
         description: "Connect your Flutter app to real backend services — fetching, sending, and handling data from live APIs across both platforms from a single codebase.",
         tags: [
             "HTTP Package",
@@ -164,6 +169,7 @@ export const flutterModules = [
     {
         num: "06",
         title: "Firebase Integration for Flutter",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725233/module-6_mf7ldx.webp",
         description: "Learn to add authentication, real-time data, and push notifications to your app using Firebase — the backend-as-a-service most Flutter apps rely on early on.",
         tags: [
             "Firebase Authentication",
@@ -179,6 +185,7 @@ export const flutterModules = [
     {
         num: "07",
         title: "Git, GitHub & App Store Deployment",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725233/module-7_ywlgia.webp",
         description: "Learn team version control workflows, and take your app through both the Google Play Store and Apple App Store publishing processes — the real advantage of building cross-platform.",
         tags: [
             "Git & GitHub",
@@ -193,6 +200,7 @@ export const flutterModules = [
     {
         num: "08",
         title: "Capstone Projects, Internship & Portfolio",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787725238/module-8_v35f9q.webp",
         description: "Apply everything into 2–3 full-scale Flutter capstone projects, complete a guided internship, and walk away with published apps and a GitHub portfolio ready to show recruiters.",
         tags: [
             "Capstone Project Build",
@@ -210,6 +218,7 @@ export const androidModules = [
     {
         num: "01",
         title: "Programming Fundamentals & Kotlin Basics",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729532/module-1_grqgbk.webp",
         description: "Start with programming logic, then move into Kotlin — the official language of Android development — covering variables, functions, OOP, coroutines, and null safety from the ground up.",
         tags: [
             "Kotlin",
@@ -225,6 +234,7 @@ export const androidModules = [
     {
         num: "02",
         title: "Android Studio & App Architecture",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729533/module-2_hu97gs.webp",
         description: "Learn to navigate Android Studio properly and understand how a real Android app is structured — activities, fragments, and the architecture patterns production apps actually follow.",
         tags: [
             "Android Studio Setup",
@@ -239,6 +249,7 @@ export const androidModules = [
     {
         num: "03",
         title: "Jetpack Compose UI",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729534/module-3_h7uwyp.webp",
         description: "Build modern Android interfaces using Jetpack Compose — Google's current recommended toolkit, replacing the older XML-based layout system most tutorials still teach.",
         tags: [
             "Composable Functions",
@@ -254,6 +265,7 @@ export const androidModules = [
     {
         num: "04",
         title: "ViewModel, LiveData & Room Database",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729534/module-4_jfl5qk.webp",
         description: "Learn to manage app state properly and store data locally — the pattern that keeps an app working smoothly even when the screen rotates or the user navigates away and back.",
         tags: [
             "ViewModel",
@@ -269,6 +281,7 @@ export const androidModules = [
     {
         num: "05",
         title: "Retrofit & REST API Integration",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729535/module-5_nk9cpu.webp",
         description: "Connect your Android app to real backend services — fetching, sending, and handling data from live APIs the way production apps do.",
         tags: [
             "Retrofit Setup",
@@ -284,6 +297,7 @@ export const androidModules = [
     {
         num: "06",
         title: "Firebase Integration for Android",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729536/module-6_jdry6j.webp",
         description: "Learn to add authentication, real-time data, and push notifications to your app using Firebase — the backend-as-a-service most Android apps rely on early on.",
         tags: [
             "Firebase Authentication",
@@ -298,6 +312,7 @@ export const androidModules = [
     {
         num: "07",
         title: "Git, GitHub & Play Store Deployment",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729537/module-7_sy9vnu.webp",
         description: "Learn team version control workflows, and take your app through the actual Google Play Store publishing process — not just a local build.",
         tags: [
             "Git & GitHub",
@@ -312,6 +327,7 @@ export const androidModules = [
     {
         num: "08",
         title: "Capstone Projects, Internship & Portfolio",
+          image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787729539/moodule-8_w1wsng.webp",
         description: "Apply everything into 2–3 full-scale native Android capstone projects, complete a guided internship, and walk away with a Play Store listing and GitHub portfolio ready to show recruiters.",
         tags: [
             "Capstone Project Build",
@@ -455,7 +471,7 @@ export const earningsSectionData = {
         {
             title: "Mobile Developer (2–3 yrs exp)",
             location: "PAN India / Remote",
-            salary: "₹7 – ₹12 LPA",
+            salary: "₹7 – ₹12 LPA", 
             badge: "Mid-Level",
             image: "/skill/ITSkills/moblieappdevelopment.webp",
         },

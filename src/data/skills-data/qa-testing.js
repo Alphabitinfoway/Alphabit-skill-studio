@@ -74,6 +74,7 @@ export const manualFunctionalModules = [
     {
         num: "01",
         title: "Software Testing Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739599/module-1_batilq.webp",
         description: "Learn the core principles of software testing — the software development lifecycle, testing levels, and the mindset every QA tester needs before touching a real application.",
         tags: [
             "SDLC & STLC",
@@ -88,6 +89,7 @@ export const manualFunctionalModules = [
     {
         num: "02",
         title: "Test Case Design & Documentation",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-2_twkloj.webp",
         description: "Learn to write clear, structured test cases and test plans — the core deliverable every QA tester produces, whether working solo or on a large team.",
         tags: [
             "Test Case Design Techniques",
@@ -102,6 +104,7 @@ export const manualFunctionalModules = [
     {
         num: "03",
         title: "Functional & Regression Testing",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-3_f2ghry.webp",
         description: "Learn to systematically test application features and verify that new changes haven't broken existing functionality — the daily work of a manual QA tester.",
         tags: [
             "Functional Testing",
@@ -116,6 +119,7 @@ export const manualFunctionalModules = [
     {
         num: "04",
         title: "API & Database Testing Basics",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-4_qsbwnj.webp",
         description: "Learn to test beyond the user interface — verifying API responses and checking database records directly, a skill that separates a strong manual tester from a UI-only tester.",
         tags: [
             "API Testing Basics",
@@ -130,6 +134,7 @@ export const manualFunctionalModules = [
     {
         num: "05",
         title: "Bug Reporting & QA Tools",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739597/module-5_r4esaz.webp",
         description: "Learn to write bug reports developers can actually act on, and manage your testing workflow using tools real QA teams rely on daily.",
         tags: [
             "Bug Reporting Standards",
@@ -144,6 +149,7 @@ export const manualFunctionalModules = [
     {
         num: "06",
         title: "Manual Testing Capstone, Internship & Portfolio",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739597/module-6_xaqucx.webp",
         description: "Apply everything into a full manual testing capstone project on a real application, complete a guided internship, and leave with a documented test portfolio ready for interviews.",
         tags: [
             "Capstone Test Cycle",
@@ -162,6 +168,7 @@ export const automationTestingModules = [
     {
         num: "01",
         title: "QA & Programming Fundamentals for Automation",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739599/module-1_batilq.webp",
         description: "Learn core testing principles alongside the basic programming concepts every automation tester needs — the foundation for writing your first test scripts.",
         tags: [
             "SDLC & STLC",
@@ -177,6 +184,7 @@ export const automationTestingModules = [
     {
         num: "02",
         title: "Selenium WebDriver Fundamentals",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-2_twkloj.webp",
         description: "Learn to automate browser interactions using Selenium WebDriver — the industry-standard tool for web application test automation.",
         tags: [
             "Selenium WebDriver Basics",
@@ -192,6 +200,7 @@ export const automationTestingModules = [
     {
         num: "03",
         title: "Test Automation Frameworks",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-3_f2ghry.webp",
         description: "Learn to structure automation projects the way real QA teams do — using frameworks that make test scripts reusable, maintainable, and scalable.",
         tags: [
             "TestNG / JUnit",
@@ -206,6 +215,7 @@ export const automationTestingModules = [
     {
         num: "04",
         title: "API Automation Testing",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739598/module-4_qsbwnj.webp",
         description: "Learn to automate API testing — verifying backend responses and data without needing a browser, a core skill for modern automation roles.",
         tags: [
             "REST Assured Basics",
@@ -220,6 +230,7 @@ export const automationTestingModules = [
     {
         num: "05",
         title: "CI/CD Integration & Reporting",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739597/module-5_r4esaz.webp",
         description: "Learn to integrate your automated tests into a CI/CD pipeline so tests run automatically on every code change — the workflow real development teams expect.",
         tags: [
             "CI/CD Basics",
@@ -234,6 +245,7 @@ export const automationTestingModules = [
     {
         num: "06",
         title: "Automation Capstone, Internship & Portfolio",
+           image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1787739597/module-6_xaqucx.webp    ",
         description: "Apply everything into a full automation framework capstone project, complete a guided internship, and leave with a working automation suite and GitHub portfolio ready for interviews.",
         tags: [
             "Capstone Automation Framework Build",

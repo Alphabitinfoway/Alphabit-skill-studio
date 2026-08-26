@@ -90,7 +90,7 @@ export const uiUxModules = [
     {
         num: "01",
         title: "Design Thinking & Visual Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721086/module-1_tyaavd.webp",
         imageAlt: "UI/UX design course module - design thinking and colour theory fundamentals",
         description: "Great UI/UX designers don't start with tools, they start with thinking. Colour theory, typography, visual hierarchy, and composition — the fundamentals every design interview tests first, before Figma ever opens.",
         tags: [
@@ -108,7 +108,7 @@ export const uiUxModules = [
     {
         num: "02",
         title: "UX Research & User-Centred Design",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721087/module-2_c19ota.webp",
         imageAlt: "UX research training - user personas and journey mapping",
         description: "Learn how real product teams decide what to design in the first place — user interviews, personas, and journey mapping before a single screen gets built.",
         tags: [
@@ -124,7 +124,7 @@ export const uiUxModules = [
     {
         num: "03",
         title: "Figma: Industry-Standard UI Design",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721087/module-3_j32ql3.webp",
         imageAlt: "Figma UI design training - components and auto layout",
         description: "Master Figma at the level real product teams use it — components, auto layout, and design files structured to actually hand off to developers, not just look good in isolation.",
         tags: [
@@ -140,7 +140,7 @@ export const uiUxModules = [
     {
         num: "04",
         title: "Prototyping & Interaction Design",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721087/module-4_nifeo8.webp",
         imageAlt: "Interaction design course - Figma prototyping and micro-interactions",
         description: "Turn static screens into clickable, testable prototypes that show how an app actually feels to use, not just how it looks in a single frame.",
         tags: [
@@ -156,7 +156,7 @@ export const uiUxModules = [
     {
         num: "05",
         title: "Design Systems & Component Libraries",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721088/module-5_rufc46.webp",
         imageAlt: "Design systems training - component libraries and design tokens",
         description: "Learn to build reusable design systems — the shared component libraries that keep large products visually consistent as they grow past a handful of screens.",
         tags: [
@@ -172,7 +172,7 @@ export const uiUxModules = [
     {
         num: "06",
         title: "Developer Handoff & Design Collaboration",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721088/module-6_z5azt9.webp",
         imageAlt: "Developer handoff training - design specs and Figma Dev Mode",
         description: "Learn to prepare and communicate designs the way developers actually need them — specs, assets, and the collaboration workflow that prevents a design from getting misread in build.",
         tags: [
@@ -188,7 +188,7 @@ export const uiUxModules = [
     {
         num: "07",
         title: "UI/UX Capstone Projects & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721086/module-7_sovweh.webp",
         imageAlt: "UI/UX portfolio capstone project - Behance case study",
         description: "Apply everything into 5+ real UI/UX case studies, published on Behance and Dribbble, structured the way hiring managers actually expect a design portfolio to read.",
         tags: [
@@ -204,7 +204,7 @@ export const uiUxModules = [
     {
         num: "08",
         title: "UI/UX Placement Prep",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module8.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721087/module-8_bsp5ib.webp",
         imageAlt: "UI/UX designer interview preparation and portfolio review",
         description: "Prepare specifically for UI/UX interviews — portfolio walkthroughs, design critique responses, and the kind of whiteboard exercises product companies actually run.",
         tags: [
@@ -223,7 +223,7 @@ export const graphicDesignModules = [
     {
         num: "01",
         title: "Design Fundamentals & Visual Communication",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721765/module-1_qdhzpo.webp",
         imageAlt: "Graphic design fundamentals - typography and visual composition",
         description: "Every strong graphic designer starts with the same fundamentals — colour theory, typography, and composition — taught here through the lens of print and brand communication rather than app screens.",
         tags: [
@@ -239,7 +239,7 @@ export const graphicDesignModules = [
     {
         num: "02",
         title: "Adobe Photoshop for Design",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721764/module-2_tnm5t3.webp",
         imageAlt: "Adobe Photoshop training - photo manipulation and compositing",
         description: "Master Photoshop at a professional level — photo manipulation, compositing, and the retouching and layout skills client work actually demands.",
         tags: [
@@ -255,7 +255,7 @@ export const graphicDesignModules = [
     {
         num: "03",
         title: "Adobe Illustrator & Vector Design",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721765/module-3_m516xd.webp",
         imageAlt: "Adobe Illustrator training - vector logo and icon design",
         description: "Learn vector-based design for logos, icons, and illustrations that need to scale cleanly from a business card to a billboard.",
         tags: [
@@ -271,7 +271,7 @@ export const graphicDesignModules = [
     {
         num: "04",
         title: "Brand Identity & Logo Design",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721770/module-4_ogyjzb.webp",
         imageAlt: "Brand identity design course - logo design and brand guidelines",
         description: "Learn to build a complete brand identity — not just a logo, but the guidelines, colour palette, and typography system that keeps a brand consistent everywhere it appears.",
         tags: [
@@ -287,7 +287,7 @@ export const graphicDesignModules = [
     {
         num: "05",
         title: "Social Media & Digital Design",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721765/module-5_ckzppt.webp",
         imageAlt: "Social media graphic design training - ad creatives and templates",
         description: "Learn to design for the platforms brands actually post on daily — templates, ad creatives, and content that's built to perform, not just look good.",
         tags: [
@@ -303,7 +303,7 @@ export const graphicDesignModules = [
     {
         num: "06",
         title: "Print Design & Layout",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721765/module-6_omn7bm.webp",
         imageAlt: "Print design course - brochure layout and packaging design",
         description: "Learn print-specific design skills — brochures, packaging, and layout work that still makes up a large share of real client and agency briefs.",
         tags: [
@@ -319,7 +319,7 @@ export const graphicDesignModules = [
     {
         num: "07",
         title: "Graphic Design Capstone Projects & Portfolio",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721766/module-7_ekjsma.webp",
         imageAlt: "Graphic design portfolio capstone project - Behance branding case study",
         description: "Apply everything into 5+ real graphic design projects across branding, social, and print, published on Behance the way agencies expect a hireable portfolio to look.",
         tags: [
@@ -335,7 +335,7 @@ export const graphicDesignModules = [
     {
         num: "08",
         title: "Graphic Design Placement Prep",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module9.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1787721765/module-8_hebbz5.webp",
         imageAlt: "Graphic designer interview preparation and freelance pricing",
         description: "Prepare specifically for graphic design and agency interviews — portfolio presentation, client-brief responses, and freelance pricing basics if you plan to go independent.",
         tags: [

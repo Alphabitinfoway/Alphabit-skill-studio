@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="lg:col-span-2 whitespace-nowrap lg:-ml-15">{/**lg:-ml-15 to move the text to left */}
+          <div className="lg:col-span-2 lg:whitespace-nowrap lg:-ml-15">
             <h4 className="text-white text-[15px] font-semibold mb-6">
               Contact Us
             </h4>
@@ -87,7 +87,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:alphabitskillstudio@gmail.com" className="hover:text-white transition-colors">
+                <a href="mailto:alphabitskillstudio@gmail.com" className="hover:text-white transition-colors break-all">
                   alphabitskillstudio@gmail.com
                 </a>
               </li>
@@ -103,7 +103,7 @@ export default function Footer() {
             © {currentYear} Alphabit Skill. All rights reserved.
           </p>
 
-          <div className="flex gap-6 text-[14px] lg:text-[16px] text-[#7A7A7A]">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 text-[14px] lg:text-[16px] text-[#7A7A7A]">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
             <Link href="/legal" className="hover:text-white transition-colors">Legal</Link>

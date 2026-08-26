@@ -30,7 +30,7 @@ export default function ContactHeroSection() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.06,
                 delayChildren: 0.1,
             }
         }
@@ -47,6 +47,19 @@ export default function ContactHeroSection() {
             }
         }
     };
+
+    const titleWords = [
+        { text: "Talk", isHighlight: false },
+        { text: "to", isHighlight: false },
+        { text: "Alphabit", isHighlight: false },
+        { text: "Skill", isHighlight: false },
+        { text: "—", isHighlight: false },
+        { text: "Industrial", isHighlight: false },
+        { text: "Internship", isHighlight: false },
+        { text: "&", isHighlight: false },
+        { text: "Training", isHighlight: false },
+        { text: "Company", isHighlight: true }
+    ];
 
     const fadeUpVariant = {
         hidden: { y: 20, opacity: 0 },
@@ -94,15 +107,23 @@ export default function ContactHeroSection() {
                     className="w-full rounded-[36px] sm:rounded-[44px] bg-[#7143FE] flex flex-col items-center justify-center pt-10 pb-12 sm:pt-14 sm:pb-16 md:pt-24 md:pb-[130px] relative shadow-[0_8px_30px_rgb(0,0,0,0.06)] notch-cutout"
                 >
                     <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-[960px] mx-auto w-full">
-                        {/* Single clean H1 */}
-                        <div className="overflow-hidden py-1">
-                            <motion.h1
-                                variants={textRevealVariant}
-                                className="text-white font-[600] text-[32px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[1.15] tracking-tight font-cabinet"
-                            >
-                                Talk to Alphabit Skill — Industrial Internship & Training    <span className="font-pp italic text-[#FF5622] font-[500]"> Company</span>
-                            </motion.h1>
-                        </div>
+                        {/* Word-by-word animated H1 */}
+                        <h1 className="text-white font-[600] text-[32px] sm:text-[44px] md:text-[54px] lg:text-[62px] leading-[1.18] tracking-tight font-cabinet flex flex-wrap justify-center gap-x-[0.25em] gap-y-1">
+                            {titleWords.map((item, index) => (
+                                <span key={index} className="inline-block overflow-hidden py-1">
+                                    <motion.span
+                                        variants={textRevealVariant}
+                                        className={`inline-block ${
+                                            item.isHighlight 
+                                                ? "font-pp italic text-[#FF5622] font-[500]" 
+                                                : ""
+                                        }`}
+                                    >
+                                        {item.text}
+                                    </motion.span>
+                                </span>
+                            ))}
+                        </h1>
 
                         {/* Subtitle */}
                         <div className="overflow-hidden mt-5 sm:mt-6">

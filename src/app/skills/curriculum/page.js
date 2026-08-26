@@ -27,7 +27,7 @@ function SecurePdfViewerContent() {
     };
 
     return (
-        <div className="w-screen h-screen flex items-center justify-center bg-[#F5F5F5] text-black px-6">
+        <div className="w-full min-h-screen flex items-center justify-center bg-[#F5F5F5] text-black px-6">
             <div className="max-w-[500px] w-full bg-white p-8 md:p-12 rounded-[32px] border border-gray-200/80 shadow-lg text-center flex flex-col items-center gap-6">
                 <div className="w-16 h-16 rounded-full bg-[#7143FE]/10 flex items-center justify-center text-[#7143FE]">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -59,7 +59,7 @@ function SecurePdfViewerContent() {
 
 export default function SecurePdfPage() {
     return (
-        <Suspense fallback={<div className="w-screen h-screen flex items-center justify-center bg-[#F5F5F5] text-gray-900">Loading...</div>}>
+        <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center bg-[#F5F5F5] text-gray-900">Loading...</div>}>
             <SecurePdfViewerContent />
         </Suspense>
     );

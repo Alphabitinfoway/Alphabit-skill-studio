@@ -13,8 +13,8 @@ export default function SkillPage() {
       <LearningMethodology />
       <LearningPathsSection />
       <TargetAudienceSection />
-      <AdvantagesSection/>
       <PricingSection />
+      <AdvantagesSection/>
       <CTASection/>
     </>
   );

@@ -202,7 +202,7 @@ export default function LearningPathsSection() {
     const visibleSkills = skills.slice(pageIndex * 6, (pageIndex * 6) + 6);
 
     return (
-        <section id="learning-paths" className="w-full bg-[#6E42F8] py-12 md:py-[50px] font-cabinet relative px-6 md:px-16 lg:px-24">
+        <section id="learning-paths" className="w-full bg-[#6E42F8] py-12 md:py-[50px] font-cabinet relative px-6 md:px-16 lg:px-24 overflow-hidden">
             {/* Title Section */}
             <div className="flex flex-col items-center justify-center text-center w-full mb-6">
                 <h2 className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] leading-[1.35] text-white font-[600]">
@@ -248,7 +248,7 @@ export default function LearningPathsSection() {
                     <>
                         <button
                             onClick={handlePrev}
-                            className="absolute left-[-20px] md:left-[-40px] top-[50%] -translate-y-[50%] z-20 w-11 h-11 rounded-2xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all text-gray-600 hover:text-[#FF5622]"
+                            className="absolute left-0 md:left-[-40px] top-[50%] -translate-y-[50%] z-20 w-11 h-11 rounded-2xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all text-gray-600 hover:text-[#FF5622]"
                             aria-label="Previous Page"
                         >
                             <svg className="w-5 h-5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -257,7 +257,7 @@ export default function LearningPathsSection() {
                         </button>
                         <button
                             onClick={handleNext}
-                            className="absolute right-[-20px] md:right-[-40px] top-[50%] -translate-y-[50%] z-20 w-11 h-11 rounded-2xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all text-gray-600 hover:text-[#FF5622]"
+                            className="absolute right-0 md:right-[-40px] top-[50%] -translate-y-[50%] z-20 w-11 h-11 rounded-2xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all text-gray-600 hover:text-[#FF5622]"
                             aria-label="Next Page"
                         >
                             <svg className="w-5 h-5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24">
