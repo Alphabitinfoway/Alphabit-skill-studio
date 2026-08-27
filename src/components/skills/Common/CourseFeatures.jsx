@@ -8,19 +8,21 @@ export default function CourseFeatures({ data }) {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 font-cabinet">
       {/* Title */}
-      <h2 className="text-center sm:text-left text-[22px] sm:text-[34px] md:text-[42px] leading-tight text-[#111111] tracking-tight">
-        <span className="font-normal" style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}>
-          {titleNormal}{" "}
+      <h2 className="leading-tight text-[#111111] tracking-tight flex flex-wrap items-baseline gap-x-1 gap-y-0">
+        <span className="font-semibold text-[22px] sm:text-[34px] md:text-[40px]" style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}>
+          {titleNormal}
         </span>
         <span
-          className="italic font-medium text-[#FF5622] text-[30px] sm:text-[42px] md:text-[50px] inline"
+          className="italic font-medium text-[#FF5622] text-[32px] sm:text-[44px] md:text-[52px]"
           style={{ fontFamily: "'PP Editorial New', serif" }}
         >
           {titleItalic}
-        </span>{" "}
-        <span className="font-normal" style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}>
-          {titleSuffix}
         </span>
+        {titleSuffix && (
+          <span className="font-semibold text-[22px] sm:text-[34px] md:text-[40px]" style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}>
+            {titleSuffix}
+          </span>
+        )}
       </h2>
 
       {/* Checklist */}

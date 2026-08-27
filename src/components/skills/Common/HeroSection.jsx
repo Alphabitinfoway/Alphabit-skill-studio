@@ -21,17 +21,11 @@ export default function HeroSection({ data }) {
                     className="flex flex-col w-full text-left"
                 >
                     {/* Title */}
-                    <h1 className="text-left leading-tight sm:leading-[1.08] tracking-tight text-[#111111] flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-                        <span
-                            className="italic font-medium text-[#E85B2A] text-[40px] sm:text-[54px] md:text-[64px] lg:text-[72px]"
-                            style={{ fontFamily: "'PP Editorial New', serif" }}
-                        >
+                    <h1 className="text-left leading-tight sm:leading-[0.8] tracking-tight text-[#111111] flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                        <span className="skill-hero-title-italic">
                             {heroSectionData.titlePrefix}
                         </span>
-                        <span
-                            className="font-semibold text-[30px] sm:text-[42px] md:text-[52px] lg:text-[62px]"
-                            style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
-                        >
+                        <span className="skill-hero-title-normal">
                             {heroSectionData.titleSuffix}
                         </span>
                     </h1>

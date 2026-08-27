@@ -92,6 +92,66 @@ body {
   font-family: 'Cabinet Grotesk', sans-serif !important;
 }
 
+/* ── Global Responsive Section Title Utilities ── */
+.skill-hero-title-italic {
+  font-family: 'PP Editorial New', serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  color: #E85B2A !important;
+  font-size: 40px !important;
+}
+@media (min-width: 640px) {
+  .skill-hero-title-italic { font-size: 54px !important; }
+}
+@media (min-width: 768px) {
+  .skill-hero-title-italic { font-size: 64px !important; }
+}
+@media (min-width: 1024px) {
+  .skill-hero-title-italic { font-size: 72px !important; }
+}
+
+.skill-hero-title-normal {
+  font-family: 'Cabinet Grotesk', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 30px !important;
+}
+@media (min-width: 640px) {
+  .skill-hero-title-normal { font-size: 42px !important; }
+}
+@media (min-width: 768px) {
+  .skill-hero-title-normal { font-size: 52px !important; }
+}
+@media (min-width: 1024px) {
+  .skill-hero-title-normal { font-size: 62px !important; }
+}
+
+/* Global Section Heading Utilities */
+.skill-section-title-italic {
+  font-family: 'PP Editorial New', serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  color: #FF5622 !important;
+  font-size: 32px !important;
+}
+@media (min-width: 640px) {
+  .skill-section-title-italic { font-size: 44px !important; }
+}
+@media (min-width: 768px) {
+  .skill-section-title-italic { font-size: 52px !important; }
+}
+
+.skill-section-title-normal {
+  font-family: 'Cabinet Grotesk', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+}
+@media (min-width: 640px) {
+  .skill-section-title-normal { font-size: 34px !important; }
+}
+@media (min-width: 768px) {
+  .skill-section-title-normal { font-size: 40px !important; }
+}
+
 /* ── Blog Prose Content styling (Rich Text HTML) ── */
 .blog-prose-content {
   font-family: 'Cabinet Grotesk', sans-serif;
