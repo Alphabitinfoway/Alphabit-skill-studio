@@ -274,6 +274,7 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [skillsOpen, setSkillsOpen] = useState(false);
     const [mobileSkillsOpen, setMobileSkillsOpen] = useState(false);
+    const [activeMobileCategory, setActiveMobileCategory] = useState("tech-coding");
     const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const linkRefs = useRef([]);
     const dropdownRef = useRef(null);
@@ -472,67 +473,58 @@ export default function Navbar() {
                                                         animate={{ height: "auto", opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
                                                         transition={{ duration: 0.25 }}
-                                                        className="overflow-hidden mt-3"
+                                                        className="overflow-hidden mt-3.5 mb-2 flex flex-col items-center w-full px-1"
                                                     >
-                                                        {skillsDropdown.categories.map((cat) => (
-                                                            <div key={cat.id} className="mb-4 text-left px-2">
-                                                                <p className="text-[12px] font-[800] text-[#E53935] uppercase tracking-wider mb-2">
-                                                                    {cat.label}
-                                                                </p>
-                                                                {cat.subgroups ? (
-                                                                    <div className="flex flex-col gap-3 pl-2">
-                                                                        {cat.subgroups.map((sub, sIdx) => (
-                                                                            <div key={sIdx}>
-                                                                                <p className="text-[10px] font-[700] text-[#FF5622] uppercase tracking-widest mb-1.5">
-                                                                                    {sub.label}
-                                                                                </p>
-                                                                                <div className="flex flex-wrap gap-1.5">
-                                                                                    {sub.items.map((item) => (
-                                                                                        <Link
-                                                                                            key={item}
-                                                                                            href={`/skills/${toSlug(item)}`}
-                                                                                            onClick={() => setMobileMenuOpen(false)}
-                                                                                            className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
-                                                                                            style={{
-                                                                                                background: "rgba(210,210,218,0.55)",
-                                                                                                backdropFilter: "blur(8px)",
-                                                                                                WebkitBackdropFilter: "blur(8px)",
-                                                                                                border: "1px solid rgba(255,255,255,0.65)",
-                                                                                                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80)",
-                                                                                            }}
-                                                                                        >
-                                                                                            <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
-                                                                                            {item}
-                                                                                        </Link>
-                                                                                    ))}
-                                                                                </div>
-                                                                            </div>
-                                                                        ))}
-                                                                    </div>
-                                                                ) : (
-                                                                    <div className="flex flex-wrap gap-1.5 pl-2">
-                                                                        {cat.items.map((item) => (
-                                                                            <Link
-                                                                                key={item}
-                                                                                href={`/skills/${toSlug(item)}`}
-                                                                                onClick={() => setMobileMenuOpen(false)}
-                                                                                className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[12.5px] font-[500] text-[#374151] transition-all"
-                                                                                style={{
-                                                                                    background: "rgba(210,210,218,0.55)",
-                                                                                    backdropFilter: "blur(8px)",
-                                                                                    WebkitBackdropFilter: "blur(8px)",
-                                                                                    border: "1px solid rgba(255,255,255,0.65)",
-                                                                                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.80)",
-                                                                                }}
-                                                                            >
-                                                                                <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
-                                                                                {item}
-                                                                            </Link>
-                                                                        ))}
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        ))}
+                                                        {/* Category Segmented Control Pills */}
+                                                        <div className="flex justify-center items-center gap-1.5 p-1 bg-gray-100/90 rounded-full border border-gray-200/60 max-w-full overflow-x-auto no-scrollbar">
+                                                            {skillsDropdown.categories.map((cat) => {
+                                                                const isActiveCat = activeMobileCategory === cat.id;
+                                                                const shortLabel = cat.id === "tech-coding" ? "Coding" : cat.id === "tech-noncoding" ? "Non-Coding" : "Non-Tech";
+
+                                                                return (
+                                                                    <button
+                                                                        key={cat.id}
+                                                                        onClick={() => setActiveMobileCategory(cat.id)}
+                                                                        className={`px-3.5 py-1.5 rounded-full text-[12px] font-bold transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                                                                            isActiveCat
+                                                                                ? "bg-[#7C3AED] text-white shadow-sm"
+                                                                                : "text-gray-600 hover:text-gray-900 hover:bg-gray-200/50"
+                                                                        }`}
+                                                                    >
+                                                                        {shortLabel}
+                                                                    </button>
+                                                                );
+                                                            })}
+                                                        </div>
+
+                                                        {/* Skill Items 2-Column Grid */}
+                                                        <div className="grid grid-cols-2 gap-1.5 w-full mt-3">
+                                                            {skillsDropdown.categories
+                                                                .find((c) => c.id === activeMobileCategory)
+                                                                ?.items.map((item) => {
+                                                                    const itemSlug = toSlug(item);
+                                                                    const isCurrentSkill = pathname === `/skills/${itemSlug}`;
+
+                                                                    return (
+                                                                        <Link
+                                                                            key={item}
+                                                                            href={`/skills/${itemSlug}`}
+                                                                            onClick={() => {
+                                                                                setMobileMenuOpen(false);
+                                                                                setMobileSkillsOpen(false);
+                                                                            }}
+                                                                            className={`flex items-center justify-between p-2.5 rounded-xl text-[12px] font-medium leading-snug text-left transition-all duration-200 border ${
+                                                                                isCurrentSkill
+                                                                                    ? "bg-[#7C3AED]/10 text-[#7C3AED] font-bold border-[#7C3AED]/30"
+                                                                                    : "bg-white/90 text-gray-800 border-gray-200/70 hover:border-[#7C3AED]/40 hover:bg-white"
+                                                                            }`}
+                                                                        >
+                                                                            <span className="line-clamp-2">{item}</span>
+                                                                            <ChevronRight className={`w-3.5 h-3.5 shrink-0 ml-1 ${isCurrentSkill ? "text-[#7C3AED]" : "text-gray-400"}`} />
+                                                                        </Link>
+                                                                    );
+                                                                })}
+                                                        </div>
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>
