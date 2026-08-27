@@ -469,10 +469,10 @@ export default function Navbar() {
                                             <AnimatePresence>
                                                 {mobileSkillsOpen && (
                                                     <motion.div
-                                                        initial={{ height: 0, opacity: 0 }}
-                                                        animate={{ height: "auto", opacity: 1 }}
-                                                        exit={{ height: 0, opacity: 0 }}
-                                                        transition={{ duration: 0.25 }}
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: "auto" }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                                                         className="overflow-hidden mt-3.5 mb-2 flex flex-col items-center w-full px-1"
                                                     >
                                                         {/* Category Segmented Control Pills */}
@@ -497,34 +497,49 @@ export default function Navbar() {
                                                             })}
                                                         </div>
 
-                                                        {/* Skill Items 2-Column Grid */}
-                                                        <div className="grid grid-cols-2 gap-1.5 w-full mt-3">
-                                                            {skillsDropdown.categories
-                                                                .find((c) => c.id === activeMobileCategory)
-                                                                ?.items.map((item) => {
-                                                                    const itemSlug = toSlug(item);
-                                                                    const isCurrentSkill = pathname === `/skills/${itemSlug}`;
+                                                        {/* Skill Items 2-Column Grid (Smooth Switch Animation) */}
+                                                        <AnimatePresence mode="wait">
+                                                            <motion.div
+                                                                key={activeMobileCategory}
+                                                                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                                exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                                                                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                                                                className="grid grid-cols-2 gap-1.5 w-full mt-3"
+                                                            >
+                                                                {skillsDropdown.categories
+                                                                    .find((c) => c.id === activeMobileCategory)
+                                                                    ?.items.map((item, idx) => {
+                                                                        const itemSlug = toSlug(item);
+                                                                        const isCurrentSkill = pathname === `/skills/${itemSlug}`;
 
-                                                                    return (
-                                                                        <Link
-                                                                            key={item}
-                                                                            href={`/skills/${itemSlug}`}
-                                                                            onClick={() => {
-                                                                                setMobileMenuOpen(false);
-                                                                                setMobileSkillsOpen(false);
-                                                                            }}
-                                                                            className={`flex items-center justify-between p-2.5 rounded-xl text-[12px] font-medium leading-snug text-left transition-all duration-200 border ${
-                                                                                isCurrentSkill
-                                                                                    ? "bg-[#7C3AED]/10 text-[#7C3AED] font-bold border-[#7C3AED]/30"
-                                                                                    : "bg-white/90 text-gray-800 border-gray-200/70 hover:border-[#7C3AED]/40 hover:bg-white"
-                                                                            }`}
-                                                                        >
-                                                                            <span className="line-clamp-2">{item}</span>
-                                                                            <ChevronRight className={`w-3.5 h-3.5 shrink-0 ml-1 ${isCurrentSkill ? "text-[#7C3AED]" : "text-gray-400"}`} />
-                                                                        </Link>
-                                                                    );
-                                                                })}
-                                                        </div>
+                                                                        return (
+                                                                            <motion.div
+                                                                                key={item}
+                                                                                initial={{ opacity: 0, y: 6 }}
+                                                                                animate={{ opacity: 1, y: 0 }}
+                                                                                transition={{ duration: 0.2, delay: idx * 0.02 }}
+                                                                            >
+                                                                                <Link
+                                                                                    href={`/skills/${itemSlug}`}
+                                                                                    onClick={() => {
+                                                                                        setMobileMenuOpen(false);
+                                                                                        setMobileSkillsOpen(false);
+                                                                                    }}
+                                                                                    className={`flex items-center justify-between p-2.5 rounded-xl text-[12px] font-medium leading-snug text-left transition-all duration-200 border ${
+                                                                                        isCurrentSkill
+                                                                                            ? "bg-[#7C3AED]/10 text-[#7C3AED] font-bold border-[#7C3AED]/30"
+                                                                                            : "bg-white/90 text-gray-800 border-gray-200/70 hover:border-[#7C3AED]/40 hover:bg-white"
+                                                                                    }`}
+                                                                                >
+                                                                                    <span className="line-clamp-2">{item}</span>
+                                                                                    <ChevronRight className={`w-3.5 h-3.5 shrink-0 ml-1 ${isCurrentSkill ? "text-[#7C3AED]" : "text-gray-400"}`} />
+                                                                                </Link>
+                                                                            </motion.div>
+                                                                        );
+                                                                    })}
+                                                            </motion.div>
+                                                        </AnimatePresence>
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>
