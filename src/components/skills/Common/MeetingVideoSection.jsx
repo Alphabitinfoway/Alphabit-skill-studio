@@ -11,27 +11,28 @@ import { Carousel } from "@/components/application/carousel/carousel-base";
 function MeetingGlanceCard({ heading, subheading, image1, image2 }) {
   return (
     <div
-      className="w-full flex items-center justify-between p-8 md:p-16 rounded-[40px]"
+      className="w-full flex flex-col sm:flex-row items-center justify-between p-5 sm:p-8 md:p-14 rounded-[24px] sm:rounded-[40px] gap-6"
       style={{
-        height: "clamp(280px, 34vw, 390px)",
+        minHeight: "260px",
         background: "linear-gradient(to bottom, #F5F5F5 0%, #e5e7eb 100%)",
       }}
     >
-      <div className="flex flex-col gap-2">
-        <h3 className="text-3xl md:text-4xl font-bold text-[#171717] font-cabinet leading-tight">
+      <div className="flex flex-col gap-2 w-full sm:w-auto text-left">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#171717] font-cabinet leading-tight">
           {heading}
         </h3>
-        <p className="text-gray-500 text-sm md:text-base font-medium max-w-xs sm:max-w-sm md:max-w-md">
-          {subheading}
-        </p>
+        {subheading && (
+          <p className="text-gray-500 text-xs sm:text-sm md:text-base font-medium max-w-xs sm:max-w-sm md:max-w-md">
+            {subheading}
+          </p>
+        )}
       </div>
 
       <div
+        className="relative shrink-0 mx-auto sm:mx-0"
         style={{
-          position: "relative",
-          width: "clamp(210px, 28vw, 330px)",
-          height: "clamp(160px, 22vw, 235px)",
-          flexShrink: 0,
+          width: "clamp(180px, 45vw, 330px)",
+          height: "clamp(130px, 30vw, 235px)",
         }}
       >
         <div
@@ -42,7 +43,7 @@ function MeetingGlanceCard({ heading, subheading, image1, image2 }) {
             width: "80%",
             height: "65%",
             backgroundColor: "white",
-            borderRadius: "clamp(16px, 2.5vw, 32px)",
+            borderRadius: "clamp(12px, 2.5vw, 32px)",
             boxShadow: "0 10px 40px rgba(0,0,0,0.04)",
             overflow: "hidden",
           }}
@@ -61,7 +62,7 @@ function MeetingGlanceCard({ heading, subheading, image1, image2 }) {
             width: "55%",
             height: "75%",
             backgroundColor: "white",
-            borderRadius: "clamp(16px, 2.5vw, 32px)",
+            borderRadius: "clamp(12px, 2.5vw, 32px)",
             boxShadow: "0 20px 50px rgba(0,0,0,0.08)",
             zIndex: 10,
             overflow: "hidden",
@@ -186,26 +187,24 @@ export default function MeetingVideoSection({ data, apiMeetings = [], apiMeeting
   if (displayMeetings.length === 0 && !displayVideoUrl) return null;
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-20 px-6 md:px-16 lg:px-24 overflow-hidden">
-      <div className="max-w-[1300px] mx-auto flex flex-col gap-10">
+    <section className="w-full bg-[#F5F5F5] py-10 sm:py-20 px-4 sm:px-6 md:px-16 lg:px-24 overflow-hidden font-cabinet">
+      <div className="max-w-[1300px] mx-auto flex flex-col gap-6 sm:gap-10">
 
         {/* ── Title ─────────────────────────────────────────────────────── */}
-        <div className="text-left mb-2">
-          <h2 className="leading-tight text-gray-950 tracking-tight">
+        <div className="text-left mb-1 sm:mb-2">
+          <h2 className="leading-tight text-gray-950 tracking-tight flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span
-              className="italic font-medium text-[#FF5622]"
+              className="italic font-medium text-[#FF5622] text-[34px] sm:text-[48px] md:text-[52px]"
               style={{
                 fontFamily: "'PP Editorial New', serif",
-                fontSize: "52px",
               }}
             >
               {meetingsList.length > 0 ? "Meeting" : (titlePrefix || "A Glance")}{" "}
             </span>
             <span
-              className="font-semibold"
+              className="font-semibold text-[20px] sm:text-[28px] md:text-[32px] text-[#111111]"
               style={{
                 fontFamily: "'Cabinet Grotesk', sans-serif",
-                fontSize: "32px",
               }}
             >
               {meetingsList.length > 0 ? "Glance" : (titleSuffix || "at yesterday's Meeting")}
@@ -231,12 +230,12 @@ export default function MeetingVideoSection({ data, apiMeetings = [], apiMeeting
                 setApi={setApi}
                 className="w-full relative group"
               >
-                <Carousel.Content style={{ marginLeft: "-2rem" }}>
+                <Carousel.Content style={{ marginLeft: "-1rem" }}>
                   {displayMeetings.map((item, index) => (
                     <Carousel.Item
                       key={index}
                       className="min-w-0 shrink-0 grow-0"
-                      style={{ flexBasis: "min(85%, 900px)", paddingLeft: "2rem" }}
+                      style={{ flexBasis: "min(92%, 900px)", paddingLeft: "1rem" }}
                     >
                       <MeetingGlanceCard
                         heading={item.heading}
@@ -249,15 +248,15 @@ export default function MeetingVideoSection({ data, apiMeetings = [], apiMeeting
                 </Carousel.Content>
 
                 {displayMeetings.length > 1 && (
-                  <div className="flex justify-center items-center mt-12">
-                    <Carousel.IndicatorGroup className="flex gap-3 flex-wrap justify-center max-w-[50vw]">
+                  <div className="flex justify-center items-center mt-6 sm:mt-12">
+                    <Carousel.IndicatorGroup className="flex gap-2.5 sm:gap-3 flex-wrap justify-center max-w-[50vw]">
                       {displayMeetings.map((_, index) => (
                         <Carousel.Indicator
                           key={index}
                           index={index}
                           className={({ isSelected }) =>
                             `h-2.5 rounded-full transition-all duration-300 ${
-                              isSelected ? "w-8 bg-[#b0b0b0]" : "w-2.5 bg-[#e5e7eb]"
+                              isSelected ? "w-8 bg-[#7143FE]" : "w-2.5 bg-[#d1d5db]"
                             }`
                           }
                         />
@@ -273,12 +272,12 @@ export default function MeetingVideoSection({ data, apiMeetings = [], apiMeeting
         {/* ── Video Player ──────────────────────────────────────────────── */}
         {displayVideoUrl && (
           <div
-            className="w-full max-w-[960px] mx-auto bg-gradient-to-br from-[#EAEAEA] to-[#D5D5D5] rounded-[40px] p-6 shadow-inner border border-gray-200/50 aspect-video relative overflow-hidden flex items-center justify-center"
+            className="w-full max-w-[960px] mx-auto bg-gradient-to-br from-[#EAEAEA] to-[#D5D5D5] rounded-[24px] sm:rounded-[40px] p-2.5 sm:p-6 shadow-inner border border-gray-200/50 aspect-video relative overflow-hidden flex items-center justify-center"
             onMouseEnter={() => setIsVideoHovered(true)}
             onMouseLeave={() => setIsVideoHovered(false)}
           >
             <iframe
-              className="w-full h-full rounded-[30px] shadow-lg border-0"
+              className="w-full h-full rounded-[18px] sm:rounded-[30px] shadow-lg border-0"
               src={getEmbedUrl(displayVideoUrl)}
               title="A Glance at yesterday's Meeting Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

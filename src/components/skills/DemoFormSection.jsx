@@ -114,12 +114,12 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
     };
 
     const renderFormCard = () => (
-        <div className="relative w-full max-w-[400px] bg-white rounded-[24px] overflow-hidden shadow-2xl">
+        <div className="relative w-full max-w-[400px] max-h-[90vh] overflow-y-auto bg-white rounded-[20px] sm:rounded-[24px] shadow-2xl no-scrollbar font-cabinet">
             {/* Close Button - only if modal */}
             {!isInline && (
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-white transition-colors duration-200"
+                    className="absolute top-3.5 right-3.5 z-10 w-8 h-8 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-gray-800 transition-colors duration-200 cursor-pointer"
                     aria-label="Close"
                 >
                     <X className="w-4 h-4" />
@@ -128,18 +128,18 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
 
             {/* Purple Header */}
             <div
-                className="px-6 pt-8 pb-6"
+                className="px-5 sm:px-6 pt-6 sm:pt-8 pb-4 sm:pb-6"
                 style={{
                     background: "linear-gradient(180deg, #7143FE 0%, #F5F5F5 100%)",
                 }}
             >
                 <p
-                    className="text-[#FFFFFF] text-[20px] italic font-semibold leading-snug"
+                    className="text-[#FFFFFF] text-[17px] sm:text-[20px] italic font-semibold leading-snug"
                     style={{ fontFamily: "'PP Editorial New', serif" }}
                 >
                     Book a Free Demo Class{" "}
                     <span
-                        className="font-medium text-black not-italic"
+                        className="font-medium text-black not-italic text-[14px] sm:text-[16px] block sm:inline mt-0.5 sm:mt-0"
                         style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                     >
                         - your path to becoming a pro at your skill.
@@ -150,11 +150,11 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
             {/* Form Body */}
             <form
                 onSubmit={handleSubmit}
-                className="px-6 py-6 flex flex-col gap-4 bg-[#F5F5F5]"
+                className="px-5 sm:px-6 py-4 sm:py-6 flex flex-col gap-3.5 sm:gap-4 bg-[#F5F5F5]"
             >
                 {submitted ? (
                     <div
-                        className="py-8 text-center text-[#7143FE] font-bold"
+                        className="py-8 text-center text-[#7143FE] font-bold text-[15px] sm:text-[16px]"
                         style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                     >
                         Thank you! Your demo class is booked.
@@ -162,10 +162,10 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                 ) : (
                     <>
                         {/* Name */}
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1 sm:gap-1.5">
                             <label
                                 htmlFor="demo-name"
-                                className="text-[13px] font-medium text-[#111111]"
+                                className="text-[12.5px] sm:text-[13px] font-medium text-[#111111]"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
                                 Name
@@ -179,16 +179,16 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 value={form.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-xl bg-white border border-[#E4E4E7] text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all"
+                                className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E4E4E7] text-[13.5px] sm:text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             />
                         </div>
 
                         {/* Email */}
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1 sm:gap-1.5">
                             <label
                                 htmlFor="demo-email"
-                                className="text-[13px] font-medium text-[#111111]"
+                                className="text-[12.5px] sm:text-[13px] font-medium text-[#111111]"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
                                 Email
@@ -202,16 +202,16 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 value={form.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-xl bg-white border border-[#E4E4E7] text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all"
+                                className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E4E4E7] text-[13.5px] sm:text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             />
                         </div>
 
                         {/* Contact Number */}
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1 sm:gap-1.5">
                             <label
                                 htmlFor="demo-contact"
-                                className="text-[13px] font-medium text-[#111111]"
+                                className="text-[12.5px] sm:text-[13px] font-medium text-[#111111]"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
                                 Contact Number
@@ -228,7 +228,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 value={form.contact}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-xl bg-white border border-[#E4E4E7] text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all [&:not(:placeholder-shown):invalid]:border-red-400"
+                                className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E4E4E7] text-[13.5px] sm:text-[14px] text-[#111] placeholder:text-[#aaa] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all [&:not(:placeholder-shown):invalid]:border-red-400"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             />
                             {error && (
@@ -239,10 +239,10 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                         </div>
 
                         {/* Technical Skill / Course */}
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1 sm:gap-1.5">
                             <label
                                 htmlFor="demo-course"
-                                className="text-[13px] font-medium text-[#111111]"
+                                className="text-[12.5px] sm:text-[13px] font-medium text-[#111111]"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
                                 Technical Skills
@@ -256,7 +256,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                     readOnly
                                     tabIndex={-1}
                                     aria-readonly="true"
-                                    className="w-full px-4 py-3 rounded-xl bg-[#EFEFEF] border border-[#E4E4E7] text-[14px] text-[#555] cursor-not-allowed outline-none select-none font-medium"
+                                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#EFEFEF] border border-[#E4E4E7] text-[13.5px] sm:text-[14px] text-[#555] cursor-not-allowed outline-none select-none font-medium"
                                     style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                                 />
                             ) : (
@@ -266,7 +266,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                     value={form.course}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#E4E4E7] text-[14px] text-[#111] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all cursor-pointer"
+                                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-white border border-[#E4E4E7] text-[13.5px] sm:text-[14px] text-[#111] outline-none focus:border-[#7143FE] focus:ring-2 focus:ring-[#7143FE]/15 transition-all cursor-pointer"
                                     style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                                 >
                                     <option value="" disabled>Select Technical Skill</option>
@@ -288,10 +288,10 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                                 suppressHydrationWarning
                                 type="submit"
                                 disabled={submitting}
-                                className="inline-flex items-center gap-1.5 px-6 py-3 bg-[#7143FE] hover:bg-[#5f33eb] disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full text-[14px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/30 cursor-pointer"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-2.5 sm:py-3 bg-[#7143FE] hover:bg-[#5f33eb] disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full text-[14px] font-semibold transition-all duration-300 hover:scale-105 shadow-md shadow-[#7143FE]/30 cursor-pointer text-center"
                                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                             >
-                                {!submitting && <img src="/whiteArrow.webp" alt="" className="w-5 h-5" />}
+                                {!submitting && <img src="/whiteArrow.webp" alt="" className="w-4.5 h-4.5 sm:w-5 sm:h-5" />}
                                 {submitting ? "Submitting..." : "Submit"}
                             </button>
                         </div>
@@ -327,7 +327,7 @@ export default function DemoFormSection({ isOpen, onClose, isInline = false, def
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.92, y: 24 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed inset-0 z-50 flex items-center justify-center px-4"
+                        className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {renderFormCard()}

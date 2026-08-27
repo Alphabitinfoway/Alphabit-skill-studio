@@ -321,4 +321,17 @@ body {
   background-color: #F1F5F9 !important;
 }
 
+/* Hide scrollbar for clean horizontal scroll */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 

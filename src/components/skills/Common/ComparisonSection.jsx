@@ -15,27 +15,21 @@ export default function ComparisonSection({ data }) {
   const activeCategory = categories.find((cat) => cat.id === activeTab);
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
-      <div className="max-w-[1300px] mx-auto flex flex-col gap-10">
+    <section className="w-full bg-[#F5F5F5] py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-100 font-cabinet">
+      <div className="max-w-[1300px] mx-auto flex flex-col gap-8 sm:gap-10">
 
         {/* Title */}
         <div className="text-center">
-          <h2 className="leading-[1.1] text-[#111111] tracking-tight">
+          <h2 className="leading-tight text-[#111111] tracking-tight">
             <span
-              className="font-semibold"
-              style={{
-                fontFamily: "'Cabinet Grotesk', sans-serif",
-                fontSize: "40px",
-              }}
+              className="font-semibold text-[22px] sm:text-[34px] md:text-[40px]"
+              style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
             >
-              {titleNormal}
+              {titleNormal}{" "}
             </span>
             <span
-              className="italic font-medium text-[#FF5622]"
-              style={{
-                fontFamily: "'PP Editorial New', serif",
-                fontSize: "52px",
-              }}
+              className="italic font-medium text-[#FF5622] text-[32px] sm:text-[44px] md:text-[52px]"
+              style={{ fontFamily: "'PP Editorial New', serif" }}
             >
               {titleItalic}
             </span>
@@ -125,16 +119,16 @@ export default function ComparisonSection({ data }) {
         </div>
 
         {/* Mobile / Tablet Accordion/Tabbed comparison (Visible only on smaller screens) */}
-        <div className="flex md:hidden flex-col gap-6">
+        <div className="flex md:hidden flex-col gap-5">
           {/* Scrollable Tabs */}
-          <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-none snap-x snap-mandatory">
+          <div className="flex overflow-x-auto gap-2 pb-2 no-scrollbar snap-x snap-mandatory">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap snap-align-start transition-all duration-300 ${activeTab === cat.id
-                    ? "bg-[#F9FAFB] text-white shadow-md shadow-[#7C3AED]/20"
-                    : "bg-white text-gray-600 border border-gray-200"
+                className={`px-4 py-2 rounded-full text-[13.5px] font-bold whitespace-nowrap snap-align-start transition-all duration-300 ${activeTab === cat.id
+                    ? "bg-[#7C3AED] text-white shadow-md shadow-[#7C3AED]/25"
+                    : "bg-white text-gray-700 border border-gray-200/80 hover:bg-gray-50"
                   }`}
                 style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
               >
@@ -144,24 +138,24 @@ export default function ComparisonSection({ data }) {
           </div>
 
           {/* Tab Content comparison cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             {/* Other Institutes */}
             <motion.div
               key={`other-${activeTab}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm flex flex-col gap-3"
+              className="bg-white border border-gray-200/80 rounded-2xl p-4.5 sm:p-5 shadow-sm flex flex-col gap-2.5"
             >
-              <div className="bg-[#B3B3B3] text-white text-xs font-bold px-3 py-1.5 rounded-lg w-max uppercase">
+              <div className="bg-[#B3B3B3] text-white text-[11px] font-bold px-2.5 py-1 rounded-md w-max uppercase tracking-wider">
                 Other Institutes
               </div>
-              <div className="flex items-start gap-3 mt-2">
-                <div className="w-6.5 h-6.5 rounded-full bg-[#FF5252] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm shadow-[#FF5252]/25">
-                  <X className="w-4 h-4 stroke-[3]" />
+              <div className="flex items-start gap-3 mt-1">
+                <div className="w-5.5 h-5.5 rounded-full bg-[#FF5252] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm shadow-[#FF5252]/20">
+                  <X className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <p className="text-[16px] text-gray-600 font-medium">
-                  {activeCategory.other}
+                <p className="text-[14.5px] text-gray-600 font-medium leading-snug">
+                  {activeCategory?.other}
                 </p>
               </div>
             </motion.div>
@@ -172,23 +166,23 @@ export default function ComparisonSection({ data }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.05 }}
-              className="bg-white border border-purple-100 rounded-2xl p-5 shadow-md shadow-purple-500/5 flex flex-col gap-3"
+              className="bg-[#F9F6FF] border border-[#7C3AED]/30 rounded-2xl p-4.5 sm:p-5 shadow-sm shadow-[#7C3AED]/10 flex flex-col gap-2.5"
             >
-              <div className="bg-[#7C3AED] text-white text-xs font-bold px-3 py-1.5 rounded-lg w-max uppercase">
+              <div className="bg-[#7C3AED] text-white text-[11px] font-bold px-2.5 py-1 rounded-md w-max uppercase tracking-wider">
                 Alphabit Skill
               </div>
-              <div className="flex items-start gap-3 mt-2">
-                <div className="w-6.5 h-6.5 rounded-full bg-[#10B981] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm shadow-[#10B981]/25">
-                  <Check className="w-4 h-4 stroke-[3]" />
+              <div className="flex items-start gap-3 mt-1">
+                <div className="w-5.5 h-5.5 rounded-full bg-[#10B981] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm shadow-[#10B981]/20">
+                  <Check className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <p className="text-[16px] text-gray-700 font-medium">
-                  {activeCategory.usPrefix}
-                  {activeCategory.usHighlight && (
-                    <span className="text-[#7C3AED] font-semibold">
-                      {activeCategory.usHighlight}
+                <p className="text-[14.5px] text-gray-800 font-medium leading-snug">
+                  {activeCategory?.usPrefix}
+                  {activeCategory?.usHighlight && (
+                    <span className="text-[#7C3AED] font-bold">
+                      {activeCategory?.usHighlight}
                     </span>
                   )}
-                  {activeCategory.usSuffix}
+                  {activeCategory?.usSuffix}
                 </p>
               </div>
             </motion.div>

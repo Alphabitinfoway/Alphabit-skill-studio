@@ -22,9 +22,7 @@ export default function Home() {
       <PlacementSupportSection />
       <TrustSection />
       <ProgramsSection />
-
       <CEPSection />
-
       <EnterpriseTrainingSection />
       <CapabilitiesSection />
       <TestimonialsSection />

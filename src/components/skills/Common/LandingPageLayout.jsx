@@ -11,13 +11,13 @@ export default function LandingPageLayout({ data }) {
     : "Full Stack Development";
 
   return (
-    <section className="w-full bg-[#F5F5F5] py-16 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#F5F5F5] py-10 sm:py-16 px-4 sm:px-6 lg:px-8 font-cabinet">
       {/* 
         Parent Container:
         - Must have items-start so sticky child does not stretch.
         - Must NOT have overflow-hidden or overflow-auto.
       */}
-      <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-10 items-start">
+      <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-8 sm:gap-10 items-start">
         
         {/* Left Column (Scrollable Content) */}
         <div className="flex-1 w-full flex flex-col">

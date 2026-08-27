@@ -6,31 +6,16 @@ import Link from "next/link";
 import { toSlug } from "@/data/skills";
 
 const skillCategories = {
-    "Coding Programs": [
+    "IT Skills": [
         {
             title: "Full Stack Development",
-            description: "Go from zero to building real web apps. You'll learn both the front-end and back-end, so you can create something complete on your own.",
+            description: "Go from zero to building real web apps with both front-end and back-end skills.",
             image: "/skill/ITSkills/fullstackdevelopment.webp"
         },
         {
             title: "Web Development",
-            description: "Learn how websites are actually built – HTML, CSS, JavaScript, and the frameworks real developers use every day.",
+            description: "Learn HTML, CSS, JavaScript and the frameworks real developers use every day.",
             image: "/skill/ITSkills/webdevelopment.webp"
-        },
-        {
-            title: "Python for AI/ML",
-            description: "Master Python programming basics, libraries like NumPy, Pandas, and Scikit-Learn for machine learning foundations.",
-            image: "/skill/AIcourses/pythonforaiml.webp"
-        },
-        {
-            title: "Java Development",
-            description: "Learn core Java, object-oriented programming, database connectivity, and backend development with Spring Boot.",
-            image: "/skill/ITSkills/fullstackdevelopment.webp"
-        },
-        {
-            title: "Data Science & Analytics",
-            description: "Learn to clean, visualize, analyze complex data and build predictive models to drive data-backed business decisions.",
-            image: "/skill/AIcourses/datascienceanalytics.webp"
         },
         {
             title: "MERN Stack Development",
@@ -44,7 +29,7 @@ const skillCategories = {
         },
         {
             title: "Cyber Security",
-            description: "Understand network security, penetration testing, and security protocols to defend digital infrastructure against cyber threats.",
+            description: "Understand network security, penetration testing, and security protocols to defend digital infrastructure.",
             image: "/skill/ITSkills/cybersecurity.webp"
         },
         {
@@ -73,39 +58,12 @@ const skillCategories = {
             image: "/skill/ITSkills/moblieappdevelopment.webp"
         }
     ],
-    "Non-Coding Programs": [
+    "Soft Skills": [
         {
             title: "UI/UX & Graphic Design",
-            description: "Learn to design interfaces people actually enjoy using – clean, intuitive, and good-looking, with the tools the industry runs on.",
+            description: "Learn to design interfaces people actually enjoy using – clean, intuitive, and good-looking, with modern industry tools.",
             image: "/skill/ITSkills/ui_uxgraphicdesign.webp"
         },
-        {
-            title: "ROR & Odoo & Golang",
-            description: "Learn Ruby on Rails, Odoo ERP, and Go language to build efficient enterprise applications and APIs.",
-            image: "/skill/ITSkills/ror_odoo_golang.webp"
-        },
-        {
-            title: "E-Commerce (Shopify/WooCommerce)",
-            description: "Learn how to build, manage, and optimize online stores using Shopify and WooCommerce to drive massive sales.",
-            image: "/skill/ITSkills/e-commerce(shopify_woocommerce).webp"
-        },
-        {
-            title: "Digital Marketing",
-            description: "Create banners, posts, and visuals that grab attention, using the same design software professionals use daily.",
-            image: "/skill/ITSkills/digitalmarketing.webp"
-        },
-        {
-            title: "Performance Marketing",
-            description: "Master paid advertising, ROI tracking, conversion rate optimization, and data-driven marketing campaigns.",
-            image: "/skill/ITSkills/digitalmarketing.webp"
-        },
-        {
-            title: "Social Media Marketing",
-            description: "Learn content strategy, brand positioning, audience engagement, and social media advertising across top platforms.",
-            image: "/skill/ITSkills/digitalmarketing.webp"
-        }
-    ],
-    "Non-Tech Field": [
         {
             title: "Human Resources (HR)",
             description: "Master recruitment, employee relations, talent management, HR analytics, and organizational behavior.",
@@ -135,16 +93,33 @@ const skillCategories = {
             title: "Brand Manager",
             description: "Master brand strategy, positioning, identity design, and consumer behavior analysis.",
             image: "/skill/SoftSkills/personalitydevelopment.webp"
+        }
+    ],
+    "AI Courses": [
+        {
+            title: "Python for AI/ML",
+            description: "Master Python programming basics, libraries like NumPy, Pandas, and Scikit-Learn for machine learning foundations.",
+            image: "/skill/AIcourses/pythonforaiml.webp"
         },
         {
-            title: "Purchase Manager",
-            description: "Learn supply chain management, vendor negotiation, procurement strategies, and inventory control.",
-            image: "/skill/SoftSkills/e-commercebusinessskills.webp"
+            title: "Data Science & Analytics",
+            description: "Learn to clean, visualize, analyze complex data and build predictive models to drive data-backed business decisions.",
+            image: "/skill/AIcourses/datascienceanalytics.webp"
         },
         {
-            title: "Digital Marketing Manager",
-            description: "Lead multi-channel digital campaigns, optimize budgets, and analyze overall marketing ROI.",
-            image: "/skill/SoftSkills/e-commercebusinessskills.webp"
+            title: "Java Development",
+            description: "Learn core Java, object-oriented programming, database connectivity, and backend development with Spring Boot.",
+            image: "/skill/ITSkills/fullstackdevelopment.webp"
+        },
+        {
+            title: "ROR & Odoo & Golang",
+            description: "Learn Ruby on Rails, Odoo ERP, and Go language to build efficient enterprise applications and APIs.",
+            image: "/skill/ITSkills/ror_odoo_golang.webp"
+        },
+        {
+            title: "E-Commerce (Shopify/WooCommerce)",
+            description: "Learn how to build, manage, and optimize online stores using Shopify and WooCommerce to drive massive sales.",
+            image: "/skill/ITSkills/e-commerce(shopify_woocommerce).webp"
         }
     ]
 };
@@ -180,10 +155,10 @@ function SkillCard({ image, title, description }) {
 }
 
 export default function LearningPathsSection() {
-    const [activeTab, setActiveTab] = useState("Coding Programs");
+    const [activeTab, setActiveTab] = useState("IT Skills");
     const [pageIndex, setPageIndex] = useState(0);
 
-    const skills = skillCategories[activeTab];
+    const skills = skillCategories[activeTab] || [];
     const totalPages = Math.ceil(skills.length / 6);
 
     const handlePrev = () => {
@@ -202,17 +177,17 @@ export default function LearningPathsSection() {
     const visibleSkills = skills.slice(pageIndex * 6, (pageIndex * 6) + 6);
 
     return (
-        <section id="learning-paths" className="w-full bg-[#6E42F8] py-12 md:py-[50px] font-cabinet relative px-6 md:px-16 lg:px-24 overflow-hidden">
+        <section id="learning-paths" className="w-full bg-[#6E42F8] py-10 md:py-[50px] font-cabinet relative px-4 sm:px-6 md:px-16 lg:px-24 overflow-hidden">
             {/* Title Section */}
-            <div className="flex flex-col items-center justify-center text-center w-full mb-6">
-                <h2 className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] leading-[1.35] text-white font-[600]">
+            <div className="flex flex-col items-center justify-center text-center w-full mb-6 sm:mb-8">
+                <h2 className="text-[26px] sm:text-[30px] md:text-[32px] lg:text-[36px] leading-[1.3] text-white font-[700] tracking-tight">
                     Explore{" "}
                     <span
-                        className="text-[#FF5622] font-normal italic text-[36px] sm:text-[42px] md:text-[48px] lg:text-[52px]"
+                        className="text-[#FF5622] font-normal italic text-[34px] sm:text-[42px] md:text-[48px] lg:text-[52px]"
                         style={{
                             fontFamily: "'PP Editorial New', serif",
-                            marginLeft: "6px",
-                            marginRight: "6px",
+                            marginLeft: "4px",
+                            marginRight: "4px",
                             verticalAlign: "baseline",
                         }}
                     >
@@ -222,18 +197,19 @@ export default function LearningPathsSection() {
                 </h2>
             </div>
 
-            {/* Category Switcher Tabs */}
-            <div className="flex justify-start gap-4 mb-8 flex-wrap relative z-10">
+            {/* Category Switcher Tabs - Styled to match Figma (Active: Solid Orange, Inactive: Orange Border) */}
+            <div className="flex justify-start sm:justify-center gap-3 mb-8 overflow-x-auto no-scrollbar relative z-10 px-2">
                 {Object.keys(skillCategories).map((category) => {
                     const isActive = activeTab === category;
                     return (
                         <button
                             key={category}
                             onClick={() => selectTab(category)}
-                            className={`px-6 py-2.5 rounded-full text-[15px] font-semibold transition-all duration-300 ${isActive
+                            className={`px-6 py-2.5 rounded-full text-[14px] sm:text-[15px] font-semibold whitespace-nowrap transition-all duration-300 border-2 border-[#FF5622] ${
+                                isActive
                                     ? "bg-[#FF5622] text-white shadow-md"
-                                    : "border border-white/30 text-white hover:border-white hover:bg-white/10"
-                                }`}
+                                    : "bg-transparent text-white hover:bg-[#FF5622]/20"
+                            }`}
                         >
                             {category}
                         </button>
@@ -241,8 +217,33 @@ export default function LearningPathsSection() {
                 })}
             </div>
 
-            {/* Carousel / Grid Wrapper */}
-            <div className="relative max-w-[1800px] mx-auto px-4 md:px-8">
+            {/* MOBILE LAYOUT (lg:hidden) - Horizontal Snap Slider matching Figma */}
+            <div className="block lg:hidden relative w-full z-10">
+                <div className="flex overflow-x-auto gap-4 px-2 pb-6 snap-x snap-mandatory scrollbar-none">
+                    {skills.map((skill, index) => (
+                        <Link
+                            key={index}
+                            href={`/skills/${toSlug(skill.title)}`}
+                            className="w-[82vw] sm:w-[310px] shrink-0 snap-center bg-white rounded-[28px] p-6 flex flex-col justify-between shadow-lg"
+                        >
+                            <div>
+                                <h3 className="font-[700] text-[20px] text-[#111111] font-cabinet leading-snug mb-2.5">
+                                    {skill.title}
+                                </h3>
+                                <p className="text-[13.5px] sm:text-[14px] text-gray-500 font-[500] font-cabinet leading-relaxed">
+                                    {skill.description}
+                                </p>
+                            </div>
+                            <span className="mt-5 text-[13.5px] font-semibold text-[#6E42F8] flex items-center gap-1">
+                                View Course →
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+            {/* DESKTOP LAYOUT (hidden lg:block) - Original Grid & Carousel preserved */}
+            <div className="hidden lg:block relative max-w-[1800px] mx-auto px-4 md:px-8">
                 {/* Arrow Controls */}
                 {skills.length > 6 && (
                     <>

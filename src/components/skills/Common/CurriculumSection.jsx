@@ -162,16 +162,197 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
     };
 
     return (
-        <section
-            className="relative w-full bg-gradient-to-b from-[#7143FE] via-[#D7CDF7] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
-            style={{
-                clipPath: "ellipse(110% 100% at 50% 100%)",
-                marginTop: "80px"
-            }}
-        >
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <>
+            {/* MOBILE LAYOUT (lg:hidden) - Pixel-perfect curved header matching desktop design */}
+            <section
+                className="block lg:hidden relative w-full bg-gradient-to-b from-[#7143FE] via-[#D7CDF7] to-[#F5F5F5] pt-16 pb-12 px-4 sm:px-6 font-cabinet overflow-hidden"
+                style={{
+                    clipPath: "ellipse(180% 100% at 50% 100%)",
+                    marginTop: "30px"
+                }}
+            >
+                <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
-            <div className="max-w-[1600px] mx-auto relative z-10">
+                <div className="max-w-[480px] mx-auto flex flex-col gap-6 relative z-10">
+
+                    {/* Section Header */}
+                    <div className="text-center">
+                        <span
+                            className="text-[#FF5622] italic font-normal text-[42px] sm:text-[48px] block leading-none"
+                            style={{ fontFamily: "'PP Editorial New', serif" }}
+                        >
+                            Curriculum
+                        </span>
+                        <h2 className="text-black font-bold text-[20px] sm:text-[24px] tracking-tight mt-1 leading-tight">
+                            that shapes your future
+                        </h2>
+                    </div>
+
+                    {/* Glass Track Switcher Tabs (Premium Segmented Control UI) */}
+                    {hasMultipleTracks && (
+                        <div className="w-full">
+                            <div
+                                className="relative flex flex-col sm:flex-row gap-2 p-1.5 rounded-2xl w-full"
+                                style={{
+                                    background: "rgba(255, 255, 255, 0.45)",
+                                    backdropFilter: "blur(20px) saturate(180%)",
+                                    WebkitBackdropFilter: "blur(20px) saturate(180%)",
+                                    border: "1px solid rgba(255, 255, 255, 0.75)",
+                                    boxShadow: "0 10px 30px -5px rgba(113, 67, 254, 0.18)",
+                                }}
+                            >
+                                {curriculumTracks.map((track, idx) => {
+                                    const isActive = activeTab === idx;
+                                    return (
+                                        <button
+                                            key={idx}
+                                            onClick={() => setActiveTab(idx)}
+                                            className={`relative z-10 w-full flex-1 px-4 py-3 rounded-xl text-[13.5px] sm:text-[14px] text-center transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                                                isActive
+                                                    ? "text-[#6B32F6] font-extrabold"
+                                                    : "text-gray-800 font-bold hover:text-gray-950"
+                                            }`}
+                                            style={
+                                                isActive
+                                                    ? {
+                                                          background: "linear-gradient(135deg, #FFFFFF 0%, #F4EEFF 100%)",
+                                                          boxShadow: "0 4px 18px rgba(113, 67, 254, 0.22), 0 2px 4px rgba(0, 0, 0, 0.04)",
+                                                          border: "1px solid rgba(113, 67, 254, 0.25)",
+                                                      }
+                                                    : {
+                                                          background: "rgba(255, 255, 255, 0.40)",
+                                                          border: "1px solid rgba(255, 255, 255, 0.40)",
+                                                      }
+                                            }
+                                        >
+                                            {isActive && (
+                                                <span className="w-2 h-2 rounded-full bg-[#7143FE] shrink-0 animate-pulse" />
+                                            )}
+                                            <span>{track.title}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Main Container Card (Light purple container matching screenshot) */}
+                    <div className="bg-[#F4EFFE] border border-[#7143FE]/20 rounded-[28px] p-4 sm:p-5 flex flex-col gap-4 shadow-sm">
+                        
+                        {/* 1. Modules List Pills (01 to N) */}
+                        <div className="flex flex-col gap-2.5">
+                            {activeModulesList.map((item, index) => {
+                                const isActive = activeModule === index;
+                                return (
+                                    <button
+                                        key={index}
+                                        onClick={() => setActiveModule(index)}
+                                        className={`w-full flex items-center gap-3 p-2.5 sm:p-3 rounded-full text-left transition-all ${
+                                            isActive
+                                                ? "bg-[#D8C7FF] border border-[#7143FE] shadow-sm"
+                                                : "bg-white/90 border border-white/60 hover:bg-white"
+                                        }`}
+                                    >
+                                        <div
+                                            className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-bold text-[12px] ${
+                                                isActive
+                                                    ? "bg-[#7143FE] text-white"
+                                                    : "bg-white border border-[#7143FE]/40 text-[#7143FE]"
+                                            }`}
+                                        >
+                                            {item.num}
+                                        </div>
+                                        <span
+                                            className={`text-[13.5px] font-semibold truncate ${
+                                                isActive ? "text-[#7143FE]" : "text-gray-800"
+                                            }`}
+                                        >
+                                            {item.title}
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+
+                        {/* 2. TechStack Card */}
+                        {currentData?.techstack && (
+                            <div className="bg-white rounded-[20px] p-4 border border-purple-100 shadow-sm flex flex-col gap-2 text-left">
+                                <h4 className="text-[#111111] font-extrabold text-[14px] tracking-tight">
+                                    TechStack
+                                </h4>
+                                <div className="flex flex-col gap-1.5 text-[12px] text-gray-700 leading-relaxed font-cabinet">
+                                    {Object.entries(currentData.techstack).map(([key, value]) =>
+                                        value ? (
+                                            <p key={key}>
+                                                <strong className="text-gray-900 font-bold capitalize">
+                                                    {key === "cms" ? "CMS" : key.charAt(0).toUpperCase() + key.slice(1)}:
+                                                </strong>{" "}
+                                                {value}
+                                            </p>
+                                        ) : null
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* 3. Selected Module Details Card */}
+                        <div className="bg-white rounded-[20px] p-4 sm:p-5 border border-purple-100 shadow-sm flex flex-col items-start text-left gap-2.5">
+                            <span className="text-[10px] font-extrabold uppercase tracking-wider text-white bg-[#7143FE] px-3 py-1 rounded-full">
+                                Module {currentData?.num}
+                            </span>
+
+                            <h3 className="text-[17px] font-bold text-gray-900 leading-tight">
+                                {currentData?.title}
+                            </h3>
+
+                            {currentData?.description && (
+                                <p className="text-[12.5px] text-gray-600 leading-relaxed font-light">
+                                    {currentData.description}
+                                </p>
+                            )}
+
+                            {/* Tags */}
+                            {currentData?.tags && currentData.tags.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5 pt-1">
+                                    {currentData.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="text-gray-800 text-[11px] font-medium px-3 py-1 border border-gray-300 rounded-full bg-gray-50/50"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* 4. Full Curriculum PDF Button */}
+                        <button
+                            onClick={handleOpenPdfFlow}
+                            className="w-full py-3.5 bg-[#7143FE] hover:bg-[#5C32EB] text-white font-bold text-[14px] rounded-2xl shadow-md transition-all flex items-center justify-center gap-2"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
+                            View Full Curriculum PDF
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+
+            {/* DESKTOP LAYOUT (hidden lg:block) - Original layout preserved */}
+            <section
+                className="hidden lg:block relative w-full bg-gradient-to-b from-[#7143FE] via-[#D7CDF7] to-[#F5F5F5] pt-36 pb-24 px-6 md:px-12 overflow-hidden"
+                style={{
+                    clipPath: "ellipse(110% 100% at 50% 100%)",
+                    marginTop: "80px"
+                }}
+            >
+                <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+                <div className="max-w-[1600px] mx-auto relative z-10">
 
                 {/* HEADING */}
                 <div className="text-center mb-16 px-4 flex flex-row items-baseline justify-center gap-3 flex-wrap">
@@ -427,8 +608,9 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                 </div>
 
             </div>
+        </section>
 
-            {/* MODAL 1: Lead Capture Form */}
+        {/* MODAL 1: Lead Capture Form */}
             <AnimatePresence>
                 {showFormModal && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -606,6 +788,6 @@ export default function CurriculumSection({ data, syllabusPdf = null }) {
                 )}
             </AnimatePresence>
 
-        </section>
+        </>
     );
 }
