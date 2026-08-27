@@ -1,47 +1,50 @@
 "use client";
 
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
-    <section className="w-full pt-13 mt-6 mb-[-2%] md:pt-16">
-      <div className="w-full max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-20 pt-6 pb-10 md:pt-8 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-12">
+    <section className="w-full pt-24 sm:pt-28 md:pt-32 pb-6 md:pb-12 font-cabinet overflow-hidden">
+      <div className="w-full max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
 
         {/* ── LEFT: Text Content ── */}
-        <div className="flex-[1.8] space-y-6 z-10">
-          <h1
-            className="font-medium text-[#171717] leading-[1.15] font-cabinet tracking-tight"
-            style={{ fontSize: "clamp(36px, 5vw, 62px)" }}
-          >
+        <div className="w-full lg:flex-[1.8] space-y-5 sm:space-y-6 z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <h1 className="font-medium text-[#171717] leading-[1.2] tracking-tight">
             <span
-              className="text-[#FF5722] italic text-3xl font-medium"
-              style={{ fontFamily: "'PP Editorial New', serif", fontSize: "1.2em" }}
+              className="text-[#FF5722] italic font-medium text-[32px] sm:text-[44px] lg:text-[62px] inline-block"
+              style={{ fontFamily: "'PP Editorial New', serif" }}
             >
               Transforming
             </span>{" "}
-            Tech Skills into
-            <br />
-            Corporate Careers
+            <span
+              className="text-[#171717] font-semibold text-[22px] sm:text-[36px] lg:text-[52px] inline-block"
+              style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+            >
+              Tech Skills into Corporate Careers
+            </span>
           </h1>
 
-          <p className="text-[#666666] text-[16px] leading-relaxed max-w-[600px]">
+          <p className="text-[#666666] text-[14.5px] sm:text-[16px] leading-relaxed max-w-[600px]">
             Alphabit Skill focuses purely on execution and employment. We engineer
             proficient developers and designers in AI, IT, and Multimedia through
             intensive practical training, expert mentorship, and aggressive placement
             support.
           </p>
 
-          <button
+          <Link
+            href="/register"
             style={{ backgroundColor: "#7143FE" }}
-            className="text-white px-4 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-2 text-[16px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03]"
+            className="text-white px-8 py-3.5 rounded-full font-medium transition-all flex items-center justify-center gap-2 text-[15px] sm:text-[16px] shadow-md w-full sm:w-fit hover:opacity-90 hover:scale-[1.02]"
           >
-            <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785222060/whiteArrow_tqeact.webp" alt="arrow" className="w-6" />
+            <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785222060/whiteArrow_tqeact.webp" alt="arrow" className="w-5 sm:w-6" />
             Join the Studio
-          </button>
+          </Link>
         </div>
 
-        {/* ── RIGHT: Shape + Image ── */}
-        <div className="flex-[0.85] w-full flex justify-end relative min-h-[500px] md:min-h-[560px]">
+        {/* ── RIGHT: Shape + Image (Hidden on mobile/tablet to prevent layout distortion) ── */}
+        <div className="hidden lg:flex flex-[0.85] w-full justify-end relative min-h-[500px] lg:min-h-[560px]">
 
-          {/* SVG gradient background shape — identical to Career HeroSection */}
+          {/* SVG gradient background shape */}
           <div
             className="absolute top-[102%] -translate-y-1/2 pointer-events-none z-0"
             style={{
@@ -70,7 +73,6 @@ export default function HeroSection() {
               />
             </svg>
           </div>
-
 
           {/* Degree person image — anchored to bottom of shape */}
           <div

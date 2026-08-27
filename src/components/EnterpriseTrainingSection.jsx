@@ -39,8 +39,14 @@ const trainingData = [
 export default function EnterpriseTrainingSection() {
   return (
     <>
-      {/* MOBILE LAYOUT (lg:hidden) - Pixel perfect matching user screenshot */}
-      <section className="block lg:hidden relative w-full bg-[#7143FE] py-10 px-4 sm:px-6 overflow-hidden">
+      {/* MOBILE LAYOUT (lg:hidden) - Pixel perfect with top curve matching desktop design */}
+      <section
+        className="block lg:hidden relative w-full bg-gradient-to-b from-[#7143FE] via-[#7143FE] to-[#F5F5F5] pt-16 pb-12 px-4 sm:px-6 overflow-hidden"
+        style={{
+          clipPath: "ellipse(180% 100% at 50% 100%)",
+          marginTop: "30px"
+        }}
+      >
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}

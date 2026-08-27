@@ -32,10 +32,10 @@ export default function PlacementSupportSection() {
             >
               Tech Career
             </span>
-            <h2 className="text-[#111111] text-[30px] sm:text-[36px] font-extrabold leading-[1.15] block">
+            <h2 className="text-[#111111] text-[26px] sm:text-[32px] font-[800] leading-[1.15] block">
               with Dedicated
             </h2>
-            <h2 className="text-[#111111] text-[30px] sm:text-[36px] font-extrabold leading-[1.15] block">
+            <h2 className="text-[#111111] text-[26px] sm:text-[32px] font-[800] leading-[1.15] block">
               Placement Support
             </h2>
           </motion.div>
@@ -102,7 +102,7 @@ export default function PlacementSupportSection() {
                   Tech Career
                 </div>
 
-                <div className="whitespace-nowrap text-[#111] font-[600] text-[18px] leading-[1.35] pt-4">
+                <div className="whitespace-nowrap text-[#111] font-[800] text-[20px] leading-[1.35] pt-4">
                   with Dedicated <br />
                   Placement Support
                 </div>

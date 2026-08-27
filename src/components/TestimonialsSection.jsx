@@ -9,7 +9,7 @@ const testimonials = [
     {
         id: 1,
         text: '"I had zero coding experience when I joined. Within 5 months I had three live projects deployed on GitHub and got placed at a software company in Rajkot. The training here is genuinely industry-level."',
-        name: "Priya Desai",
+        name: "Vinita Kanjani",
         title: "Junior React Developer, Rajkot",
         image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1786443919/copy_of_whatsapp_image_2026-08-11_at_31908_pm_ugdoba.jpg"
     },
@@ -239,7 +239,7 @@ export default function TestimonialsSection() {
                             className="absolute top-0 left-0 w-full h-[380px] bg-[#d7cdfa] transform translate-y-[24px] opacity-80"
                             style={{ borderRadius: "200px 200px 30px 200px", zIndex: 0 }}
                         />
-
+ 
                         {/* Main Purple Card with Motion */}
                         <AnimatePresence mode="wait">
                             <motion.div
