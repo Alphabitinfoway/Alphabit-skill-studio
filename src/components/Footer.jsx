@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { usePathname } from "next/navigation";
+import VisitorCounter from "./VisitorCounter";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -29,16 +30,21 @@ export default function Footer() {
               passionate individuals into industry-ready professionals.
             </p>
 
-            <div className="flex gap-3 mt-4">
-              <Link href="#" className="w-8 h-8 rounded-full bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
-                <Facebook size={20} fill="currentColor" />
-              </Link>
-              <Link href="#" className="w-8 h-8 rounded-[12px] bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
-                <Instagram size={20} strokeWidth={1.5} />
-              </Link>
-              <Link href="#" className="w-8 h-8 rounded-[12px] bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
-                <Linkedin size={20} fill="currentColor" />
-              </Link>
+            <div className="flex flex-wrap items-center gap-3 mt-2">
+              <div className="flex gap-3">
+                <Link href="#" className="w-8 h-8 rounded-full bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
+                  <Facebook size={20} fill="currentColor" />
+                </Link>
+                <Link href="#" className="w-8 h-8 rounded-[12px] bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
+                  <Instagram size={20} strokeWidth={1.5} />
+                </Link>
+                <Link href="#" className="w-8 h-8 rounded-[12px] bg-[#7A7A7A] flex items-center justify-center text-[#0f0f0f] transition-all hover:bg-white hover:scale-110">
+                  <Linkedin size={20} fill="currentColor" />
+                </Link>
+              </div>
+
+              {/* Inline Visitor Counter Badge */}
+              <VisitorCounter placement="inline" variant="dark" showLive={true} />
             </div>
           </div>
 
@@ -77,18 +83,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4 text-[13px] lg:text-[14px]">
               <li>
-                <a href="tel:+911234567890" className="hover:text-white transition-colors">
+                <a href="tel:+919409207327" className="hover:text-white transition-colors">
                   +91 9409207327
                 </a>
               </li>
               <li>
-                <a href="tel:+911234567890" className="hover:text-white transition-colors">
+                <a href="tel:+918866549495" className="hover:text-white transition-colors">
                   +91 88665 49495
                 </a>
               </li>
               <li>
-                <a href="mailto:alphabitskillstudio@gmail.com" className="hover:text-white transition-colors break-all">
-                  alphabitskillstudio@gmail.com
+                <a href="mailto:alphabitinfoway@gmail.com" className="hover:text-white transition-colors break-all">
+                 alphabitinfoway@gmail.com
                 </a>
               </li>
             </ul>
