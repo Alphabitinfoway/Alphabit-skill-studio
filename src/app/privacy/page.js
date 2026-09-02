@@ -4,7 +4,7 @@ import { ShieldCheck, Lock, Eye, FileText, ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "Privacy Policy | Alphabit Skill",
-  description: "Privacy Policy for Alphabit Skill Studio — Learn how we collect, protect, and handle your data.",
+  description: "Privacy Policy for Alphabit Skill  — Learn how we collect, protect, and handle your data.",
 };
 
 export default function PrivacyPage() {
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               <Lock className="w-5 h-5 text-[#6C4FF6]" /> 1. Overview & Commitment
             </h2>
             <p className="text-sm sm:text-base">
-              At <strong>Alphabit Skill Studio</strong>, we are committed to respecting your privacy and protecting any personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and how we keep it secure.
+              At <strong>Alphabit Skill </strong>, we are committed to respecting your privacy and protecting any personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and how we keep it secure.
             </p>
           </section>
 

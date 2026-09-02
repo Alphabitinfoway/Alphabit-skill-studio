@@ -106,6 +106,7 @@ export const unityModules = [
     {
         num: "01",
         title: "Game Programming Fundamentals & C#",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326930/module-1_gay1u9.webp",
         description: "Core programming logic and C# syntax, taught the way a game actually uses it — loops driving gameplay, not abstract \"print a number\" exercises.",
         tags: [
             "C# Fundamentals",
@@ -122,6 +123,7 @@ export const unityModules = [
     {
         num: "02",
         title: "2D & 3D Game Mechanics",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326931/module-2_dzxupb.webp",
         description: "Player movement, collision, and core gameplay mechanics — the systems every playable prototype needs before art or polish matters at all.",
         tags: [
             "Player Controllers",
@@ -137,6 +139,7 @@ export const unityModules = [
     {
         num: "03",
         title: "Animation, UI & Game Feel",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326931/module-3_rtf7og.webp",
         description: "Animator controllers, in-game UI, and the small feedback details — screen shake, hit pause, sound cues — that separate a game that feels responsive from one that just technically works.",
         tags: [
             "Animation Controllers",
@@ -152,6 +155,7 @@ export const unityModules = [
     {
         num: "04",
         title: "Game Architecture & Data Systems",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326931/module-4_g3qsxw.webp",
         description: "Structuring a project so it doesn't collapse under its own scripts by month three — save systems, scriptable objects, and architecture patterns real teams use to keep a codebase manageable.",
         tags: [
             "Scriptable Objects",
@@ -167,6 +171,7 @@ export const unityModules = [
     {
         num: "05",
         title: "Performance, Build & Deployment",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326931/module-5_qbvlzm.webp",
         description: "Getting a game to actually run well on target hardware — profiling, optimization, and building for PC, Android, or WebGL instead of leaving everything at editor-only quality.",
         tags: [
             "Performance Profiling",
@@ -182,6 +187,7 @@ export const unityModules = [
     {
         num: "06",
         title: "Capstone Game, Internship & Portfolio",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326931/module-6_igz0jq.webp",
         description: "Everything comes together in a full playable capstone game, a guided internship, and a downloadable build plus GitHub/itch.io portfolio ready to show a studio.",
         tags: [
             "Capstone Game Build",
@@ -200,6 +206,7 @@ export const unrealModules = [
     {
         num: "01",
         title: "Game Programming Fundamentals & Blueprints",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326935/module-1_wbzmfp.webp",
         description: "Core programming logic taught through Unreal's visual scripting system first, building the same logical thinking you'll later apply in C++ without fighting syntax on day one.",
         tags: [
             "Blueprint Visual Scripting",
@@ -215,6 +222,7 @@ export const unrealModules = [
     {
         num: "02",
         title: "3D Game Mechanics & Physics",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326935/module-2_uvdiea.webp",
         description: "Player movement, collision, and physics-driven gameplay in true 3D space — the mechanics behind everything from a platformer to a first-person shooter prototype.",
         tags: [
             "Character Movement",
@@ -230,6 +238,8 @@ export const unrealModules = [
     {
         num: "03",
         title: "C++ for Game Development",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326937/module-3_en3rhc.webp",
+            
         description: "Moving from Blueprints into C++ — the language behind performance-critical systems in almost every serious Unreal project, and a skill that distinguishes a technical candidate from a Blueprints-only one.",
         tags: [
             "C++ Fundamentals",
@@ -246,6 +256,7 @@ export const unrealModules = [
     {
         num: "04",
         title: "Animation, UI & Game Feel",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326936/module-4_ewmtms.webp",
         description: "Animation Blueprints, UMG-based UI, and the feedback layer — camera shake, hit-stop, sound cues — that makes a 3D game feel responsive instead of technically correct but flat.",
         tags: [
             "Animation Blueprints",
@@ -261,6 +272,7 @@ export const unrealModules = [
     {
         num: "05",
         title: "Performance, Build & Deployment",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326937/module-5_zjl8ls.webp",
         description: "Profiling and optimizing a 3D game for real hardware, then packaging a build for PC or console-adjacent platforms instead of leaving everything running only inside the editor.",
         tags: [
             "Performance Profiling",
@@ -276,6 +288,7 @@ export const unrealModules = [
     {
         num: "06",
         title: "Capstone Game, Internship & Portfolio",
+             image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788326936/module-6_fnxvfq.webp",
         description: "Everything comes together in a full playable 3D capstone game, a guided internship, and a downloadable build plus portfolio ready to show a studio or recruiter.",
         tags: [
             "Capstone Game Build",
@@ -311,7 +324,7 @@ export const javaModules = unrealModules;
  */
 export const comparisonSectionData = {
     titleNormal: "Why Students Choose Our ",
-    titleItalic: "Training Studio",
+    titleItalic: "Training ",
     categories: [
         {
             id: "mentors",

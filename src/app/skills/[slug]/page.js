@@ -145,7 +145,7 @@ function getCourseJsonLd(slug, skill, skillData) {
         },
         "location": {
           "@type": "Place",
-          "name": "Alphabit Skill Training Studio",
+          "name": "Alphabit Skill Training ",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Kalawad Road",

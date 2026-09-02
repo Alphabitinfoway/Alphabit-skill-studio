@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Logo + Description */}
           <div className="lg:col-span-4 flex flex-col gap-5">
             <Link href="/" className="flex items-center gap-2">
-              <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1785220854/flogo_ysyn7s.webp" alt="logo" className="h-10 lg:h-12" />
+              <img src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1788328311/2_hpsbfb.webp" alt="logo" className="h-10 lg:h-12" />
             </Link>
 
             <p className="text-[15px] leading-relaxed text-[#7A7A7A] max-w-sm">

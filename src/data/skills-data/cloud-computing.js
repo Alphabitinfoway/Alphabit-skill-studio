@@ -96,6 +96,7 @@ export const cloudInfraModules = [
     {
         num: "01",
         title: "Cloud Computing Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331431/module-1_ciedwy.webp",
         description: "Before you touch a console, you need to know what you're actually renting. Service models, the major providers, and why companies move to the cloud in the first place — the context every later module assumes you already have.",
         tags: [
             "IaaS/PaaS/SaaS Models",
@@ -110,6 +111,7 @@ export const cloudInfraModules = [
     {
         num: "02",
         title: "Compute & Virtual Machines",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331432/module-2_fmgpau.webp",
         description: "Setting up and managing virtual servers the way real infrastructure teams do — sizing them correctly, configuring them securely, and understanding what happens when one goes down at the worst possible time.",
         tags: [
             "EC2 / Azure VMs",
@@ -125,6 +127,7 @@ export const cloudInfraModules = [
     {
         num: "03",
         title: "Storage & Database Services",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331433/module-3_iicutg.webp",
         description: "Where cloud data actually lives — object storage, block storage, and managed database services — and how to choose between them for a given use case instead of defaulting to whatever's familiar.",
         tags: [
             "S3 / Azure Blob Storage",
@@ -140,6 +143,7 @@ export const cloudInfraModules = [
     {
         num: "04",
         title: "Networking & Security in the Cloud",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331434/module-4_grrsrp.webp",
         description: "Most cloud breaches trace back to a misconfigured security setting, not a sophisticated attack. This module is built entirely around avoiding that — VPCs, security groups, and identity management done properly.",
         tags: [
             "VPC & Subnetting",
@@ -155,6 +159,7 @@ export const cloudInfraModules = [
     {
         num: "05",
         title: "Monitoring, Cost Management & Optimization",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331437/module-5_qokk79.webp",
         description: "Keeping an eye on what your cloud infrastructure is actually doing, and just as importantly, what it's costing you every month — the module most beginner courses skip entirely.",
         tags: [
             "CloudWatch / Azure Monitor",
@@ -170,6 +175,7 @@ export const cloudInfraModules = [
     {
         num: "06",
         title: "Infrastructure Capstone, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331439/module-6_iisla5.webp",
         description: "You'll put it together into a deployed, multi-tier cloud environment — not a diagram, an actual running setup you can walk an interviewer through — plus a guided internship and a portfolio that shows it.",
         tags: [
             "Capstone Infrastructure Build",
@@ -187,6 +193,7 @@ export const devopsAutomationModules = [
     {
         num: "01",
         title: "DevOps & Cloud Fundamentals",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331442/module-1_k8yvrx.webp",
         description: "What DevOps actually changes about how software gets shipped, and the cloud fundamentals every automation script eventually has to interact with, whether the tutorial mentions it or not.",
         tags: [
             "DevOps Culture & Practices",
@@ -202,6 +209,7 @@ export const devopsAutomationModules = [
     {
         num: "02",
         title: "Linux, Scripting & Automation Basics",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331444/module-2_bl7xqq.webp",
         description: "Almost every DevOps task eventually runs through a terminal. This module gets you comfortable enough with Linux and shell scripting that later modules don't slow you down waiting on basics.",
         tags: [
             "Linux Command Line",
@@ -217,6 +225,7 @@ export const devopsAutomationModules = [
     {
         num: "03",
         title: "Containers with Docker",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331445/module-3_jsb6ey.webp",
         description: "Packaging applications into containers — the format that's replaced \"it works on my machine\" as the standard way software actually gets deployed across a team.",
         tags: [
             "Docker Fundamentals",
@@ -231,6 +240,7 @@ export const devopsAutomationModules = [
     {
         num: "04",
         title: "Container Orchestration with Kubernetes",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331448/module-4_ohaidf.webp",
         description: "Once you have more than a handful of containers, something has to manage them. Kubernetes is that something, covered here at the level real teams actually use it day to day, not just a demo cluster.",
         tags: [
             "Kubernetes Architecture",
@@ -245,6 +255,7 @@ export const devopsAutomationModules = [
     {
         num: "05",
         title: "CI/CD Pipelines & Infrastructure as Code",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331450/module-5_zcs09o.webp",
         description: "Automating the path from a code commit to a live deployment, and defining infrastructure in code instead of clicking through a console every single time something needs to change.",
         tags: [
             "Jenkins / GitHub Actions",
@@ -259,6 +270,7 @@ export const devopsAutomationModules = [
     {
         num: "06",
         title: "Automation Capstone, Internship & Portfolio",
+        image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1788331452/module-6_ttvxjx.webp",
         description: "You'll build a working CI/CD pipeline end to end — code commit to automated deployment — plus a guided internship and a GitHub portfolio that actually demonstrates it instead of describing it.",
         tags: [
             "Capstone Pipeline Build",

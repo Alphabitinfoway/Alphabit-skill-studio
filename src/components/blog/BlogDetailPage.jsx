@@ -289,7 +289,7 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
             </h1>
 
             {/* Large Featured / Cover Image Banner */}
-            <div className="w-full h-[240px] sm:h-[340px] lg:h-[420px] rounded-[20px] sm:rounded-[24px] overflow-hidden bg-[#D9D9D9] mb-8 sm:mb-10 shadow-sm">
+            <div className="w-full rounded-[20px] sm:rounded-[24px] overflow-hidden bg-[#F5F5F7] mb-8 sm:mb-10 border border-[#E4E4E9] shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex justify-center items-center">
               <img
                 src={image}
                 alt={title}
@@ -297,7 +297,7 @@ export default function BlogDetailPage({ initialBlog = null, initialAllBlogs = [
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = "/Home Page/Career/Specialized Training Modules_11zon.webp";
                 }}
-                className="w-full h-full object-cover"
+                className="w-full h-auto max-h-[550px] object-contain rounded-[20px] sm:rounded-[24px]"
               />
             </div>
 

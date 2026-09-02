@@ -4,7 +4,7 @@ import { ShieldCheck, FileText, CheckCircle2, ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "Terms of Use | Alphabit Skill",
-  description: "Terms of Use for Alphabit Skill Studio — Review our terms, user guidelines, and course enrollment policies.",
+  description: "Terms of Use for Alphabit Skill  — Review our terms, user guidelines, and course enrollment policies.",
 };
 
 export default function TermsPage() {
@@ -41,7 +41,7 @@ export default function TermsPage() {
               <CheckCircle2 className="w-5 h-5 text-[#6C4FF6]" /> 1. Acceptance of Terms
             </h2>
             <p className="text-sm sm:text-base">
-              By accessing or using <strong>Alphabit Skill Studio</strong>, you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, please do not use our services or website.
+              By accessing or using <strong>Alphabit Skill </strong>, you agree to comply with and be bound by these Terms of Use. If you do not agree to these terms, please do not use our services or website.
             </p>
           </section>
 
@@ -52,7 +52,7 @@ export default function TermsPage() {
               2. Educational Services & Content
             </h2>
             <p className="text-sm sm:text-base mb-3">
-              Alphabit Skill provides IT training programs, software development courses, and career assistance. All course material, curriculum design, and branding assets are intellectual property of Alphabit Skill Studio.
+              Alphabit Skill provides IT training programs, software development courses, and career assistance. All course material, curriculum design, and branding assets are intellectual property of Alphabit Skill .
             </p>
           </section>
 
@@ -82,7 +82,7 @@ export default function TermsPage() {
               For any questions regarding these Terms of Use, reach out to us at:
             </p>
             <div className="mt-3 bg-[#F5F5F5] p-4 rounded-2xl text-sm font-medium text-gray-800">
-              <p>Email: <a href="mailto:alphabitinfoway@gmail.com" className="text-[#6C4FF6] hover:underline">alphabitskillstudio@gmail.com</a></p>
+              <p>Email: <a href="mailto:alphabitinfoway@gmail.com" className="text-[#6C4FF6] hover:underline">alphabitskill@gmail.com</a></p>
               <p className="mt-1">Phone: +91 9409207327 | +91 8866549495</p>
             </div>
           </section>
