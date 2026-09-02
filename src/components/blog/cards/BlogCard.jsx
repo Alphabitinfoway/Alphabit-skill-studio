@@ -40,15 +40,18 @@ export default function BlogCard({ post }) {
           {title}
         </p>
 
-        {/* Read More link — grey arrow image */}
-        <span className="inline-flex items-center gap-2 text-[14px] font-medium text-[#555555] group-hover:text-[#7143FE] transition-colors duration-200 mt-auto">
-          <img
-            src="/greyArrow.webp"
-            alt="arrow"
-            className="w-[18px] h-[18px] object-contain flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
-          />
-          Read More
-        </span>
+        {/* Read Article Button */}
+        <div className="pt-2 mt-auto border-t border-[#F0F0F5] flex items-center justify-between">
+          <span 
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-bold text-[#7143FE] bg-[#7143FE]/10 group-hover:bg-[#7143FE] group-hover:text-white transition-all duration-300 shadow-sm"
+            style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+          >
+            Read Article
+            <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </div>
       </div>
     </Link>
   );

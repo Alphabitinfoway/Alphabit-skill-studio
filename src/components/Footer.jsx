@@ -57,8 +57,9 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link href="/skills" className="hover:text-white transition-colors">Skills</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/activities" className="hover:text-white transition-colors">Activities</Link></li>
+              <li><Link href="/career" className="hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a></li>
             </ul>
           </div>
 
@@ -68,11 +69,11 @@ export default function Footer() {
               Trending Course
             </h4>
             <ul className="space-y-4 text-[13px] lg:text-[14px]">
-              <li><Link href="#" className="hover:text-white transition-colors">AI/ML & Data Science Course</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Business Administration & Commerce</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Full Stack Development</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Digital Marketing Training</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">UI/UX & Graphic Design Course</Link></li>
+              <li><Link href="/skills/python-for-ai-ml" className="hover:text-white transition-colors">AI/ML & Data Science Course</Link></li>
+              <li><Link href="/skills/full-stack-development" className="hover:text-white transition-colors">Full Stack Development</Link></li>
+              <li><Link href="/skills/digital-marketing" className="hover:text-white transition-colors">Digital Marketing Training</Link></li>
+              <li><Link href="/skills/ui-ux-graphic-design" className="hover:text-white transition-colors">UI/UX & Graphic Design Course</Link></li>
+              <li><Link href="/skills/mobile-app-development" className="hover:text-white transition-colors">Mobile App Development</Link></li>
             </ul>
           </div>
 
@@ -112,8 +113,7 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 text-[14px] lg:text-[16px] text-[#7A7A7A]">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-            <Link href="/legal" className="hover:text-white transition-colors">Legal</Link>
-            <Link href="/sitemap" className="hover:text-white transition-colors">Site Map</Link>
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
