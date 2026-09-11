@@ -30,7 +30,7 @@ export default function MVCSection() {
           <div className="md:w-[65%] lg:w-[70%] flex items-start gap-4 text-[#666666] leading-[1.65] pt-5" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>
             <ArrowIcon />
             <p>
-              To future-proof technical careers by providing rigorous, mentor-driven instruction in next-generation frameworks, equipping our learners to solve complex engineering and design challenges.
+              To make students job-ready, not just course-complete, through practical, mentor-led training in the tools and frameworks companies use today.
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function MVCSection() {
           <div className="md:w-[65%] lg:w-[70%] flex items-start gap-4 text-[#666666] leading-[1.65] pt-4" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>
             <ArrowIcon />
             <p>
-              To act as the premier catalyst for digital innovation, continuously supplying the global IT sector with forward-thinking developers, AI specialists, and UI/UX architects.
+              To become Gujarat's most trusted name in IT and design training, known as much for who we place as what we teach.
             </p>
           </div>
         </div>
@@ -64,31 +64,31 @@ export default function MVCSection() {
           <div className="md:w-[65%] lg:w-[70%] flex flex-col gap-8">
             
             <div className="flex flex-col gap-2">
-              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Technological Agility:</h3>
+              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Skills That Age Well:</h3>
               <div className="flex items-start gap-4 text-[#666666] leading-[1.65]" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>
                 <ArrowIcon />
                 <p>
-                  To act as the premier catalyst for digital innovation, continuously supplying the global IT sector with forward-thinking developers, AI specialists, and UI/UX architects.
+                  We update our curriculum as the industry moves, so what you learn on day one is still relevant on the day you get hired.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Mentored Execution:</h3>
+              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Mentors, Not Lecturers:</h3>
               <div className="flex items-start gap-4 text-[#666666] leading-[1.65]" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>
                 <ArrowIcon />
                 <p>
-                  Replacing traditional teaching with direct technical oversight from deployed industry veterans.
+                  Every course is led by people who've built and shipped real software or design work, not read from a slide deck.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Verifiable Authority:</h3>
+              <h3 className="text-[#666666] font-bold" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>Proof Before Placement:</h3>
               <div className="flex items-start gap-4 text-[#666666] leading-[1.65]" style={{ fontSize: "clamp(14px, 1.2vw, 15px)" }}>
                 <ArrowIcon />
                 <p>
-                  Validating every learner's expertise through the successful deployment of functional, complex digital products prior to corporate placement.
+                  No one graduates on attendance alone. Every student defends a working project before we put them in front of a hiring partner.
                 </p>
               </div>
             </div>

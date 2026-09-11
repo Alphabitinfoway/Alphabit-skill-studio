@@ -9,7 +9,7 @@ export default function CTASection() {
   return (
     <section className="w-full bg-[#F5F5F5] py-14 lg:py-20 px-6 lg:px-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
-        
+
         {/* MOBILE LAYOUT (lg:hidden) - Pixel perfect matching user screenshot */}
         <div className="block lg:hidden text-center">
           <motion.div
@@ -96,7 +96,7 @@ export default function CTASection() {
             <h2 className="text-[#111111] leading-[1.1] tracking-tight">
               {/* First Line */}
               <div className="flex flex-wrap items-baseline gap-x-3 md:gap-x-4">
-                <span 
+                <span
                   className="text-[36px] font-extrabold"
                   style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                 >
@@ -114,7 +114,7 @@ export default function CTASection() {
                 >
                   Curriculum
                 </span>
-                <span 
+                <span
                   className="text-[26px] font-bold text-[#111111]/80"
                   style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                 >
@@ -124,7 +124,7 @@ export default function CTASection() {
 
               {/* Second Line */}
               <div className="flex flex-wrap items-baseline gap-x-3 md:gap-x-4 mt-2">
-                <span 
+                <span
                   className="text-[36px] font-extrabold"
                   style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
                 >
@@ -134,11 +134,11 @@ export default function CTASection() {
                   className="whitespace-nowrap"
                   style={{
                     fontFamily: "'PP Editorial New', serif",
-                    fontSize: "clamp(48px, 6vw, 52px)", 
+                    fontSize: "clamp(48px, 6vw, 52px)",
                     color: "#FF5622",
                     fontStyle: "italic",
                     fontWeight: 300,
-                    lineHeight: 1,                                                           
+                    lineHeight: 1,
                   }}
                 >
                   Advanced Tech Frameworks

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutMissionSection() {
   return (
@@ -63,19 +64,21 @@ export default function AboutMissionSection() {
 
           {/* CTA Button */}
           <div>
-            <button
-              style={{ backgroundColor: "#7143FE" }}
-              className="text-white px-4 py-2.5 rounded-full font-medium flex items-center gap-1.5 text-[15px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03] transition-all"
-            >
-              <Image
-                src="/whiteArrow.webp"
-                alt="arrow"
-                width={22}
-                height={22}
-                className="object-contain"
-              />
-              Join the Studio
-            </button>
+            <Link href="/register">
+              <button
+                style={{ backgroundColor: "#7143FE" }}
+                className="text-white px-5 py-3 rounded-full font-medium flex items-center gap-2 text-[15px] shadow-md w-fit hover:opacity-90 hover:scale-[1.03] transition-all cursor-pointer"
+              >
+                <Image
+                  src="/whiteArrow.webp"
+                  alt="arrow"
+                  width={22}
+                  height={22}
+                  className="object-contain"
+                />
+                Join the Studio
+              </button>
+            </Link>
           </div>
 
         </div>

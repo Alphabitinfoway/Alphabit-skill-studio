@@ -4,16 +4,19 @@ export default function AdvantagesSection() {
       title: "High-Performance Workspace",
       description: "A collaborative, agile environment designed to eliminate operational bottlenecks and support uninterrupted technical execution.",
       alt: "High-Performance Workspace",
+      image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1789039929/High-Performance_Workspace_p9phep.webp"
     },
     {
       title: "Tech Stack Expansion",
       description: "Continuous opportunities to upgrade your technical capabilities, master new frameworks, and increase your market value.",
       alt: "Tech Stack Expansion",
+      image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1789039927/Tech_Stack_Expansion_wl7xlw.webp"
     },
     {
       title: "Output-Based Incentives",
       description: "Direct recognition and compensation tied entirely to the quality, efficiency, and impact of your functional deliverables.",
       alt: "Output-Based Incentives",
+      image:"https://res.cloudinary.com/dir8eqqnk/image/upload/v1789039928/Output-Based_Incentives_kigpyd.webp"
     },
   ];
 
@@ -28,7 +31,7 @@ export default function AdvantagesSection() {
           {advantages.map((advantage) => (
             <div key={advantage.title} className="bg-white rounded-[32px] p-5 shadow-xl overflow-hidden flex flex-col h-full">
               <div className="w-full rounded-[24px] overflow-hidden mb-5">
-                <img src="/Home%20Page/Career/Specialized%20Training%20Modules_11zon.webp" alt={advantage.alt} className="w-full h-48 object-cover" />
+                <img src={advantage.image} alt={advantage.alt} className="w-full h-48 object-cover" />
               </div>
               <div className="p-2 md:p-2 flex-grow flex flex-col">
                 <h4 className="text-[20px] font-bold text-gray-900 mb-3 font-cabinet leading-tight">{advantage.title}</h4>

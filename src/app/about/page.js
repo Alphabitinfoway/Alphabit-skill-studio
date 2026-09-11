@@ -114,7 +114,15 @@ export default function About() {
       <PlacementSupportSection />
       <TestimonialsSection />
       <FAQSection />
-      <CTASection />
+      <CTASection
+        line1Normal="Build Your"
+        line1Italic="Career"
+        line1Suffix="- Apply Today &"
+        line2Normal="Launch"
+        line2Italic="Real Projects, Real Placements"
+        buttonText="Join the Studio"
+        buttonHref="/register"
+      />
     </main>
   );
 }
