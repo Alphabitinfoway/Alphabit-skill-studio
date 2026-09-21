@@ -90,7 +90,7 @@ export const searchGoogleAdsModules = [
     {
         num: "01",
         title: "Search & Performance Marketing Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801694/image_226_lzyup8.webp",
         imageAlt: "Search and performance marketing fundamentals and marketing funnel",
         description: "Before you touch an ad account, understand how people actually search and how ad auctions decide who shows up — the marketing funnel, search intent, and campaign objectives framed specifically around capturing existing demand.",
         tags: [
@@ -106,7 +106,7 @@ export const searchGoogleAdsModules = [
     {
         num: "02",
         title: "Google Ads Campaign Structure & Search Campaigns",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801694/image_227_a7efpy.webp",
         imageAlt: "Google Ads campaign structure and search campaign organization",
         description: "Build and structure real search campaigns — ad groups, ad copy, and campaign settings the way a real account is organized, not a single-ad test.",
         tags: [
@@ -122,7 +122,7 @@ export const searchGoogleAdsModules = [
     {
         num: "03",
         title: "Keyword Strategy, Bidding & Quality Score",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801701/image_228_baujaw.webp",
         imageAlt: "Keyword strategy bidding and Quality Score optimization",
         description: "Learn the mechanics that decide whether a search budget gets wasted or converts — keyword match types, bidding strategies, and the Quality Score system that quietly controls your cost per click.",
         tags: [
@@ -138,7 +138,7 @@ export const searchGoogleAdsModules = [
     {
         num: "04",
         title: "Display, YouTube & Shopping Ads",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801695/image_229_e7hr4v.webp",
         imageAlt: "Google Display YouTube and Shopping ad campaigns",
         description: "Go beyond search into Google's other ad formats — display remarketing, YouTube ads, and Shopping campaigns for e-commerce clients.",
         tags: [
@@ -154,7 +154,7 @@ export const searchGoogleAdsModules = [
     {
         num: "05",
         title: "Google Analytics & Conversion Tracking for Search",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801697/image_230_ifcfvm.webp",
         imageAlt: "Google Analytics 4 GA4 and Tag Manager conversion tracking",
         description: "Set up the tracking that makes every campaign decision trustworthy — GA4 events, conversion tracking, and attribution for search traffic specifically.",
         tags: [
@@ -170,7 +170,7 @@ export const searchGoogleAdsModules = [
     {
         num: "06",
         title: "Search Marketing Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801699/image_231_ropjfv.webp",
         imageAlt: "Search marketing capstone project and ROI reporting",
         description: "Apply everything into a live search campaign on a real ad account and budget, complete a guided internship, and leave with campaign reports and ROI data ready for interviews.",
         tags: [
@@ -189,7 +189,7 @@ export const metaPaidSocialModules = [
     {
         num: "01",
         title: "Paid Social Fundamentals",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801886/image_232_jg88k5.webp",
         imageAlt: "Paid social fundamentals and audience psychology",
         description: "Before running a single ad, understand how paid social differs from search — you're interrupting a scroll, not capturing existing intent. Cover the social funnel, audience psychology, and campaign objectives built around that difference.",
         tags: [
@@ -205,7 +205,7 @@ export const metaPaidSocialModules = [
     {
         num: "02",
         title: "Meta Ads Manager: Campaign Structure & Objectives",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801882/image_233_ftq2b0.webp",
         imageAlt: "Meta Ads Manager campaign and ad set structure",
         description: "Build campaigns inside Meta Ads Manager the way real accounts are structured — campaign, ad set, and ad-level settings mapped to the right objective for the business goal.",
         tags: [
@@ -221,7 +221,7 @@ export const metaPaidSocialModules = [
     {
         num: "03",
         title: "Audience Targeting, Lookalikes & Creative Testing",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801883/image_234_i0afpp.webp",
         imageAlt: "Audience targeting lookalikes and creative A/B testing",
         description: "Learn to find and reach the right audience, then test creative systematically instead of guessing which ad 'looks good.'",
         tags: [
@@ -237,7 +237,7 @@ export const metaPaidSocialModules = [
     {
         num: "04",
         title: "Retargeting, Catalog & E-commerce Ads",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801885/image_235_eeakdh.webp",
         imageAlt: "Retargeting campaigns and dynamic catalog ads",
         description: "Layer retargeting and dynamic product ads on top of cold traffic — the campaigns that recover abandoned carts and turn browsers into buyers.",
         tags: [
@@ -253,7 +253,7 @@ export const metaPaidSocialModules = [
     {
         num: "05",
         title: "Meta Pixel, Conversions API & Tracking",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801886/image_236_fumsgo.webp",
         imageAlt: "Meta Pixel setup and Conversions API tracking",
         description: "Set up the tracking that makes campaign data trustworthy on Meta specifically — Pixel setup, Conversions API, and reading Ads Manager reporting correctly.",
         tags: [
@@ -269,7 +269,7 @@ export const metaPaidSocialModules = [
     {
         num: "06",
         title: "Paid Social Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789801889/image_237_croiod.webp",
         imageAlt: "Paid social capstone project and campaign ROI reporting",
         description: "Apply everything into live campaigns on a real Meta ad account and budget, complete a guided internship, and leave with campaign reports and ROI data ready for interviews.",
         tags: [

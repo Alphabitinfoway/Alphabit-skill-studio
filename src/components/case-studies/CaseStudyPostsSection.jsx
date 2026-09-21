@@ -1,0 +1,57 @@
+"use client";
+
+import { useState } from "react";
+import { allPosts, POSTS_PER_PAGE } from "./data/postsData";
+import CaseStudyCard from "./cards/CaseStudyCard";
+
+export default function CaseStudyPostsSection({ initialCaseStudies = [] }) {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const postsList = Array.isArray(initialCaseStudies) && initialCaseStudies.length > 0 ? initialCaseStudies : allPosts;
+
+  const totalPages = Math.ceil(postsList.length / POSTS_PER_PAGE) || 1;
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const visiblePosts = postsList.slice(start, start + POSTS_PER_PAGE);
+
+  return (
+    <section className="w-full bg-[#F5F5F5] py-10 px-4 sm:px-8 lg:px-16 xl:px-20">
+      <div className="max-w-[1440px] mx-auto">
+
+        {/* ── Card Grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          {visiblePosts.map((post, idx) => (
+            <CaseStudyCard key={post._id || post.id || post.slug || idx} post={post} />
+          ))}
+        </div>
+        
+
+        {/* ── Pagination ── */}
+        {totalPages > 1 && (
+          <div className="mt-12 flex items-center justify-center gap-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`w-9 h-9 rounded-full text-[14px] font-semibold transition-all duration-200 ${
+                  page === currentPage
+                    ? "bg-[#7143FE] text-white shadow-md"
+                    : "bg-white text-[#555] border border-[#E0E0E0] hover:border-[#7143FE] hover:text-[#7143FE]"
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+            {/* Next arrow */}
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+              className="w-9 h-9 rounded-full bg-white border border-[#E0E0E0] flex items-center justify-center text-[#555] hover:border-[#7143FE] hover:text-[#7143FE] transition-all duration-200"
+            >
+              <img src="/greyArrow.webp" alt="arrow" className="w-5 rotate-45" />
+            </button>
+          </div>
+        )}
+
+      </div>
+    </section>
+  );
+}

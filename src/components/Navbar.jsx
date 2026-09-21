@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
+import { ChevronDown, Menu, X, ChevronRight, Newspaper, Briefcase, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -273,24 +273,36 @@ export default function Navbar() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [skillsOpen, setSkillsOpen] = useState(false);
+    const [insightsOpen, setInsightsOpen] = useState(false);
     const [mobileSkillsOpen, setMobileSkillsOpen] = useState(false);
+    const [mobileInsightsOpen, setMobileInsightsOpen] = useState(false);
     const [activeMobileCategory, setActiveMobileCategory] = useState("tech-coding");
     const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const linkRefs = useRef([]);
     const dropdownRef = useRef(null);
+    const insightsDropdownRef = useRef(null);
+
+    const insightLinks = [
+        { name: "Blogs", href: "/blog", icon: Newspaper },
+        { name: "Case Studies", href: "/case-studies", icon: Briefcase },
+    ];
 
     const navLinks = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Skills", href: "/skills", hasDropdown: true },
         { name: "Career", href: "/career" },
-        { name: "Blog", href: "/blog" },
+        { name: "Insights", href: "/blog", hasInsightsDropdown: true },
         { name: "Contact Us", href: "/contact" },
     ];
 
-    const activeIndex = navLinks.findIndex((link) =>
-        link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)
-    );
+    const activeIndex = navLinks.findIndex((link) => {
+        if (link.href === "/") return pathname === "/";
+        if (link.hasInsightsDropdown) {
+            return pathname.startsWith("/blog") || pathname.startsWith("/case-studies");
+        }
+        return pathname.startsWith(link.href);
+    });
 
     const isRegisterActive = pathname === "/register";
 
@@ -309,6 +321,9 @@ export default function Navbar() {
         function handleClick(e) {
             if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
                 setSkillsOpen(false);
+            }
+            if (insightsDropdownRef.current && !insightsDropdownRef.current.contains(e.target)) {
+                setInsightsOpen(false);
             }
         }
         document.addEventListener("mousedown", handleClick);
@@ -351,7 +366,9 @@ export default function Navbar() {
 
                         {navLinks.map((link, i) => {
                             const isActive =
-                                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                                link.hasInsightsDropdown
+                                    ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies")
+                                    : link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
                             if (link.hasDropdown) {
                                 return (
@@ -383,7 +400,6 @@ export default function Navbar() {
                                             </motion.span>
                                         </Link>
 
-                                        {/* Mega dropdown wrapper — keep open on hover */}
                                         <div
                                             onMouseEnter={() => setSkillsOpen(true)}
                                             onMouseLeave={() => setSkillsOpen(false)}
@@ -391,6 +407,70 @@ export default function Navbar() {
                                         >
                                             <AnimatePresence>
                                                 {skillsOpen && <SkillsMegaDropdown />}
+                                            </AnimatePresence>
+                                        </div>
+                                    </div>
+                                );
+                            }
+
+                            if (link.hasInsightsDropdown) {
+                                return (
+                                    <div
+                                        key={link.name}
+                                        className="relative"
+                                        ref={(el) => {
+                                            insightsDropdownRef.current = el;
+                                            linkRefs.current[i] = el;
+                                        }}
+                                    >
+                                        <button
+                                            type="button"
+                                            onMouseEnter={() => setInsightsOpen(true)}
+                                            onMouseLeave={() => setInsightsOpen(false)}
+                                            onClick={() => setInsightsOpen((prev) => !prev)}
+                                            className={`relative flex items-center text-[14px] font-[500] transition-colors tracking-wide px-1 py-1 ${isActive || insightsOpen ? "text-[#7C3AED] font-[600]" : "text-[#444] hover:text-[#7C3AED]"}`}
+                                        >
+                                            {link.name}
+                                            <motion.span
+                                                animate={{ rotate: insightsOpen ? 180 : 0 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="inline-flex ml-1"
+                                            >
+                                                <ChevronDown className="h-3.5 w-3.5 stroke-[2.5] opacity-50" />
+                                            </motion.span>
+                                        </button>
+
+                                        <div
+                                            onMouseEnter={() => setInsightsOpen(true)}
+                                            onMouseLeave={() => setInsightsOpen(false)}
+                                            className="absolute top-full left-1/2 -translate-x-1/2"
+                                        >
+                                            <AnimatePresence>
+                                                {insightsOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                        exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                                                        transition={{ duration: 0.18, ease: "easeOut" }}
+                                                        className="mt-3 min-w-[210px] w-56 rounded-2xl border border-[#EBEBEB] bg-white p-3.5 shadow-[0_12px_32px_rgba(0,0,0,0.08)] flex flex-col gap-2"
+                                                    >
+                                                        {insightLinks.map((item) => {
+                                                            const Icon = item.icon;
+                                                            const isItemActive = pathname.startsWith(item.href);
+                                                            return (
+                                                                <Link
+                                                                    key={item.name}
+                                                                    href={item.href}
+                                                                    onClick={() => setInsightsOpen(false)}
+                                                                    className={`flex items-center justify-between rounded-xl px-3.5 py-2.5 text-[14px] font-medium transition-all duration-150 ${isItemActive ? "bg-[#F1ECFF] text-[#7C3AED] font-semibold" : "text-gray-800 hover:bg-[#F5F3FF] hover:text-[#7C3AED]"}`}
+                                                                >
+                                                                    <span>{item.name}</span>
+                                                                    <Icon className="h-4 w-4 text-[#7C3AED] shrink-0" />
+                                                                </Link>
+                                                            );
+                                                        })}
+                                                    </motion.div>
+                                                )}
                                             </AnimatePresence>
                                         </div>
                                     </div>
@@ -447,7 +527,9 @@ export default function Navbar() {
                         <div className="flex flex-col space-y-2 text-center">
                             {navLinks.map((link) => {
                                 const isActive =
-                                    link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                                    link.hasInsightsDropdown
+                                        ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies")
+                                        : link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
                                 if (link.hasDropdown) {
                                     return (
@@ -540,6 +622,52 @@ export default function Navbar() {
                                                                     })}
                                                             </motion.div>
                                                         </AnimatePresence>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    );
+                                }
+
+                                if (link.hasInsightsDropdown) {
+                                    return (
+                                        <div key={link.name}>
+                                            <button
+                                                onClick={() => setMobileInsightsOpen((v) => !v)}
+                                                className={`text-xl font-semibold flex items-center justify-center gap-2 transition-colors w-full ${isActive ? "text-[#7C3AED]" : "text-zinc-900"}`}
+                                            >
+                                                {link.name}
+                                                <motion.span animate={{ rotate: mobileInsightsOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                                                    <ChevronDown className="h-5 w-5 stroke-[2.5]" />
+                                                </motion.span>
+                                            </button>
+
+                                            <AnimatePresence>
+                                                {mobileInsightsOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: "auto" }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                                                        className="overflow-hidden mt-2 mb-2 w-full"
+                                                    >
+                                                        <div className="flex flex-col gap-2 overflow-hidden rounded-2xl border border-[#E7E7E7] bg-white p-2.5 shadow-sm">
+                                                            {insightLinks.map((item) => {
+                                                                const Icon = item.icon;
+                                                                const isItemActive = pathname.startsWith(item.href);
+                                                                return (
+                                                                    <Link
+                                                                        key={item.name}
+                                                                        href={item.href}
+                                                                        onClick={() => setMobileMenuOpen(false)}
+                                                                        className={`flex items-center justify-between rounded-xl px-3.5 py-2.5 text-left text-[15px] font-medium transition-colors ${isItemActive ? "bg-[#F1ECFF] text-[#7C3AED]" : "text-zinc-800 hover:bg-[#F5F3FF] hover:text-[#7C3AED]"}`}
+                                                                    >
+                                                                        <span>{item.name}</span>
+                                                                        <Icon className="h-4 w-4 text-[#7C3AED] shrink-0" />
+                                                                    </Link>
+                                                                );
+                                                            })}
+                                                        </div>
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>

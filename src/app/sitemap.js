@@ -1,5 +1,6 @@
 import { skills } from "@/data/skills";
 import { API_BASE_URL } from "@/config/api";
+import { allPosts } from "@/components/case-studies/data/postsData";
 
 export default async function sitemap() {
   const baseUrl = "https://alphabitskill.com";
@@ -10,6 +11,7 @@ export default async function sitemap() {
     "/about",
     "/blog",
     "/career",
+    "/case-studies",
     "/contact",
     "/privacy",
     "/register",
@@ -53,5 +55,36 @@ export default async function sitemap() {
     console.warn("[Sitemap] API fetch error:", err?.message);
   }
 
-  return [...staticRoutes, ...skillRoutes, ...blogRoutes];
+  // Dynamic case study routes (fetched from API or static fallback)
+  let caseStudyRoutes = [];
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/case-studies`, {
+      headers: { "ngrok-skip-browser-warning": "true" },
+      next: { revalidate: 3600 },
+    });
+    if (res.ok) {
+      const json = await res.json();
+      if (json?.success && Array.isArray(json.data) && json.data.length > 0) {
+        caseStudyRoutes = json.data.map((cs) => ({
+          url: `${baseUrl}/case-studies/${cs.slug || cs._id}`,
+          lastModified: cs.updatedAt || cs.createdAt || new Date().toISOString(),
+          changeFrequency: "monthly",
+          priority: 0.8,
+        }));
+      }
+    }
+  } catch (err) {
+    console.warn("[Sitemap] Case studies API fetch error:", err?.message);
+  }
+
+  if (caseStudyRoutes.length === 0) {
+    caseStudyRoutes = allPosts.map((cs) => ({
+      url: `${baseUrl}/case-studies/${cs.slug || cs.id}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }));
+  }
+
+  return [...staticRoutes, ...skillRoutes, ...blogRoutes, ...caseStudyRoutes];
 }

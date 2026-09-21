@@ -89,6 +89,8 @@ export const organicGrowthModules = [
     {
         num: "01",
         title: "Organic Social Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810601/image_262_efdjuz.webp",
+        imageAlt: "Organic social media fundamentals",
         description: "Before you post anything, understand how a platform's algorithm actually decides what to show people, and how organic reach is earned rather than bought. Cover platform fundamentals and content pillars framed specifically around growth.",
         tags: [
             "Platform Algorithms (Instagram, Facebook)",
@@ -103,6 +105,8 @@ export const organicGrowthModules = [
     {
         num: "02",
         title: "Content Strategy & Content Calendars",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810604/image_263_fgsmeh.webp",
+        imageAlt: "Social media content strategy",
         description: "Plan content the way real brand accounts do — monthly calendars, content pillars, and post formats mapped to actual business goals, not random daily posting.",
         tags: [
             "Content Calendar Planning",
@@ -117,6 +121,8 @@ export const organicGrowthModules = [
     {
         num: "03",
         title: "Reels, Short-Form Video & Discovery",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810604/image_264_ib1kaj.webp",
+        imageAlt: "Reels and short-form video strategy",
         description: "Learn what actually drives organic reach on Instagram and Facebook today — Reels strategy, hooks, and hashtag/discovery research based on how the algorithm behaves now.",
         tags: [
             "Reels & Short-Form Video Strategy",
@@ -131,6 +137,8 @@ export const organicGrowthModules = [
     {
         num: "04",
         title: "Content Creation & Copywriting for Social",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810608/image_265_law3h6.webp",
+        imageAlt: "Social media content creation",
         description: "Write and design content that stops a scroll — captions, visual hierarchy, and formats matched to what each platform actually rewards.",
         tags: [
             "Copywriting for Social",
@@ -145,6 +153,8 @@ export const organicGrowthModules = [
     {
         num: "05",
         title: "Social Media Analytics & Reporting",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810608/image_266_na9ffo.webp",
+        imageAlt: "Social media analytics and reporting",
         description: "Learn to read what a platform's analytics are actually telling you — reach vs engagement vs conversions — and iterate content based on real performance data.",
         tags: [
             "Platform Analytics (Instagram/Facebook Insights)",
@@ -159,6 +169,8 @@ export const organicGrowthModules = [
     {
         num: "06",
         title: "Content Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810612/image_267_s2zkan.webp",
+        imageAlt: "Social media content capstone project",
         description: "Apply everything into a real content calendar and posting cycle for a brand account, complete a guided internship, and leave with a content portfolio and growth data ready for interviews.",
         tags: [
             "Capstone Content Calendar Build",
@@ -176,6 +188,8 @@ export const communityManagementModules = [
     {
         num: "01",
         title: "Community & Brand Voice Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810971/image_268_zmbmdi.webp",
+        imageAlt: "Community management and brand voice",
         description: "Before responding to a single comment, understand how a brand's voice needs to stay consistent across every public interaction, and why community management is different from just posting content.",
         tags: [
             "Brand Voice & Tone Guidelines",
@@ -190,6 +204,8 @@ export const communityManagementModules = [
     {
         num: "02",
         title: "Community Management & Engagement Practices",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810968/image_269_ot2top.webp",
+        imageAlt: "Community engagement practices",
         description: "Learn the day-to-day of running a brand's community — responding to comments and DMs in the brand's voice, and turning casual followers into an engaged audience.",
         tags: [
             "Comment & DM Management",
@@ -202,6 +218,8 @@ export const communityManagementModules = [
     {
         num: "03",
         title: "Handling Negative Feedback & Crisis Response",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810970/image_270_ghwhx0.webp",
+        imageAlt: "Social media crisis response",
         description: "Learn the part most courses skip — responding to negative comments and public complaints in a way that protects the brand instead of escalating the situation.",
         tags: [
             "Negative Feedback Response Frameworks",
@@ -214,6 +232,8 @@ export const communityManagementModules = [
     {
         num: "04",
         title: "Influencer Identification & Outreach",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810972/image_271_olvvvp.webp",
+        imageAlt: "Influencer identification and outreach",
         description: "Learn how brands actually find and approach creators — vetting for audience fit, not just follower count, and writing outreach that gets a response.",
         tags: [
             "Influencer Vetting & Audience Fit",
@@ -226,6 +246,8 @@ export const communityManagementModules = [
     {
         num: "05",
         title: "Collaboration Structuring, UGC & Campaign ROI",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810976/image_272_vjixsw.webp",
+        imageAlt: "Influencer collaboration and campaign ROI",
         description: "Learn how to structure a creator collaboration properly and measure whether it was worth the spend — briefs, deliverables, and ROI tracking.",
         tags: [
             "Collaboration & Barter Structuring",
@@ -240,6 +262,8 @@ export const communityManagementModules = [
     {
         num: "06",
         title: "Community Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789810978/image_273_qwjm7n.webp",
+        imageAlt: "Community management capstone project",
         description: "Apply everything into managing a real brand's community and running a small influencer collaboration, complete a guided internship, and leave with a portfolio of documented engagement and campaign work.",
         tags: [
             "Capstone Community Management",
