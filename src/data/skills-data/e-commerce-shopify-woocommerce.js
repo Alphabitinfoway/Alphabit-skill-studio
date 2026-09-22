@@ -89,6 +89,8 @@ export const shopifyModules = [
     {
         num: "01",
         title: "Shopify Fundamentals & Store Setup",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798894/image_214_bzm8rd.webp",
+        imageAlt: "Shopify store setup",
         description: "Setting up a Shopify store the way an actual client project starts — store configuration, product structure, and the admin settings that get skipped in tutorials and cause problems later.",
         tags: [
             "Shopify Admin & Settings",
@@ -103,6 +105,8 @@ export const shopifyModules = [
     {
         num: "02",
         title: "Liquid Templating & Theme Customization",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798896/image_215_arwxds.webp",
+        imageAlt: "Shopify Liquid theme customization",
         description: "Shopify's templating language, and how to customize a theme beyond the settings panel — the skill that separates a Shopify developer from someone who just picks a theme from the store.",
         tags: [
             "Liquid Syntax & Objects",
@@ -117,6 +121,8 @@ export const shopifyModules = [
     {
         num: "03",
         title: "Custom Sections & Store Design",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798895/image_216_rotpfp.webp",
+        imageAlt: "Custom Shopify store sections",
         description: "Building custom, reusable sections merchants can actually drag and drop into their store — the difference between a theme that looks stock and one that looks built for the brand.",
         tags: [
             "Custom Section Development",
@@ -131,6 +137,8 @@ export const shopifyModules = [
     {
         num: "04",
         title: "Apps, Integrations & Checkout Customization",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798896/image_217_ba54m2.webp",
+        imageAlt: "Shopify apps and checkout integration",
         description: "Integrating third-party apps and customizing checkout and cart behavior — the part of a real project where most of the client's actual requirements live.",
         tags: [
             "Shopify App Ecosystem",
@@ -145,6 +153,8 @@ export const shopifyModules = [
     {
         num: "05",
         title: "Performance, SEO & Store Launch",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798895/image_218_t3aohb.webp",
+        imageAlt: "Shopify store performance and SEO",
         description: "Getting a store to actually load fast and rank — page speed, image optimization, and on-page SEO — because a slow store loses sales regardless of how good the design is.",
         tags: [
             "Store Performance Optimization",
@@ -159,6 +169,8 @@ export const shopifyModules = [
     {
         num: "06",
         title: "Capstone Store, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789798897/image_219_eabdk7.webp",
+        imageAlt: "Shopify capstone store project",
         description: "Everything comes together in a full, published Shopify store built for a simulated brand, a guided internship, and a portfolio with a live store link you can hand anyone.",
         tags: [
             "Capstone Store Build",
@@ -176,6 +188,8 @@ export const woocommerceModules = [
     {
         num: "01",
         title: "WordPress & WooCommerce Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799274/image_220_nvqnns.webp",
+        imageAlt: "WordPress and WooCommerce setup",
         description: "Setting up WordPress and WooCommerce correctly from the start — hosting basics, plugin architecture, and store configuration, the foundation every later module builds on.",
         tags: [
             "WordPress Fundamentals",
@@ -190,6 +204,8 @@ export const woocommerceModules = [
     {
         num: "02",
         title: "Theme Customization & Page Building",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799274/image_221_dqayki.webp",
+        imageAlt: "WooCommerce theme customization",
         description: "Customizing WooCommerce themes and building store pages using page builders — the way most real WooCommerce projects are actually built, not hand-coded from scratch every time.",
         tags: [
             "WooCommerce Theme Structure",
@@ -204,6 +220,8 @@ export const woocommerceModules = [
     {
         num: "03",
         title: "Essential Plugins & Store Functionality",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799275/image_222_f1bflx.webp",
+        imageAlt: "WooCommerce plugins and functionality",
         description: "Configuring the plugin stack every real WooCommerce store needs — SEO, caching, security — and knowing which plugins are worth using versus which ones slow a site down.",
         tags: [
             "Plugin Selection & Configuration",
@@ -218,6 +236,8 @@ export const woocommerceModules = [
     {
         num: "04",
         title: "Payment Gateways & Shipping Setup",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799276/image_223_vifnlb.webp",
+        imageAlt: "WooCommerce payments and shipping",
         description: "Configuring payment gateways and shipping rules correctly — the module where a small misconfiguration directly costs a client real money or lost orders.",
         tags: [
             "Payment Gateway Integration",
@@ -232,6 +252,8 @@ export const woocommerceModules = [
     {
         num: "05",
         title: "Custom Functionality & Light Development",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799275/image_224_actlp1.webp",
+        imageAlt: "WooCommerce custom development",
         description: "Extending WooCommerce beyond default plugin behavior using PHP snippets and hooks — the skill that lets you actually fulfill a client's unusual request instead of saying it's not possible.",
         tags: [
             "WooCommerce Hooks & Filters",
@@ -246,6 +268,8 @@ export const woocommerceModules = [
     {
         num: "06",
         title: "Capstone Store, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789799277/image_225_ksdmhz.webp",
+        imageAlt: "WooCommerce capstone store project",
         description: "Everything comes together in a full, published WooCommerce store for a simulated business, a guided internship, and a portfolio with a live store link ready to show clients or employers.",
         tags: [
             "Capstone Store Build",

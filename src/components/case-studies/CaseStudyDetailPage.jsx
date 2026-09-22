@@ -1,0 +1,281 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Calendar, Search, ArrowLeft } from "lucide-react";
+import { caseStudyDetailData } from "./data/caseStudyDetailData";
+import CTASection from "@/components/CTASection";
+import { API_BASE_URL } from "@/config/api";
+
+
+function SidebarCard({ post }) {
+  const href = `/case-studies/${post.slug || post.id || post._id}`;
+  const defaultImg = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+  let img = defaultImg;
+  if (post?.image && post.image !== "no-photo.jpg") {
+    img = post.image.startsWith("http") ? post.image : `${API_BASE_URL}/${post.image}`;
+  }
+
+  return (
+    <Link href={href} className="flex items-center gap-3.5 group cursor-pointer">
+      <div className="flex-shrink-0 w-[72px] h-[54px] rounded-[10px] overflow-hidden bg-[#E0E0E0]">
+        <img
+          src={img}
+          alt={post.title}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = defaultImg;
+          }}
+          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 ease-out"
+        />
+      </div>
+      <div className="flex flex-col gap-1 min-w-0">
+        <p
+          className="text-[13px] font-semibold text-[#111111] leading-[1.35] line-clamp-2 group-hover:text-[#7143FE] transition-colors font-cabinet"
+        >
+          {post.title}
+        </p>
+        <span className="inline-flex items-center gap-1.5 text-[11px] text-[#888888]">
+          <Calendar size={13} className="flex-shrink-0 text-[#888888]" />
+          {post.date || "Sep 2024"}
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+function CaseStudyContentRenderer({ content }) {
+  if (!content) return null;
+
+  const isHtml = /<[a-z][\s\S]*>/i.test(content);
+
+  if (isHtml) {
+    return (
+      <div
+        className="blog-detail-content blog-prose-content w-full max-w-full overflow-x-auto break-words font-cabinet"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    );
+  }
+
+  const rawBlocks = content
+    .split(/\r?\n\r?\n/)
+    .map((b) => b.trim())
+    .filter(Boolean);
+
+  const blocks = rawBlocks.filter((b) => {
+    const lower = b.toLowerCase();
+    return !lower.startsWith("meta title") && !lower.startsWith("meta description") && !lower.startsWith("url\n") && lower !== "url";
+  });
+
+  return (
+    <div className="space-y-6 text-[#333333] text-[16px] leading-[1.85] font-cabinet w-full max-w-full overflow-hidden break-words">
+      {blocks.map((block, idx) => {
+        if (block.toLowerCase().startsWith("last updated") || block.toLowerCase().startsWith("written by")) {
+          const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+          return (
+            <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-[14px] bg-[#F5F5F8] border border-[#E2E2E8] text-[13px] text-[#555555] mb-8 shadow-sm">
+              {lines.map((line, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <Calendar size={13} className="flex-shrink-0 text-[#777]" />
+                  <span className="font-medium text-[#222]">{line}</span>
+                </div>
+              ))}
+            </div>
+          );
+        }
+
+        const isMarkdownHeading = /^#{1,4}\s+/.test(block);
+        const cleanHeadingText = block.replace(/^#{1,4}\s+/, "").trim();
+
+        const isHeading =
+          isMarkdownHeading ||
+          (block.length < 85 && !block.endsWith(".") && !block.endsWith(",") && !block.includes("\n"));
+
+        if (isHeading) {
+          return (
+            <h2
+              key={idx}
+              className="text-[22px] sm:text-[26px] font-bold text-[#111111] leading-[1.3] mt-8 mb-3 font-cabinet"
+            >
+              {cleanHeadingText}
+            </h2>
+          );
+        }
+
+        const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+        const bulletRegex = /^([•\-\*]|->|>|\d+[\.\)])\s+/;
+        const hasBulletLines = lines.some((l) => bulletRegex.test(l));
+
+        if (hasBulletLines) {
+          const bulletItems = lines.filter((l) => bulletRegex.test(l)).map((l) => l.replace(bulletRegex, ""));
+          const introLines = lines.filter((l) => !bulletRegex.test(l));
+
+          return (
+            <div key={idx} className="my-4 font-cabinet space-y-3">
+              {introLines.length > 0 && (
+                <p className="text-[16px] text-[#333333] leading-[1.85]">
+                  {introLines.join(" ")}
+                </p>
+              )}
+              <ul className="space-y-2 pl-6 list-disc text-[#333333]">
+                {bulletItems.map((item, lIdx) => (
+                  <li key={lIdx} className="text-[16px] leading-[1.75]">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+
+        return (
+          <p key={idx} className="text-[16px] text-[#333333] leading-[1.85] mb-4 font-cabinet">
+            {block}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
+
+export default function CaseStudyDetailPage({ initialCaseStudy = null, initialAllCaseStudies = [], slugOrId = "" }) {
+  const [search, setSearch] = useState("");
+
+  const hasApiData = !!initialCaseStudy;
+  const title = initialCaseStudy?.title || caseStudyDetailData.title;
+  let image = caseStudyDetailData.image;
+  if (initialCaseStudy?.image && initialCaseStudy.image !== "no-photo.jpg") {
+    image = initialCaseStudy.image.startsWith("http") ? initialCaseStudy.image : `${API_BASE_URL}/${initialCaseStudy.image}`;
+  }
+
+  const contentHtml = initialCaseStudy?.content;
+
+  const sidebarPosts = Array.isArray(initialAllCaseStudies) && initialAllCaseStudies.length > 0
+    ? initialAllCaseStudies.map((b) => ({
+        id: b._id,
+        slug: b.slug || b._id,
+        title: b.title,
+        image: b.image && b.image !== "no-photo.jpg" ? b.image : "/Home Page/Career/Specialized Training Modules_11zon.webp",
+        date: b.createdAt ? new Date(b.createdAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "",
+      }))
+    : [];
+
+  const recentPosts = sidebarPosts.length > 0 ? sidebarPosts.slice(0, 4) : caseStudyDetailData.recentPosts;
+  const popularPosts = sidebarPosts.length > 0 ? sidebarPosts.slice(0, 4) : caseStudyDetailData.popularPosts;
+
+  const filterBySearch = (posts) => {
+    if (!search.trim()) return posts;
+    return posts.filter((p) => p.title.toLowerCase().includes(search.toLowerCase()));
+  };
+
+  return (
+    <div className="w-full min-h-screen bg-[#F5F5F5]">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 pt-32 sm:pt-36 lg:pt-40 pb-16">
+
+
+        <Link
+          href="/case-studies"
+          className="inline-flex items-center gap-2 text-[13px] text-[#777777] hover:text-[#7143FE] transition-colors mb-6 group font-medium"
+        >
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-200" />
+          Back to Case Studies
+        </Link>
+
+        <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 items-start">
+
+          <article className="flex-1 min-w-0">
+
+            <h1
+              className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[#111111] leading-[1.25] tracking-tight mb-6 sm:mb-8"
+              style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+            >
+              {title}
+            </h1>
+
+
+            <div className="w-full rounded-[20px] sm:rounded-[24px] overflow-hidden bg-[#F5F5F7] mb-8 sm:mb-10 border border-[#E4E4E9] shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex justify-center items-center">
+              <img
+                src={image}
+                alt={title}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "/Home Page/Career/Specialized Training Modules_11zon.webp";
+                }}
+                className="w-full h-auto max-h-[550px] object-contain rounded-[20px] sm:rounded-[24px]"
+              />
+            </div>
+
+            {hasApiData && contentHtml ? (
+              <CaseStudyContentRenderer content={contentHtml} />
+            ) : (
+              <CaseStudyContentRenderer content={caseStudyDetailData.rawText || ""} />
+            )}
+
+          </article>
+
+          <aside className="w-full lg:w-[300px] xl:w-[330px] flex-shrink-0 flex flex-col gap-6 lg:sticky lg:top-28">
+
+            <div className="bg-white rounded-[20px] p-5 sm:p-6 border border-[#E5E5E5] shadow-[0_2px_14px_rgba(0,0,0,0.04)]">
+              <h3
+                className="text-[17px] font-bold text-[#111111] mb-4"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                Search
+              </h3>
+              <div className="relative flex items-center">
+                <input
+                  suppressHydrationWarning
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Search"
+                  className="w-full h-[46px] rounded-full border border-[#DCDCDC] bg-[#F9F9F9] pl-5 pr-[54px] text-[14px] text-[#111111] placeholder:text-[#999999] outline-none focus:border-[#7143FE] focus:bg-white transition-all font-cabinet"
+                />
+                <button
+                  suppressHydrationWarning
+                  className="absolute right-[3px] w-[40px] h-[40px] rounded-full bg-[#7143FE] flex items-center justify-center hover:bg-[#5e35d4] transition-colors text-white"
+                >
+                  <Search size={18} />
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-[20px] p-5 sm:p-6 border border-[#E5E5E5] shadow-[0_2px_14px_rgba(0,0,0,0.04)]">
+              <h3
+                className="text-[16px] font-bold text-[#111111] mb-5"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                Recent Case Studies
+              </h3>
+              <div className="flex flex-col gap-4">
+                {filterBySearch(recentPosts).map((p, idx) => (
+                  <SidebarCard key={p.id || p.slug || idx} post={p} />
+                ))}
+              </div>
+            </div>
+
+
+            <div className="bg-white rounded-[20px] p-5 sm:p-6 border border-[#E5E5E5] shadow-[0_2px_14px_rgba(0,0,0,0.04)]">
+              <h3
+                className="text-[16px] font-bold text-[#111111] mb-5"
+                style={{ fontFamily: "'Cabinet Grotesk', sans-serif" }}
+              >
+                Popular Case Studies
+              </h3>
+              <div className="flex flex-col gap-4">
+                {filterBySearch(popularPosts).map((p, idx) => (
+                  <SidebarCard key={p.id || p.slug || idx} post={p} />
+                ))}
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+
+      <CTASection />
+    </div>
+  );
+}

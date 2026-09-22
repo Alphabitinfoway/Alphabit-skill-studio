@@ -89,7 +89,7 @@ export const functionalModules = [
     {
         num: "01",
         title: "Odoo & ERP Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_202_bqisb5.webp",
         imageAlt: "Odoo ERP fundamentals and architecture training",
         description: "What an ERP system is actually solving for, and how Odoo's app structure and database model work under the hood — the context every later module assumes you already have.",
         tags: [
@@ -106,7 +106,7 @@ export const functionalModules = [
     {
         num: "02",
         title: "Sales, CRM & Purchase Configuration",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_203_zyxwa6.webp",
         imageAlt: "Odoo Sales CRM and Purchase configuration",
         description: "Configuring the apps most Odoo implementations start with — sales pipelines, quotations, CRM stages, and purchase workflows set up the way a real sales team would actually use them.",
         tags: [
@@ -122,7 +122,7 @@ export const functionalModules = [
     {
         num: "03",
         title: "Inventory & Manufacturing",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_204_zozqhe.webp",
         imageAlt: "Odoo Inventory and Manufacturing MRP training",
         description: "Setting up warehouse operations, stock moves, and manufacturing workflows — the module where a badly configured setting quietly costs a business real money in misplaced stock.",
         tags: [
@@ -138,7 +138,7 @@ export const functionalModules = [
     {
         num: "04",
         title: "Accounting & Invoicing",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_205_fniwll.webp",
         imageAlt: "Odoo Accounting and Invoicing financial setup",
         description: "Configuring Odoo Accounting for real financial workflows — invoicing, payments, and tax setup done correctly, since this is the module clients trust least until you prove it's set up right.",
         tags: [
@@ -154,7 +154,7 @@ export const functionalModules = [
     {
         num: "05",
         title: "Odoo Studio & No-Code Customization",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_206_leyhuk.webp",
         imageAlt: "Odoo Studio no-code customization training",
         description: "Extending Odoo without writing code — custom fields, views, and automated actions using Odoo Studio, the layer between pure configuration and full technical development.",
         tags: [
@@ -170,7 +170,7 @@ export const functionalModules = [
     {
         num: "06",
         title: "Implementation Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789796429/image_207_stnxyg.webp",
         imageAlt: "Odoo implementation capstone project and portfolio",
         description: "Everything comes together in a full Odoo implementation for a simulated business — multiple apps configured and connected, a guided internship, and a portfolio you can walk a client or interviewer through.",
         tags: [
@@ -189,7 +189,7 @@ export const technicalModules = [
     {
         num: "01",
         title: "Odoo Framework & Python Fundamentals",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797025/image_208_vvm74v.webp",
         imageAlt: "Odoo framework and Python fundamentals development",
         description: "Python fundamentals taught specifically through Odoo's framework structure — models, fields, and the ORM patterns every custom module is built on, not generic Python exercises.",
         tags: [
@@ -207,7 +207,7 @@ export const technicalModules = [
     {
         num: "02",
         title: "Building Custom Odoo Modules",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797026/image_209_gl8zjh.webp",
         imageAlt: "Building custom Odoo modules from scratch",
         description: "Building a custom module from scratch — manifest files, model definitions, and business logic, the actual unit of work in almost every real Odoo development job.",
         tags: [
@@ -223,7 +223,7 @@ export const technicalModules = [
     {
         num: "03",
         title: "Views, XML & UI Customization",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797026/image_210_ogrbtu.webp",
         imageAlt: "Odoo XML views and UI customization",
         description: "Building the interface layer — form views, list views, and menus defined in XML, so a custom module doesn't just work, it looks and feels like it belongs in Odoo.",
         tags: [
@@ -239,7 +239,7 @@ export const technicalModules = [
     {
         num: "04",
         title: "Odoo ORM, Workflows & Automations",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797026/image_211_inp9aw.webp",
         imageAlt: "Odoo ORM workflows and automated actions",
         description: "Going deeper into the ORM — computed fields, constraints, and automated workflows, the layer that makes a module do something intelligent instead of just storing data.",
         tags: [
@@ -255,7 +255,7 @@ export const technicalModules = [
     {
         num: "05",
         title: "APIs, Integrations & Reporting",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797026/image_212_bqqrw8.webp",
         imageAlt: "Odoo APIs third-party integrations and QWeb reports",
         description: "Connecting Odoo to external systems and building custom reports — the work that comes up in almost every real implementation once the basic modules are in place.",
         tags: [
@@ -271,7 +271,7 @@ export const technicalModules = [
     {
         num: "06",
         title: "Development Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789797027/image_213_zf9pd4.webp",
         imageAlt: "Odoo development capstone project and GitHub portfolio",
         description: "Everything comes together in a full custom Odoo module built and deployed end to end, a guided internship, and a GitHub portfolio ready to show a development team.",
         tags: [

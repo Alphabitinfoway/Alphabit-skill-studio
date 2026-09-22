@@ -89,6 +89,8 @@ export const talentAcquisitionModules = [
     {
         num: "01",
         title: "Recruitment Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803379/image_238_kr4qiz.webp",
+        imageAlt: "Recruitment fundamentals",
         description: "Before sourcing a single candidate, understand how a hiring cycle actually works — job descriptions, hiring manager alignment, and what makes a candidate genuinely a fit versus just qualified on paper.",
         tags: [
             "Hiring Cycle Overview",
@@ -103,6 +105,8 @@ export const talentAcquisitionModules = [
     {
         num: "02",
         title: "Sourcing & Candidate Screening",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803381/image_239_bzb6on.webp",
+        imageAlt: "Candidate sourcing and screening",
         description: "Learn to actually find candidates, not just wait for applications — boolean search, portal sourcing, and resume screening that filters efficiently without missing good candidates.",
         tags: [
             "Sourcing Techniques",
@@ -117,6 +121,8 @@ export const talentAcquisitionModules = [
     {
         num: "03",
         title: "Interview Coordination & Assessment",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803381/image_240_wvmudg.webp",
+        imageAlt: "Interview coordination and assessment",
         description: "Run the logistics and structure of real interview processes — scheduling, structured interview formats, and evaluation scorecards that make hiring decisions defensible.",
         tags: [
             "Interview Scheduling & Coordination",
@@ -131,6 +137,8 @@ export const talentAcquisitionModules = [
     {
         num: "04",
         title: "Applicant Tracking Systems & Recruitment Analytics",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803383/image_241_zgdlcl.webp",
+        imageAlt: "ATS and recruitment analytics",
         description: "Learn to manage a hiring pipeline inside a real ATS, and track recruitment metrics that show whether a hiring process is actually working.",
         tags: [
             "ATS Pipeline Management",
@@ -145,6 +153,8 @@ export const talentAcquisitionModules = [
     {
         num: "05",
         title: "Employer Branding & Candidate Experience",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803385/image_242_jmq6ag.webp",
+        imageAlt: "Employer branding and candidate experience",
         description: "Understand how candidates experience your hiring process from the outside — and why a bad candidate experience costs you good hires later.",
         tags: [
             "Employer Branding Basics",
@@ -159,6 +169,8 @@ export const talentAcquisitionModules = [
     {
         num: "06",
         title: "Recruitment Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803389/image_243_eh4jri.webp",
+        imageAlt: "Recruitment capstone project",
         description: "Apply everything into running a real (or simulated) hiring cycle end to end, complete a guided internship, and leave with a documented recruitment case study for interviews.",
         tags: [
             "Capstone Hiring Cycle",
@@ -176,6 +188,8 @@ export const hrOperationsModules = [
     {
         num: "01",
         title: "HR Fundamentals & the Employee Lifecycle",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803542/image_244_cahfat.webp",
+        imageAlt: "HR fundamentals and employee lifecycle",
         description: "Before drafting a single policy, understand the full employee lifecycle — from onboarding to exit — and where HR operations actually sits in a company's structure.",
         tags: [
             "Employee Lifecycle Overview",
@@ -190,6 +204,8 @@ export const hrOperationsModules = [
     {
         num: "02",
         title: "Onboarding & Employee Documentation",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803542/image_245_fvu9zk.webp",
+        imageAlt: "Employee onboarding and documentation",
         description: "Learn to run a real onboarding process — offer letters, joining formalities, and the documentation that protects both employee and employer from day one.",
         tags: [
             "Onboarding Process Design",
@@ -204,6 +220,8 @@ export const hrOperationsModules = [
     {
         num: "03",
         title: "Payroll Basics & Statutory Compliance",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803541/image_246_kadrrf.webp",
+        imageAlt: "Payroll and statutory compliance",
         description: "Understand the compliance side of HR that companies get penalized for getting wrong — PF, ESI, and basic payroll structuring, at the level an HR executive actually needs.",
         tags: [
             "Payroll Structuring Basics",
@@ -218,6 +236,8 @@ export const hrOperationsModules = [
     {
         num: "04",
         title: "Labour Law & Workplace Policy",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803541/image_247_wdfqc8.webp",
+        imageAlt: "Labour law and workplace policy",
         description: "Learn the labour law fundamentals and internal policies HR is responsible for enforcing — leave policy, POSH compliance, and employee handbooks.",
         tags: [
             "Labour Law Fundamentals",
@@ -232,6 +252,8 @@ export const hrOperationsModules = [
     {
         num: "05",
         title: "Employee Relations & Performance Management",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803542/image_248_rudwu8.webp",
+        imageAlt: "Employee relations and performance management",
         description: "Handle the interpersonal side of HR — conflict resolution, performance review cycles, and disciplinary processes done fairly and documented properly.",
         tags: [
             "Employee Relations & Conflict Resolution",
@@ -246,6 +268,8 @@ export const hrOperationsModules = [
     {
         num: "06",
         title: "HR Operations Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789803544/image_249_vy3ob6.webp",
+        imageAlt: "HR operations capstone project",
         description: "Apply everything into a full HR operations case study — an onboarding-to-offboarding cycle for a simulated company, complete a guided internship, and leave with documentation ready to show an interviewer.",
         tags: [
             "Capstone HR Operations Case Study",

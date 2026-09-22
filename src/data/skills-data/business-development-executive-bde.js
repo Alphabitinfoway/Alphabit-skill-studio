@@ -89,6 +89,8 @@ export const salesLeadGenModules = [
     {
         num: "01",
         title: "Sales & Business Development Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808717/image_250_wclquv.webp",
+        imageAlt: "Sales and business development fundamentals",
         description: "Before making a single call, understand how a sales funnel actually works — from cold lead to closed deal — and where a BDE's job sits inside that process.",
         tags: [
             "Sales Funnel Overview",
@@ -103,6 +105,8 @@ export const salesLeadGenModules = [
     {
         num: "02",
         title: "Lead Generation & Prospecting",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808718/image_251_atqrrz.webp",
+        imageAlt: "Lead generation and prospecting",
         description: "Learn to actually find prospects, not just wait for inbound leads — LinkedIn Sales Navigator, list building, and research techniques that make outreach worth sending.",
         tags: [
             "Prospecting Techniques",
@@ -117,6 +121,8 @@ export const salesLeadGenModules = [
     {
         num: "03",
         title: "Cold Outreach: Calls, Email & LinkedIn",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808718/image_252_rdvzgl.webp",
+        imageAlt: "Cold outreach calls and email",
         description: "Run real cold outreach across channels — call scripts that don't sound scripted, cold emails that get replies, and LinkedIn messaging that doesn't get ignored.",
         tags: [
             "Cold Calling Techniques",
@@ -131,6 +137,8 @@ export const salesLeadGenModules = [
     {
         num: "04",
         title: "Pipeline Management & CRM",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808721/image_253_wty2ti.webp",
+        imageAlt: "Sales pipeline and CRM management",
         description: "Learn to manage a real sales pipeline inside a CRM — stage tracking, follow-up cadences, and the discipline that keeps deals from going cold.",
         tags: [
             "CRM Pipeline Management",
@@ -145,6 +153,8 @@ export const salesLeadGenModules = [
     {
         num: "05",
         title: "Sales Metrics & Performance",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808723/image_254_g2ivp4.webp",
+        imageAlt: "Sales metrics and performance",
         description: "Understand the numbers that actually matter in sales — conversion rates, pipeline velocity, and how targets get set and tracked in a real sales team.",
         tags: [
             "Sales KPIs & Metrics",
@@ -159,6 +169,8 @@ export const salesLeadGenModules = [
     {
         num: "06",
         title: "Sales Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789808725/image_255_yz7x6k.webp",
+        imageAlt: "Sales capstone project",
         description: "Apply everything into running a real (or simulated) outbound campaign end to end, complete a guided internship, and leave with a documented pipeline case study for interviews.",
         tags: [
             "Capstone Outbound Campaign",
@@ -176,6 +188,8 @@ export const clientAcquisitionModules = [
     {
         num: "01",
         title: "Client Acquisition Fundamentals",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809556/image_256_o8u0r7.webp",
+        imageAlt: "Client acquisition fundamentals",
         description: "Before pitching a client, understand what actually moves a prospect from 'interested' to 'signed' — the buying process, decision-maker mapping, and how deals really get won.",
         tags: [
             "B2B Buying Process",
@@ -190,6 +204,8 @@ export const clientAcquisitionModules = [
     {
         num: "02",
         title: "Discovery Calls & Needs Analysis",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809559/image_257_mlzp1j.webp",
+        imageAlt: "Discovery calls and needs analysis",
         description: "Learn to run a discovery call that actually uncovers what a client needs, instead of pitching before you understand the problem.",
         tags: [
             "Discovery Call Structure",
@@ -204,6 +220,8 @@ export const clientAcquisitionModules = [
     {
         num: "03",
         title: "Proposal Writing & Presentations",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809559/image_258_fgfkko.webp",
+        imageAlt: "Proposal writing and presentations",
         description: "Build proposals and pitch decks that actually address what a client said in discovery, not generic templates with the client's name swapped in.",
         tags: [
             "Proposal Writing",
@@ -218,6 +236,8 @@ export const clientAcquisitionModules = [
     {
         num: "04",
         title: "Negotiation & Deal Closing",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809564/image_259_mciucp.webp",
+        imageAlt: "Negotiation and deal closing",
         description: "Learn to negotiate terms and close deals without either caving on every objection or losing the deal over inflexibility.",
         tags: [
             "Negotiation Techniques",
@@ -232,6 +252,8 @@ export const clientAcquisitionModules = [
     {
         num: "05",
         title: "Account Management & Client Retention",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809563/image_260_vajjch.webp",
+        imageAlt: "Account management and client retention",
         description: "Understand what happens after the deal closes — onboarding a new client properly and growing the account instead of just servicing it.",
         tags: [
             "Client Onboarding",
@@ -246,6 +268,8 @@ export const clientAcquisitionModules = [
     {
         num: "06",
         title: "Client Acquisition Capstone, Internship & Portfolio",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1789809569/image_261_sdi3ba.webp",
+        imageAlt: "Client acquisition capstone project",
         description: "Apply everything into a full client acquisition cycle — from discovery to proposal to close — complete a guided internship, and leave with a documented case study ready for interviews.",
         tags: [
             "Capstone Client Acquisition Cycle",
