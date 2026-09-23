@@ -13,8 +13,15 @@ async function fetchCaseStudies() {
     });
     if (res.ok) {
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        return json.data;
+      const caseStudies = Array.isArray(json)
+        ? json
+        : json.success && Array.isArray(json.data)
+          ? json.data
+          : Array.isArray(json.data)
+            ? json.data
+            : [];
+      if (caseStudies.length > 0) {
+        return caseStudies;
       }
     }
   } catch (err) {

@@ -90,7 +90,7 @@ export const performanceModules = [
     {
         num: "01",
         title: "Performance Marketing Fundamentals",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145023/image_72_ocamhl.webp",
         imageAlt: "Performance marketing fundamentals and campaign strategy",
         description: "Before you touch an ad account, you need to understand how paid channels actually move a customer from seeing a brand to buying from it — on someone else's ad budget. Cover the marketing funnel, buyer personas, campaign objectives, and how ROI and ad spend get judged, before opening a single ads dashboard.",
         tags: [
@@ -106,7 +106,7 @@ export const performanceModules = [
     {
         num: "02",
         title: "Google Ads & Search Engine Marketing",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145024/image_73_abtrd4.webp",
         imageAlt: "Google Ads search engine marketing and keyword planner",
         description: "Build, structure, and optimize real search and display campaigns — keyword match types, bidding strategies, and Quality Score, the mechanics that decide whether an ad budget gets wasted or converts.",
         tags: [
@@ -122,7 +122,7 @@ export const performanceModules = [
     {
         num: "03",
         title: "Meta Ads: Facebook & Instagram Advertising",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145599/image_74_vrggqo.webp",
         imageAlt: "Meta Ads Facebook and Instagram advertising campaigns",
         description: "Run campaigns inside Meta Ads Manager — audience targeting, creative testing, and budget allocation across Facebook and Instagram placements for real lead-gen and e-commerce objectives.",
         tags: [
@@ -138,7 +138,7 @@ export const performanceModules = [
     {
         num: "04",
         title: "Google Analytics & Conversion Tracking",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145023/7dd77f75-e687-43ff-805f-c364460d4827-Photoroom_1_azmucm.webp",
         imageAlt: "Google Analytics 4 and Tag Manager conversion tracking",
         description: "Set up the tracking that makes every other module's data trustworthy — GA4 events, Tag Manager, and pixel setup, so campaign performance numbers reflect what actually happened, not guesswork.",
         tags: [
@@ -154,7 +154,7 @@ export const performanceModules = [
     {
         num: "05",
         title: "Conversion Rate Optimisation & Landing Pages",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145023/image_75_lz57ff.webp",
         imageAlt: "Conversion rate optimization and landing page A/B testing",
         description: "Learn why a campaign can hit its click targets and still lose money — landing page structure, A/B testing, and CRO principles that turn traffic into actual conversions.",
         tags: [
@@ -170,7 +170,7 @@ export const performanceModules = [
     {
         num: "06",
         title: "E-commerce, Retargeting & Automation",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145024/image_76_xyzdlw.webp",
         imageAlt: "E-commerce retargeting campaigns and marketing automation",
         description: "Layer retargeting campaigns and automated email/WhatsApp flows on top of paid traffic — the systems that recover abandoned carts and turn one-time buyers into repeat customers.",
         tags: [
@@ -186,7 +186,7 @@ export const performanceModules = [
     {
         num: "07",
         title: "Performance Marketing Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/FullStackDevelopment/Java/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790145022/05395e7e-00f5-4b0d-bbcd-a6e00e63e3d5-Photoroom_1_dxqydz.webp",
         imageAlt: "Performance marketing capstone project and ROI reporting",
         description: "Apply everything into live campaigns on a real ad account and budget, complete a guided internship, and leave with campaign reports and ROI data you can walk an interviewer through.",
         tags: [
@@ -205,7 +205,7 @@ export const seoModules = [
     {
         num: "01",
         title: "SEO & Content Marketing Fundamentals",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module1.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790146269/image_72_snfd9n.webp",
         imageAlt: "SEO and content marketing fundamentals and search intent",
         description: "Before writing a single article or touching a site's code, you need to understand how search actually works — search intent, how Google and AI search tools decide what to surface, and how organic and content strategy fit together long-term.",
         tags: [
@@ -221,7 +221,7 @@ export const seoModules = [
     {
         num: "02",
         title: "Keyword Research & On-Page SEO",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module2.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790146270/image_78_pnqcsn.webp",
         imageAlt: "Keyword research and on-page SEO optimization",
         description: "Find the keywords worth targeting and structure a page to actually rank for them — title tags, meta descriptions, headers, and internal linking done the way real audits check for.",
         tags: [
@@ -237,7 +237,7 @@ export const seoModules = [
     {
         num: "03",
         title: "Technical SEO & Site Health",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module3.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790148774/Technical_SEO_Site_Health_hzy9li.webp",
         imageAlt: "Technical SEO site audits speed and schema markup",
         description: "Learn the site-level issues that quietly cap a page's rankings no matter how good the content is — crawlability, site speed, Core Web Vitals, and structured data.",
         tags: [
@@ -253,7 +253,7 @@ export const seoModules = [
     {
         num: "04",
         title: "Content Strategy & Writing for Search",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module4.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790148759/Content_Strategy_Writing_for_Search_agrlq3.webp",
         imageAlt: "Content strategy and writing for search engine intent",
         description: "Plan and write content that actually ranks and gets read — content calendars, search-intent-matched writing, and structuring articles for both readers and search engines.",
         tags: [
@@ -269,7 +269,7 @@ export const seoModules = [
     {
         num: "05",
         title: "Off-Page SEO & Link Building",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module5.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790146270/image_79_xdxzvc.webp",
         imageAlt: "Off-page SEO backlink building and outreach techniques",
         description: "Learn how domain authority actually gets built — white-hat link building, outreach, and the off-page signals that separate a page that should rank from one that actually does.",
         tags: [
@@ -277,6 +277,7 @@ export const seoModules = [
             "Outreach Techniques",
             "Domain Authority Signals",
             "White-Hat vs Black-Hat SEO"
+            
         ],
         techstack: {
             tools: "Ahrefs / Semrush · Outreach Tools"
@@ -285,7 +286,7 @@ export const seoModules = [
     {
         num: "06",
         title: "GEO/AEO: Optimizing for AI Search & Answer Engines",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module6.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790146271/image_80_q39rll.webp",
         imageAlt: "GEO and AEO optimizing for AI search and ChatGPT citation",
         description: "Go beyond classic SEO into how brands get cited inside ChatGPT, Google AI Overviews, and other AI-driven search tools — the newest, fastest-growing part of organic visibility.",
         tags: [
@@ -301,7 +302,7 @@ export const seoModules = [
     {
         num: "07",
         title: "SEO Capstone, Internship & Portfolio",
-        image: "/skill/ITSkills/WebDevelopment/FrontEndWebDevelopment/module7.webp",
+        image: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1790146270/image_81_nldzzs.webp",
         imageAlt: "SEO capstone case study and ranking performance reporting",
         description: "Apply everything into a full SEO case study on a real website — keyword research through ranking results — complete a guided internship, and leave with ranking data and reports ready for interviews.",
         tags: [
