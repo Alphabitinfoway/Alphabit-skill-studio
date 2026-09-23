@@ -21,11 +21,18 @@ async function fetchCaseStudyData(id) {
       allRes.ok ? allRes.json() : Promise.resolve(null),
     ]);
 
-    const caseStudy = caseStudyJson?.success ? caseStudyJson.data : null;
-    const allCaseStudies =
-      allJson?.success && Array.isArray(allJson.data)
+    const caseStudy = caseStudyJson?.success
+      ? caseStudyJson.data
+      : caseStudyJson?._id || caseStudyJson?.slug
+        ? caseStudyJson
+        : null;
+    const allCaseStudies = Array.isArray(allJson)
+      ? allJson
+      : allJson?.success && Array.isArray(allJson.data)
         ? allJson.data
-        : [];
+        : Array.isArray(allJson?.data)
+          ? allJson.data
+          : [];
 
     return { caseStudy, allCaseStudies };
   } catch (err) {
