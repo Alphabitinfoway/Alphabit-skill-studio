@@ -3,20 +3,60 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import RoleCard from "./cards/RoleCard";
-import { rolesTabs } from "./data/rolesData";
+import { API_BASE_URL } from "@/config/api";
 
 export default function RolesSection() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [jobs, setJobs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeDepartment, setActiveDepartment] = useState("");
+  const [error, setError] = useState("");
   const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
   const tabRefs = useRef([]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadJobs() {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/jobs`, {
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error("Unable to load current openings.");
+
+        const result = await response.json();
+        const jobList = Array.isArray(result)
+          ? result
+          : result.jobs ?? result.data?.jobs ?? result.data ?? [];
+        setJobs(Array.isArray(jobList) ? jobList : []);
+      } catch (fetchError) {
+        if (fetchError.name !== "AbortError") setError(fetchError.message);
+      } finally {
+        if (!controller.signal.aborted) setIsLoading(false);
+      }
+    }
+
+    loadJobs();
+    return () => controller.abort();
+  }, []);
+
+  const departments = [...new Set(jobs.map((job) =>
+    typeof job.department === "string" ? job.department : job.department?.name
+  ).filter(Boolean))];
+  const selectedDepartment = departments.includes(activeDepartment)
+    ? activeDepartment
+    : departments[0] || "";
+  const activeTab = departments.indexOf(selectedDepartment);
 
   useEffect(() => {
     const el = tabRefs.current[activeTab];
     if (el) {
       const { offsetLeft, offsetWidth } = el;
       setPillStyle({ left: offsetLeft, width: offsetWidth, opacity: 1 });
+    } else {
+      setPillStyle((current) => ({ ...current, opacity: 0 }));
     }
-  }, [activeTab]);
+  }, [activeTab, departments.length]);
 
   return (
     <section className="w-full max-w-7xl mx-auto py-16 px-4">
@@ -66,33 +106,43 @@ export default function RolesSection() {
             }}
           />
 
-          {rolesTabs.map((tab, index) => (
+          {departments.map((department, index) => (
             <button
-              key={tab.id}
+              key={department}
               ref={(el) => (tabRefs.current[index] = el)}
-              onClick={() => setActiveTab(index)}
+              onClick={() => setActiveDepartment(department)}
               className={`relative z-10 px-5 py-2 whitespace-nowrap text-[14px] font-[500] rounded-xl transition-colors duration-200 ${
                 activeTab === index
                   ? "text-[#7C3AED] font-[700]"
                   : "text-gray-500 hover:text-gray-800"
               }`}
             >
-              {tab.label}
+              {department}
             </button>
           ))}
         </div>
       </div>
 
       <div className="w-full overflow-hidden pb-4">
-        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeTab * 100}%)` }}>
-          {rolesTabs.map((tab) => (
-            <div key={tab.id} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-1">
-              {tab.cards.map((card) => (
-                <RoleCard key={card.id} card={card} />
-              ))}
-            </div>
-          ))}
-        </div>
+        {isLoading ? (
+          <p role="status" className="py-8 text-center text-gray-600">Loading current openings...</p>
+        ) : error ? (
+          <p role="alert" className="py-8 text-center text-gray-600">{error}</p>
+        ) : jobs.length === 0 ? (
+          <p className="py-8 text-center text-gray-600">
+            No current openings are available.
+          </p>
+        ) : (
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeTab * 100}%)` }}>
+            {departments.map((department) => (
+              <div key={department} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
+                {jobs
+                  .filter((job) => (typeof job.department === "string" ? job.department : job.department?.name) === department)
+                  .map((job) => <RoleCard key={job.id ?? job._id} card={job} />)}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
