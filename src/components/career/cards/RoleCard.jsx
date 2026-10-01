@@ -63,7 +63,7 @@ export default function RoleCard({ card }) {
 
   return (
     <>
-      <article className="group flex h-full min-h-72 flex-col rounded-2xl border border-gray-200 border-t-4 border-t-[#FF5722] bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+      <article className="group flex h-full min-h-72 min-w-0 w-full max-w-[28rem] flex-[1_1_22rem] flex-col rounded-2xl border border-gray-200 border-t-4 border-t-[#FF5722] bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
         {card.department && (
           <p className="mb-4 text-xs font-semibold uppercase leading-5 text-[#7143FE]">
             {typeof card.department === "string" ? card.department : card.department.name}
@@ -73,7 +73,7 @@ export default function RoleCard({ card }) {
           {card.title}
         </h3>
         {card.description && (
-          <p className="text-sm leading-6 text-gray-600">{card.description}</p>
+          <p className="line-clamp-3 break-words whitespace-pre-line text-sm leading-6 text-gray-600">{card.description}</p>
         )}
         <button
           type="button"

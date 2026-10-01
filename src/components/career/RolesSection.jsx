@@ -133,9 +133,9 @@ export default function RolesSection() {
             No current openings are available.
           </p>
         ) : (
-          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeTab * 100}%)` }}>
+          <div className="flex items-start transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeTab * 100}%)` }}>
             {departments.map((department) => (
-              <div key={department} className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-1">
+              <div key={department} className="flex w-full shrink-0 flex-wrap items-stretch justify-start gap-6 px-1">
                 {jobs
                   .filter((job) => (typeof job.department === "string" ? job.department : job.department?.name) === department)
                   .map((job) => <RoleCard key={job.id ?? job._id} card={job} />)}
