@@ -15,36 +15,13 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* Right: Abstract Shape */}
-        <div className="flex-[0.75] w-full flex justify-end relative h-full min-h-[350px]">
-          <div
-            className="absolute top-[58%] -translate-y-1/2 pointer-events-none z-0"
-            style={{
-              width: "130%",
-              minWidth: "500px",
-              maxWidth: "750px",
-              right: "-15%",
-              height: "130%",
-            }}
-          >
-            <svg
-              viewBox="0 0 750 620"
-              className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.06)]"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient id="caseStudyHeroShapeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#F8F8F8" />
-                  <stop offset="100%" stopColor="#D8D8D8" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M 220 0 H 610 A 40 40 0 0 1 650 40 V 480 A 40 40 0 0 1 610 520 H 40 A 40 40 0 0 1 0 480 V 220 Q 0 150 60 150 A 100 100 0 0 0 150 60 Q 150 0 220 0 Z"
-                fill="url(#caseStudyHeroShapeGrad)"
-              />
-            </svg>
-          </div>
+        {/* Right: Hero Image */}
+        <div className="flex-[0.9] lg:flex-1 w-full flex justify-center md:justify-end items-center relative">
+          <img
+            src="https://res.cloudinary.com/dir8eqqnk/image/upload/v1792668153/Insight-Case_Stydy_Page_Hero_fb8msj.webp"
+            alt="Repository for Technical Case Studies & Success Stories - Alphabit Skill"
+            className="w-full max-w-[540px] lg:max-w-[620px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)] transform hover:scale-[1.02] transition-transform duration-500"
+          />
         </div>
 
       </div>

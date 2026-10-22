@@ -15,7 +15,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1792582253/Java.hero_xr9kux.webp",
 };
 
 export const projectStatsSectionData = {

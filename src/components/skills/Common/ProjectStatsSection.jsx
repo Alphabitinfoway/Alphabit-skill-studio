@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+const DEFAULT_PROJECTS_IMAGE = "https://res.cloudinary.com/dir8eqqnk/image/upload/v1792579987/Real_World_Project_Section_Image_1_j6take.webp";
+
 export default function ProjectStatsSection({ data }) {
     const {
         titleItalic,
@@ -14,6 +16,10 @@ export default function ProjectStatsSection({ data }) {
         hoursVal,
         hoursLabel
     } = data?.projectStatsSectionData || {};
+
+    const imageSrc = (purpleImage && purpleImage !== "/purplesubtract.webp")
+        ? purpleImage
+        : DEFAULT_PROJECTS_IMAGE;
 
     if (!stats || stats.length === 0) return null;
 
@@ -74,7 +80,7 @@ export default function ProjectStatsSection({ data }) {
                     >
                         <div className="w-full max-w-[280px] sm:max-w-[360px] md:max-w-[400px]">
                             <img
-                                src={purpleImage}
+                                src={imageSrc}
                                 alt="Projects & Stats"
                                 className="w-full h-auto object-contain mx-auto"
                             />
