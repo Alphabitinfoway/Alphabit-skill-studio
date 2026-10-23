@@ -7,8 +7,9 @@
  * 1. Hero Section Data
  */
 export const heroSectionData = {
-    titlePrefix: "Business Development Executive ",
-    titleSuffix: "(BDE)",
+    
+    titlePrefix: "Business ",
+    titleSuffix: "Development Executive (BDE)",
     highlights: [
         "NSDC-Recognised Certification",
         "300+ Active Hiring Partners",
@@ -18,7 +19,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1792735380/Business_Development_Executive_BDE_rtr3b8.webp",
 };
 
 /**

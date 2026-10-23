@@ -7,8 +7,8 @@
  * 1. Hero Section Data
  */
 export const heroSectionData = {
-    titlePrefix: "Human Resources (HR)",
-    titleSuffix: "",
+    titlePrefix: "Human Resources ",
+    titleSuffix: "(HR)",
     highlights: [
         "NSDC-Recognised Certification",
         "300+ Active Hiring Partners",
@@ -18,7 +18,7 @@ export const heroSectionData = {
     primaryCtaText: "Book Free Demo Class",
     secondaryCtaText: "Call Us",
     phoneNumber: "+919409207327",
-    heroImage: "/subtract.webp",
+    heroImage: "https://res.cloudinary.com/dir8eqqnk/image/upload/v1792737161/Human_Resources_HR_vhkchi.webp",
 };
 
 /**
