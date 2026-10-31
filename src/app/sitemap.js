@@ -18,6 +18,7 @@ export default async function sitemap() {
     "/skills",
     "/skills/curriculum",
     "/terms",
+    "/internships/python",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),

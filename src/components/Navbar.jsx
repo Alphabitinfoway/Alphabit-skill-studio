@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, Menu, X, ChevronRight, Newspaper, Briefcase, User } from "lucide-react";
+import { ChevronDown, Menu, X, ChevronRight, Newspaper, Briefcase, User, GraduationCap } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -285,6 +285,7 @@ export default function Navbar() {
     const insightLinks = [
         { name: "Blogs", href: "/blog", icon: Newspaper },
         { name: "Case Studies", href: "/case-studies", icon: Briefcase },
+        { name: "Internships", href: "/internships/python", icon: GraduationCap },
     ];
 
     const navLinks = [
@@ -299,7 +300,7 @@ export default function Navbar() {
     const activeIndex = navLinks.findIndex((link) => {
         if (link.href === "/") return pathname === "/";
         if (link.hasInsightsDropdown) {
-            return pathname.startsWith("/blog") || pathname.startsWith("/case-studies");
+            return pathname.startsWith("/blog") || pathname.startsWith("/case-studies") || pathname.startsWith("/internships");
         }
         return pathname.startsWith(link.href);
     });
@@ -367,7 +368,7 @@ export default function Navbar() {
                         {navLinks.map((link, i) => {
                             const isActive =
                                 link.hasInsightsDropdown
-                                    ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies")
+                                    ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies") || pathname.startsWith("/internships")
                                     : link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
                             if (link.hasDropdown) {
@@ -456,7 +457,7 @@ export default function Navbar() {
                                                     >
                                                         {insightLinks.map((item) => {
                                                             const Icon = item.icon;
-                                                            const isItemActive = pathname.startsWith(item.href);
+                                                            const isItemActive = pathname.startsWith(item.href) || (item.name === "Internships" && pathname.startsWith("/internships"));
                                                             return (
                                                                 <Link
                                                                     key={item.name}
@@ -528,7 +529,7 @@ export default function Navbar() {
                             {navLinks.map((link) => {
                                 const isActive =
                                     link.hasInsightsDropdown
-                                        ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies")
+                                        ? pathname.startsWith("/blog") || pathname.startsWith("/case-studies") || pathname.startsWith("/internships")
                                         : link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
                                 if (link.hasDropdown) {
@@ -654,7 +655,7 @@ export default function Navbar() {
                                                         <div className="flex flex-col gap-2 overflow-hidden rounded-2xl border border-[#E7E7E7] bg-white p-2.5 shadow-sm">
                                                             {insightLinks.map((item) => {
                                                                 const Icon = item.icon;
-                                                                const isItemActive = pathname.startsWith(item.href);
+                                                                const isItemActive = pathname.startsWith(item.href) || (item.name === "Internships" && pathname.startsWith("/internships"));
                                                                 return (
                                                                     <Link
                                                                         key={item.name}
