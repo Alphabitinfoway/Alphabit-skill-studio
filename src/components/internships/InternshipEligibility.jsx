@@ -2,14 +2,37 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Repeat, Code2, CheckSquare } from "lucide-react";
+import {
+  GraduationCap, Briefcase, Repeat, Code2, CheckSquare,
+  User, Users, BookOpen, Lightbulb, Star, Target,
+} from "lucide-react";
 
+// Exact-match icon map (Python internship uses these names)
 const ICON_MAP = {
   GraduationCap,
   Briefcase,
   Repeat,
   Code2,
+  User,
+  Users,
+  BookOpen,
+  Lightbulb,
+  Star,
+  Target,
 };
+
+// Keyword-based fallback for backend data where icon may be a label/text
+function resolveEligibilityIcon(iconValue = "") {
+  if (ICON_MAP[iconValue]) return ICON_MAP[iconValue];
+  const v = iconValue.toLowerCase();
+  if (v.includes("student") || v.includes("college") || v.includes("graduat")) return GraduationCap;
+  if (v.includes("job") || v.includes("work") || v.includes("career") || v.includes("employ")) return Briefcase;
+  if (v.includes("change") || v.includes("transit") || v.includes("switch") || v.includes("pivot")) return Repeat;
+  if (v.includes("self") || v.includes("code") || v.includes("program") || v.includes("learn")) return Code2;
+  if (v.includes("fresh") || v.includes("beginn") || v.includes("newbie")) return BookOpen;
+  if (v.includes("profes") || v.includes("expert") || v.includes("senior")) return Target;
+  return GraduationCap; // universal fallback
+}
 
 export default function InternshipEligibility({ data }) {
   const {
@@ -47,7 +70,7 @@ export default function InternshipEligibility({ data }) {
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           {cards.map((card, idx) => {
-            const Icon = ICON_MAP[card.icon] || GraduationCap;
+            const Icon = resolveEligibilityIcon(card.icon || "");
 
             return (
               <motion.div

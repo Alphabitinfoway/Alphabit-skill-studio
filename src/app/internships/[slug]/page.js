@@ -1,16 +1,13 @@
 import { notFound } from "next/navigation";
-import { getInternshipBySlug, getAllInternshipSlugs } from "@/data/internships";
+import { getInternshipBySlug } from "@/data/internships";
 import InternshipTemplate from "@/components/internships/InternshipTemplate";
 
-// ── SSG: Pre-render all internship slugs ──────────────────────────────────
-export async function generateStaticParams() {
-  return getAllInternshipSlugs();
-}
+export const dynamic = "force-dynamic";
 
 // ── SEO Metadata ──────────────────────────────────────────────────────────
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const internship = getInternshipBySlug(slug);
+  const internship = await getInternshipBySlug(slug);
 
   if (!internship) return {};
 
@@ -30,7 +27,7 @@ function getInternshipJsonLd(internship) {
     "name": `${internship.title} | Alphabit Skill`,
     "description":
       internship.hero?.tagline ||
-      "Industrial Python Internship with live project development, industry mentorship, and verified certification.",
+      "Hands-on internship with live projects, industry mentorship, and verified certification.",
     "provider": {
       "@type": "Organization",
       "name": "Alphabit Skill",
@@ -65,7 +62,7 @@ function getInternshipJsonLd(internship) {
 // ── Page Component ────────────────────────────────────────────────────────
 export default async function InternshipDetailPage({ params }) {
   const { slug } = await params;
-  const internship = getInternshipBySlug(slug);
+  const internship = await getInternshipBySlug(slug);
 
   if (!internship) {
     notFound();

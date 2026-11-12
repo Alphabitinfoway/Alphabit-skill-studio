@@ -20,7 +20,7 @@ export default function InternshipTemplate({ data }) {
     setIsApplyOpen(true);
   };
 
-  const courseTitle = data?.title || "Python Internship";
+  const courseTitle = data?.title || "Internship";
 
   return (
     <div className="w-full bg-[#F5F5F5] flex flex-col items-center">

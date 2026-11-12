@@ -8,7 +8,7 @@ import { Phone, ArrowUpRight, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function InternshipHero({ data, onApplyClick }) {
   const {
-    titlePrefix = "Python",
+    titlePrefix = "Internship",
     titleSuffix = "Internship",
     tagline,
     heroImage,

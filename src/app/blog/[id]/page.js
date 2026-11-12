@@ -3,6 +3,14 @@ import { API_BASE_URL } from "@/config/api";
 
 const API_BASE = API_BASE_URL;
 
+function slugifyTitle(title) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 async function fetchBlogData(id) {
   try {
     const [blogRes, allBlogsRes] = await Promise.all([
@@ -21,11 +29,20 @@ async function fetchBlogData(id) {
       allBlogsRes.ok ? allBlogsRes.json() : Promise.resolve(null),
     ]);
 
-    const blog = blogJson?.success ? blogJson.data : null;
     const allBlogs =
       allBlogsJson?.success && Array.isArray(allBlogsJson.data)
         ? allBlogsJson.data
         : [];
+    const blog =
+      (blogJson?.success ? blogJson.data : null) ||
+      allBlogs.find(
+        (post) =>
+          post.slug === id ||
+          String(post._id) === id ||
+          String(post.id) === id ||
+          slugifyTitle(post.title || "") === id
+      ) ||
+      null;
 
     return { blog, allBlogs };
   } catch (err) {

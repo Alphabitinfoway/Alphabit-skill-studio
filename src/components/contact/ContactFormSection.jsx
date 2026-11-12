@@ -214,7 +214,7 @@ export default function ContactFormSection() {
                                         Our <span className="font-pp italic text-[#7143FE]">Location</span>
                                     </h3>
                                     <p className="text-gray-600 text-xs sm:text-[15px] leading-relaxed">
-                                        701, Runway Heights, Ayodhya Chowk, 150 Ft Ring Road, Rajkot – 360006, Gujarat
+                                        4th Floor, Krishnashray Building, Akshar Marg, opp. Satnam Hospital, beside Utkarsh School Of Excellence, Panchvati Society, Kotecha Nagar, Rajkot, Gujarat 360001
                                     </p>
                                 </div>
                             </div>

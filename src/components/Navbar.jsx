@@ -285,7 +285,7 @@ export default function Navbar() {
     const insightLinks = [
         { name: "Blogs", href: "/blog", icon: Newspaper },
         { name: "Case Studies", href: "/case-studies", icon: Briefcase },
-        { name: "Internships", href: "/internships/python", icon: GraduationCap },
+        { name: "Internships", href: "/internships", icon: GraduationCap },
     ];
 
     const navLinks = [

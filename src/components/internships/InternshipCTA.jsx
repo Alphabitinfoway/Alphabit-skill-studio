@@ -7,10 +7,10 @@ import { Phone } from "lucide-react";
 export default function InternshipCTA({ data, onApplyClick }) {
   const {
     line1Normal = "Ready to Master",
-    line1Italic = "Python Engineering",
+    line1Italic = "Your Career",
     line1Suffix = "and Build Production Apps?",
     line2Normal = "Apply For The",
-    line2Italic = "Python Internship Today",
+    line2Italic = "Internship Today",
     buttonText = "Apply Now",
     phone = "+919409207327"
   } = data?.cta || {};

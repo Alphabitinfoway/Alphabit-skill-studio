@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function InternshipOverview({ data }) {
   const {
     headingNormal = "About The",
-    headingItalic = "Python Internship",
+    headingItalic = "Internship",
     subheading,
     description = [],
     features = [],
@@ -79,36 +79,48 @@ export default function InternshipOverview({ data }) {
             </div>
           </div>
 
-          {/* Right Column: Key Metrics & Stats Highlight Box */}
+          {/* Right Column: Key Metrics & Stats Highlight Box (From Backend) */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
-              <span className="text-[12px] font-bold uppercase tracking-wider text-[#7C3AED] bg-[#7143FE]/10 px-3 py-1 rounded-full inline-block mb-6">
-                Execution Benchmark
-              </span>
-
-              <div className="grid grid-cols-2 gap-5 sm:gap-6">
-                {stats.map((stat, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col p-4 rounded-2xl bg-[#FBFBFC] border border-[#EEEEEE]"
-                  >
-                    <span className="text-[26px] sm:text-[32px] font-extrabold text-[#111111] tracking-tight">
-                      {stat.value}
-                    </span>
-                    <span className="text-[13px] sm:text-[14px] text-[#666666] font-medium mt-1 leading-snug">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                <span className="text-[13px] sm:text-[14px] text-[#555555]">
-                  Active mentors available for weekly code reviews
+            {stats && stats.length > 0 && (
+              <div className="bg-white rounded-3xl border border-[#E5E5E5] p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+                <span className="text-[12px] font-bold uppercase tracking-wider text-[#7C3AED] bg-[#7143FE]/10 px-3.5 py-1.5 rounded-full inline-block mb-6">
+                  Execution Benchmark
                 </span>
+
+                <div className="grid grid-cols-2 gap-5 sm:gap-6">
+                  {stats.map((stat, idx) => {
+                    const isLongValue = String(stat?.value || "").length > 8;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-[#FBFBFC] border border-[#EEEEEE] min-h-[96px]"
+                      >
+                        <span
+                          className={`font-extrabold text-[#111111] tracking-tight leading-tight ${
+                            isLongValue
+                              ? "text-[18px] sm:text-[22px] md:text-[24px]"
+                              : "text-[26px] sm:text-[32px]"
+                          }`}
+                        >
+                          {stat.value}
+                        </span>
+                        <span className="text-[13px] sm:text-[14px] text-[#666666] font-medium mt-1 leading-snug">
+                          {stat.label}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <span className="text-[13px] sm:text-[14px] text-[#555555]">
+                    Active mentors available for weekly code reviews
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
         </div>

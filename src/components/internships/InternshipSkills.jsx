@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Server, Database, Wrench, Cpu } from "lucide-react";
+import { Code, Server, Database, Wrench, Cpu, Brain, BarChart2, Cloud, Layers, Zap } from "lucide-react";
 
+// Exact-match map for Python internship categories
 const CATEGORY_ICONS = {
   "Core & Language": Code,
   "Frameworks & APIs": Server,
@@ -11,6 +12,21 @@ const CATEGORY_ICONS = {
   "DevOps & Tools": Wrench,
   "Architecture & Professional": Cpu,
 };
+
+// Keyword-based fallback for backend internship categories (AI/ML, etc.)
+function resolveIcon(categoryName = "") {
+  if (CATEGORY_ICONS[categoryName]) return CATEGORY_ICONS[categoryName];
+  const n = categoryName.toLowerCase();
+  if (n.includes("ai") || n.includes("ml") || n.includes("machine") || n.includes("deep") || n.includes("neural")) return Brain;
+  if (n.includes("data") || n.includes("analyt") || n.includes("stat") || n.includes("visual")) return BarChart2;
+  if (n.includes("cloud") || n.includes("deploy") || n.includes("devops") || n.includes("infra")) return Cloud;
+  if (n.includes("frame") || n.includes("api") || n.includes("backend") || n.includes("web")) return Server;
+  if (n.includes("tool") || n.includes("wrench") || n.includes("util")) return Wrench;
+  if (n.includes("arch") || n.includes("system") || n.includes("design")) return Cpu;
+  if (n.includes("automat") || n.includes("pipeline") || n.includes("workflow")) return Zap;
+  if (n.includes("stack") || n.includes("layer") || n.includes("core") || n.includes("lang")) return Code;
+  return Layers; // universal fallback
+}
 
 export default function InternshipSkills({ data }) {
   const {
@@ -47,7 +63,7 @@ export default function InternshipSkills({ data }) {
         {/* Skill Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, idx) => {
-            const Icon = CATEGORY_ICONS[category.name] || Code;
+            const Icon = resolveIcon(category.name);
 
             return (
               <motion.div

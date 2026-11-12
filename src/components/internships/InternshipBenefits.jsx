@@ -2,8 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, FileCheck, Layers, Users, Compass, Sparkles } from "lucide-react";
+import {
+  Award, FileCheck, Layers, Users, Compass, Sparkles,
+  BookOpen, Briefcase, Code2, Star, Target, Zap, Shield, GraduationCap,
+} from "lucide-react";
 
+// Exact-match icon map (Python internship uses these names)
 const BENEFIT_ICONS = {
   Award,
   FileCheck,
@@ -11,7 +15,33 @@ const BENEFIT_ICONS = {
   Users,
   Compass,
   Sparkles,
+  BookOpen,
+  Briefcase,
+  Code2,
+  Star,
+  Target,
+  Zap,
+  Shield,
+  GraduationCap,
 };
+
+// Keyword-based fallback for backend data where icon may be a label/text
+function resolveBenefitIcon(iconValue = "") {
+  if (BENEFIT_ICONS[iconValue]) return BENEFIT_ICONS[iconValue];
+  const v = iconValue.toLowerCase();
+  if (v.includes("cert") || v.includes("award") || v.includes("nsdc") || v.includes("iso")) return Award;
+  if (v.includes("lor") || v.includes("letter") || v.includes("recommend") || v.includes("file")) return FileCheck;
+  if (v.includes("project") || v.includes("live") || v.includes("production") || v.includes("layer")) return Layers;
+  if (v.includes("mentor") || v.includes("review") || v.includes("1-on-1") || v.includes("user")) return Users;
+  if (v.includes("interview") || v.includes("placement") || v.includes("career") || v.includes("job")) return Compass;
+  if (v.includes("communit") || v.includes("alumni") || v.includes("network") || v.includes("spark")) return Sparkles;
+  if (v.includes("learn") || v.includes("book") || v.includes("course") || v.includes("content")) return BookOpen;
+  if (v.includes("job") || v.includes("work") || v.includes("employ") || v.includes("brief")) return Briefcase;
+  if (v.includes("secur") || v.includes("safe") || v.includes("protect") || v.includes("shield")) return Shield;
+  if (v.includes("speed") || v.includes("fast") || v.includes("energy") || v.includes("zap")) return Zap;
+  if (v.includes("goal") || v.includes("target") || v.includes("aim")) return Target;
+  return Star; // universal fallback
+}
 
 export default function InternshipBenefits({ data }) {
   const {
@@ -48,7 +78,7 @@ export default function InternshipBenefits({ data }) {
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((benefit, idx) => {
-            const Icon = BENEFIT_ICONS[benefit.icon] || Award;
+            const Icon = resolveBenefitIcon(benefit.icon || "");
 
             return (
               <motion.div

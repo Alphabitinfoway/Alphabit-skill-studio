@@ -1,8 +1,3 @@
-"use client";
-
-import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-
 export default function StatsSection() {
     return (
         <section className="w-full bg-[#F5F5F5] py-10 sm:py-14 md:py-[72px] border-b border-gray-100 font-cabinet">
@@ -32,38 +27,14 @@ export default function StatsSection() {
     );
 }
 
-function CountingNumber({ value, prefix = "" }) {
-    const count = useMotionValue(0);
-    const rounded = useTransform(count, (latest) => {
-        const num = Math.round(latest);
-        return prefix && num < 10 ? `${prefix}${num}` : num;
-    });
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    useEffect(() => {
-        if (isInView) {
-            animate(count, value, { duration: 1.8, ease: "easeOut" });
-        }
-    }, [isInView, count, value]);
-
-    return (
-        <motion.span 
-            ref={ref} 
-            className="inline-block"
-            style={{ textShadow: "3px 3px 0px #FFC72C" }}
-        >
-            <motion.span>{rounded}</motion.span>
-        </motion.span>
-    );
-}
-
 function StatItem({ value, label, showDivider, prefix = "" }) {
     return (
         <div className="flex items-center gap-6 md:gap-8">
             <div className="flex flex-col items-start md:items-center text-left md:text-center">
                 <div className="text-[42px] sm:text-[46px] md:text-[48px] font-extrabold text-[#7143FE] leading-none flex items-center font-cabinet">
-                    <CountingNumber value={value} prefix={prefix} />
+                    <span className="inline-block" style={{ textShadow: "3px 3px 0px #FFC72C" }}>
+                        {prefix && value < 10 ? `${prefix}${value}` : value}
+                    </span>
                     <span 
                         className="text-[34px] sm:text-[38px] md:text-[36px] font-extrabold ml-0.5"
                         style={{ textShadow: "2.5px 2.5px 0px #FFC72C" }}

@@ -1,6 +1,7 @@
 import { skills } from "@/data/skills";
 import { API_BASE_URL } from "@/config/api";
 import { allPosts } from "@/components/case-studies/data/postsData";
+import { getInternships } from "@/data/internships";
 
 export default async function sitemap() {
   const baseUrl = "https://alphabitskill.com";
@@ -18,7 +19,7 @@ export default async function sitemap() {
     "/skills",
     "/skills/curriculum",
     "/terms",
-    "/internships/python",
+    "/internships",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
@@ -33,6 +34,21 @@ export default async function sitemap() {
     changeFrequency: "weekly",
     priority: 0.9,
   }));
+
+  let internshipRoutes = [];
+  try {
+    const internships = await getInternships();
+    internshipRoutes = internships
+      .filter((internship) => internship.slug || internship._id || internship.id)
+      .map((internship) => ({
+        url: `${baseUrl}/internships/${internship.slug || internship._id || internship.id}`,
+        lastModified: internship.updatedAt || internship.createdAt || new Date().toISOString(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      }));
+  } catch (err) {
+    console.warn("[Sitemap] Internship API fetch error:", err?.message);
+  }
 
   // Dynamic blog post routes (fetched from API)
   let blogRoutes = [];
@@ -87,5 +103,11 @@ export default async function sitemap() {
     }));
   }
 
-  return [...staticRoutes, ...skillRoutes, ...blogRoutes, ...caseStudyRoutes];
+  return [
+    ...staticRoutes,
+    ...skillRoutes,
+    ...internshipRoutes,
+    ...blogRoutes,
+    ...caseStudyRoutes,
+  ];
 }
